@@ -1,3 +1,6 @@
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { HomeModule } from './home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -12,9 +15,15 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HomeModule,
+    RouterModule.forRoot([
+      { path: '**', redirectTo: '', pathMatch: 'full' }
+    ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
