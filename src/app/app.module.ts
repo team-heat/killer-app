@@ -1,3 +1,4 @@
+import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
