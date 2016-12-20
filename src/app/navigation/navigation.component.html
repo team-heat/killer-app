@@ -2,7 +2,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-            <li><a routerLink="/home">Home</a></li>
+            <li [class.active]="activeItem == 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
