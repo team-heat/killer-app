@@ -5,6 +5,7 @@ nav {
     text-align: center;
 
     li.active > a {
-        background-color: rgba(177, 33, 33, 0.33) !important;
+        background-color: rgba(133, 33, 33, 0.33) !important;
+        box-shadow: 0 1px 15px #000000;
     }
 }
