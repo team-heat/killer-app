@@ -3,4 +3,8 @@ nav {
     box-shadow: 0 5px 25px #000000;
     background-color: rgba(0, 0, 0, 0.33);
     text-align: center;
+
+    li.active > a {
+        background-color: rgba(177, 33, 33, 0.33) !important;
+    }
 }
