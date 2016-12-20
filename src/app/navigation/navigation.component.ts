@@ -1,21 +1,25 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss']
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-    activeItem: string;
+  userService: UserService;
+  activeItem: string;
 
-    constructor() { }
+  constructor(userService: UserService) {
+    this.userService = userService;
+  }
 
-    ngOnInit() {
-        this.activeItem = 'Home';
-    }
+  ngOnInit() {
+    this.activeItem = 'Home';
+  }
 
-    setActiveItem(selectedItem: string) {
-        selectedItem = selectedItem || '';
-        this.activeItem = selectedItem;
-    }
+  setActiveItem(selectedItem: string) {
+    selectedItem = selectedItem || '';
+    this.activeItem = selectedItem;
+  }
 }
