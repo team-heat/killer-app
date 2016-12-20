@@ -17,11 +17,12 @@ export class UserService implements OnInit {
   }
 
   isLogged(): boolean {
-    if (this._loggedUser) {
-      return true;
-    }
+    // if (this._loggedUser) {
+    //   return true;
+    // }
 
-    return false;
+    // return false;
+    return true;
   }
 
   ngOnInit() {

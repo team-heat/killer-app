@@ -1,11 +1,12 @@
 <nav class="navbar navbar-inverse" role="navigation">
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
+    <ul *ngIf="hasLoggedUser == true" class="nav navbar-nav">
       <li [class.active]="activeItem == 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
       <li [class.active]="activeItem == 'Browse'" (click)="setActiveItem('Browse')"><a routerLink="/">Browse</a></li>
       <li [class.active]="activeItem == 'Create'" (click)="setActiveItem('Create')"><a routerLink="/">Create</a></li>
     </ul>
+    <h1 class="app-heading" *ngIf="hasLoggedUser == false">DREAMSTIME</h1>
   </div>
   <!-- /.navbar-collapse -->
 </nav>
