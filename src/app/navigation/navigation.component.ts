@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  userService: UserService;
   activeItem: string;
 
-  constructor() { }
+  constructor(userService: UserService) {
+    this.userService = userService;
+  }
 
   ngOnInit() {
     this.activeItem = 'Home';

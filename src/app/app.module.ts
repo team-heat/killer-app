@@ -1,3 +1,4 @@
+import { UserService } from './services/user.service';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -23,7 +24,9 @@ import { AppComponent } from './app.component';
       { path: '**', redirectTo: '', pathMatch: 'full' }
     ])
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [
     AppComponent
   ]
