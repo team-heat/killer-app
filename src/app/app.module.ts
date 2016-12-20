@@ -21,7 +21,8 @@ import { AppComponent } from './app.component';
     HttpModule,
     HomeModule,
     RouterModule.forRoot([
-      { path: '**', redirectTo: '', pathMatch: 'full' }
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: '**', redirectTo: '/', pathMatch: 'full' }
     ])
   ],
   providers: [
