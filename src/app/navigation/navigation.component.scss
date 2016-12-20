@@ -4,7 +4,13 @@ nav {
   box-shadow: 0 5px 25px #000000;
   background-color: rgba(0, 0, 0, 0.33);
   text-align: center;
-  
+
+  h1.app-heading {
+      color: rgba(225, 225, 225, 0.77);
+      font-family: 'Verdana, Geneva, sans-serif';
+      letter-spacing: 0.77em;
+  }
+
   li.active>a {
     background-color: rgba(133, 33, 33, 0.33) !important;
     box-shadow: 0 1px 15px #000000;

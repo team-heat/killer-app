@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationComponent implements OnInit {
   userService: UserService;
   activeItem: string;
+  hasLoggedUser: boolean;
 
   constructor(userService: UserService) {
     this.userService = userService;
@@ -16,6 +17,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.activeItem = 'Home';
+    this.hasLoggedUser = this.userService.isLogged();
   }
 
   setActiveItem(selectedItem: string) {
