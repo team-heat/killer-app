@@ -5,14 +5,19 @@ import { User } from './../models/user.model';
 @Injectable()
 export class UserService implements OnInit {
   httpService: Http;
-  loggedUser: User;
+
+  private _loggedUser: User;
 
   constructor(httpService: Http) {
     this.httpService = httpService;
   }
 
+  get loggedUser() {
+    return this._loggedUser;
+  }
+
   isLogged(): boolean {
-    if (this.loggedUser) {
+    if (this._loggedUser) {
       return true;
     }
 
