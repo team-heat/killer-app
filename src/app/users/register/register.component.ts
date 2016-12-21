@@ -12,26 +12,20 @@ export class RegisterComponent implements OnInit {
   userService: UserService;
   appRouter: Router;
   user: User;
+  isLoading: boolean;
 
   constructor(userService: UserService, appRouter: Router) {
     this.userService = userService;
     this.appRouter = appRouter;
     this.user = new User();
+    this.isLoading = false;
   }
 
   ngOnInit() {
   }
 
   onSubmit(): void {
-    console.log(this.user);
-    const obeservable = this.userService.registerUser(this.user);
-    obeservable.subscribe((user) => {
-      console.log(user);
-      this.user = user;
-    }, (err) => {
-      console.log(err);
-    }, () => {
-      this.appRouter.navigateByUrl('profile');
-    });
+    this.userService.registerUser(this.user);
+    this.isLoading = true;
   }
 }

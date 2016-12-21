@@ -1,18 +1,22 @@
 import { Http, Response } from '@angular/http';
 import { Injectable, OnInit } from '@angular/core';
-import { User } from './../models/user.model';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { User } from './../models/user.model';
 
 @Injectable()
 export class UserService implements OnInit {
   httpService: Http;
+  appRouter: Router;
   registerResponse: Observable<Response>;
 
   private _loggedUser: User;
 
-  constructor(httpService: Http) {
+  constructor(httpService: Http, appRouter: Router) {
     this.httpService = httpService;
+    this.appRouter = appRouter;
 
+    // TO BE DELETED
     this._loggedUser = new User();
     this._loggedUser.username = 'Test User';
   }
@@ -30,9 +34,18 @@ export class UserService implements OnInit {
     return true;
   }
 
-  registerUser(user: User): Observable<User> {
+  registerUser(user: User): void {
     // for testing 
-    return Observable.of(user);
+    const observe = Observable.of(user)
+      .subscribe((responseUser) => {
+        console.log(responseUser);
+        this._loggedUser = responseUser;
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        this.appRouter.navigateByUrl('profile');
+        observe.unsubscribe();
+      });
   }
 
   ngOnInit() {
