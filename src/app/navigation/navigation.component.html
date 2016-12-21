@@ -1,12 +1,35 @@
 <nav class="navbar navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div *ngIf="hasLoggedUser == true" class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+      aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand">DREAMSTIME</a>
+  </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
+  <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
     <ul *ngIf="hasLoggedUser == true" class="nav navbar-nav">
       <li [class.active]="activeItem == 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
       <li [class.active]="activeItem == 'Browse'" (click)="setActiveItem('Browse')"><a routerLink="/">Browse</a></li>
       <li [class.active]="activeItem == 'Create'" (click)="setActiveItem('Create')"><a routerLink="/">Create</a></li>
     </ul>
-    <div class="row" *ngIf="hasLoggedUser == false">
+  </div>
+  <!-- /.navbar-collapse -->
+  <div class="row" *ngIf="hasLoggedUser == false">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
       <h1>
         <a routerLink="/" class="btn btn-default navbar-btn col-xs-1" aria-label="Left Align">
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
@@ -20,5 +43,4 @@
       </h1>
     </div>
   </div>
-  <!-- /.navbar-collapse -->
 </nav>
