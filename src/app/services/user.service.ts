@@ -36,15 +36,13 @@ export class UserService implements OnInit {
 
   registerUser(user: User): void {
     // for testing 
-    const observe = Observable.of(user)
+    Observable.of(user)
       .subscribe((responseUser) => {
-        console.log(responseUser);
         this._loggedUser = responseUser;
       }, (err) => {
         console.log(err);
       }, () => {
         this.appRouter.navigateByUrl('profile');
-        observe.unsubscribe();
       });
   }
 

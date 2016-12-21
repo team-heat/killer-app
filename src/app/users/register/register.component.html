@@ -1,5 +1,5 @@
 <h2>Registration Form</h2>
-<form #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
+<form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
   <div class="form-group">
     <label> 
       <span>Username: </span>
@@ -18,3 +18,4 @@
     </label>
   </div>
 </form>
+<img *ngIf="isLoading === true" id="loading" src="../../../assets/load.gif" alt="Be patient..." width="50px" />
