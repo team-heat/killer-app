@@ -1,13 +1,13 @@
 import { User } from './../models/user.model';
 import { UserService } from './../services/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, DoCheck {
   userService: UserService;
   activeItem: string;
   hasLoggedUser: boolean;
@@ -19,6 +19,11 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.activeItem = 'Home';
+    this.hasLoggedUser = this.userService.isLogged();
+    this.loggedUser = this.userService.loggedUser;
+  }
+
+  ngDoCheck() {
     this.hasLoggedUser = this.userService.isLogged();
     this.loggedUser = this.userService.loggedUser;
   }
