@@ -1,6 +1,7 @@
+import { UsersModule } from './users/users.module';
 import { UserService } from './services/user.service';
 import { NavigationComponent } from './navigation/navigation.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     HomeModule,
+    UsersModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }

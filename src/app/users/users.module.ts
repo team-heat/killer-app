@@ -1,3 +1,4 @@
+import { UsersRouterModuler } from './users.routes';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
@@ -11,7 +12,8 @@ import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    UsersRouterModuler
   ],
   declarations: [
     UsersComponent,
@@ -19,9 +21,6 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterComponent,
     FacebookLoginComponent,
     ProfileComponent
-  ],
-  providers: [
-    UserService
   ]
 })
 export class UsersModule { }

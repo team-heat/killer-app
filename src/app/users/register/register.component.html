@@ -1,3 +1,20 @@
-<p>
-  register works!
-</p>
+<h2>Registration Form</h2>
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
+  <div class="form-group">
+    <label> 
+      <span>Username: </span>
+      <input class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+    </label>
+  </div>
+  <div class="form-group">
+    <label> 
+      <span>Password: </span>
+      <input class="form-control" type="password" name="password" [(ngModel)]="user.password" placeholder="Enter your username" required minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <button class="form-control" type="submit">Register</button>
+    </label>
+  </div>
+</form>

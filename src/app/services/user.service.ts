@@ -1,10 +1,12 @@
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Injectable, OnInit } from '@angular/core';
 import { User } from './../models/user.model';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserService implements OnInit {
   httpService: Http;
+  registerResponse: Observable<Response>;
 
   private _loggedUser: User;
 
@@ -26,6 +28,11 @@ export class UserService implements OnInit {
 
     // return false;
     return true;
+  }
+
+  registerUser(user: User): Observable<User> {
+    // for testing 
+    return Observable.of(user);
   }
 
   ngOnInit() {
