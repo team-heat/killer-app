@@ -1,11 +1,26 @@
-import { NgModule } from '@angular/core';
+import { UsersRouterModuler } from './users.routes';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { NgModule } from '@angular/core';
+import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users.component';
+import { UserService } from './../services/user.service';
+import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    FormsModule,
+    CommonModule,
+    UsersRouterModuler
   ],
-  declarations: [UsersComponent]
+  declarations: [
+    UsersComponent,
+    LoginComponent,
+    RegisterComponent,
+    FacebookLoginComponent,
+    ProfileComponent
+  ]
 })
 export class UsersModule { }
