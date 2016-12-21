@@ -10,6 +10,9 @@ export class UserService implements OnInit {
 
   constructor(httpService: Http) {
     this.httpService = httpService;
+    
+    this._loggedUser = new User();
+    this._loggedUser.username = 'Test User';
   }
 
   get loggedUser() {
@@ -26,6 +29,5 @@ export class UserService implements OnInit {
   }
 
   ngOnInit() {
-
   }
 }
