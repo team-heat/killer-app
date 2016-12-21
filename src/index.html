@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>KillerApp</title>
@@ -7,8 +8,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style> 
+    /* Center loading image while css is still loading. */
+    #loading {
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+    }
+  </style>
 </head>
+
 <body>
-  <app-root>Loading...</app-root>
+  <app-root><img id="loading" src="/assets/load.gif" alt="Be patient..." width="50px" /></app-root>
 </body>
+
 </html>
