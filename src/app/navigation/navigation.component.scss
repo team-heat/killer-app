@@ -1,3 +1,14 @@
+@font-face {
+  font-family: polaris;
+  src: url('../../assets/Polaris.ttf');
+}
+
+@font-face {
+  font-family: planer;
+  src: url('../../assets/Planer-Regular.otf');
+}
+
+
 nav {
   margin-top: 1.5%;
   padding-left: 10px;
@@ -10,12 +21,13 @@ nav {
     background-color: transparent;
     border: none;
     font-size: 24px;
-    margin-top: 0px;   
+    margin-top: 0px;
   }
   h1.app-heading {
     color: rgba(225, 225, 225, 0.77);
-    font-family: 'Verdana, Geneva, sans-serif';
-    letter-spacing: 0.77em;
+    // font-family: 'Verdana, Geneva, sans-serif';
+    font-family: planer;
+    letter-spacing: 1em;
     margin-top: 0px;
   }
   li.active>a {
