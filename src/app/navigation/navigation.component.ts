@@ -1,3 +1,4 @@
+import { User } from './../models/user.model';
 import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,6 +11,7 @@ export class NavigationComponent implements OnInit {
   userService: UserService;
   activeItem: string;
   hasLoggedUser: boolean;
+  loggedUser: User;
 
   constructor(userService: UserService) {
     this.userService = userService;
@@ -18,6 +20,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
     this.activeItem = 'Home';
     this.hasLoggedUser = this.userService.isLogged();
+    this.loggedUser = this.userService.loggedUser;
   }
 
   setActiveItem(selectedItem: string) {

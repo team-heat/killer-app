@@ -11,11 +11,24 @@
     <a class="navbar-brand">DREAMSTIME</a>
   </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
-    <ul *ngIf="hasLoggedUser == true" class="nav navbar-nav">
+  <div *ngIf="hasLoggedUser == true" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
       <li [class.active]="activeItem == 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
       <li [class.active]="activeItem == 'Browse'" (click)="setActiveItem('Browse')"><a routerLink="/">Browse</a></li>
       <li [class.active]="activeItem == 'Create'" (click)="setActiveItem('Create')"><a routerLink="/">Create</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUser.username}}<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
   <!-- /.navbar-collapse -->
