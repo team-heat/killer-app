@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users.component';
 import { UserService } from './../services/user.service';
+import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import { UserService } from './../services/user.service';
   declarations: [
     UsersComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FacebookLoginComponent,
+    ProfileComponent
   ],
   providers: [
     UserService
