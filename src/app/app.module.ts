@@ -11,12 +11,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+/** MOCK */
+// import { MockedModule } from './mocked-module/mocked.module'
+
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent
   ],
   imports: [
+    // MockedModule,
     BrowserModule,
     FormsModule,
     HttpModule,
