@@ -18,9 +18,15 @@ module.exports = function ({app}) {
 
     app.use('/api', apiRouter);
 
-    app.get('/', function (req, res) {
-        res
-            .status(200)
-            .sendFile(path.join(__dirname, '/../../dist/index.html'));
-    });
+    app
+        .get('/', function (req, res) {
+            res
+                .status(200)
+                .sendFile(path.join(__dirname, '/../../dist/index.html'));
+        })
+        .get('*', function (req, res) {
+            res
+                .status(200)
+                .sendFile(path.join(__dirname, '/../../dist/index.html'));
+        });
 };
