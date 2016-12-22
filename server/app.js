@@ -10,7 +10,7 @@ const userData = require('./data/user-data')({});
 require('./config/local.passport.config')({ app, userData });
 require('./config/jwt.passport.config')({ app, userData, config });
 
-require('./config/routes.config')({ app, userData });
+require('./config/routes.config')({ app, userData, config });
 
 app.listen(config.port, function () {
     console.log(`App listening on port: ${config.port}`);
