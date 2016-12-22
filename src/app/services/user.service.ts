@@ -1,23 +1,28 @@
 import { LoginComponent } from './../users/login/login.component';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { User } from './../models/user.model';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Injectable()
 export class UserService implements OnInit {
   httpService: Http;
+  cookieService: CookieService;
   appRouter: Router;
   registerResponse: Observable<Response>;
 
   private _loggedUser: User;
+  private headers = new Headers({ 'Content-Type': 'application/json' });
 
   // TO BE DELETED
   users: User[];
 
-  constructor(httpService: Http, appRouter: Router) {
+
+  constructor(httpService: Http, cookieService: CookieService, appRouter: Router) {
     this.httpService = httpService;
+    this.cookieService = cookieService;
     this.appRouter = appRouter;
 
     this.users = [];
@@ -39,9 +44,10 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   registerUser(user: User): void {
+    const token = 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE1MCwidXNlcm5hbWUiOiIxMjMiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTQ4MjQzNTg2OX0.sJu5AMxPQ_nncUbP2L2TYkh1nWrMlFATxuX6e2ZHUwk';
     // for testing 
-    Observable.of(user)
-      .subscribe((responseUser) => {
+    this.httpService.put('/api/users', JSON.stringify(user), { headers: new Headers({ 'Authorization': token }) })
+      .subscribe((responseUser: any) => {
         console.log(responseUser);
         const newUser = new User();
         newUser.username = responseUser.username;
@@ -61,17 +67,19 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   loginUser(user: User): void {
+    console.log(user);
     // for testing 
-    Observable.of(user)
-      .subscribe((responseUser) => {
+    // Observable.of(user)
+    this.httpService.post('/api/users', JSON.stringify(user), { headers: this.headers })
+      .subscribe((responseUser: any) => {
         console.log(responseUser);
-        const newUser = new User();
-        newUser.username = responseUser.username;
-        newUser.password = responseUser.password;
+        // const newUser = new User();
+        // newUser.username = responseUser.username;
+        // newUser.password = responseUser.password;
 
-        this._loggedUser = newUser;
-        this.users.push(newUser);
-        console.log(this.users);
+        // this.cookieService.put('user', JSON.stringify(newUser));
+        // this._loggedUser = newUser;
+        // this.users.push(newUser);
       }, (err) => {
         console.log(err);
       }, () => {
