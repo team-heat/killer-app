@@ -16,7 +16,7 @@ module.exports = function ({app, userData}) {
       .then(user => {
         if (user) {
           return {
-            authenticated: user.authenticate(password),
+            isAuthenticated: user.authenticate(password),
             user
           };
         }
@@ -24,7 +24,7 @@ module.exports = function ({app, userData}) {
         return done(null, false);
       })
       .then((result) => {
-        if (result.authenticated) {
+        if (result.isAuthenticated) {
           return done(null, result.user);
         }
 
