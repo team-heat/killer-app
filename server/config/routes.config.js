@@ -14,6 +14,16 @@ module.exports = function ({app}) {
     .put('/users', function (req, res) {
       // Create user here
       res.status(200).send('PUT /api/users');
+    })
+    .get('/gallery', function (req, res) {
+      res.status(200).json({
+        message: 'GET /api/gallery'
+      });
+    })
+    .get('/gallery/:id', function (req, res) {
+      res.status(200).json({
+        message: 'GET /api/gallery/:id'
+      });
     });
 
   app.use('/api', apiRouter);
