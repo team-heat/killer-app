@@ -16,7 +16,6 @@ module.exports = function ({app}) {
       res.status(200).send('PUT /api/users');
     });
 
-
   app.use('/api', apiRouter);
 
   app
