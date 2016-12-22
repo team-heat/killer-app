@@ -1,14 +1,12 @@
 import { LoginComponent } from './../users/login/login.component';
 import { Http, Response } from '@angular/http';
-import { Injectable, OnInit, Output, EventEmitter } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { User } from './../models/user.model';
 
 @Injectable()
 export class UserService implements OnInit {
-  @Output() onRegister: EventEmitter<string> = new EventEmitter<string>();
-
   httpService: Http;
   appRouter: Router;
   registerResponse: Observable<Response>;
@@ -56,7 +54,6 @@ export class UserService implements OnInit {
         console.log(err);
       }, () => {
         this.appRouter.navigateByUrl('profile');
-        this.onRegister.emit('registerd');
       });
   }
 
@@ -79,7 +76,6 @@ export class UserService implements OnInit {
         console.log(err);
       }, () => {
         this.appRouter.navigateByUrl('profile');
-        this.onRegister.emit('registerd');
       });
   }
 
