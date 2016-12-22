@@ -14,6 +14,7 @@ export class UserService implements OnInit {
   registerResponse: Observable<Response>;
 
   private _loggedUser: User;
+  private headers = new Headers({ 'Content-Type': 'application/json' });
 
   // TO BE DELETED
   users: User[];
@@ -43,8 +44,9 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   registerUser(user: User): void {
+    const token = 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE1MCwidXNlcm5hbWUiOiIxMjMiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTQ4MjQzNTg2OX0.sJu5AMxPQ_nncUbP2L2TYkh1nWrMlFATxuX6e2ZHUwk';
     // for testing 
-    this.httpService.put('/api/users', user)
+    this.httpService.put('/api/users', JSON.stringify(user), { headers: new Headers({ 'Authorization': token }) })
       .subscribe((responseUser: any) => {
         console.log(responseUser);
         const newUser = new User();
@@ -65,18 +67,19 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   loginUser(user: User): void {
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJ1c2VybmFtZSI6IlBlc2hvIiwicGFzc3dvcmQiOiJQZXNoZXYiLCJpYXQiOjE0ODI0MzE5MTJ9.Lnrf8PlIClLjzwLD9pA5yoZcpzjkjBVc3KWHTMCqRnI';
+    console.log(user);
     // for testing 
     // Observable.of(user)
-    this.httpService.post('/api/users', {}, new Headers({ Authorization: token }))
+    this.httpService.post('/api/users', JSON.stringify(user), { headers: this.headers })
       .subscribe((responseUser: any) => {
-        const newUser = new User();
-        newUser.username = responseUser.username;
-        newUser.password = responseUser.password;
+        console.log(responseUser);
+        // const newUser = new User();
+        // newUser.username = responseUser.username;
+        // newUser.password = responseUser.password;
 
-        this.cookieService.put('user', JSON.stringify(newUser));
-        this._loggedUser = newUser;
-        this.users.push(newUser);
+        // this.cookieService.put('user', JSON.stringify(newUser));
+        // this._loggedUser = newUser;
+        // this.users.push(newUser);
       }, (err) => {
         console.log(err);
       }, () => {

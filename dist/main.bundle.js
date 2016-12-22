@@ -27,6 +27,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var UserService = (function () {
     function UserService(httpService, cookieService, appRouter) {
+        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this.httpService = httpService;
         this.cookieService = cookieService;
         this.appRouter = appRouter;
@@ -50,8 +51,9 @@ var UserService = (function () {
     // Display message on incorrect login
     UserService.prototype.registerUser = function (user) {
         var _this = this;
+        var token = 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE1MCwidXNlcm5hbWUiOiIxMjMiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTQ4MjQzNTg2OX0.sJu5AMxPQ_nncUbP2L2TYkh1nWrMlFATxuX6e2ZHUwk';
         // for testing 
-        this.httpService.put('/api/users', user)
+        this.httpService.put('/api/users', JSON.stringify(user), { headers: new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Authorization': token }) })
             .subscribe(function (responseUser) {
             console.log(responseUser);
             var newUser = new __WEBPACK_IMPORTED_MODULE_3__models_user_model__["a" /* User */]();
@@ -71,17 +73,18 @@ var UserService = (function () {
     // Display message on incorrect login
     UserService.prototype.loginUser = function (user) {
         var _this = this;
-        var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJ1c2VybmFtZSI6IlBlc2hvIiwicGFzc3dvcmQiOiJQZXNoZXYiLCJpYXQiOjE0ODI0MzE5MTJ9.Lnrf8PlIClLjzwLD9pA5yoZcpzjkjBVc3KWHTMCqRnI';
+        console.log(user);
         // for testing 
         // Observable.of(user)
-        this.httpService.post('/api/users', {}, new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ Authorization: token }))
+        this.httpService.post('/api/users', JSON.stringify(user), { headers: this.headers })
             .subscribe(function (responseUser) {
-            var newUser = new __WEBPACK_IMPORTED_MODULE_3__models_user_model__["a" /* User */]();
-            newUser.username = responseUser.username;
-            newUser.password = responseUser.password;
-            _this.cookieService.put('user', JSON.stringify(newUser));
-            _this._loggedUser = newUser;
-            _this.users.push(newUser);
+            console.log(responseUser);
+            // const newUser = new User();
+            // newUser.username = responseUser.username;
+            // newUser.password = responseUser.password;
+            // this.cookieService.put('user', JSON.stringify(newUser));
+            // this._loggedUser = newUser;
+            // this.users.push(newUser);
         }, function (err) {
             console.log(err);
         }, function () {

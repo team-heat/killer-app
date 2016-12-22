@@ -11,8 +11,7 @@ module.exports = function ({app, userData}) {
   var opts = {};
   opts.jwtFromRequest = ExtractJwt.fromAuthHeader();
   opts.secretOrKey = 'secret';
-  opts.issuer = "accounts.examplesoft.com";
-  opts.audience = "yoursite.net";
+
   passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
     console.log(jwt_payload);
     userData.getUserById({ id: jwt_payload.sub })

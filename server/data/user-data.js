@@ -5,9 +5,9 @@
 const jsonwebtoken = require('jsonwebtoken');
 
 const testUser = {
-  id: 150,
-  username: 'Pesho',
-  password: 'Peshev'
+  _id: 150,
+  username: '123',
+  password: '123'
 };
 
 module.exports = function ({User}) {
