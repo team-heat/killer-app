@@ -19,7 +19,7 @@ export class UserStorageService {
     this.cookieService.putObject('killerapp', authResponse, { expires: new Date(2017, 12, 30) });
   }
 
-  clearCookie(): void {
+  clearLoggedUser(): void {
     this.cookieService.remove('killerapp');
   }
 }
