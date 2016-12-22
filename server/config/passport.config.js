@@ -1,7 +1,7 @@
 'use strict';
 
-const passport = require('passport');
 const LocalStrategy = require('passport-local');
+const passport = require('passport');
 
 module.exports = function ({app, userData}) {
   app.use(passport.initialize());
