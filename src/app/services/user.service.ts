@@ -1,10 +1,11 @@
-import { LoginComponent } from './../users/login/login.component';
+import { AuthenticationResponseModel } from './../models/authentication-response.model';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Http, Response, Headers } from '@angular/http';
 import { Injectable, OnInit } from '@angular/core';
+import { LoginComponent } from './../users/login/login.component';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { User } from './../models/user.model';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Injectable()
 export class UserService implements OnInit {
@@ -14,7 +15,7 @@ export class UserService implements OnInit {
   registerResponse: Observable<Response>;
 
   private _loggedUser: User;
-  private headers = new Headers({ 'Content-Type': 'application/json' });
+  private contentTypeHeaders = new Headers({ 'Content-Type': 'application/json' });
 
   // TO BE DELETED
   users: User[];
@@ -44,18 +45,11 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   registerUser(user: User): void {
-    const token = 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE1MCwidXNlcm5hbWUiOiIxMjMiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTQ4MjQzNTg2OX0.sJu5AMxPQ_nncUbP2L2TYkh1nWrMlFATxuX6e2ZHUwk';
+    //  { headers: new Headers({ 'Authorization': token }) }
     // for testing 
-    this.httpService.put('/api/users', JSON.stringify(user), { headers: new Headers({ 'Authorization': token }) })
+    this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders })
       .subscribe((responseUser: any) => {
         console.log(responseUser);
-        const newUser = new User();
-        newUser.username = responseUser.username;
-        newUser.password = responseUser.password;
-
-        this._loggedUser = newUser;
-        this.users.push(newUser);
-        console.log(this.users);
       }, (err) => {
         console.log(err);
       }, () => {
@@ -70,16 +64,10 @@ export class UserService implements OnInit {
     console.log(user);
     // for testing 
     // Observable.of(user)
-    this.httpService.post('/api/users', JSON.stringify(user), { headers: this.headers })
-      .subscribe((responseUser: any) => {
-        console.log(responseUser);
-        // const newUser = new User();
-        // newUser.username = responseUser.username;
-        // newUser.password = responseUser.password;
-
-        // this.cookieService.put('user', JSON.stringify(newUser));
-        // this._loggedUser = newUser;
-        // this.users.push(newUser);
+    this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders })
+      .map(res => res.json())
+      .subscribe(response => {
+        console.log(response);
       }, (err) => {
         console.log(err);
       }, () => {

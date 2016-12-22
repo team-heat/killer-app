@@ -19,14 +19,12 @@ module.exports = function ({app, userData}) {
         if (err) {
           return done(err, false);
         }
+
         if (user) {
-          done(null, user);
-        } else {
-          done(null, false);
-          // or you could create a new account 
+          return done(null, user);
         }
 
-        return null;
+        return done(null, false);
       });
   }));
 };
