@@ -1,5 +1,5 @@
 import { LoginComponent } from './../users/login/login.component';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -44,8 +44,8 @@ export class UserService implements OnInit {
   // Display message on incorrect login
   registerUser(user: User): void {
     // for testing 
-    Observable.of(user)
-      .subscribe((responseUser) => {
+    this.httpService.put('/api/users', user)
+      .subscribe((responseUser: any) => {
         console.log(responseUser);
         const newUser = new User();
         newUser.username = responseUser.username;
@@ -65,9 +65,10 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   loginUser(user: User): void {
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUwLCJ1c2VybmFtZSI6IlBlc2hvIiwicGFzc3dvcmQiOiJQZXNoZXYiLCJpYXQiOjE0ODI0MzE5MTJ9.Lnrf8PlIClLjzwLD9pA5yoZcpzjkjBVc3KWHTMCqRnI';
     // for testing 
     // Observable.of(user)
-    this.httpService.get('/api/gallery')
+    this.httpService.post('/api/users', {}, new Headers({ Authorization: token }))
       .subscribe((responseUser: any) => {
         const newUser = new User();
         newUser.username = responseUser.username;

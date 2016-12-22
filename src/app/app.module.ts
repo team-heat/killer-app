@@ -1,6 +1,6 @@
-import { UserStorageService } from './services/user-storage.service';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { UserStorageService } from './services/user-storage.service';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
