@@ -57,13 +57,11 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   loginUser(user: User): void {
-    console.log(user);
     // for testing 
     // Observable.of(user)
     this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders })
       .map((res) => res.json())
       .subscribe(response => {
-        console.log(response);
         if (!response.username || !response.auth_token) {
           throw new Error('Incorrect response');
         }
