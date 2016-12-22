@@ -1,3 +1,4 @@
+import { LoginComponent } from './../users/login/login.component';
 import { Http, Response } from '@angular/http';
 import { Injectable, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -36,7 +37,33 @@ export class UserService implements OnInit {
     return false;
   }
 
+  // Create server Router
+  // Only Redirect on Successful Login
+  // Display message on incorrect login
   registerUser(user: User): void {
+    // for testing 
+    Observable.of(user)
+      .subscribe((responseUser) => {
+        console.log(responseUser);
+        const newUser = new User();
+        newUser.username = responseUser.username;
+        newUser.password = responseUser.password;
+
+        this._loggedUser = newUser;
+        this.users.push(newUser);
+        console.log(this.users);
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        this.appRouter.navigateByUrl('profile');
+        this.onRegister.emit('registerd');
+      });
+  }
+
+  // Create server Router
+  // Only Redirect on Successful Login
+  // Display message on incorrect login
+  loginUser(user: User): void {
     // for testing 
     Observable.of(user)
       .subscribe((responseUser) => {
