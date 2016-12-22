@@ -12,7 +12,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 /** MOCK */
-import { MockedModule } from './mocked-module/mocked.module'
+// import { MockedModule } from './mocked-module/mocked.module'
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { MockedModule } from './mocked-module/mocked.module'
     NavigationComponent
   ],
   imports: [
-    MockedModule,
+    // MockedModule,
     BrowserModule,
     FormsModule,
     HttpModule,
