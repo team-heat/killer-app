@@ -10,8 +10,10 @@ module.exports = function ({app, userData}) {
   apiRouter
     .post('/users', passport.authenticate('local'), function (req, res) {
       // Login user here
-      console.log(req.body);
-      res.status(200).json(jsonwebtoken.sign(req.user, 'secret'));
+      res.status(200).json({
+        username: req.user.username,
+        auth_token: jsonwebtoken.sign(req.user, 'secret')
+      });
     })
     .put('/users', passport.authenticate('jwt'), function (req, res) {
       // Create user here

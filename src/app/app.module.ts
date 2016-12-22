@@ -35,7 +35,8 @@ import { UserStorageService } from './services/user-storage.service';
   providers: [
     UserService,
     UserStorageService,
-    CookieService
+    CookieService,
+    UserStorageService
   ],
   bootstrap: [
     AppComponent
