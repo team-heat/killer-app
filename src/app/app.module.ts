@@ -29,7 +29,8 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }
-    ])
+    ],
+      { useHash: true })
   ],
   providers: [
     UserService
