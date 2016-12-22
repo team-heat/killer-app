@@ -1,1 +1,5 @@
-<h1>Single item maybe!</h1>
+<h1>Single item</h1>
+<div>
+    <app-carousel *ngIf="this.item && this.item.pictures && this.item.pictures.length > 0"></app-carousel>
+    <div *ngIf="!this.item && !this.item.pictures && !this.item.pictures.length > 0"></div>
+</div>

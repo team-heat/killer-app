@@ -1,16 +1,30 @@
 import { NgModule } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { CarouselListComponent } from './../carousel-list/carousel-list.component';
 
 import { SingleItemComponent } from './single-item/single-item.component';
+import { ItemsRouterModule } from './items.routes';
 
-let itemsRoutes = [
-    { path: 'gallery/:id', SingleItemComponent }
-]
+import { ItemsService } from './../services/item.service';
 
 @NgModule({
-    imports: [],
-    declarations: [SingleItemComponent],
-    providers: []
+    imports: [
+        ItemsRouterModule,
+        CommonModule,
+        FormsModule,
+        BrowserModule
+    ],
+    declarations: [
+        SingleItemComponent,
+        CarouselListComponent
+    ],
+    providers: [
+        ItemsService
+    ]
 })
 
 export class ItemsModule {
