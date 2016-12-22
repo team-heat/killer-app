@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class CookiesService {
+export class UserStorageService {
 
   constructor() { }
 
