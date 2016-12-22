@@ -4,10 +4,12 @@ import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { User } from './../models/user.model';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Injectable()
 export class UserService implements OnInit {
   httpService: Http;
+  cookieService: CookieService;
   appRouter: Router;
   registerResponse: Observable<Response>;
 
@@ -16,8 +18,9 @@ export class UserService implements OnInit {
   // TO BE DELETED
   users: User[];
 
-  constructor(httpService: Http, appRouter: Router) {
+  constructor(httpService: Http, cookieService: CookieService, appRouter: Router) {
     this.httpService = httpService;
+    this.cookieService = cookieService;
     this.appRouter = appRouter;
 
     this.users = [];
@@ -69,6 +72,7 @@ export class UserService implements OnInit {
         newUser.username = responseUser.username;
         newUser.password = responseUser.password;
 
+        this.cookieService.put('user', JSON.stringify(newUser));
         this._loggedUser = newUser;
         this.users.push(newUser);
         console.log(this.users);
