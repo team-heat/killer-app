@@ -11,6 +11,7 @@ import { RouterModule, Router } from '@angular/router';
 import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
 @NgModule({

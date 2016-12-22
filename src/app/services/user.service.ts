@@ -18,6 +18,7 @@ export class UserService implements OnInit {
   // TO BE DELETED
   users: User[];
 
+
   constructor(httpService: Http, cookieService: CookieService, appRouter: Router) {
     this.httpService = httpService;
     this.cookieService = cookieService;
@@ -65,14 +66,16 @@ export class UserService implements OnInit {
   // Display message on incorrect login
   loginUser(user: User): void {
     // for testing 
-    Observable.of(user)
-      .subscribe((responseUser) => {
+    // Observable.of(user)
+    this.httpService.get('/api/gallery')
+      .subscribe((responseUser: any) => {
         console.log(responseUser);
         const newUser = new User();
         newUser.username = responseUser.username;
         newUser.password = responseUser.password;
 
         this.cookieService.put('user', JSON.stringify(newUser));
+        console.log('again');
         this._loggedUser = newUser;
         this.users.push(newUser);
         console.log(this.users);
