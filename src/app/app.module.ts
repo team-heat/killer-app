@@ -11,6 +11,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { ItemsModule } from './items/items.module';
+
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
 
@@ -21,6 +23,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     // MockedModule,
+    ItemsModule,
     BrowserModule,
     FormsModule,
     HttpModule,
