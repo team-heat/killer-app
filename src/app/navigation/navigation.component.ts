@@ -11,7 +11,7 @@ export class NavigationComponent implements OnInit, DoCheck {
   userService: UserService;
   activeItem: string;
   hasLoggedUser: boolean;
-  loggedUser: User;
+  loggedUserName: string;
 
   constructor(userService: UserService) {
     this.userService = userService;
@@ -20,12 +20,12 @@ export class NavigationComponent implements OnInit, DoCheck {
   ngOnInit() {
     this.activeItem = 'Home';
     this.hasLoggedUser = this.userService.isLogged();
-    this.loggedUser = this.userService.loggedUser;
+    this.loggedUserName = this.userService.loggedUser;
   }
 
   ngDoCheck() {
     this.hasLoggedUser = this.userService.isLogged();
-    this.loggedUser = this.userService.loggedUser;
+    this.loggedUserName = this.userService.loggedUser;
   }
 
   setActiveItem(selectedItem: string) {
