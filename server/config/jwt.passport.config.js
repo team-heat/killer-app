@@ -9,7 +9,15 @@ module.exports = function ({app, userData, config}) {
   app.use(passport.session());
 
   var opts = {};
-  opts.jwtFromRequest = ExtractJwt.fromAuthHeader();
+  // opts.jwtFromRequest = ExtractJwt.fromAuthHeader();
+  const cookieExtractor = function (req) {
+    let cookie = null;
+    if (req && req.cookies) {
+      cookie = JSON.parse(req.cookies['killerapp']);
+    }
+    return cookie.auth_token;
+  };
+  opts.jwtFromRequest = ExtractJwt.fromExtractors([cookieExtractor]);
   opts.secretOrKey = config.sessionSecret;
 
   passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
