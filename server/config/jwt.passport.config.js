@@ -10,15 +10,17 @@ module.exports = function ({app, userData, config}) {
 
   var opts = {};
   // opts.jwtFromRequest = ExtractJwt.fromAuthHeader();
+
   const cookieExtractor = function (req) {
     let cookie = null;
     if (req && req.cookies) {
-      cookie = JSON.parse(req.cookies['killerapp']);
+      cookie = JSON.parse(req.cookies[config.cookieName]);
     }
     return cookie.auth_token;
   };
+  
   opts.jwtFromRequest = ExtractJwt.fromExtractors([cookieExtractor]);
-  opts.secretOrKey = config.sessionSecret;
+  opts.secretOrKey = config.webTokenSecret;
 
   passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
     userData.getUserById(jwt_payload._doc._id)
@@ -26,7 +28,6 @@ module.exports = function ({app, userData, config}) {
         if (user) {
           return done(null, user);
         }
-
         return done(null, false);
       })
       .catch((err) => {

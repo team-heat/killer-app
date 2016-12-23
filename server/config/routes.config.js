@@ -12,7 +12,7 @@ module.exports = function ({app, userData, config}) {
       // Login user here
       res.status(200).json({
         username: req.user.username,
-        auth_token: jsonwebtoken.sign(req.user, config.sessionSecret)
+        auth_token: jsonwebtoken.sign(req.user, config.webTokenSecret)
       });
     })
     .put('/users', passport.authenticate('jwt'), function (req, res) {

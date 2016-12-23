@@ -1039,6 +1039,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UserStorageService = (function () {
     function UserStorageService(cookieService) {
         this.cookieService = cookieService;
+        this.cookieName = 'com.herokuapps.killerapp';
     }
     Object.defineProperty(UserStorageService.prototype, "loggedUser", {
         get: function () {
@@ -1056,15 +1057,15 @@ var UserStorageService = (function () {
         return loggedUser ? true : false;
     };
     UserStorageService.prototype.getLoggedUser = function () {
-        var cookieContent = this.cookieService.getObject('killerapp');
+        var cookieContent = this.cookieService.getObject(this.cookieName);
         return cookieContent;
     };
     UserStorageService.prototype.setLoggedUser = function (authResponse) {
         var expirationDate = new Date(2050, 12, 12);
-        this.cookieService.putObject('killerapp', authResponse, { expires: expirationDate });
+        this.cookieService.putObject(this.cookieName, authResponse, { expires: expirationDate });
     };
     UserStorageService.prototype.clearLoggedUser = function () {
-        this.cookieService.remove('killerapp');
+        this.cookieService.remove(this.cookieName);
     };
     UserStorageService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
