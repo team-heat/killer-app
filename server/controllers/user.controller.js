@@ -10,7 +10,17 @@ module.exports = function ({userData, config}) {
     });
   }
 
+  function profile(req, res) {
+
+  }
+
+  function register(req, res) {
+    res.status(200).json({ message: 'PUT /api/users' });
+  }
+
   return {
-    login
+    login,
+    profile,
+    register
   };
 };
