@@ -20,6 +20,8 @@ userSchema.static('createUser', function (user) {
     password: user.password,
     firstName: user.firstName,
     lastName: user.lastName,
+    image: user.image,
+    gender: user.gender,
     email: user.email,
     favorites: user.favorites || [],
     activeListings: user.activeListings || []
