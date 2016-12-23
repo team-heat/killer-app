@@ -5,7 +5,9 @@ const userSchema = new mongoose.Schema({
   password: String,
   firstName: String,
   lastName: String,
-  email: String
+  email: String,
+  favorites: [{}],
+  activeListings: [{}]
 });
 
 let UserModel;
@@ -16,7 +18,9 @@ userSchema.static('createUser', function (user) {
     password: user.password,
     firstName: user.firstName,
     lastName: user.lastName,
-    email: user.email
+    email: user.email,
+    favorites: user.favorites || [],
+    activeListings: user.activeListings || []
   });
 });
 

@@ -16,7 +16,8 @@ export class UserStorageService {
   }
 
   setLoggedUser(authResponse: AuthenticationResponseModel) {
-    this.cookieService.putObject('killerapp', authResponse, { expires: new Date(2017, 12, 30) });
+    const expirationDate = new Date(2050, 12, 12);
+    this.cookieService.putObject('killerapp', authResponse, { expires: expirationDate });
   }
 
   clearLoggedUser(): void {
