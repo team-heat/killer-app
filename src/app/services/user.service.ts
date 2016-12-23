@@ -22,20 +22,6 @@ export class UserService implements OnInit {
     this.appRouter = appRouter;
   }
 
-  get loggedUser(): string {
-    const loggedUser = this.userStorage.getLoggedUser();
-    if (loggedUser) {
-      return loggedUser.username;
-    }
-
-    return undefined;
-  }
-
-  isLogged(): boolean {
-    const loggedUser = this.userStorage.getLoggedUser();
-    return loggedUser ? true : false;
-  }
-
   // Create server Router
   // Only Redirect on Successful Login
   // Display message on incorrect login
@@ -60,10 +46,7 @@ export class UserService implements OnInit {
     return this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
   }
 
-  getUserDetails(): Observable<Response> {
-    const cookie = this.userStorage.getLoggedUser();
-    const token = cookie.auth_token;
-
+  getUserDetails(token: string): Observable<Response> {
     //  { headers: new Headers({ 'Authorization': 'JWT' + token }) }   
     return this.httpService.get('/api/users', { headers: new Headers({ 'Authorization': `JWT ${token}` }) });
   }

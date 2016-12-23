@@ -10,6 +10,20 @@ export class UserStorageService {
     this.cookieService = cookieService;
   }
 
+  get loggedUser(): string {
+    const loggedUser = this.getLoggedUser();
+    if (loggedUser) {
+      return loggedUser.username;
+    }
+
+    return undefined;
+  }
+
+  isLogged(): boolean {
+    const loggedUser = this.getLoggedUser();
+    return loggedUser ? true : false;
+  }
+
   getLoggedUser(): AuthenticationResponseModel {
     const cookieContent = this.cookieService.getObject('killerapp');
     return cookieContent as AuthenticationResponseModel;
