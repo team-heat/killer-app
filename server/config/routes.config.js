@@ -3,18 +3,11 @@
 const express = require('express');
 const passport = require('passport');
 const path = require('path');
-const jsonwebtoken = require('jsonwebtoken');
 
-module.exports = function ({app, userData, config}) {
+module.exports = function ({app, userController}) {
   const apiRouter = new express.Router();
   apiRouter
-    .post('/users', passport.authenticate('local'), function (req, res) {
-      // Login user here
-      res.status(200).json({
-        username: req.user.username,
-        auth_token: jsonwebtoken.sign(req.user, config.webTokenSecret)
-      });
-    })
+    .post('/users', passport.authenticate('local'), userController.login)
     .put('/users', passport.authenticate('jwt'), function (req, res) {
       // Create user here
       res.status(200).send('PUT /api/users');
