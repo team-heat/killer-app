@@ -31,11 +31,7 @@ export class SingleItemComponent implements OnInit {
             .map((params: Params) => params['id'])
             .subscribe(x => id = x)
 
-        console.log(id)
-
         this.item = this.mockedItem;
-
-        console.log(this.item.pictures)
 
         // this.service.getSingleItem(id)
         //     .subscribe(x => this.item = x);
