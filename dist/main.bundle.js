@@ -1,6 +1,6 @@
 webpackJsonp([0,4],{
 
-/***/ 203:
+/***/ 136:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -132,9 +132,13 @@ var User = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_user_model__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(681);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_user_model__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(136);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -148,33 +152,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var LoginComponent = (function () {
-    function LoginComponent(userService) {
+    function LoginComponent(userService, userStorage, appRouter) {
         this.userService = userService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_0__models_user_model__["a" /* User */]();
+        this.appRouter = appRouter;
+        this.userStorage = userStorage;
+        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_user_model__["a" /* User */]();
         this.isLoading = false;
-        this.images = [
-            'https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg',
-            'https://c1.staticflickr.com/7/6107/6381966401_032df5fe1e_b.jpg',
-            'https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg'
-        ];
     }
     LoginComponent.prototype.ngOnInit = function () {
     };
     LoginComponent.prototype.onSubmit = function () {
+        var _this = this;
         this.isLoading = true;
-        this.userService.loginUser(this.user);
+        this.userService.loginUser(this.user)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (response) {
+            if (!response.username || !response.auth_token) {
+                throw new Error('Incorrect response');
+            }
+            _this.userStorage.setLoggedUser(response);
+        }, function (err) {
+            console.log(err);
+        }, function () {
+            _this.appRouter.navigateByUrl('profile');
+        });
     };
     LoginComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-login',
             template: __webpack_require__(672),
             styles: [__webpack_require__(663)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _c) || Object])
     ], LoginComponent);
     return LoginComponent;
-    var _a;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
 
@@ -185,8 +201,8 @@ var LoginComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_storage_service__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_storage_service__ = __webpack_require__(136);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LogoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -248,6 +264,7 @@ var ProfileComponent = (function () {
     }
     ProfileComponent.prototype.ngOnInit = function () {
         this.userService.getUserDetails()
+            .map(function (res) { return res.json(); })
             .subscribe(function (response) {
             console.log(response);
         });
@@ -364,10 +381,10 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_navigation_component__ = __webpack_require__(495);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_user_service__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__users_users_module__ = __webpack_require__(498);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_user_storage_service__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_user_storage_service__ = __webpack_require__(136);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -478,7 +495,7 @@ var HomeModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_component__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HomeRouterModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -715,7 +732,7 @@ var UsersModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__(323);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register_component__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(72);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UsersRouterModuler; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -967,10 +984,8 @@ module.exports = __webpack_require__(383);
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__user_storage_service__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(681);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__user_storage_service__ = __webpack_require__(136);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -981,7 +996,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -1027,28 +1041,15 @@ var UserService = (function () {
     // Only Redirect on Successful Login
     // Display message on incorrect login
     UserService.prototype.loginUser = function (user) {
-        var _this = this;
         // for testing 
         // Observable.of(user)
-        this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders })
-            .map(function (res) { return res.json(); })
-            .subscribe(function (response) {
-            if (!response.username || !response.auth_token) {
-                throw new Error('Incorrect response');
-            }
-            _this.userStorage.setLoggedUser(response);
-        }, function (err) {
-            console.log(err);
-        }, function () {
-            _this.appRouter.navigateByUrl('profile');
-        });
+        return this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
     };
     UserService.prototype.getUserDetails = function () {
         var cookie = this.userStorage.getLoggedUser();
         var token = cookie.auth_token;
         //  { headers: new Headers({ 'Authorization': 'JWT' + token }) }   
-        return this.httpService.get('/api/users', { headers: new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Authorization': "JWT " + token }) })
-            .map(function (res) { return res.json(); });
+        return this.httpService.get('/api/users', { headers: new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Authorization': "JWT " + token }) });
     };
     UserService.prototype.ngOnInit = function () {
     };

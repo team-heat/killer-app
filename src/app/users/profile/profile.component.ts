@@ -15,9 +15,9 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getUserDetails()
+      .map(res => res.json())
       .subscribe(response => {
         console.log(response);
       });
   }
-
 }
