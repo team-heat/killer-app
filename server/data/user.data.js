@@ -2,14 +2,6 @@
 
 'use strict';
 
-const jsonwebtoken = require('jsonwebtoken');
-
-const testUser = {
-  _id: 150,
-  username: '123',
-  password: '123'
-};
-
 module.exports = function ({User}) {
   function createUser(user) {
     const newUser = User.createUser(user);
