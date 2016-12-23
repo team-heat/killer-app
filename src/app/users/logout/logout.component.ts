@@ -8,13 +8,10 @@ import { UserStorageService } from './../../services/user-storage.service';
   styleUrls: ['./logout.component.scss']
 })
 export class LogoutComponent implements OnInit {
-  appRouter: Router;
-  userStorage: UserStorageService;
 
-  constructor(appRouter: Router, userStorage: UserStorageService) {
-    this.appRouter = appRouter;
-    this.userStorage = userStorage;
-  }
+  constructor(
+    private appRouter: Router,
+    private userStorage: UserStorageService) { }
 
   ngOnInit() {
     this.userStorage.clearLoggedUser();

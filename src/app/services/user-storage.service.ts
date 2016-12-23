@@ -4,10 +4,21 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UserStorageService {
-  cookieService: CookieService;
 
-  constructor(cookieService: CookieService) {
-    this.cookieService = cookieService;
+  constructor(private cookieService: CookieService) {}
+
+  get loggedUser(): string {
+    const loggedUser = this.getLoggedUser();
+    if (loggedUser) {
+      return loggedUser.username;
+    }
+
+    return undefined;
+  }
+
+  isLogged(): boolean {
+    const loggedUser = this.getLoggedUser();
+    return loggedUser ? true : false;
   }
 
   getLoggedUser(): AuthenticationResponseModel {

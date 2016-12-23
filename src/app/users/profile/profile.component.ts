@@ -1,5 +1,8 @@
+import 'rxjs/add/operator/map';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../../services/user.service';
+import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,17 +10,25 @@ import { UserService } from './../../services/user.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  userService: UserService;
 
-  constructor(userService: UserService) {
-    this.userService = userService;
-  }
+  constructor(
+    private userService: UserService,
+    private userStorage: UserStorageService,
+    private appRouter: Router) { }
 
   ngOnInit() {
-    this.userService.getUserDetails()
+    if (!this.userStorage.isLogged()) {
+      this.appRouter.navigateByUrl('login');
+      return;
+    }
+
+    const cookie = this.userStorage.getLoggedUser();
+    const token = cookie.auth_token;
+
+    this.userService.getUserDetails(token)
+      .map(res => res.json())
       .subscribe(response => {
         console.log(response);
       });
   }
-
 }
