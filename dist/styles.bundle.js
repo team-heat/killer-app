@@ -394,7 +394,7 @@ exports = module.exports = __webpack_require__(365)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nbody {\n  background-size: 100%;\n  background-image: url(" + __webpack_require__(698) + ");\n  background-repeat: repeat;\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody {\r\n  background-image: url(" + __webpack_require__(698) + ");\r\n  background-repeat: repeat;\r\n}\r\n", ""]);
 
 // exports
 
@@ -430,9 +430,9 @@ module.exports = __webpack_require__.p + "448c34a56d699c29117adc64c43affeb.woff2
 /***/ },
 
 /***/ 698:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-module.exports = __webpack_require__.p + "0ed641d8fdd8e73555132e5ad9429564.jpg";
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAAAAACMmsGiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABdJREFUCB1jUlGRkWH6CQRMf//y8oJZAFUaCmUwcfODAAAAAElFTkSuQmCC"
 
 /***/ },
 
