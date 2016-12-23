@@ -28,7 +28,8 @@ var UserStorageService = (function () {
         return cookieContent;
     };
     UserStorageService.prototype.setLoggedUser = function (authResponse) {
-        this.cookieService.putObject('killerapp', authResponse, { expires: new Date(2017, 12, 30) });
+        var expirationDate = new Date(2050, 12, 12);
+        this.cookieService.putObject('killerapp', authResponse, { expires: expirationDate });
     };
     UserStorageService.prototype.clearLoggedUser = function () {
         this.cookieService.remove('killerapp');
@@ -227,8 +228,8 @@ var LogoutComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_user_service__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(95);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -252,12 +253,12 @@ var ProfileComponent = (function () {
         });
     };
     ProfileComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-profile',
             template: __webpack_require__(674),
             styles: [__webpack_require__(665)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object])
     ], ProfileComponent);
     return ProfileComponent;
     var _a;
@@ -1045,7 +1046,7 @@ var UserService = (function () {
     UserService.prototype.getUserDetails = function () {
         var cookie = this.userStorage.getLoggedUser();
         var token = cookie.auth_token;
-        //  { headers: new Headers({ 'Authorization': token }) }   
+        //  { headers: new Headers({ 'Authorization': 'JWT' + token }) }   
         return this.httpService.get('/api/users', { headers: new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Authorization': "JWT " + token }) })
             .map(function (res) { return res.json(); });
     };
