@@ -5,7 +5,11 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class UserStorageService {
 
-  constructor(private cookieService: CookieService) {}
+  private cookieName; string;
+
+  constructor(private cookieService: CookieService) {
+    this.cookieName = 'com.herokuapps.killerapp';
+  }
 
   get loggedUser(): string {
     const loggedUser = this.getLoggedUser();
@@ -22,16 +26,16 @@ export class UserStorageService {
   }
 
   getLoggedUser(): AuthenticationResponseModel {
-    const cookieContent = this.cookieService.getObject('killerapp');
+    const cookieContent = this.cookieService.getObject(this.cookieName);
     return cookieContent as AuthenticationResponseModel;
   }
 
   setLoggedUser(authResponse: AuthenticationResponseModel) {
     const expirationDate = new Date(2050, 12, 12);
-    this.cookieService.putObject('killerapp', authResponse, { expires: expirationDate });
+    this.cookieService.putObject(this.cookieName, authResponse, { expires: expirationDate });
   }
 
   clearLoggedUser(): void {
-    this.cookieService.remove('killerapp');
+    this.cookieService.remove(this.cookieName);
   }
 }
