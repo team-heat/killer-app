@@ -17,7 +17,7 @@ module.exports = function ({ItemListing}) {
   ];
 
   function createItemListing(listing) {
-    const newListing = ItemListing.createItemListing(listing)
+    const newListing = ItemListing.createItemListing(listing);
     return new Promise((resolve, reject) => {
       newListing.save((err) => {
         if (err) {
