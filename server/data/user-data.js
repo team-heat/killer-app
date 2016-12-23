@@ -12,15 +12,44 @@ const testUser = {
 
 module.exports = function ({User}) {
   function createUser(user) {
-    return new Promise(resolve => resolve(jsonwebtoken.sign(testUser, 'secret')));
+    const newUser = User.createUser(user);
+    return new Promise((resolve, reject) => {
+      newUser.save((err) => {
+        if (err) {
+          return reject(err);
+        }
+
+        return resolve(newUser);
+      });
+    });
   }
 
   function getUserByUsername(username) {
-    return new Promise(resolve => resolve(testUser));
+    return new Promise((resolve, reject) => {
+      User.findOne({
+        username
+      }, (err, user) => {
+        if (err) {
+          return reject(err);
+        }
+
+        return resolve(user);
+      });
+    });
   }
 
   function getUserById(id) {
-    return new Promise(resolve => resolve(testUser));
+    return new Promise((resolve, reject) => {
+      User.findOne({
+        _id: id
+      }, (err, user) => {
+        if (err) {
+          return reject(err);
+        }
+
+        return resolve(user);
+      });
+    });
   }
 
   return {

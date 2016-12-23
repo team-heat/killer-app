@@ -5,19 +5,23 @@ const passport = require('passport');
 const path = require('path');
 const jsonwebtoken = require('jsonwebtoken');
 
-module.exports = function ({app, userData}) {
+module.exports = function ({app, userData, config}) {
   const apiRouter = new express.Router();
   apiRouter
     .post('/users', passport.authenticate('local'), function (req, res) {
       // Login user here
       res.status(200).json({
         username: req.user.username,
-        auth_token: jsonwebtoken.sign(req.user, 'secret')
+        auth_token: jsonwebtoken.sign(req.user, config.sessionSecret)
       });
     })
     .put('/users', passport.authenticate('jwt'), function (req, res) {
       // Create user here
       res.status(200).send('PUT /api/users');
+    })
+    .get('/users', passport.authenticate('jwt'), function (req, res) {
+      console.log(req.user);
+      res.status(200).json({ message: 'GET /api/users' });
     })
     .get('/gallery', function (req, res) {
       res.status(200).json({
