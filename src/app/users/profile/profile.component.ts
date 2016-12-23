@@ -1,3 +1,4 @@
+import 'rxjs/add/operator/map';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../../services/user.service';

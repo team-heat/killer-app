@@ -12,17 +12,15 @@ import { UserStorageService } from './../../services/user-storage.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  userService: UserService;
-  appRouter: Router;
-  userStorage: UserStorageService;
 
   user: User;
   isLoading: boolean;
 
-  constructor(userService: UserService, userStorage: UserStorageService, appRouter: Router) {
-    this.userService = userService;
-    this.appRouter = appRouter;
-    this.userStorage = userStorage;
+  constructor(
+    private userService: UserService,
+    private userStorage: UserStorageService,
+    private appRouter: Router) {
+
     this.user = new User();
     this.isLoading = false;
   }

@@ -9,18 +9,13 @@ import { UserStorageService } from './user-storage.service';
 
 @Injectable()
 export class UserService implements OnInit {
-  httpService: Http;
-  appRouter: Router;
-  userStorage: UserStorageService;
-  registerResponse: Observable<Response>;
 
   private contentTypeHeaders = new Headers({ 'Content-Type': 'application/json' });
 
-  constructor(httpService: Http, userStorage: UserStorageService, appRouter: Router) {
-    this.httpService = httpService;
-    this.userStorage = userStorage;
-    this.appRouter = appRouter;
-  }
+  constructor(
+    private httpService: Http,
+    private userStorage: UserStorageService,
+    private appRouter: Router) { }
 
   // Create server Router
   // Only Redirect on Successful Login
