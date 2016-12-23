@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CarouselListComponent } from './../carousel-list/carousel-list.component';
 
 import { SingleItemComponent } from './single-item/single-item.component';
+import { ItemsCollectionComponent } from './items-collection/items-collection.component';
 import { ItemsRouterModule } from './items.routes';
 
 import { ItemsService } from './../services/item.service';
@@ -20,6 +21,7 @@ import { ItemsService } from './../services/item.service';
     ],
     declarations: [
         SingleItemComponent,
+        ItemsCollectionComponent,
         CarouselListComponent
     ],
     providers: [
