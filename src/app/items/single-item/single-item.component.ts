@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Params } from '@angular/router'
 
 import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
 
@@ -24,8 +24,35 @@ export class SingleItemComponent implements OnInit {
     }
 
     ngOnInit() {
-        let id = +this.route.params['id'];
-        this.service.getSingleItem(id)
-            .subscribe(x => this.item = x);
+
+        let id;
+
+        this.route.params
+            .map((params: Params) => params['id'])
+            .subscribe(x => id = x)
+
+        console.log(id)
+
+        this.item = this.mockedItem;
+
+        console.log(this.item.pictures)
+
+        // this.service.getSingleItem(id)
+        //     .subscribe(x => this.item = x);
+    }
+
+    private mockedItem = {
+        id: 13,
+        brand: 'Lexus',
+        model: 'LC 500h',
+        year: "2018",
+        pictures: [
+            'http://www.lexus-int.com/models/LC/images/LC-500h.jpg',
+            'https://i.ytimg.com/vi/7v9QpFaQHjE/maxresdefault.jpg'
+            ],
+        price: 100000
     }
 }
+
+
+

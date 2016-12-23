@@ -10,11 +10,19 @@ export class ItemsService {
         this.httpService = httpService;
     }
 
-    // TODO url finishing with /
-    private url = '';
+    // single item server route
+    private singleUrl = '/api/gallery/'; // +id
 
-    getSingleItem(id: any) :Observable<Response> {
-        return this.httpService.get(this.url + id)
+    // collection of items server route
+    private collectionUrl = '/api/gallery'
+
+    getSingleItem(id: string | number): Observable<Response> {
+        return this.httpService.get(this.singleUrl + id)
+            .map((res: Response) => res.json());
+    }
+
+    getCollectionOfItems(): Observable<Response> {
+        return this.httpService.get(this.collectionUrl)
             .map((res: Response) => res.json());
     }
 }

@@ -1,5 +1,6 @@
-<h1>Single item</h1>
 <div>
-    <app-carousel *ngIf="this.item && this.item.pictures && this.item.pictures.length > 0"></app-carousel>
-    <div *ngIf="!this.item && !this.item.pictures && !this.item.pictures.length > 0"></div>
+    <app-carousel *ngIf="this.item && this.item.pictures && this.item.pictures.length > 0" [mylist]="this.item.pictures"></app-carousel>
+    <!--<div *ngIf="!this.item && !this.item.pictures && !this.item.pictures.length > 0"></div>-->
+    <h1>{{this.item.brand}} {{this.item.model}} {{this.item.year}}</h1>
+    <span>Price: ${{this.item.price}}</span>
 </div>
