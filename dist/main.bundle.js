@@ -65,7 +65,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user.service.js.map
 
 /***/ },
 
@@ -99,7 +99,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -134,7 +134,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -148,7 +148,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -216,7 +216,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -260,7 +260,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -319,7 +319,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -366,7 +366,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -403,7 +403,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/main.js.map
 
 /***/ },
 
@@ -483,7 +483,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -524,7 +524,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -563,7 +563,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -577,7 +577,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/index.js.map
 
 /***/ },
 
@@ -627,7 +627,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -662,7 +662,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -697,7 +697,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -758,7 +758,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -807,7 +807,7 @@ var UsersRouterModuler = (function () {
     ], UsersRouterModuler);
     return UsersRouterModuler;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -823,7 +823,7 @@ var UsersRouterModuler = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -879,7 +879,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -949,35 +949,35 @@ module.exports = ""
 /***/ 669:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>"
+module.exports = "<div id=\"root\" class=\"container\">\n    <app-navigation></app-navigation>\n    <div id=\"content\">\n        <router-outlet></router-outlet>\n    </div>\n</div>"
 
 /***/ },
 
 /***/ 670:
 /***/ function(module, exports) {
 
-module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n  <a routerLink=\"mock\"  class=\"btn <btn-warning></btn-warning>\">Click FFS</a>\r\n</section>"
+module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\n  <a routerLink=\"mock\"  class=\"btn <btn-warning></btn-warning>\">Click FFS</a>\n</section>"
 
 /***/ },
 
 /***/ 671:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n      aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li [class.active]=\"activeItem == 'Home'\" (click)=\"setActiveItem('Home')\"><a routerLink=\"/\">Home</a></li>\r\n      <li [class.active]=\"activeItem == 'Browse'\" (click)=\"setActiveItem('Browse')\"><a routerLink=\"/\">Browse</a></li>\r\n      <li [class.active]=\"activeItem == 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li><a href=\"#\">Action</a></li>\r\n          <li><a href=\"#\">Another action</a></li>\r\n          <li><a href=\"#\">Something else here</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n        aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\n      aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    <a class=\"navbar-brand\">DREAMSTIME</a>\n  </div>\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav\">\n      <li [class.active]=\"activeItem == 'Home'\" (click)=\"setActiveItem('Home')\"><a routerLink=\"/\">Home</a></li>\n      <li [class.active]=\"activeItem == 'Browse'\" (click)=\"setActiveItem('Browse')\"><a routerLink=\"/\">Browse</a></li>\n      <li [class.active]=\"activeItem == 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/\">Create</a></li>\n    </ul>\n\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li class=\"dropdown\">\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\n        <ul class=\"dropdown-menu\">\n          <li><a href=\"#\">Action</a></li>\n          <li><a href=\"#\">Another action</a></li>\n          <li><a href=\"#\">Something else here</a></li>\n          <li role=\"separator\" class=\"divider\"></li>\n          <li><a routerLink=\"logout\">Logout</a></li>\n        </ul>\n      </li>\n    </ul>\n  </div>\n  <!-- /.navbar-collapse -->\n  <div class=\"row\" *ngIf=\"hasLoggedUser == false\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\n        aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <h1>\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\n      <h1>\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n    </div>\n  </div>\n</nav>"
 
 /***/ },
 
 /***/ 672:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
+module.exports = "<p>\n  facebook-login works!\n</p>\n"
 
 /***/ },
 
 /***/ 673:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Login Form</h2>\r\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit(); registerForm.reset()\">\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Username: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Password: </span>\r\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      <button class=\"form-control\" type=\"submit\">Register</button>\r\n    </label>\r\n  </div>\r\n</form>\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
+module.exports = "<h2>Login Form</h2>\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit(); registerForm.reset()\">\n  <div class=\"form-group\">\n    <label> \n      <span>Username: </span>\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Password: </span>\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label>\n      <button class=\"form-control\" type=\"submit\">Register</button>\n    </label>\n  </div>\n</form>\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\n\n<!-- Carousel testing DELETE -->\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n  <ol class=\"carousel-indicators\">\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\n  </ol>\n  <div class=\"carousel-inner\" role=\"listbox\">\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\n      <img [src]=\"img\" alt=\"slide\">\n    </div>\n  </div>\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>-->"
 
 /***/ },
 
@@ -991,21 +991,21 @@ module.exports = "<p>\n  logout works!\n</p>\n"
 /***/ 675:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  profile works!\r\n</p>\r\n"
+module.exports = "<p>\n  profile works!\n</p>\n"
 
 /***/ },
 
 /***/ 676:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Registration Form</h2>\r\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit(); registerForm.reset()\">\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Username: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Password: </span>\r\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      <button class=\"form-control\" type=\"submit\">Register</button>\r\n    </label>\r\n  </div>\r\n</form>\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+module.exports = "<h2>Registration Form</h2>\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit(); registerForm.reset()\">\n  <div class=\"form-group\">\n    <label> \n      <span>Username: </span>\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Password: </span>\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your username\" required minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label>\n      <button class=\"form-control\" type=\"submit\">Register</button>\n    </label>\n  </div>\n</form>\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
 
 /***/ },
 
 /***/ 677:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
+module.exports = "<p>\n  users works!\n</p>\n"
 
 /***/ },
 
@@ -1074,7 +1074,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user-storage.service.js.map
 
 /***/ }
 

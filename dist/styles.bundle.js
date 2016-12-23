@@ -394,7 +394,7 @@ exports = module.exports = __webpack_require__(365)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody {\r\n  background-size: 100%;\r\n  background-image: url(" + __webpack_require__(698) + ");\r\n  background-repeat: repeat;\r\n}\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nbody {\n  background-size: 100%;\n  background-image: url(" + __webpack_require__(698) + ");\n  background-repeat: repeat;\n}\n", ""]);
 
 // exports
 
