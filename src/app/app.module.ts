@@ -32,7 +32,8 @@ import { ItemsModule } from './items/items.module';
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }
-    ])
+    ],
+      { useHash: true })
   ],
   providers: [
     UserService
