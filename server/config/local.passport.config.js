@@ -3,7 +3,7 @@
 const LocalStrategy = require('passport-local');
 const passport = require('passport');
 
-module.exports = function ({app, userData}) {
+module.exports = function({ app, userData }) {
   app.use(passport.initialize());
   app.use(passport.session());
 

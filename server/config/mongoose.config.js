@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-module.exports = function ({config}) {
+module.exports = function({ config }) {
   mongoose.connect(config.connectionString, (err) => {
     if (err) {
       console.log(err);
