@@ -15,7 +15,7 @@ module.exports = function ({app, userData}) {
       .then((user) => {
         if (user) {
           return {
-            isAuthenticated: true,
+            isAuthenticated: user.isAuthenticated(username, password),
             user
           };
         }

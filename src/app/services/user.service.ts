@@ -41,7 +41,6 @@ export class UserService implements OnInit {
   // Only Redirect on Successful Login
   // Display message on incorrect login
   registerUser(user: User): void {
-    //  { headers: new Headers({ 'Authorization': token }) }
     // for testing 
     this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders })
       .subscribe((responseUser: any) => {
@@ -72,6 +71,15 @@ export class UserService implements OnInit {
       }, () => {
         this.appRouter.navigateByUrl('profile');
       });
+  }
+
+  getUserDetails(): Observable<Response> {
+    const cookie = this.userStorage.getLoggedUser();
+    const token = cookie.auth_token;
+
+    //  { headers: new Headers({ 'Authorization': token }) }   
+    return this.httpService.get('/api/users', { headers: new Headers({ 'Authorization': `JWT ${token}` }) })
+      .map(res => res.json());
   }
 
   ngOnInit() {

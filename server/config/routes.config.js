@@ -19,6 +19,10 @@ module.exports = function ({app, userData, config}) {
       // Create user here
       res.status(200).send('PUT /api/users');
     })
+    .get('/users', passport.authenticate('jwt'), function (req, res) {
+      console.log(req.user);
+      res.status(200).json({ message: 'GET /api/users' });
+    })
     .get('/gallery', function (req, res) {
       res.status(200).json({
         message: 'GET /api/gallery'

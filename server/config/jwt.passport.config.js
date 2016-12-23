@@ -13,18 +13,16 @@ module.exports = function ({app, userData, config}) {
   opts.secretOrKey = config.sessionSecret;
 
   passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
-    console.log(jwt_payload);
-    userData.getUserById({ id: jwt_payload.sub })
-      .then((err, user) => {
-        if (err) {
-          return done(err, false);
-        }
-
+    userData.getUserById(jwt_payload._doc._id)
+      .then((user) => {
         if (user) {
           return done(null, user);
         }
 
         return done(null, false);
+      })
+      .catch((err) => {
+        done(err, false);
       });
   }));
 };
