@@ -77,7 +77,7 @@ export class UserService implements OnInit {
     const cookie = this.userStorage.getLoggedUser();
     const token = cookie.auth_token;
 
-    //  { headers: new Headers({ 'Authorization': token }) }   
+    //  { headers: new Headers({ 'Authorization': 'JWT' + token }) }   
     return this.httpService.get('/api/users', { headers: new Headers({ 'Authorization': `JWT ${token}` }) })
       .map(res => res.json());
   }
