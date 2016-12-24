@@ -259,7 +259,7 @@ var LoginComponent = (function () {
             var that = _this;
             setTimeout(function () {
                 that.appRouter.navigateByUrl('profile');
-            }, 500);
+            }, 1000);
         });
     };
     LoginComponent = __decorate([
@@ -443,7 +443,7 @@ var RegisterComponent = (function () {
             var that = _this;
             setTimeout(function () {
                 that.appRouter.navigateByUrl('login');
-            }, 500);
+            }, 1000);
         });
     };
     RegisterComponent = __decorate([
