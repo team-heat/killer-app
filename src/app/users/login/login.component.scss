@@ -7,8 +7,11 @@ input {
   background-color: rgba(0, 0, 0, 0.77);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  &.ng-valid {
+  &.ng-valid.ng-touched {
     border-color: #3c763d;
+  }
+  &.ng-invalid.ng-touched {
+    border-color: #F55145;
   }
 }
 

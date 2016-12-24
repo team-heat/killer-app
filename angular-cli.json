@@ -19,6 +19,8 @@
       "mobile": false,
       "styles": [
         "styles.css",
+        "../stylesheets/animate.css",
+        "../stylesheets/hover.scss",
         "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
