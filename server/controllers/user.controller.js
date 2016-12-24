@@ -19,7 +19,8 @@ module.exports = function ({userData, config}) {
   }
 
   function profile(req, res) {
-    res.status(200).json({ message: 'GET /api/users' });
+    const user = req.user;
+    res.status(200).json(user);
   }
 
   function register(req, res) {
