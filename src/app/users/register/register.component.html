@@ -25,14 +25,20 @@
     </label>
   </div>
   <div class="form-group">
+    <label> 
+      <span>Age: </span>
+      <input class="form-control" type="number" name="Last Name" [(ngModel)]="user.age" placeholder="Enter your age" min="0" max="120" required>
+    </label>
+  </div>
+  <div class="form-group">
     <div class="dropdown">
-      <button *ngIf="user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="true" name="gender">
+      <button *ngIf="user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="true" name="gender">
           {{user.gender}}
         <span class="caret"></span>
       </button>
-      <button *ngIf="!user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="true" name="gender">
+      <button *ngIf="!user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="true" name="gender">
           Gender
         <span class="caret"></span>
       </button>
