@@ -28,6 +28,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     if (this.userStorage.isLogged()) {
       this.appRouter.navigateByUrl('profile');
+      this.toastr.success('You are already logged in!');
     }
   }
 
