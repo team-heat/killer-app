@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck, ViewContainerRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, DoCheck, ViewContainerRef } from '@angular/core';
 import { ToastrNotificationService } from './../services/toastr-notification.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
@@ -20,21 +20,10 @@ export class ToastrNotificationsHandlerComponent implements OnInit, DoCheck {
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
-    while (this.toastrNotificationService.hasNotificationsInQueue) {
-      const nextToast = this.toastrNotificationService.nextNotificationInQueue;
-      if (nextToast.onInit === true) {
-        this.toastr[nextToast.method](nextToast.message);
-      }
-    }
-  }
-
   ngDoCheck() {
     while (this.toastrNotificationService.hasNotificationsInQueue) {
       const nextToast = this.toastrNotificationService.nextNotificationInQueue;
-      if (nextToast.onInit === false) {
-        this.toastr[nextToast.method](nextToast.message);
-      }
+      this.toastr[nextToast.method](nextToast.message);
     }
   }
 }

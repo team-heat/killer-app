@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ToastrNotificationsHandlerComponent } from './toastr-notifications-handler.component';
+import { ToastrNotificationsHandlerDirective } from './toastr-notifications-handler.component';
 
 describe('ToastrNotificationsHandlerComponent', () => {
-  let component: ToastrNotificationsHandlerComponent;
-  let fixture: ComponentFixture<ToastrNotificationsHandlerComponent>;
+  let component: ToastrNotificationsHandlerDirective;
+  let fixture: ComponentFixture<ToastrNotificationsHandlerDirective>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToastrNotificationsHandlerComponent ]
+      declarations: [ ToastrNotificationsHandlerDirective ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ToastrNotificationsHandlerComponent);
+    fixture = TestBed.createComponent(ToastrNotificationsHandlerDirective);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
