@@ -1,7 +1,6 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
 import { User } from './../models/user.model';
 import { UserService } from './../services/user.service';
-import { UserStorageService } from './../services/user-storage.service';
+import { Component, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -9,22 +8,24 @@ import { UserStorageService } from './../services/user-storage.service';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit, DoCheck {
-
+  userService: UserService;
   activeItem: string;
   hasLoggedUser: boolean;
-  loggedUserName: string;
+  loggedUser: User;
 
-  constructor(private userStorage: UserStorageService) { }
+  constructor(userService: UserService) {
+    this.userService = userService;
+  }
 
   ngOnInit() {
     this.activeItem = 'Home';
-    this.hasLoggedUser = this.userStorage.isLogged();
-    this.loggedUserName = this.userStorage.loggedUser;
+    this.hasLoggedUser = this.userService.isLogged();
+    this.loggedUser = this.userService.loggedUser;
   }
 
   ngDoCheck() {
-    this.hasLoggedUser = this.userStorage.isLogged();
-    this.loggedUserName = this.userStorage.loggedUser;
+    this.hasLoggedUser = this.userService.isLogged();
+    this.loggedUser = this.userService.loggedUser;
   }
 
   setActiveItem(selectedItem: string) {

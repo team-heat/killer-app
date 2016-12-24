@@ -1,42 +1,82 @@
-import { AuthenticationResponseModel } from './../models/authentication-response.model';
-import { Http, Response, Headers } from '@angular/http';
-import { Injectable, OnInit } from '@angular/core';
 import { LoginComponent } from './../users/login/login.component';
+import { Http, Response } from '@angular/http';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { User } from './../models/user.model';
-import { UserStorageService } from './user-storage.service';
 
 @Injectable()
 export class UserService implements OnInit {
+  httpService: Http;
+  appRouter: Router;
+  registerResponse: Observable<Response>;
 
-  private contentTypeHeaders = new Headers({ 'Content-Type': 'application/json' });
+  private _loggedUser: User;
 
-  constructor(
-    private httpService: Http,
-    private userStorage: UserStorageService,
-    private appRouter: Router) { }
+  // TO BE DELETED
+  users: User[];
 
-  // Create server Router
-  // Only Redirect on Successful Login
-  // Display message on incorrect login
-  registerUser(user: User): Observable<Response> {
-    // for testing 
-    return this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
+  constructor(httpService: Http, appRouter: Router) {
+    this.httpService = httpService;
+    this.appRouter = appRouter;
+
+    this.users = [];
+  }
+
+  get loggedUser() {
+    return this._loggedUser;
+  }
+
+  isLogged(): boolean {
+    if (this._loggedUser) {
+      return true;
+    }
+
+    return false;
   }
 
   // Create server Router
   // Only Redirect on Successful Login
   // Display message on incorrect login
-  loginUser(user: User): Observable<Response> {
+  registerUser(user: User): void {
     // for testing 
-    // Observable.of(user)
-    return this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
+    Observable.of(user)
+      .subscribe((responseUser) => {
+        console.log(responseUser);
+        const newUser = new User();
+        newUser.username = responseUser.username;
+        newUser.password = responseUser.password;
+
+        this._loggedUser = newUser;
+        this.users.push(newUser);
+        console.log(this.users);
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        this.appRouter.navigateByUrl('profile');
+      });
   }
 
-  getUserDetails(token: string): Observable<Response> {
-    //  { headers: new Headers({ 'Authorization': 'JWT' + token }) }   
-    return this.httpService.get('/api/users', { headers: new Headers({ 'Authorization': `JWT ${token}` }) });
+  // Create server Router
+  // Only Redirect on Successful Login
+  // Display message on incorrect login
+  loginUser(user: User): void {
+    // for testing 
+    Observable.of(user)
+      .subscribe((responseUser) => {
+        console.log(responseUser);
+        const newUser = new User();
+        newUser.username = responseUser.username;
+        newUser.password = responseUser.password;
+
+        this._loggedUser = newUser;
+        this.users.push(newUser);
+        console.log(this.users);
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        this.appRouter.navigateByUrl('profile');
+      });
   }
 
   ngOnInit() {

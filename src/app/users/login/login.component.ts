@@ -1,11 +1,6 @@
-import 'rxjs/add/operator/map';
-import { AuthenticationResponseModel } from './../../models/authentication-response.model';
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Response } from '@angular/http';
-import { Router } from '@angular/router';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
-import { UserStorageService } from './../../services/user-storage.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -13,17 +8,22 @@ import { UserStorageService } from './../../services/user-storage.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  userService: UserService;
   user: User;
   isLoading: boolean;
 
-  constructor(
-    private userService: UserService,
-    private userStorage: UserStorageService,
-    private appRouter: Router) {
+  images: string[];
 
+  constructor(userService: UserService) {
+    this.userService = userService;
     this.user = new User();
     this.isLoading = false;
+
+    this.images = [
+      'https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg',
+      'https://c1.staticflickr.com/7/6107/6381966401_032df5fe1e_b.jpg',
+      'https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg'
+    ];
   }
 
   ngOnInit() {
@@ -31,17 +31,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     this.isLoading = true;
-    this.userService.loginUser(this.user)
-      .map((res) => res.json())
-      .subscribe(response => {
-        if (!response.username || !response.auth_token) {
-          throw new Error('Incorrect response');
-        }
-        this.userStorage.setLoggedUser(response as AuthenticationResponseModel);
-      }, (err) => {
-        this.isLoading = false;
-      }, () => {
-        this.appRouter.navigateByUrl('profile');
-      });
+    this.userService.loginUser(this.user);
   }
 }

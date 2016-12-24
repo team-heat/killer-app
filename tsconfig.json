@@ -7,8 +7,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "noImplicitAny": true,
-        "suppressImplicitAnyInexErrors": true,
-        "allowSyntheticDefaultImports": true
+        "suppressImplicitAnyInexErrors": true
     },
     "compileOnSave": false,
     "exclude": [

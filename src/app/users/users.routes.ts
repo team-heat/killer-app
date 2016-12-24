@@ -1,4 +1,3 @@
-import { LogoutComponent } from './logout/logout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -9,8 +8,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'facebook-login', component: ProfileComponent },
-  { path: 'logout', component: LogoutComponent }
+  { path: 'facebook-login', component: ProfileComponent }
 ];
 
 @NgModule({
