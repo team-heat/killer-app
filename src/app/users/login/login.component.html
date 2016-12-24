@@ -1,25 +1,27 @@
 <div class="login-wrapper">
-  <h2>Log In</h2>
-  <form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
-    <div class="form-group">
-      <label> 
+  <h2 id="component-header">Sign In</h2>
+  <div class="inner-wrapper">
+    <form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
+      <div class="form-group">
+        <label> 
       <input #ngName="ngModel" class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
       <div class="invalid-input-msg animated jello" [hidden]="ngName.valid || ngName.untouched">Your username must be between</div>
     </label>
-    </div>
-    <div class="form-group">
-      <label> 
+      </div>
+      <div class="form-group">
+        <label> 
       <input #ngPass="ngModel" class="form-control" type="password" name="password" [(ngModel)]="user.password" placeholder="Enter your password" required minlength="6" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
       <div class="invalid-input-msg animated jello" [hidden]="ngPass.valid || ngPass.untouched">Your password must be between</div>
     </label>
-    </div>
-    <div class="form-group">
-      <label>
+      </div>
+      <div class="form-group">
+        <label>
       <button class="btn btn-success" [disabled]="ngPass.invalid || ngName.invalid" type="submit">Submit</button>
     </label>
-    </div>
-  </form>
-  <img *ngIf="isLoading === true" id="loading" src="../../../assets/load.gif" alt="Be patient..." width="50px" />
+      </div>
+    </form>
+    <img *ngIf="isLoading === true" id="loading" src="../../../assets/load.gif" alt="Be patient..." width="50px" />
+  </div>
 </div>
 
 <!-- Carousel testing DELETE -->
