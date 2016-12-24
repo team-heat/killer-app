@@ -13,14 +13,24 @@ const userSchema = new mongoose.Schema({
 });
 
 let UserModel;
-
+const femaleProfileImage = '/assets/profile-female.jpg';
+const maleProfileImage = '/assets/profile-male.jpg';
 userSchema.static('createUser', function (user) {
+  let imageUrl = user.image;
+  if (!imageUrl) {
+    if (user.gender === 'male') {
+      imageUrl = maleProfileImage;
+    } else {
+      imageUrl = femaleProfileImage;
+    }
+  }
+
   return new UserModel({
     username: user.username,
     password: user.password,
     firstName: user.firstName,
     lastName: user.lastName,
-    image: user.image,
+    image: imageUrl,
     gender: user.gender,
     email: user.email,
     favorites: user.favorites || [],
