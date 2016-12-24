@@ -23,11 +23,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService,
     private userStorage: UserStorageService,
     private appRouter: Router,
-    private toastr: ToastsManager,
-    private vRef: ViewContainerRef,
     private toastrNotificationService: ToastrNotificationService) {
 
-    this.toastr.setRootViewContainerRef(vRef);
     this.user = new User();
     this.isLoading = false;
   }
@@ -54,7 +51,7 @@ export class LoginComponent implements OnInit {
         this.toastrNotificationService.enqueueNotification({
           method: 'error',
           message: 'Incorrect username or password, please try again.',
-          heading: 'Error logging in.'
+          heading: 'Oops!'
         });
       }, () => {
         const that = this;

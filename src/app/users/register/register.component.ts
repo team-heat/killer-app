@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
@@ -19,12 +20,10 @@ export class RegisterComponent implements OnInit {
     private userService: UserService,
     private userStorage: UserStorageService,
     private appRouter: Router,
-    private toastr: ToastsManager,
-    private vRef: ViewContainerRef) {
+    private toastrNotificationService: ToastrNotificationService) {
 
     this.user = new User();
     this.isLoading = false;
-    this.toastr.setRootViewContainerRef(vRef);
   }
 
   ngOnInit() {
@@ -37,12 +36,23 @@ export class RegisterComponent implements OnInit {
     this.isLoading = true;
     this.userService.registerUser(this.user)
       .subscribe((responseUser: any) => {
-
+        this.toastrNotificationService.enqueueNotification({
+          method: 'success',
+          message: `Successful registration.`,
+          heading: 'Yay!'
+        });
       }, (err) => {
         this.isLoading = false;
-        this.toastr.error('Please try again.', 'Error');
+        this.toastrNotificationService.enqueueNotification({
+          method: 'error',
+          message: 'Please try again.',
+          heading: 'Oops!'
+        });
       }, () => {
-        this.appRouter.navigateByUrl('login');
+        const that = this;
+        setTimeout(function () {
+          that.appRouter.navigateByUrl('login');
+        }, 1000);
       });
   }
 }
