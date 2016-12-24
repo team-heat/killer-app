@@ -1,9 +1,9 @@
-import { UserStorageService } from './../../services/user-storage.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
+import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
   selector: 'app-register',
