@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrNotificationService } from './../../services/toastr-notification.service';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
+import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
   selector: 'app-register',
@@ -15,25 +18,41 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private appRouter: Router) {
+    private userStorage: UserStorageService,
+    private appRouter: Router,
+    private toastrNotificationService: ToastrNotificationService) {
 
-    this.userService = userService;
     this.user = new User();
     this.isLoading = false;
   }
 
   ngOnInit() {
+    if (this.userStorage.isLogged()) {
+      this.appRouter.navigateByUrl('profile');
+    }
   }
 
   onSubmit(): void {
     this.isLoading = true;
     this.userService.registerUser(this.user)
       .subscribe((responseUser: any) => {
-
+        this.toastrNotificationService.enqueueNotification({
+          method: 'success',
+          message: `Successful registration.`,
+          heading: 'Yay!'
+        });
       }, (err) => {
         this.isLoading = false;
+        this.toastrNotificationService.enqueueNotification({
+          method: 'error',
+          message: 'Please try again.',
+          heading: 'Oops!'
+        });
       }, () => {
-        this.appRouter.navigateByUrl('login');
+        const that = this;
+        setTimeout(function () {
+          that.appRouter.navigateByUrl('login');
+        }, 1000);
       });
   }
 }
