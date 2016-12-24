@@ -12,7 +12,7 @@ export class MockedComponent implements OnInit {
         'https://s-media-cache-ak0.pinimg.com/originals/1a/71/5f/1a715ff490253e5d5fd6bb825329d3d9.jpg',
         'https://s-media-cache-ak0.pinimg.com/originals/01/21/53/012153f878f71bd62f7e7c7464689b5b.jpg',
         'http://www.hd-wallpapersdownload.com/script/bulk-upload/amazing-car-photos.jpg'
-    ]
+    ];
 
     constructor() { }
 

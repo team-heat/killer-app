@@ -4,27 +4,15 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 
-module.exports = function ({app}) {
+module.exports = function ({ app, userController, itemListingController }) {
   const apiRouter = new express.Router();
   apiRouter
-    .post('/users', passport.authenticate('local'), function (req, res) {
-      // Login user here
-      res.status(200).send('POST /api/users');
-    })
-    .put('/users', function (req, res) {
-      // Create user here
-      res.status(200).send('PUT /api/users');
-    })
-    .get('/gallery', function (req, res) {
-      res.status(200).json({
-        message: 'GET /api/gallery'
-      });
-    })
-    .get('/gallery/:id', function (req, res) {
-      res.status(200).json({
-        message: 'GET /api/gallery/:id'
-      });
-    });
+    .get('/users', passport.authenticate('jwt'), userController.profile)
+    .post('/users', passport.authenticate('local'), userController.login)
+    .put('/users', userController.register)
+    .get('/gallery', itemListingController.index)
+    .post('/gallery', itemListingController.createListing)
+    .get('/gallery/:id', itemListingController.details);
 
   app.use('/api', apiRouter);
 

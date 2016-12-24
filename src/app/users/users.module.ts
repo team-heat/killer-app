@@ -8,6 +8,7 @@ import { UsersComponent } from './users.component';
 import { UserService } from './../services/user.service';
 import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     RegisterComponent,
     FacebookLoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    LogoutComponent
   ]
 })
 export class UsersModule { }
