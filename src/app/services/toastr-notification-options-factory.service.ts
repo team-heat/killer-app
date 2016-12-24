@@ -6,7 +6,7 @@ export class ToastrNotificationOptionsFactoryService {
 
   constructor() { }
 
-  createToastrNotificationOptions(method: string, message: string, heading: string, delay: number): ToastrNotificationOptions {
+  createToastrNotificationOptions(method = '', message = '', heading = '', delay = 0): ToastrNotificationOptions {
     method = method || 'info';
     message = message || 'Hello World!';
     heading = heading || 'Toastr';

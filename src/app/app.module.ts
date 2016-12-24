@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { ToastrNotificationOptionsFactoryService } from './services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './services/toastr-notification.service';
 import { ToastrNotificationsHandlerComponent } from './toastr-notifications-handler/toastr-notifications-handler.component';
 import { UserService } from './services/user.service';
@@ -42,7 +43,8 @@ import { UserStorageService } from './services/user-storage.service';
     UserStorageService,
     CookieService,
     UserStorageService,
-    ToastrNotificationService
+    ToastrNotificationService,
+    ToastrNotificationOptionsFactoryService
   ],
   bootstrap: [
     AppComponent

@@ -3,6 +3,7 @@ import { AuthenticationResponseModel } from './../../models/authentication-respo
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
 import { Router } from '@angular/router';
+import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
@@ -23,13 +24,25 @@ export class LoginComponent implements OnInit {
     private userService: UserService,
     private userStorage: UserStorageService,
     private appRouter: Router,
-    private toastrNotificationService: ToastrNotificationService) {
+    private toastrNotificationService: ToastrNotificationService,
+    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
 
     this.user = new User();
     this.isLoading = false;
   }
 
   ngOnInit() {
+    if (this.userStorage.isLogged()) {
+      const method = 'error';
+      const message = 'User is already logged in.';
+      const heading = 'Yay!';
+      const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+        .createToastrNotificationOptions(method, message, heading);
+
+      this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      
+      this.appRouter.navigateByUrl('profile');
+    }
   }
 
   onSubmit(): void {
@@ -40,21 +53,26 @@ export class LoginComponent implements OnInit {
         if (!response.username || !response.auth_token) {
           throw new Error('Incorrect response');
         }
+
         this.userStorage.setLoggedUser(response as AuthenticationResponseModel);
-        this.toastrNotificationService.enqueueNotification({
-          method: 'success',
-          message: `Welcome back ${this.userStorage.loggedUser}`,
-          heading: 'Yay!',
-          delay: 0
-        });
+
+        const method = 'success';
+        const message = `Welcome back ${this.userStorage.loggedUser}`;
+        const heading = 'Yay!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
       }, (err) => {
         this.isLoading = false;
-        this.toastrNotificationService.enqueueNotification({
-          method: 'error',
-          message: 'Incorrect username or password, please try again.',
-          heading: 'Oops!',
-          delay: 0
-        });
+
+        const method = 'error';
+        const message = 'Incorrect username or password, please try again.';
+        const heading = 'Oops!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
       }, () => {
         const that = this;
         setTimeout(function () {

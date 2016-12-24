@@ -1,5 +1,7 @@
+import 'rxjs/add/operator/map';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
@@ -20,7 +22,8 @@ export class RegisterComponent implements OnInit {
     private userService: UserService,
     private userStorage: UserStorageService,
     private appRouter: Router,
-    private toastrNotificationService: ToastrNotificationService) {
+    private toastrNotificationService: ToastrNotificationService,
+    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
 
     this.user = new User();
     this.isLoading = false;
@@ -28,6 +31,14 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     if (this.userStorage.isLogged()) {
+      const method = 'error';
+      const message = 'User is already logged in.';
+      const heading = 'Yay!';
+      const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+        .createToastrNotificationOptions(method, message, heading);
+
+      this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+
       this.appRouter.navigateByUrl('profile');
     }
   }
@@ -35,21 +46,25 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     this.isLoading = true;
     this.userService.registerUser(this.user)
+      .map((res) => res.json())
       .subscribe((responseUser: any) => {
-        this.toastrNotificationService.enqueueNotification({
-          method: 'success',
-          message: `Successful registration.`,
-          heading: 'Yay!',
-          delay: 0
-        });
+        const method = 'success';
+        const message = 'Successful registration.';
+        const heading = 'Yay!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
       }, (err) => {
         this.isLoading = false;
-        this.toastrNotificationService.enqueueNotification({
-          method: 'error',
-          message: 'Please try again.',
-          heading: 'Oops!',
-          delay: 0
-        });
+
+        const method = 'error';
+        const message = 'Please try again.';
+        const heading = 'Oops!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
       }, () => {
         const that = this;
         setTimeout(function () {
