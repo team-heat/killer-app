@@ -987,7 +987,7 @@ module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\"
 /***/ 696:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  logout works!\n</p>\n"
+module.exports = "<p>\r\n  logout works!\r\n</p>\r\n"
 
 /***/ },
 
