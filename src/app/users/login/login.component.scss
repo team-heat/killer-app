@@ -1,5 +1,19 @@
 .login-wrapper {
   text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-flow: column wrap;
+  >.inner-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+#component-header {
+  margin: 0;
+  padding: 2vh 0;
+  color: #e6e6e6;
+  background-color: #848484;
 }
 
 input {
@@ -8,11 +22,15 @@ input {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   &.ng-valid.ng-touched {
-    border-color: #3c763d;
+    border-color: #55b559;
   }
   &.ng-invalid.ng-touched {
     border-color: #F55145;
   }
+}
+
+.btn.btn-success {
+  background-color: #55b559;
 }
 
 .invalid-input-msg {
