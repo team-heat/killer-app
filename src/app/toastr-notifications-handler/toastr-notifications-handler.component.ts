@@ -12,12 +12,7 @@ export class ToastrNotificationsHandlerComponent implements OnInit, DoCheck {
   constructor(
     private toastr: ToastsManager,
     private viewContainerRef: ViewContainerRef,
-<<<<<<< HEAD
-    private toastrNotificationService: ToastrNotificationService) {
-  }
-=======
     private toastrNotificationService: ToastrNotificationService) { }
->>>>>>> refs/remotes/origin/master
 
   ngOnInit() {
     this.toastr.setRootViewContainerRef(this.viewContainerRef);
