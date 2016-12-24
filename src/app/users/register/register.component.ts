@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
           method: 'success',
           message: `Successful registration.`,
           heading: 'Yay!',
-          delay: 500
+          delay: 0
         });
       }, (err) => {
         this.isLoading = false;
@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
         const that = this;
         setTimeout(function () {
           that.appRouter.navigateByUrl('login');
-        }, 1000);
+        }, 500);
       });
   }
 }

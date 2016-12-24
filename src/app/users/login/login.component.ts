@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/map';
 import { AuthenticationResponseModel } from './../../models/authentication-response.model';
-import { Component, OnInit, OnDestroy, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           method: 'success',
           message: `Welcome back ${this.userStorage.loggedUser}`,
           heading: 'Yay!',
-          delay: 500
+          delay: 0
         });
       }, (err) => {
         this.isLoading = false;
@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
         const that = this;
         setTimeout(function () {
           that.appRouter.navigateByUrl('profile');
-        }, 1000);
+        }, 500);
       });
   }
 }

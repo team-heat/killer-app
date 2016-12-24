@@ -245,7 +245,7 @@ var LoginComponent = (function () {
                 method: 'success',
                 message: "Welcome back " + _this.userStorage.loggedUser,
                 heading: 'Yay!',
-                delay: 500
+                delay: 0
             });
         }, function (err) {
             _this.isLoading = false;
@@ -259,7 +259,7 @@ var LoginComponent = (function () {
             var that = _this;
             setTimeout(function () {
                 that.appRouter.navigateByUrl('profile');
-            }, 1000);
+            }, 500);
         });
     };
     LoginComponent = __decorate([
@@ -429,7 +429,7 @@ var RegisterComponent = (function () {
                 method: 'success',
                 message: "Successful registration.",
                 heading: 'Yay!',
-                delay: 500
+                delay: 0
             });
         }, function (err) {
             _this.isLoading = false;
@@ -443,7 +443,7 @@ var RegisterComponent = (function () {
             var that = _this;
             setTimeout(function () {
                 that.appRouter.navigateByUrl('login');
-            }, 1000);
+            }, 500);
         });
     };
     RegisterComponent = __decorate([
@@ -769,7 +769,7 @@ var ToastrNotificationsHandlerComponent = (function () {
             setTimeout(function () {
                 that.toastr.setRootViewContainerRef(that.vRef);
                 that.toastr[nextToast.method](nextToast.message, nextToast.heading);
-            }, 1000);
+            }, nextToast.delay);
         };
         var this_1 = this;
         while (this.toastrNotificationService.hasNotificationsInQueue) {
