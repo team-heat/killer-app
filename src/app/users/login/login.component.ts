@@ -1,3 +1,4 @@
+import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import 'rxjs/add/operator/map';
 import { AuthenticationResponseModel } from './../../models/authentication-response.model';
 import { Component, OnInit, OnDestroy, ViewContainerRef } from '@angular/core';
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit {
     private userStorage: UserStorageService,
     private appRouter: Router,
     private toastr: ToastsManager,
-    private vRef: ViewContainerRef) {
+    private vRef: ViewContainerRef,
+    private toastrNotificationService: ToastrNotificationService) {
 
     this.toastr.setRootViewContainerRef(vRef);
     this.user = new User();
@@ -42,9 +44,20 @@ export class LoginComponent implements OnInit {
           throw new Error('Incorrect response');
         }
         this.userStorage.setLoggedUser(response as AuthenticationResponseModel);
+        this.toastrNotificationService.enqueueNotification({
+          method: 'success',
+          message: `Welcome back ${this.userStorage.loggedUser}`,
+          heading: 'Yay!',
+          onInit: true
+        });
       }, (err) => {
         this.isLoading = false;
-        this.toastr.error('Incorrect username or password, please try again.');
+        this.toastrNotificationService.enqueueNotification({
+          method: 'error',
+          message: 'Incorrect username or password, please try again.',
+          onInit: false,
+          heading: 'Error logging in.'
+        });
       }, () => {
         this.appRouter.navigateByUrl('profile');
       });
