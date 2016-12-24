@@ -19,8 +19,8 @@ module.exports = function ({userData, config}) {
   }
 
   function profile(req, res) {
-    const userJson = req.user;
-    userJson.password = 'tough luck';
+    const userJson = JSON.parse(JSON.stringify(req.user));
+    delete userJson.password;
     res.status(200).json(userJson);
   }
 
