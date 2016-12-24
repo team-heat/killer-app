@@ -246,7 +246,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_user_model__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_factory_service__ = __webpack_require__(741);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_service__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginComponent; });
@@ -268,20 +268,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginComponent = (function () {
-    function LoginComponent(userService, userStorage, appRouter, toastrNotificationService, toastrNotificationOptionsFactoryService) {
+    function LoginComponent(userService, userStorage, userFactoryService, appRouter, toastrNotificationService, toastrNotificationOptionsFactoryService) {
         this.userService = userService;
         this.userStorage = userStorage;
+        this.userFactoryService = userFactoryService;
         this.appRouter = appRouter;
         this.toastrNotificationService = toastrNotificationService;
         this.toastrNotificationOptionsFactoryService = toastrNotificationOptionsFactoryService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_5__models_user_model__["a" /* User */]();
+        this.user = this.userFactoryService.createUser();
         this.isLoading = false;
     }
     LoginComponent.prototype.ngOnInit = function () {
         if (this.userStorage.isLogged()) {
             var method = 'error';
             var message = 'User is already logged in.';
-            var heading = 'Yay!';
+            var heading = 'Oops!';
             var toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
             this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
@@ -325,10 +326,10 @@ var LoginComponent = (function () {
             template: __webpack_require__(707),
             styles: [__webpack_require__(697)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
     ], LoginComponent);
     return LoginComponent;
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d, _e, _f;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
 
@@ -447,7 +448,7 @@ var ProfileComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_user_model__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_factory_service__ = __webpack_require__(741);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_service__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RegisterComponent; });
@@ -469,20 +470,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var RegisterComponent = (function () {
-    function RegisterComponent(userService, userStorage, appRouter, toastrNotificationService, toastrNotificationOptionsFactoryService) {
+    function RegisterComponent(userService, userStorage, userFactoryService, appRouter, toastrNotificationService, toastrNotificationOptionsFactoryService) {
         this.userService = userService;
         this.userStorage = userStorage;
+        this.userFactoryService = userFactoryService;
         this.appRouter = appRouter;
         this.toastrNotificationService = toastrNotificationService;
         this.toastrNotificationOptionsFactoryService = toastrNotificationOptionsFactoryService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_5__models_user_model__["a" /* User */]();
+        this.user = this.userFactoryService.createUser();
         this.isLoading = false;
     }
     RegisterComponent.prototype.ngOnInit = function () {
         if (this.userStorage.isLogged()) {
             var method = 'error';
             var message = 'User is already logged in.';
-            var heading = 'Yay!';
+            var heading = 'Oops!';
             var toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
             this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
@@ -522,10 +524,10 @@ var RegisterComponent = (function () {
             template: __webpack_require__(710),
             styles: [__webpack_require__(700)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
     ], RegisterComponent);
     return RegisterComponent;
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d, _e, _f;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
 
@@ -632,22 +634,21 @@ var AppModule = (function () {
                 // MockedModule,
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["BrowserModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_4__home_home_module__["a" /* HomeModule */],
-                __WEBPACK_IMPORTED_MODULE_14__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_9_ng2_toastr_ng2_toastr__["ToastModule"],
+                __WEBPACK_IMPORTED_MODULE_14__users_users_module__["a" /* UsersModule */],
                 __WEBPACK_IMPORTED_MODULE_8__angular_router__["a" /* RouterModule */].forRoot([
                     { path: '', redirectTo: '/', pathMatch: 'full' },
                     { path: '**', redirectTo: '/', pathMatch: 'full' }
                 ], { useHash: true })
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_13__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__["a" /* UserStorageService */],
                 __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_services_cookies_service__["CookieService"],
-                __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__["a" /* UserStorageService */],
+                __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
                 __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_service__["a" /* ToastrNotificationService */],
-                __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]
+                __WEBPACK_IMPORTED_MODULE_13__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__["a" /* UserStorageService */]
             ],
             bootstrap: [
                 __WEBPACK_IMPORTED_MODULE_0__app_component__["a" /* AppComponent */]
@@ -938,16 +939,17 @@ var UsersComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__users_routes__ = __webpack_require__(533);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facebook_login_facebook_login_component__ = __webpack_require__(530);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login_component__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register_component__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__users_component__ = __webpack_require__(531);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__facebook_login_facebook_login_component__ = __webpack_require__(530);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__logout_logout_component__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__logout_logout_component__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile_component__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__register_register_component__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_factory_service__ = __webpack_require__(741);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__users_component__ = __webpack_require__(531);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__users_routes__ = __webpack_require__(533);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UsersModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -968,23 +970,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UsersModule = (function () {
     function UsersModule() {
     }
     UsersModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__angular_core__["NgModule"])({
             imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_0__users_routes__["a" /* UsersRouterModuler */]
+                __WEBPACK_IMPORTED_MODULE_10__users_routes__["a" /* UsersRouterModule */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__users_component__["a" /* UsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_1__facebook_login_facebook_login_component__["a" /* FacebookLoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_3__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__facebook_login_facebook_login_component__["a" /* FacebookLoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__logout_logout_component__["a" /* LogoutComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__logout_logout_component__["a" /* LogoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__users_component__["a" /* UsersComponent */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_8__services_user_factory_service__["a" /* UserFactoryService */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -1005,7 +1011,7 @@ var UsersModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register_component__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(56);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UsersRouterModuler; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UsersRouterModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1028,17 +1034,17 @@ var routes = [
     { path: 'facebook-login', component: __WEBPACK_IMPORTED_MODULE_1__profile_profile_component__["a" /* ProfileComponent */] },
     { path: 'logout', component: __WEBPACK_IMPORTED_MODULE_0__logout_logout_component__["a" /* LogoutComponent */] }
 ];
-var UsersRouterModuler = (function () {
-    function UsersRouterModuler() {
+var UsersRouterModule = (function () {
+    function UsersRouterModule() {
     }
-    UsersRouterModuler = __decorate([
+    UsersRouterModule = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
             imports: [__WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forChild(routes)],
             exports: [__WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */]]
         }), 
         __metadata('design:paramtypes', [])
-    ], UsersRouterModuler);
-    return UsersRouterModuler;
+    ], UsersRouterModule);
+    return UsersRouterModule;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
 
@@ -1322,6 +1328,53 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(403);
 
+
+/***/ },
+
+/***/ 741:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user_model__ = __webpack_require__(337);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserFactoryService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var UserFactoryService = (function () {
+    function UserFactoryService() {
+    }
+    UserFactoryService.prototype.createUser = function (username, password, firstName, lastName, image, email) {
+        if (username === void 0) { username = ''; }
+        if (password === void 0) { password = ''; }
+        if (firstName === void 0) { firstName = ''; }
+        if (lastName === void 0) { lastName = ''; }
+        if (image === void 0) { image = ''; }
+        if (email === void 0) { email = ''; }
+        var newUser = new __WEBPACK_IMPORTED_MODULE_1__models_user_model__["a" /* User */]();
+        newUser.username = username;
+        newUser.password = password;
+        newUser.firstName = firstName;
+        newUser.lastName = lastName;
+        newUser.image = image;
+        newUser.email = email;
+        return newUser;
+    };
+    UserFactoryService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], UserFactoryService);
+    return UserFactoryService;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
 
 /***/ }
 

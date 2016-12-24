@@ -5,6 +5,7 @@ import { ToastrNotificationOptionsFactoryService } from './../../services/toastr
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
+import { UserFactoryService } from './../../services/user-factory.service';
 import { UserService } from './../../services/user.service';
 import { UserStorageService } from './../../services/user-storage.service';
 
@@ -21,11 +22,12 @@ export class RegisterComponent implements OnInit {
   constructor(
     private userService: UserService,
     private userStorage: UserStorageService,
+    private userFactoryService: UserFactoryService,
     private appRouter: Router,
     private toastrNotificationService: ToastrNotificationService,
     private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
 
-    this.user = new User();
+    this.user = this.userFactoryService.createUser();
     this.isLoading = false;
   }
 
@@ -33,7 +35,7 @@ export class RegisterComponent implements OnInit {
     if (this.userStorage.isLogged()) {
       const method = 'error';
       const message = 'User is already logged in.';
-      const heading = 'Yay!';
+      const heading = 'Oops!';
       const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
         .createToastrNotificationOptions(method, message, heading);
 

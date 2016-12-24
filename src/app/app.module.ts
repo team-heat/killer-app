@@ -28,10 +28,10 @@ import { UserStorageService } from './services/user-storage.service';
     // MockedModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
     HomeModule,
-    UsersModule,
+    HttpModule,
     ToastModule,
+    UsersModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }
@@ -39,12 +39,11 @@ import { UserStorageService } from './services/user-storage.service';
       { useHash: true })
   ],
   providers: [
-    UserService,
-    UserStorageService,
     CookieService,
-    UserStorageService,
+    ToastrNotificationOptionsFactoryService,
     ToastrNotificationService,
-    ToastrNotificationOptionsFactoryService
+    UserService,
+    UserStorageService
   ],
   bootstrap: [
     AppComponent
