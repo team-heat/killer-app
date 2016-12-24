@@ -1,6 +1,7 @@
 import 'rxjs/add/operator/map';
 import { AuthenticationResponseModel } from './../../models/authentication-response.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
@@ -36,10 +37,9 @@ export class LoginComponent implements OnInit {
         if (!response.username || !response.auth_token) {
           throw new Error('Incorrect response');
         }
-
         this.userStorage.setLoggedUser(response as AuthenticationResponseModel);
       }, (err) => {
-        console.log(err);
+        this.isLoading = false;
       }, () => {
         this.appRouter.navigateByUrl('profile');
       });

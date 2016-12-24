@@ -5,6 +5,8 @@ const userSchema = new mongoose.Schema({
   password: String,
   firstName: String,
   lastName: String,
+  image: String,
+  gender: String,
   email: String,
   favorites: [{}],
   activeListings: [{}]
@@ -18,6 +20,8 @@ userSchema.static('createUser', function (user) {
     password: user.password,
     firstName: user.firstName,
     lastName: user.lastName,
+    image: user.image,
+    gender: user.gender,
     email: user.email,
     favorites: user.favorites || [],
     activeListings: user.activeListings || []

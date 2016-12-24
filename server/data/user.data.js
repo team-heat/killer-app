@@ -10,7 +10,6 @@ module.exports = function ({User}) {
         if (err) {
           return reject(err);
         }
-
         return resolve(newUser);
       });
     });
@@ -24,7 +23,6 @@ module.exports = function ({User}) {
         if (err) {
           return reject(err);
         }
-
         return resolve(user);
       });
     });
@@ -38,7 +36,6 @@ module.exports = function ({User}) {
         if (err) {
           return reject(err);
         }
-
         return resolve(user);
       });
     });
