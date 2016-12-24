@@ -23,7 +23,7 @@ module.exports = function ({app, userData, config}) {
   opts.secretOrKey = config.webTokenSecret;
 
   passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
-    userData.getUserById(jwt_payload._doc._id)
+    userData.getUserById(jwt_payload._id)
       .then((user) => {
         if (user) {
           return done(null, user);
