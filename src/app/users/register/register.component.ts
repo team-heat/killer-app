@@ -1,5 +1,7 @@
+import { UserStorageService } from './../../services/user-storage.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
 
@@ -15,13 +17,18 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private appRouter: Router) {
+    private userStorage: UserStorageService,
+    private appRouter: Router,
+    private toastr: ToastsManager) {
 
     this.user = new User();
     this.isLoading = false;
   }
 
   ngOnInit() {
+    if (this.userStorage.isLogged()) {
+      this.appRouter.navigateByUrl('profile');
+    }
   }
 
   onSubmit(): void {
@@ -31,6 +38,7 @@ export class RegisterComponent implements OnInit {
 
       }, (err) => {
         this.isLoading = false;
+        this.toastr.error('Please try again.', 'Error');
       }, () => {
         this.appRouter.navigateByUrl('login');
       });
