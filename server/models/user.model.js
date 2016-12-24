@@ -19,7 +19,7 @@ const maleProfileImage = '/assets/profile-male.jpg';
 userSchema.static('createUser', function (user) {
   let imageUrl = user.image;
   if (!imageUrl) {
-    if (user.gender === 'male') {
+    if (user.gender === 'Male') {
       imageUrl = maleProfileImage;
     } else {
       imageUrl = femaleProfileImage;
