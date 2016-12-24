@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { ToastrNotificationOptionsFactoryService } from './services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './services/toastr-notification.service';
 import { ToastrNotificationsHandlerComponent } from './toastr-notifications-handler/toastr-notifications-handler.component';
 import { UserService } from './services/user.service';
@@ -27,10 +28,10 @@ import { UserStorageService } from './services/user-storage.service';
     // MockedModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
     HomeModule,
-    UsersModule,
+    HttpModule,
     ToastModule,
+    UsersModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }
@@ -38,11 +39,11 @@ import { UserStorageService } from './services/user-storage.service';
       { useHash: true })
   ],
   providers: [
-    UserService,
-    UserStorageService,
     CookieService,
-    UserStorageService,
-    ToastrNotificationService
+    ToastrNotificationOptionsFactoryService,
+    ToastrNotificationService,
+    UserService,
+    UserStorageService
   ],
   bootstrap: [
     AppComponent

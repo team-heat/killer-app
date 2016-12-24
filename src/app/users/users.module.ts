@@ -1,28 +1,32 @@
-import { UsersRouterModuler } from './users.routes';
 import { CommonModule } from '@angular/common';
+import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { NgModule } from '@angular/core';
+import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { UserFactoryService } from './../services/user-factory.service';
 import { UsersComponent } from './users.component';
 import { UserService } from './../services/user.service';
-import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
-import { ProfileComponent } from './profile/profile.component';
-import { LogoutComponent } from './logout/logout.component';
+import { UsersRouterModule } from './users.routes';
 
 @NgModule({
   imports: [
-    FormsModule,
     CommonModule,
-    UsersRouterModuler
+    FormsModule,
+    UsersRouterModule
   ],
   declarations: [
-    UsersComponent,
-    LoginComponent,
-    RegisterComponent,
     FacebookLoginComponent,
+    LoginComponent,
+    LogoutComponent,
     ProfileComponent,
-    LogoutComponent
+    RegisterComponent,
+    UsersComponent
+  ],
+  providers: [
+    UserFactoryService
   ]
 })
 export class UsersModule { }
