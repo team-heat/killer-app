@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
         this.isLoading = false;
         this.toastr.error('Incorrect username or password, please try again.');
       }, () => {
-        this.toastr.success('Successfully logged in.');
         this.appRouter.navigateByUrl('profile');
       });
   }

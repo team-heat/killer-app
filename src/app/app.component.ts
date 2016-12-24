@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { Component, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  constructor(
+    private toastr: ToastsManager,
+    private vRef: ViewContainerRef) {
+
+    this.toastr.setRootViewContainerRef(vRef);
+  }
+
+  toastrError(msg: string): void {
+    this.toastr.error(msg);
+  }
 }

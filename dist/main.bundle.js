@@ -65,7 +65,9 @@ var UserService = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng2_toastr_ng2_toastr__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ng2_toastr_ng2_toastr__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -77,19 +79,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'app works!';
+    function AppComponent(toastr, vRef) {
+        this.toastr = toastr;
+        this.vRef = vRef;
+        this.toastr.setRootViewContainerRef(vRef);
     }
+    AppComponent.prototype.toastrError = function (msg) {
+        this.toastr.error(msg);
+    };
     AppComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(698),
             styles: [__webpack_require__(689)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"]) === 'function' && _b) || Object])
     ], AppComponent);
     return AppComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
 
@@ -201,7 +210,6 @@ var LoginComponent = (function () {
             _this.isLoading = false;
             _this.toastr.error('Incorrect username or password, please try again.');
         }, function () {
-            _this.toastr.success('Successfully logged in.');
             _this.appRouter.navigateByUrl('profile');
         });
     };
@@ -364,7 +372,6 @@ var RegisterComponent = (function () {
     RegisterComponent.prototype.ngOnInit = function () {
         if (this.userStorage.isLogged()) {
             this.appRouter.navigateByUrl('profile');
-            this.toastr.info('You are already logged in.');
         }
     };
     RegisterComponent.prototype.onSubmit = function () {
