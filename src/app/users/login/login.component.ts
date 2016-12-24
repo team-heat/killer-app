@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
         const that = this;
         setTimeout(function () {
           that.appRouter.navigateByUrl('profile');
-        }, 500);
+        }, 1000);
       });
   }
 }

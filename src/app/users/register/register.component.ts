@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
         const that = this;
         setTimeout(function () {
           that.appRouter.navigateByUrl('login');
-        }, 500);
+        }, 1000);
       });
   }
 }
