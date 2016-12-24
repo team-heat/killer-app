@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
@@ -19,16 +19,18 @@ export class RegisterComponent implements OnInit {
     private userService: UserService,
     private userStorage: UserStorageService,
     private appRouter: Router,
-    private toastr: ToastsManager) {
+    private toastr: ToastsManager,
+    private vRef: ViewContainerRef) {
 
     this.user = new User();
     this.isLoading = false;
+    this.toastr.setRootViewContainerRef(vRef);
   }
 
   ngOnInit() {
     if (this.userStorage.isLogged()) {
       this.appRouter.navigateByUrl('profile');
-      this.toastr.success('You are already logged in!');
+      this.toastr.info('You are already logged in.');
     }
   }
 

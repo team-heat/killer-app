@@ -1,8 +1,9 @@
 import 'rxjs/add/operator/map';
 import { AuthenticationResponseModel } from './../../models/authentication-response.model';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewContainerRef } from '@angular/core';
 import { Response } from '@angular/http';
 import { Router } from '@angular/router';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { User } from './../../models/user.model';
 import { UserService } from './../../services/user.service';
 import { UserStorageService } from './../../services/user-storage.service';
@@ -20,8 +21,11 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private userStorage: UserStorageService,
-    private appRouter: Router) {
+    private appRouter: Router,
+    private toastr: ToastsManager,
+    private vRef: ViewContainerRef) {
 
+    this.toastr.setRootViewContainerRef(vRef);
     this.user = new User();
     this.isLoading = false;
   }
@@ -40,7 +44,9 @@ export class LoginComponent implements OnInit {
         this.userStorage.setLoggedUser(response as AuthenticationResponseModel);
       }, (err) => {
         this.isLoading = false;
+        this.toastr.error('Incorrect username or password, please try again.');
       }, () => {
+        this.toastr.success('Successfully logged in.');
         this.appRouter.navigateByUrl('profile');
       });
   }
