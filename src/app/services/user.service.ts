@@ -20,16 +20,9 @@ export class UserService implements OnInit {
   // Create server Router
   // Only Redirect on Successful Login
   // Display message on incorrect login
-  registerUser(user: User): void {
+  registerUser(user: User): Observable<Response> {
     // for testing 
-    this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders })
-      .subscribe((responseUser: any) => {
-        console.log(responseUser);
-      }, (err) => {
-        console.log(err);
-      }, () => {
-        this.appRouter.navigateByUrl('profile');
-      });
+    return this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
   }
 
   // Create server Router
