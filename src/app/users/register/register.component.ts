@@ -45,6 +45,10 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  onGenderSelect(gender: string): void {
+    this.user.gender = gender;
+  }
+
   onSubmit(): void {
     this.isLoading = true;
     this.userService.registerUser(this.user)

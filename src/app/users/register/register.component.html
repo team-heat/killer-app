@@ -25,6 +25,24 @@
     </label>
   </div>
   <div class="form-group">
+    <div class="dropdown">
+      <button *ngIf="user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="true" name="gender">
+          {{user.gender}}
+        <span class="caret"></span>
+      </button>
+      <button *ngIf="!user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="true" name="gender">
+          Gender
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="gender-select">
+        <li (click)="onGenderSelect('Male')"><a>Male</a></li>
+        <li (click)="onGenderSelect('Female')"><a>Female</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="form-group">
     <label> 
       <span>Email: </span>
       <input class="form-control" type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" required>
