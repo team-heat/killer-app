@@ -17,7 +17,6 @@ export class RegisterComponent implements OnInit {
     private userService: UserService,
     private appRouter: Router) {
 
-    this.userService = userService;
     this.user = new User();
     this.isLoading = false;
   }
