@@ -1,6 +1,6 @@
 'use strict';
 
-const jsonwebtoken = require('jsonwebtoken');
+const jsonWebToken = require('jsonwebtoken');
 
 module.exports = function ({userData, config}) {
 
@@ -14,7 +14,7 @@ module.exports = function ({userData, config}) {
 
     res.status(200).json({
       username: req.user.username,
-      auth_token: jsonwebtoken.sign(webTokenObject, webTokenSecret)
+      auth_token: jsonWebToken.sign(webTokenObject, webTokenSecret)
     });
   }
 
