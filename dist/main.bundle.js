@@ -754,11 +754,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ToastrNotificationsHandlerComponent = (function () {
-    function ToastrNotificationsHandlerComponent(toastr, vRef, toastrNotificationService) {
+    function ToastrNotificationsHandlerComponent(toastr, viewContainerRef, toastrNotificationService) {
         this.toastr = toastr;
-        this.vRef = vRef;
+        this.viewContainerRef = viewContainerRef;
         this.toastrNotificationService = toastrNotificationService;
-        this.toastr.setRootViewContainerRef(this.vRef);
+        this.toastr.setRootViewContainerRef(this.viewContainerRef);
     }
     ToastrNotificationsHandlerComponent.prototype.ngOnInit = function () {
     };
@@ -767,7 +767,7 @@ var ToastrNotificationsHandlerComponent = (function () {
             var that = this_1;
             var nextToast = this_1.toastrNotificationService.nextNotificationInQueue;
             setTimeout(function () {
-                that.toastr.setRootViewContainerRef(that.vRef);
+                that.toastr.setRootViewContainerRef(that.viewContainerRef);
                 that.toastr[nextToast.method](nextToast.message, nextToast.heading);
             }, nextToast.delay);
         };

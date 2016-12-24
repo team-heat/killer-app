@@ -11,10 +11,10 @@ export class ToastrNotificationsHandlerComponent implements OnInit, DoCheck {
 
   constructor(
     private toastr: ToastsManager,
-    private vRef: ViewContainerRef,
+    private viewContainerRef: ViewContainerRef,
     private toastrNotificationService: ToastrNotificationService) {
 
-    this.toastr.setRootViewContainerRef(this.vRef);
+    this.toastr.setRootViewContainerRef(this.viewContainerRef);
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class ToastrNotificationsHandlerComponent implements OnInit, DoCheck {
       const that = this;
       const nextToast = this.toastrNotificationService.nextNotificationInQueue;
       setTimeout(function () {
-        that.toastr.setRootViewContainerRef(that.vRef);
+        that.toastr.setRootViewContainerRef(that.viewContainerRef);
         that.toastr[nextToast.method](nextToast.message, nextToast.heading);
       }, nextToast.delay);
     }
