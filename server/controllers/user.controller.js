@@ -19,8 +19,9 @@ module.exports = function ({userData, config}) {
   }
 
   function profile(req, res) {
-    const user = req.user;
-    res.status(200).json(user);
+    const userJson = req.user;
+    userJson.password = 'tough luck';
+    res.status(200).json(userJson);
   }
 
   function register(req, res) {
