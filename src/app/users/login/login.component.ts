@@ -44,14 +44,16 @@ export class LoginComponent implements OnInit {
         this.toastrNotificationService.enqueueNotification({
           method: 'success',
           message: `Welcome back ${this.userStorage.loggedUser}`,
-          heading: 'Yay!'
+          heading: 'Yay!',
+          delay: 500
         });
       }, (err) => {
         this.isLoading = false;
         this.toastrNotificationService.enqueueNotification({
           method: 'error',
           message: 'Incorrect username or password, please try again.',
-          heading: 'Oops!'
+          heading: 'Oops!',
+          delay: 0
         });
       }, () => {
         const that = this;

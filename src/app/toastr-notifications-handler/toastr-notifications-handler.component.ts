@@ -14,7 +14,7 @@ export class ToastrNotificationsHandlerComponent implements OnInit, DoCheck {
     private vRef: ViewContainerRef,
     private toastrNotificationService: ToastrNotificationService) {
 
-    this.toastr.setRootViewContainerRef(vRef);
+    this.toastr.setRootViewContainerRef(this.vRef);
   }
 
   ngOnInit() {
@@ -22,8 +22,12 @@ export class ToastrNotificationsHandlerComponent implements OnInit, DoCheck {
 
   ngDoCheck() {
     while (this.toastrNotificationService.hasNotificationsInQueue) {
+      const that = this;
       const nextToast = this.toastrNotificationService.nextNotificationInQueue;
-      this.toastr[nextToast.method](nextToast.message);
+      setTimeout(function () {
+        that.toastr.setRootViewContainerRef(that.vRef);
+        that.toastr[nextToast.method](nextToast.message, nextToast.heading);
+      }, nextToast.delay);
     }
   }
 }

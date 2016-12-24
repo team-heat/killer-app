@@ -244,14 +244,16 @@ var LoginComponent = (function () {
             _this.toastrNotificationService.enqueueNotification({
                 method: 'success',
                 message: "Welcome back " + _this.userStorage.loggedUser,
-                heading: 'Yay!'
+                heading: 'Yay!',
+                delay: 500
             });
         }, function (err) {
             _this.isLoading = false;
             _this.toastrNotificationService.enqueueNotification({
                 method: 'error',
                 message: 'Incorrect username or password, please try again.',
-                heading: 'Oops!'
+                heading: 'Oops!',
+                delay: 0
             });
         }, function () {
             var that = _this;
@@ -426,14 +428,16 @@ var RegisterComponent = (function () {
             _this.toastrNotificationService.enqueueNotification({
                 method: 'success',
                 message: "Successful registration.",
-                heading: 'Yay!'
+                heading: 'Yay!',
+                delay: 500
             });
         }, function (err) {
             _this.isLoading = false;
             _this.toastrNotificationService.enqueueNotification({
                 method: 'error',
                 message: 'Please try again.',
-                heading: 'Oops!'
+                heading: 'Oops!',
+                delay: 0
             });
         }, function () {
             var that = _this;
@@ -754,14 +758,22 @@ var ToastrNotificationsHandlerComponent = (function () {
         this.toastr = toastr;
         this.vRef = vRef;
         this.toastrNotificationService = toastrNotificationService;
-        this.toastr.setRootViewContainerRef(vRef);
+        this.toastr.setRootViewContainerRef(this.vRef);
     }
     ToastrNotificationsHandlerComponent.prototype.ngOnInit = function () {
     };
     ToastrNotificationsHandlerComponent.prototype.ngDoCheck = function () {
+        var _loop_1 = function() {
+            var that = this_1;
+            var nextToast = this_1.toastrNotificationService.nextNotificationInQueue;
+            setTimeout(function () {
+                that.toastr.setRootViewContainerRef(that.vRef);
+                that.toastr[nextToast.method](nextToast.message, nextToast.heading);
+            }, 1000);
+        };
+        var this_1 = this;
         while (this.toastrNotificationService.hasNotificationsInQueue) {
-            var nextToast = this.toastrNotificationService.nextNotificationInQueue;
-            this.toastr[nextToast.method](nextToast.message);
+            _loop_1();
         }
     };
     ToastrNotificationsHandlerComponent = __decorate([

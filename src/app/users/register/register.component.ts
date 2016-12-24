@@ -39,14 +39,16 @@ export class RegisterComponent implements OnInit {
         this.toastrNotificationService.enqueueNotification({
           method: 'success',
           message: `Successful registration.`,
-          heading: 'Yay!'
+          heading: 'Yay!',
+          delay: 500
         });
       }, (err) => {
         this.isLoading = false;
         this.toastrNotificationService.enqueueNotification({
           method: 'error',
           message: 'Please try again.',
-          heading: 'Oops!'
+          heading: 'Oops!',
+          delay: 0
         });
       }, () => {
         const that = this;
