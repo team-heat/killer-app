@@ -12,7 +12,8 @@ const itemListingSchema = new mongoose.Schema({
   engineTorque: Number,
   enginePower: Number,
   history: String,
-  createdOn: Date
+  createdOn: Date,
+  isActive: Boolean
 });
 
 let ItemListing;
@@ -27,7 +28,8 @@ itemListingSchema.static('createItemListing', function (listing) {
     engineTorque: listing.engineTorque,
     enginePower: listing.enginePower,
     history: listing.history,
-    createdOn: new Date()
+    createdOn: new Date(),
+    isActive: true
   });
 });
 
