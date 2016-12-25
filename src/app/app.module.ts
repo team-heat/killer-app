@@ -19,6 +19,7 @@ import { ToastrNotificationsHandlerComponent } from './toastr-notifications-hand
 import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
 import { UserStorageService } from './services/user-storage.service';
+import { NavigationHoverDirective } from './directives/navigation-hover.directive';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
@@ -26,7 +27,8 @@ import { UserStorageService } from './services/user-storage.service';
   declarations: [
     AppComponent,
     NavigationComponent,
-    ToastrNotificationsHandlerComponent
+    ToastrNotificationsHandlerComponent,
+    NavigationHoverDirective
   ],
   imports: [
     // MockedModule,

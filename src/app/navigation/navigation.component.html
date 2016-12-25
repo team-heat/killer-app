@@ -13,19 +13,19 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div *ngIf="hasLoggedUser == true" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li [class.active]="activeItem === 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
-      <li [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/">Gallery</a></li>
-      <li [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/">Create</a></li>
+      <li appNavigationHover [class.active]="activeItem === 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
+      <li appNavigationHover [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/">Gallery</a></li>
+      <li appNavigationHover [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/">Create</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUserName}}<span class="caret"></span></a>
+        <a appNavigationHover href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUserName}}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a routerLink='profile'>Profile</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><a appNavigationHover routerLink='profile'>Profile</a></li>
+          <li><a appNavigationHover href="#">Settings</a></li>
           <li role="separator" class="divider"></li>
-          <li><a routerLink="logout">Logout</a></li>
+          <li><a appNavigationHover routerLink="logout">Logout</a></li>
         </ul>
       </li>
     </ul>
