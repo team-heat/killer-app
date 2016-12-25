@@ -25,6 +25,10 @@ export class UserService {
     return this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
   }
 
+  logoutUser(): Observable<Response> {
+    return this.httpService.get('/api/logout');
+  }
+
   // Using Cookies 
   // { headers: new Headers({ 'Authorization': `JWT ${token}` }) }
   getUserDetails(token: string): Observable<Response> {
