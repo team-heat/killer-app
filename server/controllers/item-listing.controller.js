@@ -14,9 +14,14 @@ module.exports = function ({itemListingData}) {
     res.status(200).json({ message: 'POST /api/gallery/' });
   }
 
+  function submitOfferForListing(req, res) {
+    res.status(200).json({ message: 'POST /api/gallery/:id' });
+  }
+
   return {
     index,
     details,
-    createListing
+    createListing,
+    submitOfferForListing
   };
 };
