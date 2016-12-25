@@ -6,6 +6,10 @@ module.exports = function ({userData, config}) {
 
   const webTokenSecret = config.webTokenSecret;
 
+  function logout(req, res) {
+    res.status(200).json({ message: 'POST /api/logout' });
+  }
+
   function login(req, res) {
     const webTokenObject = {
       _id: req.user.id,
@@ -50,6 +54,7 @@ module.exports = function ({userData, config}) {
   return {
     login,
     profile,
-    register
+    register,
+    logout
   };
 };
