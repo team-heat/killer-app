@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
   age: Number,
   gender: String,
   email: String,
+  createdOn: Date,
   favorites: [{}],
   activeListings: [{}]
 });
@@ -35,6 +36,7 @@ userSchema.static('createUser', function (user) {
     age: +user.age,
     gender: user.gender,
     email: user.email,
+    createdOn: new Date(),
     favorites: user.favorites || [],
     activeListings: user.activeListings || []
   });

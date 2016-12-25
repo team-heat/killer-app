@@ -1,1 +1,35 @@
-<img [src]="user.image" alt="profile image" width="200px">
+<div class="row">
+  <div class="content-left col-xs-6">
+    <img [src]="user.image" alt="profile image" width="100%">
+  </div>
+  <div class="content-right col-xs-6">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="column-left col-xs-6 text-left">
+            <p>{{user.username}}</p>
+          </div>
+          <div class="column-right col-xs-6 text-right">
+            <p>{{user.email}}</p>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="column-left col-xs-6 text-left">
+            <p>{{user.firstName}} {{user.lastName}}</p>
+          </div>
+          <div class="column-right col-xs-6 text-right">
+            <p>{{user.gender}}, {{user.age}}</p>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="column-left col-xs-12 text-left">
+            <p>Member since {{user.createdOn}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>

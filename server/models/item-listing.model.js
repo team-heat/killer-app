@@ -11,7 +11,8 @@ const itemListingSchema = new mongoose.Schema({
   interiorColor: String,
   engineTorque: Number,
   enginePower: Number,
-  history: String
+  history: String,
+  createdOn: Date
 });
 
 let ItemListing;
@@ -25,7 +26,8 @@ itemListingSchema.static('createItemListing', function (listing) {
     interiorColor: listing.interiorColor,
     engineTorque: listing.engineTorque,
     enginePower: listing.enginePower,
-    history: listing.history
+    history: listing.history,
+    createdOn: new Date()
   });
 });
 
