@@ -1,7 +1,7 @@
-import { HashingService } from './../../services/hashing.service';
 import 'rxjs/add/operator/map';
 import { AuthenticationResponseModel } from './../../models/authentication-response.model';
 import { Component, OnInit } from '@angular/core';
+import { HashingService } from './../../services/hashing.service';
 import { Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
