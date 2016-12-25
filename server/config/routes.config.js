@@ -11,8 +11,8 @@ module.exports = function ({ app, userController, itemListingController }) {
     .post('/users', passport.authenticate('local'), userController.login)
     .put('/users', userController.register)
     .get('/gallery', itemListingController.index)
-    .post('/gallery', itemListingController.createListing)
-    .get('/gallery/:id', itemListingController.details);
+    .get('/gallery/:id', itemListingController.details)
+    .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing);
 
   app.use('/api', apiRouter);
 
