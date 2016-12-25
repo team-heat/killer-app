@@ -19,12 +19,18 @@ module.exports = function ({userData, config}) {
   }
 
   function profile(req, res) {
-    res.status(200).json({ message: 'GET /api/users' });
+    const userJson = JSON.parse(JSON.stringify(req.user));
+    delete userJson.password;
+    res.status(200).json(userJson);
   }
 
   function register(req, res) {
+    if (req.user) {
+      return res.status(400).json({ message: 'User already logged in.' });
+    }
+
     const userObject = req.body;
-    userData.createUser(userObject)
+    return userData.createUser(userObject)
       .then((user) => {
         res.status(200).json({ message: 'PUT /api/users' });
       })

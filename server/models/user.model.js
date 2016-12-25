@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   image: String,
+  age: Number,
   gender: String,
   email: String,
   favorites: [{}],
@@ -13,14 +14,25 @@ const userSchema = new mongoose.Schema({
 });
 
 let UserModel;
-
+const femaleProfileImage = '/assets/profile-female.jpg';
+const maleProfileImage = '/assets/profile-male.jpg';
 userSchema.static('createUser', function (user) {
+  let imageUrl = user.image;
+  if (!imageUrl) {
+    if (user.gender === 'Male') {
+      imageUrl = maleProfileImage;
+    } else {
+      imageUrl = femaleProfileImage;
+    }
+  }
+
   return new UserModel({
     username: user.username,
     password: user.password,
     firstName: user.firstName,
     lastName: user.lastName,
-    image: user.image,
+    image: imageUrl,
+    age: user.age,
     gender: user.gender,
     email: user.email,
     favorites: user.favorites || [],
