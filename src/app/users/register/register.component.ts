@@ -1,5 +1,6 @@
 import 'rxjs/add/operator/map';
 import { Component, OnInit } from '@angular/core';
+import { HashingService } from './../../services/hashing.service';
 import { Router } from '@angular/router';
 import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
@@ -25,7 +26,8 @@ export class RegisterComponent implements OnInit {
     private userFactoryService: UserFactoryService,
     private appRouter: Router,
     private toastrNotificationService: ToastrNotificationService,
-    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
+    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService,
+    private hashingService: HashingService) {
 
     this.user = this.userFactoryService.createUser();
     this.isLoading = false;
@@ -50,6 +52,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
+    const hashedPassword = this.hashingService.generateHash(this.user.password);
+    this.user.password = hashedPassword;
+
     this.isLoading = true;
     this.userService.registerUser(this.user)
       .map((res) => res.json())
