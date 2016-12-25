@@ -7,4 +7,5 @@ export class User {
   gender: string;
   image: String;
   email: String;
+  createdOn: Date;
 }
