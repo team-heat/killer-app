@@ -1,12 +1,13 @@
 export interface ItemListing {
-  make: String;
-  model: String;
-  year: String;
-  price: Number;
-  exteriorColor: String;
-  interiorColor: String;
-  engineTorque: Number;
-  enginePower: Number;
-  history: String;
+  _id: string;
+  make: string;
+  model: string;
+  year: string;
+  price: number;
+  exteriorColor: string;
+  interiorColor: string;
+  engineTorque: number;
+  enginePower: number;
+  history: string;
   createdOn: Date;
 }
