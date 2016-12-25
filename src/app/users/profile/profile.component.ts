@@ -1,3 +1,4 @@
+import { DateFormatterPipe } from './../../pipes/date-formatter.pipe';
 import 'rxjs/add/operator/map';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -36,7 +37,7 @@ export class ProfileComponent implements OnInit {
     this.userService.getUserDetails(token)
       .map(res => res.json())
       .subscribe(response => {
-        console.log(response);
+        response.createdOn = new Date(response.createdOn);
         this.user = response;
       });
   }

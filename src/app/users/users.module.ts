@@ -1,3 +1,4 @@
+import { DateFormatterPipe } from './../pipes/date-formatter.pipe';
 import { CommonModule } from '@angular/common';
 import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
 import { FormsModule } from '@angular/forms';
@@ -24,7 +25,8 @@ import { UsersRouterModule } from './users.routes';
     LogoutComponent,
     ProfileComponent,
     RegisterComponent,
-    UsersComponent
+    UsersComponent,
+    DateFormatterPipe
   ],
   providers: [
     UserFactoryService,
