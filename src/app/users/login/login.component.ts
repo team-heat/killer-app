@@ -1,3 +1,4 @@
+import { HashingService } from './../../services/hashing.service';
 import 'rxjs/add/operator/map';
 import { AuthenticationResponseModel } from './../../models/authentication-response.model';
 import { Component, OnInit } from '@angular/core';
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
     private userFactoryService: UserFactoryService,
     private appRouter: Router,
     private toastrNotificationService: ToastrNotificationService,
-    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
+    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService,
+    private hashingService: HashingService) {
 
     this.user = this.userFactoryService.createUser();
     this.isLoading = false;
@@ -48,6 +50,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
+    const hashedPassword = this.hashingService.generateHash(this.user.password);
+    this.user.password = hashedPassword;
+
     this.isLoading = true;
     this.userService.loginUser(this.user)
       .map((res) => res.json())

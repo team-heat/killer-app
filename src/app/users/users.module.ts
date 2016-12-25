@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
 import { FormsModule } from '@angular/forms';
+import { HashingService } from './../services/hashing.service';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NgModule } from '@angular/core';
@@ -26,7 +27,8 @@ import { UsersRouterModule } from './users.routes';
     UsersComponent
   ],
   providers: [
-    UserFactoryService
+    UserFactoryService,
+    HashingService
   ]
 })
 export class UsersModule { }
