@@ -1,8 +1,8 @@
-import { UserFactoryService } from './../../services/user-factory.service';
 import 'rxjs/add/operator/map';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from './../../models/user.model';
+import { UserFactoryService } from './../../services/user-factory.service';
 import { UserService } from './../../services/user.service';
 import { UserStorageService } from './../../services/user-storage.service';
 
