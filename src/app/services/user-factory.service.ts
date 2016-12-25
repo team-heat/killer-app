@@ -14,6 +14,7 @@ export class UserFactoryService {
     newUser.lastName = lastName;
     newUser.image = image;
     newUser.email = email;
+    newUser.createdOn = new Date();
 
     return newUser;
   }
