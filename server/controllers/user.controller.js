@@ -30,8 +30,16 @@ module.exports = function ({userData, config}) {
     }
 
     const userObject = req.body;
-    return userData.createUser(userObject)
-      .then((user) => {
+    return userData.getUserByUsername(userObject.username)
+      .then(user => {
+        if (user) {
+          throw new Error('Username already exists.');
+        }
+      })
+      .then(() => {
+        return userData.createUser(userObject);
+      })
+      .then(() => {
         res.status(200).json({ message: 'PUT /api/users' });
       })
       .catch((err) => {
