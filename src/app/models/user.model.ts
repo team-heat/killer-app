@@ -1,3 +1,5 @@
+import { ItemListing } from './item-listing.model';
+
 export class User {
   _id: string;
   username: string;
@@ -9,4 +11,6 @@ export class User {
   image: String;
   email: String;
   createdOn: Date;
+  favorites: ItemListing[];
+  listedItems: ItemListing[];
 }
