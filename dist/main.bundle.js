@@ -1284,7 +1284,7 @@ var UserStorageService = (function () {
 /***/ 694:
 /***/ function(module, exports) {
 
-module.exports = "div#content {\n  min-height: 60vh;\n  padding: 25px;\n  box-sizing: border-box;\n  background-color: rgba(0, 0, 0, 0.33);\n  box-shadow: 0 5px 20px black;\n  color: rgba(225, 225, 225, 0.77); }\n"
+module.exports = "div#content {\n  padding: 25px;\n  box-sizing: border-box;\n  background-color: rgba(0, 0, 0, 0.33);\n  box-shadow: 0 5px 20px black;\n  color: rgba(225, 225, 225, 0.77); }\n"
 
 /***/ },
 
@@ -1333,7 +1333,7 @@ module.exports = ""
 /***/ 701:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\nimg {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: planer;\n  font-size: 20px;\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n"
 
 /***/ },
 
@@ -1403,7 +1403,7 @@ module.exports = "<p>\r\n  logout works!\r\n</p>\r\n"
 /***/ 711:
 /***/ function(module, exports) {
 
-module.exports = "<img [src]=\"user.image\" alt=\"profile image\" width=\"200px\">\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-12 text-left\">\r\n            <p>Member since {{user.createdOn}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
 
 /***/ },
 
