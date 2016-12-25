@@ -1280,7 +1280,7 @@ var UserStorageService = (function () {
 /***/ 694:
 /***/ function(module, exports) {
 
-module.exports = "div#content {\n  min-height: 60vh;\n  box-sizing: border-box;\n  background-color: rgba(0, 0, 0, 0.33);\n  box-shadow: 0 5px 20px black;\n  color: white; }\n"
+module.exports = "div#content {\n  min-height: 60vh;\n  padding: 25px;\n  box-sizing: border-box;\n  background-color: rgba(0, 0, 0, 0.33);\n  box-shadow: 0 5px 20px black;\n  color: rgba(225, 225, 225, 0.77); }\n"
 
 /***/ },
 
