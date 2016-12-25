@@ -26,8 +26,11 @@
       </li>
       <li class="list-group-item">
         <div class="row">
-          <div class="column-left col-xs-12 text-left">
-            <p>Member since {{user.createdOn}}</p>
+          <div class="column-left col-xs-6 text-left">
+            <p>Member since:</p>
+          </div>
+          <div class="column-right col-xs-6 text-right">
+            <p>{{user.createdOn | dateFormatter}}</p>
           </div>
         </div>
       </li>

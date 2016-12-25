@@ -20,6 +20,7 @@ import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
 import { UserStorageService } from './services/user-storage.service';
 import { NavigationHoverDirective } from './directives/navigation-hover.directive';
+import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'

@@ -520,7 +520,7 @@ var ProfileComponent = (function () {
         this.userService.getUserDetails(token)
             .map(function (res) { return res.json(); })
             .subscribe(function (response) {
-            console.log(response);
+            response.createdOn = new Date(response.createdOn);
             _this.user = response;
         });
     };
@@ -1065,18 +1065,19 @@ var UsersComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facebook_login_facebook_login_component__ = __webpack_require__(532);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_hashing_service__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__logout_logout_component__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_profile_component__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__register_register_component__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_user_factory_service__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__users_component__ = __webpack_require__(533);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_routes__ = __webpack_require__(535);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pipes_date_formatter_pipe__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facebook_login_facebook_login_component__ = __webpack_require__(532);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_hashing_service__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__logout_logout_component__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__register_register_component__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_user_factory_service__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__users_component__ = __webpack_require__(533);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__users_routes__ = __webpack_require__(535);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UsersModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1099,27 +1100,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UsersModule = (function () {
     function UsersModule() {
     }
     UsersModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_11__users_routes__["a" /* UsersRouterModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_12__users_routes__["a" /* UsersRouterModule */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_1__facebook_login_facebook_login_component__["a" /* FacebookLoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__logout_logout_component__["a" /* LogoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__users_component__["a" /* UsersComponent */]
+                __WEBPACK_IMPORTED_MODULE_2__facebook_login_facebook_login_component__["a" /* FacebookLoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__logout_logout_component__["a" /* LogoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__users_component__["a" /* UsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_0__pipes_date_formatter_pipe__["a" /* DateFormatterPipe */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_9__services_user_factory_service__["a" /* UserFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_3__services_hashing_service__["a" /* HashingService */]
+                __WEBPACK_IMPORTED_MODULE_10__services_user_factory_service__["a" /* UserFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_4__services_hashing_service__["a" /* HashingService */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -1434,7 +1437,7 @@ module.exports = "<p>\r\n  logout works!\r\n</p>\r\n"
 /***/ 711:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-12 text-left\">\r\n            <p>Member since {{user.createdOn}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
 
 /***/ },
 
@@ -1511,6 +1514,40 @@ var NavigationHoverDirective = (function () {
     var _a;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
+
+/***/ },
+
+/***/ 747:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return DateFormatterPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DateFormatterPipe = (function () {
+    function DateFormatterPipe() {
+    }
+    DateFormatterPipe.prototype.transform = function (value) {
+        return value.toLocaleDateString();
+    };
+    DateFormatterPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'dateFormatter'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DateFormatterPipe);
+    return DateFormatterPipe;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
 
 /***/ }
 
