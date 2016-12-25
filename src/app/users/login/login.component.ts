@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     const hashedPassword = this.hashingService.generateHash(this.user.password);
     this.user.password = hashedPassword;
+    console.log(hashedPassword);
 
     this.isLoading = true;
     this.userService.loginUser(this.user)

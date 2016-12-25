@@ -319,6 +319,7 @@ var LoginComponent = (function () {
         var _this = this;
         var hashedPassword = this.hashingService.generateHash(this.user.password);
         this.user.password = hashedPassword;
+        console.log(hashedPassword);
         this.isLoading = true;
         this.userService.loginUser(this.user)
             .map(function (res) { return res.json(); })
@@ -535,6 +536,7 @@ var RegisterComponent = (function () {
         var _this = this;
         var hashedPassword = this.hashingService.generateHash(this.user.password);
         this.user.password = hashedPassword;
+        console.log(hashedPassword);
         this.isLoading = true;
         this.userService.registerUser(this.user)
             .map(function (res) { return res.json(); })

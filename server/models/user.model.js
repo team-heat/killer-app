@@ -32,7 +32,7 @@ userSchema.static('createUser', function (user) {
     firstName: user.firstName,
     lastName: user.lastName,
     image: imageUrl,
-    age: user.age,
+    age: +user.age,
     gender: user.gender,
     email: user.email,
     favorites: user.favorites || [],
