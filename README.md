@@ -6,6 +6,23 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
+# Routes
+
+## Gallery
+- /gallery -> all items
+- /gallery/:id -> item details
+- add item to user favorites
+- bidding and/ or buying items 
+- vote up/ down ( possibly )
+
+## Creating an item
+- /create -> from for creating a new item, logged user
+
+## User
+- /favorites -> list user favorite items, logged user
+
+# How to run
+
 ## npm start 
 `node server/app.js` 
 
@@ -13,7 +30,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 `ng serve`
 
 ## ng build -w 
-Requires server restart ( npm start )
+Run npm start in a separate terminal. Needs running mongodb.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

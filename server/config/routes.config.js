@@ -4,15 +4,17 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 
-module.exports = function ({ app, userController, itemListingController }) {
+module.exports = function ({ app, userController, itemListingController, favoritesController }) {
   const apiRouter = new express.Router();
   apiRouter
     .get('/users', passport.authenticate('jwt'), userController.profile)
     .post('/users', passport.authenticate('local'), userController.login)
     .put('/users', userController.register)
+    .get('/favorites', passport.authenticate('jwt'), favoritesController.index)
+    .post('/favorites', passport.authenticate('jwt'), favoritesController.create)
     .get('/gallery', itemListingController.index)
-    .post('/gallery', itemListingController.createListing)
-    .get('/gallery/:id', itemListingController.details);
+    .get('/gallery/:id', itemListingController.details)
+    .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing);
 
   app.use('/api', apiRouter);
 
