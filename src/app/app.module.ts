@@ -20,13 +20,6 @@ import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
 import { UserStorageService } from './services/user-storage.service';
 
-export function toastOptionsFactory() {
-  return new ToastOptions({
-    positionClass: 'toast-bottom-right',
-    animate: 'flyRight'
-  });
-}
-
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
 @NgModule({
@@ -42,7 +35,7 @@ export function toastOptionsFactory() {
     HomeModule,
     HttpModule,
     UsersModule,
-    ToastModule.forRoot(toastOptionsFactory()),
+    ToastModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }
