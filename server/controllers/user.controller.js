@@ -7,6 +7,7 @@ module.exports = function ({userData, config}) {
   const webTokenSecret = config.webTokenSecret;
 
   function logout(req, res) {
+    req.logout();
     res.status(200).json({ message: 'POST /api/logout' });
   }
 

@@ -131,6 +131,9 @@ var UserService = (function () {
     UserService.prototype.loginUser = function (user) {
         return this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
     };
+    UserService.prototype.logoutUser = function () {
+        return this.httpService.get('/api/logout');
+    };
     // Using Cookies 
     // { headers: new Headers({ 'Authorization': `JWT ${token}` }) }
     UserService.prototype.getUserDetails = function (token) {
@@ -403,9 +406,10 @@ var LoginComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_storage_service__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_user_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(68);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LogoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -419,25 +423,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var LogoutComponent = (function () {
-    function LogoutComponent(appRouter, userStorage) {
+    function LogoutComponent(appRouter, userService, userStorage) {
         this.appRouter = appRouter;
+        this.userService = userService;
         this.userStorage = userStorage;
     }
     LogoutComponent.prototype.ngOnInit = function () {
-        this.userStorage.clearLoggedUser();
-        this.appRouter.navigateByUrl('/');
+        var _this = this;
+        this.userService.logoutUser()
+            .subscribe(
+        // success
+        function (response) {
+            _this.userStorage.clearLoggedUser();
+        }, 
+        // error
+        function (err) {
+            console.log(err);
+        }, 
+        // complete
+        function () {
+            _this.appRouter.navigateByUrl('/');
+        });
     };
     LogoutComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-logout',
             template: __webpack_require__(710),
             styles: [__webpack_require__(700)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object])
     ], LogoutComponent);
     return LogoutComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
 

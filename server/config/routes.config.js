@@ -10,7 +10,7 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .get('/users', passport.authenticate('jwt'), userController.profile)
     .post('/users', passport.authenticate('local'), userController.login)
     .put('/users', userController.register)
-    .post('/logout', passport.authenticate('jwt'), userController.logout)
+    .get('/logout', passport.authenticate('jwt'), userController.logout)
     .get('/favorites', passport.authenticate('jwt'), favoritesController.index)
     .post('/favorites', passport.authenticate('jwt'), favoritesController.create)
     .get('/gallery', itemListingController.index)
