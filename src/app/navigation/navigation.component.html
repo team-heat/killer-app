@@ -22,10 +22,10 @@
       <li class="dropdown">
         <a appNavigationHover href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUserName}}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a appNavigationHover routerLink='profile'>Profile</a></li>
-          <li><a appNavigationHover href="#">Settings</a></li>
+          <li (click)="setActiveItem('None')"><a appNavigationHover routerLink='profile'>Profile</a></li>
+          <li (click)="setActiveItem('None')"><a appNavigationHover routerLink='profile'>Settings</a></li>
           <li role="separator" class="divider"></li>
-          <li><a appNavigationHover routerLink="logout">Logout</a></li>
+          <li (click)="setActiveItem('None')"><a appNavigationHover routerLink="logout">Logout</a></li>
         </ul>
       </li>
     </ul>
