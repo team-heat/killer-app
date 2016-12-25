@@ -319,7 +319,6 @@ var LoginComponent = (function () {
         var _this = this;
         var hashedPassword = this.hashingService.generateHash(this.user.password);
         this.user.password = hashedPassword;
-        console.log(hashedPassword);
         this.isLoading = true;
         this.userService.loginUser(this.user)
             .map(function (res) { return res.json(); })
@@ -536,7 +535,6 @@ var RegisterComponent = (function () {
         var _this = this;
         var hashedPassword = this.hashingService.generateHash(this.user.password);
         this.user.password = hashedPassword;
-        console.log(hashedPassword);
         this.isLoading = true;
         this.userService.registerUser(this.user)
             .map(function (res) { return res.json(); })
@@ -1366,7 +1364,7 @@ module.exports = "<p>\r\n  logout works!\r\n</p>\r\n"
 /***/ 710:
 /***/ function(module, exports) {
 
-module.exports = "<img [src]=\"user.image\" alt=\"profile image\">\r\n"
+module.exports = "<img [src]=\"user.image\" alt=\"profile image\" width=\"200px\">\r\n"
 
 /***/ },
 
