@@ -18,6 +18,9 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 ## Creating an item
 - /create -> from for creating a new item, logged user
 
+## User
+- /favorites -> list user favorite items, logged user
+
 # How to run
 
 ## npm start 
