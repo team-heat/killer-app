@@ -18,6 +18,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var ToastrNotificationService = (function () {
     function ToastrNotificationService() {
+        this.minimumTimeBetweenEnqueueInMs = 200;
+        this.lastNotificationTimestamp = 0;
         this.notificationsQueue = [];
     }
     Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
@@ -35,8 +37,24 @@ var ToastrNotificationService = (function () {
         enumerable: true,
         configurable: true
     });
-    ToastrNotificationService.prototype.enqueueNotification = function (options) {
-        this.notificationsQueue.push(options);
+    ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
+        var notificationsAreEqual = false;
+        if (this.lastItemInQueue) {
+            notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+        }
+        var currentTimestamp = Date.now();
+        var durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+        if (notificationsAreEqual && durationBetweenToastrsIsValid) {
+            return;
+        }
+        this.notificationsQueue.push(newNotification);
+        this.lastNotificationTimestamp = Date.now();
+        this.lastItemInQueue = newNotification;
+    };
+    ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
+        var messageIsEqual = newNotification.message === lastNotification.message;
+        var headingIsEqual = newNotification.heading === lastNotification.heading;
+        return messageIsEqual && headingIsEqual;
     };
     ToastrNotificationService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
@@ -77,9 +95,11 @@ var UserService = (function () {
         this.apiUrlsConfigService = apiUrlsConfigService;
         this.userApiUrl = '/api/users';
         this.logoutApiUrl = '/api/logout';
+        this.favoritesApiUrl = '/api/favorites';
         this.contentTypeHeaderObject = { 'Content-Type': 'application/json' };
         this.userApiUrl = this.apiUrlsConfigService.usersApiUrl;
         this.logoutApiUrl = this.apiUrlsConfigService.logoutApiUrl;
+        this.favoritesApiUrl = this.apiUrlsConfigService.favoritesApiUrl;
     }
     UserService.prototype.registerUser = function (user) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
@@ -100,6 +120,11 @@ var UserService = (function () {
     UserService.prototype.getUserDetails = function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userApiUrl);
         return this.httpRequesterService.get(httpRequestOptions);
+    };
+    UserService.prototype.addItemToUserFavorites = function (itemId) {
+        var httpRequestOptions = this.httpRequesterOptionsFactory
+            .createHttpRequesterOptions(this.favoritesApiUrl, itemId, this.contentTypeHeaderObject);
+        return this.httpRequesterService.post(httpRequestOptions);
     };
     UserService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(), 
@@ -374,11 +399,10 @@ var HttpRequesterOptionsFactoryService = (function () {
     HttpRequesterOptionsFactoryService.prototype.createHttpRequesterOptions = function (url, content, headers) {
         if (content === void 0) { content = {}; }
         if (headers === void 0) { headers = {}; }
-        return {
-            url: url,
-            content: content,
-            headers: headers
-        };
+        if (typeof content !== 'object') {
+            content = { content: content };
+        }
+        return { url: url, content: content, headers: headers };
     };
     HttpRequesterOptionsFactoryService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
@@ -445,6 +469,9 @@ var HttpRequesterService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__(110);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddToFavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -458,12 +485,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var AddToFavoritesComponent = (function () {
-    function AddToFavoritesComponent(route, router) {
-        this.route = route;
+    function AddToFavoritesComponent(router, route, userService, toastrNotificationService, toastrNotificationOptionsFactoryService) {
         this.router = router;
+        this.route = route;
+        this.userService = userService;
+        this.toastrNotificationService = toastrNotificationService;
+        this.toastrNotificationOptionsFactoryService = toastrNotificationOptionsFactoryService;
     }
     AddToFavoritesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .switchMap(function (params) {
+            var itemListingId = params['id'];
+            return _this.userService.addItemToUserFavorites(itemListingId);
+        })
+            .subscribe(function (response) {
+            var method = 'success';
+            var message = "Added a new item to favorites.";
+            var heading = 'Yay!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        }, function (err) {
+            var method = 'error';
+            var message = 'User already has this item in favorites.';
+            var heading = 'Oops!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        }, function () {
+            _this.router.navigateByUrl('favorites');
+        });
     };
     AddToFavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
@@ -471,10 +527,10 @@ var AddToFavoritesComponent = (function () {
             template: __webpack_require__(719),
             styles: [__webpack_require__(706)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], AddToFavoritesComponent);
     return AddToFavoritesComponent;
-    var _a, _b;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
 

@@ -7,10 +7,10 @@ export class HttpRequesterOptionsFactoryService {
   constructor() { }
 
   createHttpRequesterOptions(url: string, content = {}, headers = {}): HttpRequestOptions {
-    return {
-      url,
-      content,
-      headers
-    };
+    if (typeof content !== 'object') {
+      content = { content };
+    }
+
+    return { url, content, headers };
   }
 }
