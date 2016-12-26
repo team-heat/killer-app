@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class ApiUrlsConfigService {
 
   // POST -> login 
-  // PUT  -> Register
+  // PUT  -> register
   // GET  -> details
   usersApiUrl: string = '/api/users';
 

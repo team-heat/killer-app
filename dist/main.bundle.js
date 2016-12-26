@@ -1726,7 +1726,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ApiUrlsConfigService = (function () {
     function ApiUrlsConfigService() {
         // POST -> login 
-        // PUT  -> Register
+        // PUT  -> register
         // GET  -> details
         this.usersApiUrl = '/api/users';
         // GET  -> logout
