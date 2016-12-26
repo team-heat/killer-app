@@ -52,9 +52,10 @@ var ToastrNotificationService = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__http_requester_options_factory_service__ = __webpack_require__(753);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__http_requester_service__ = __webpack_require__(752);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api_urls_config_service__ = __webpack_require__(754);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__ = __webpack_require__(753);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__http_requester_service__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -68,13 +69,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UserService = (function () {
-    function UserService(httpRequesterService, httpRequesterOptionsFactory) {
+    function UserService(httpRequesterService, httpRequesterOptionsFactory, apiUrlsConfigService) {
         this.httpRequesterService = httpRequesterService;
         this.httpRequesterOptionsFactory = httpRequesterOptionsFactory;
+        this.apiUrlsConfigService = apiUrlsConfigService;
         this.userApiUrl = '/api/users';
-        this.userLogoutApiUrl = '/api/logout';
+        this.logoutApiUrl = '/api/logout';
         this.contentTypeHeaderObject = { 'Content-Type': 'application/json' };
+        this.userApiUrl = this.apiUrlsConfigService.usersApiUrl;
+        this.logoutApiUrl = this.apiUrlsConfigService.logoutApiUrl;
     }
     UserService.prototype.registerUser = function (user) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
@@ -87,7 +92,7 @@ var UserService = (function () {
         return this.httpRequesterService.post(httpRequestOptions);
     };
     UserService.prototype.logoutUser = function () {
-        var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userLogoutApiUrl);
+        var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.logoutApiUrl);
         return this.httpRequesterService.get(httpRequestOptions);
     };
     // Using Cookies 
@@ -97,11 +102,11 @@ var UserService = (function () {
         return this.httpRequesterService.get(httpRequestOptions);
     };
     UserService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__http_requester_service__["a" /* HttpRequesterService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__http_requester_service__["a" /* HttpRequesterService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */]) === 'function' && _b) || Object])
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__http_requester_service__["a" /* HttpRequesterService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__http_requester_service__["a" /* HttpRequesterService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__api_urls_config_service__["a" /* ApiUrlsConfigService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__api_urls_config_service__["a" /* ApiUrlsConfigService */]) === 'function' && _c) || Object])
     ], UserService);
     return UserService;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
 
@@ -770,12 +775,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_service__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(535);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_user_service__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__users_users_module__ = __webpack_require__(538);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_http_requester_service__ = __webpack_require__(752);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_http_requester_options_factory_service__ = __webpack_require__(753);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__directives_navigation_hover_directive__ = __webpack_require__(528);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_api_urls_config_service__ = __webpack_require__(754);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_service__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__users_users_module__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_user_storage_service__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_http_requester_service__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_http_requester_options_factory_service__ = __webpack_require__(753);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__ = __webpack_require__(528);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -786,6 +792,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -816,7 +823,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__navigation_navigation_component__["a" /* NavigationComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
+                __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
             ],
             imports: [
                 // MockedModule,
@@ -824,7 +831,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_7__home_home_module__["a" /* HomeModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_14__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_15__users_users_module__["a" /* UsersModule */],
                 __WEBPACK_IMPORTED_MODULE_9_ng2_toastr_ng2_toastr__["ToastModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot([
                     { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -832,13 +839,14 @@ var AppModule = (function () {
                 ], { useHash: true })
             ],
             providers: [
+                __WEBPACK_IMPORTED_MODULE_13__services_api_urls_config_service__["a" /* ApiUrlsConfigService */],
                 __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__["CookieService"],
-                __WEBPACK_IMPORTED_MODULE_17__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_16__services_http_requester_service__["a" /* HttpRequesterService */],
+                __WEBPACK_IMPORTED_MODULE_18__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_17__services_http_requester_service__["a" /* HttpRequesterService */],
                 __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
                 __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_service__["a" /* ToastrNotificationService */],
-                __WEBPACK_IMPORTED_MODULE_13__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__["a" /* UserStorageService */]
+                __WEBPACK_IMPORTED_MODULE_14__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_16__services_user_storage_service__["a" /* UserStorageService */]
             ],
             bootstrap: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]
@@ -1696,6 +1704,49 @@ var HttpRequesterOptionsFactoryService = (function () {
     return HttpRequesterOptionsFactoryService;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
+
+/***/ },
+
+/***/ 754:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ApiUrlsConfigService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ApiUrlsConfigService = (function () {
+    function ApiUrlsConfigService() {
+        // POST -> login 
+        // PUT  -> Register
+        // GET  -> details
+        this.usersApiUrl = '/api/users';
+        // GET  -> logout
+        this.logoutApiUrl = '/api/logout';
+        // GET  -> all items
+        // POST -> create item
+        // GET  /:id -> item details
+        // POST /:id -> submit offer
+        this.galleryApiUrl = '/api/gallery';
+        // GET  -> list favorites for logged on user
+        // POST -> add item to logged user favorites list
+        this.favoritesApiUrl = '/api/favorites';
+    }
+    ApiUrlsConfigService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], ApiUrlsConfigService);
+    return ApiUrlsConfigService;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 

@@ -1,3 +1,4 @@
+import { ApiUrlsConfigService } from './api-urls-config.service';
 import { HttpRequesterOptionsFactoryService } from './http-requester-options-factory.service';
 import { HttpRequesterService } from './http-requester.service';
 import { Injectable, OnInit } from '@angular/core';
@@ -10,12 +11,17 @@ import { User } from './../models/user.model';
 export class UserService {
 
   private userApiUrl: string = '/api/users';
-  private userLogoutApiUrl: string = '/api/logout';
+  private logoutApiUrl: string = '/api/logout';
   private contentTypeHeaderObject: {} = { 'Content-Type': 'application/json' };
 
   constructor(
     private httpRequesterService: HttpRequesterService,
-    private httpRequesterOptionsFactory: HttpRequesterOptionsFactoryService) { }
+    private httpRequesterOptionsFactory: HttpRequesterOptionsFactoryService,
+    private apiUrlsConfigService: ApiUrlsConfigService) {
+
+    this.userApiUrl = this.apiUrlsConfigService.usersApiUrl;
+    this.logoutApiUrl = this.apiUrlsConfigService.logoutApiUrl;
+  }
 
   registerUser(user: User): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory
@@ -32,7 +38,7 @@ export class UserService {
   }
 
   logoutUser(): Observable<Response> {
-    const httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userLogoutApiUrl);
+    const httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.logoutApiUrl);
     return this.httpRequesterService.get(httpRequestOptions);
   }
 

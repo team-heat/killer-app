@@ -16,6 +16,7 @@ import { ToastrNotificationOptionsFactoryService } from './services/toastr-notif
 import { ToastrNotificationService } from './services/toastr-notification.service';
 import { ToastrNotificationsHandlerComponent } from './toastr-notifications-handler/toastr-notifications-handler.component';
 
+import { ApiUrlsConfigService } from './services/api-urls-config.service';
 import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
 import { UserStorageService } from './services/user-storage.service';
@@ -49,6 +50,7 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
       { useHash: true })
   ],
   providers: [
+    ApiUrlsConfigService,
     CookieService,
     HttpRequesterOptionsFactoryService,
     HttpRequesterService,
