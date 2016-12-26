@@ -77,9 +77,11 @@ var UserService = (function () {
         this.apiUrlsConfigService = apiUrlsConfigService;
         this.userApiUrl = '/api/users';
         this.logoutApiUrl = '/api/logout';
+        this.favoritesApiUrl = '/api/favorites';
         this.contentTypeHeaderObject = { 'Content-Type': 'application/json' };
         this.userApiUrl = this.apiUrlsConfigService.usersApiUrl;
         this.logoutApiUrl = this.apiUrlsConfigService.logoutApiUrl;
+        this.favoritesApiUrl = this.apiUrlsConfigService.favoritesApiUrl;
     }
     UserService.prototype.registerUser = function (user) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
@@ -100,6 +102,11 @@ var UserService = (function () {
     UserService.prototype.getUserDetails = function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userApiUrl);
         return this.httpRequesterService.get(httpRequestOptions);
+    };
+    UserService.prototype.addItemToUserFavorites = function (itemId) {
+        var httpRequestOptions = this.httpRequesterOptionsFactory
+            .createHttpRequesterOptions(this.favoritesApiUrl, itemId, this.contentTypeHeaderObject);
+        return this.httpRequesterService.post(httpRequestOptions);
     };
     UserService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(), 
@@ -445,6 +452,7 @@ var HttpRequesterService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__(110);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddToFavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -458,12 +466,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AddToFavoritesComponent = (function () {
-    function AddToFavoritesComponent(route, router) {
+    function AddToFavoritesComponent(route, router, userService) {
         this.route = route;
         this.router = router;
+        this.userService = userService;
     }
     AddToFavoritesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .switchMap(function (params) {
+            var itemListingId = params['id'];
+            return _this.userService.addItemToUserFavorites(itemListingId);
+        })
+            .subscribe(function (response) {
+        }, function (err) {
+            console.log(err);
+        }, function () {
+            _this.router.navigateByUrl('favorites');
+        });
     };
     AddToFavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
@@ -471,10 +493,10 @@ var AddToFavoritesComponent = (function () {
             template: __webpack_require__(719),
             styles: [__webpack_require__(706)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === 'function' && _c) || Object])
     ], AddToFavoritesComponent);
     return AddToFavoritesComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
 
