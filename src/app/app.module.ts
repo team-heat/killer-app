@@ -37,8 +37,7 @@ import { FormDefaultValueDirective } from './directives/form-default-value.direc
     AppComponent,
     NavigationComponent,
     ToastrNotificationsHandlerComponent,
-    NavigationHoverDirective,
-    FormDefaultValueDirective
+    NavigationHoverDirective
   ],
   imports: [
     // MockedModule,
