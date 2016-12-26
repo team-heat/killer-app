@@ -27,5 +27,4 @@ export class AddListingComponent implements OnInit {
       this.appRouter.navigateByUrl('login');
     }
   }
-
 }
