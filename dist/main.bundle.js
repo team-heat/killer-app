@@ -615,7 +615,7 @@ var RegisterComponent = (function () {
         }, function (err) {
             _this.isLoading = false;
             var method = 'error';
-            var message = 'Please try again.';
+            var message = 'Email or username already in use.';
             var heading = 'Oops!';
             var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);

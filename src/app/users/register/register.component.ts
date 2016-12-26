@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit {
         this.isLoading = false;
 
         const method = 'error';
-        const message = 'Please try again.';
+        const message = 'Email or username already in use.';
         const heading = 'Oops!';
         const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
           .createToastrNotificationOptions(method, message, heading);
