@@ -21,6 +21,12 @@ var ToastrNotificationService = (function () {
         this.minimumTimeBetweenEnqueueInMs = 200;
         this.lastNotificationTimestamp = 0;
         this.notificationsQueue = [];
+        this.lastItemInQueue = {
+            method: '',
+            message: '',
+            heading: '',
+            delay: 1500000
+        };
     }
     Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
         get: function () {
@@ -38,10 +44,7 @@ var ToastrNotificationService = (function () {
         configurable: true
     });
     ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
-        var notificationsAreEqual = false;
-        if (this.lastItemInQueue) {
-            notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
-        }
+        var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
         var currentTimestamp = Date.now();
         var durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
         if (notificationsAreEqual && durationBetweenToastrsIsValid) {

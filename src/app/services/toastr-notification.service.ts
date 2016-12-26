@@ -12,6 +12,12 @@ export class ToastrNotificationService {
 
   constructor() {
     this.notificationsQueue = [];
+    this.lastItemInQueue = {
+      method: '',
+      message: '',
+      heading: '',
+      delay: 1500000
+    };
   }
 
   get hasNotificationsInQueue(): boolean {
@@ -24,11 +30,7 @@ export class ToastrNotificationService {
   }
 
   enqueueNotification(newNotification: ToastrNotificationOptions): void {
-    let notificationsAreEqual = false;
-    if (this.lastItemInQueue) {
-      notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
-    }
-
+    const notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
     const currentTimestamp = Date.now();
     const durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
     if (notificationsAreEqual && durationBetweenToastrsIsValid) {
