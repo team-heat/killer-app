@@ -40,7 +40,7 @@ module.exports = function ({itemListingData}) {
       });
   }
 
-  function submitOfferForListing(req, res) {
+  function updateListing(req, res) {
     res.status(200).json({ message: 'POST /api/gallery/:id' });
   }
 
@@ -48,6 +48,6 @@ module.exports = function ({itemListingData}) {
     index,
     details,
     createListing,
-    submitOfferForListing
+    updateListing
   };
 };

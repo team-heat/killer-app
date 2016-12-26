@@ -335,7 +335,7 @@ var ApiUrlsConfigService = (function () {
         // GET  -> all items
         // POST -> create item
         // GET  /:id -> item details
-        // POST /:id -> submit offer
+        // POST /:id -> update listing
         this.galleryApiUrl = '/api/gallery';
         // GET  -> list favorites for logged on user
         // POST -> add item to logged user favorites list

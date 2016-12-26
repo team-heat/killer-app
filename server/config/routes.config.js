@@ -16,7 +16,7 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .get('/gallery', itemListingController.index)
     .get('/gallery/:id', itemListingController.details)
     .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing)
-    .post('/gallery/:id', passport.authenticate('jwt'), itemListingController.submitOfferForListing);
+    .post('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing);
 
   app.use('/api', apiRouter);
 
