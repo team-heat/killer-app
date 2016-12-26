@@ -42,7 +42,7 @@ export class AddListingComponent implements OnInit {
   onsubmit(): void {
     this.itemListingService.addItem(this.itemListing)
       .subscribe((response: any) => {
-        const 
+        
       });
   }
 }
