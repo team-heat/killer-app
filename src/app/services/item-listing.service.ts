@@ -20,7 +20,7 @@ export class ItemListingService {
     this.galleryApiUrl = this.apiUrlsConfigService.galleryApiUrl;
   }
 
-  submitItem(item: ItemListing): Observable<Response> {
+  addItem(item: ItemListing): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory
       .createHttpRequesterOptions(this.galleryApiUrl, item, this.contentTypeHeaderObject);
 
