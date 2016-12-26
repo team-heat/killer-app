@@ -493,7 +493,6 @@ var AddToFavoritesComponent = (function () {
                 .createToastrNotificationOptions(method, message, heading);
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
         }, function (err) {
-            console.log(err);
             var method = 'error';
             var message = 'User already has this item in favorites.';
             var heading = 'Oops!';
