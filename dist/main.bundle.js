@@ -468,7 +468,7 @@ var AddToFavoritesComponent = (function () {
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
         }, function (err) {
             var method = 'error';
-            var message = 'User already has this item in favorites.';
+            var message = 'Invalid item.';
             var heading = 'Oops!';
             var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
@@ -2260,9 +2260,9 @@ var UserService = (function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userApiUrl);
         return this.httpRequesterService.get(httpRequestOptions);
     };
-    UserService.prototype.addItemToUserFavorites = function (itemId) {
+    UserService.prototype.addItemToUserFavorites = function (id) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
-            .createHttpRequesterOptions(this.favoritesApiUrl, itemId, this.contentTypeHeaderObject);
+            .createHttpRequesterOptions(this.favoritesApiUrl, id, this.contentTypeHeaderObject);
         return this.httpRequesterService.post(httpRequestOptions);
     };
     UserService = __decorate([

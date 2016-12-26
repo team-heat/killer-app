@@ -51,9 +51,9 @@ export class UserService {
     return this.httpRequesterService.get(httpRequestOptions);
   }
 
-  addItemToUserFavorites(itemId: string): Observable<Response> {
+  addItemToUserFavorites(id: string): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory
-      .createHttpRequesterOptions(this.favoritesApiUrl, itemId, this.contentTypeHeaderObject);
+      .createHttpRequesterOptions(this.favoritesApiUrl, id, this.contentTypeHeaderObject);
 
     return this.httpRequesterService.post(httpRequestOptions);
   }

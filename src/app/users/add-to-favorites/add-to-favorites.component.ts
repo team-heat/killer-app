@@ -37,7 +37,7 @@ export class AddToFavoritesComponent implements OnInit {
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
       }, (err) => {
         const method = 'error';
-        const message = 'User already has this item in favorites.';
+        const message = 'Invalid item.';
         const heading = 'Oops!';
         const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
           .createToastrNotificationOptions(method, message, heading);
