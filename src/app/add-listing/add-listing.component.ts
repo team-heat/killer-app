@@ -42,7 +42,10 @@ export class AddListingComponent implements OnInit {
   onsubmit(): void {
     this.itemListingService.addItem(this.itemListing)
       .subscribe((response: any) => {
-        
+        const toastrNotificationOptions = this.toastrOptionsFactory
+          .createToastrNotificationOptions('success', 'You have submitted the item successfully.');
+
+        this.toastrNotification.enqueueNotification(toastrNotificationOptions);
       });
   }
 }
