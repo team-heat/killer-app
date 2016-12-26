@@ -49,8 +49,8 @@ var ToastrNotificationService = (function () {
     ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
         var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
         var currentTimestamp = this.dateProviderService.currentTimestamp;
-        var durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
-        if (notificationsAreEqual && durationBetweenToastrsIsValid) {
+        var durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+        if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
             return;
         }
         this.notificationsQueue.push(newNotification);

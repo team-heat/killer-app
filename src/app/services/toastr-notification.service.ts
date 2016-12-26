@@ -35,8 +35,8 @@ export class ToastrNotificationService {
   enqueueNotification(newNotification: ToastrNotificationOptions): void {
     const notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
     const currentTimestamp = this.dateProviderService.currentTimestamp;
-    const durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
-    if (notificationsAreEqual && durationBetweenToastrsIsValid) {
+    const durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+    if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
       return;
     }
 
