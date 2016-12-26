@@ -7,6 +7,7 @@ export class ToastrNotificationService {
   private minimumTimeBetweenEnqueueInMs: number = 200;
 
   private notificationsQueue: ToastrNotificationOptions[];
+  private lastItemInQueue: ToastrNotificationOptions;
   private lastNotificationTimestamp: number = 0;
 
   constructor() {
@@ -22,15 +23,26 @@ export class ToastrNotificationService {
     return nextNotification;
   }
 
-  enqueueNotification(options: ToastrNotificationOptions): void {
+  enqueueNotification(newNotification: ToastrNotificationOptions): void {
+    let notificationsAreEqual = false;
+    if (this.lastItemInQueue) {
+      notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+    }
+
     const currentTimestamp = Date.now();
-    if (currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
+    if (notificationsAreEqual && currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
       return;
     }
 
-    console.log(currentTimestamp - this.lastNotificationTimestamp);
-
-    this.notificationsQueue.push(options);
+    this.notificationsQueue.push(newNotification);
     this.lastNotificationTimestamp = Date.now();
+    this.lastItemInQueue = newNotification;
+  }
+
+  private notificationsAreEqual(newNotification: ToastrNotificationOptions, lastNotification: ToastrNotificationOptions): boolean {
+    const messageIsEqual = newNotification.message === lastNotification.message;
+    const headingIsEqual = newNotification.heading === lastNotification.heading;
+
+    return messageIsEqual && headingIsEqual;
   }
 }

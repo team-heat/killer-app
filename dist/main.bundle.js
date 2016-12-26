@@ -37,14 +37,23 @@ var ToastrNotificationService = (function () {
         enumerable: true,
         configurable: true
     });
-    ToastrNotificationService.prototype.enqueueNotification = function (options) {
+    ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
+        var notificationsAreEqual = false;
+        if (this.lastItemInQueue) {
+            notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+        }
         var currentTimestamp = Date.now();
-        if (currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
+        if (notificationsAreEqual && currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
             return;
         }
-        console.log(currentTimestamp - this.lastNotificationTimestamp);
-        this.notificationsQueue.push(options);
+        this.notificationsQueue.push(newNotification);
         this.lastNotificationTimestamp = Date.now();
+        this.lastItemInQueue = newNotification;
+    };
+    ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
+        var messageIsEqual = newNotification.message === lastNotification.message;
+        var headingIsEqual = newNotification.heading === lastNotification.heading;
+        return messageIsEqual && headingIsEqual;
     };
     ToastrNotificationService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
