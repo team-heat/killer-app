@@ -1,10 +1,18 @@
+import { RouterModule, Routes } from '@angular/router';
+
 import { AddListingComponent } from './add-listing.component';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
 import { ItemListingService } from '../services/item-listing.service';
+import { NgModule } from '@angular/core';
+
+const routes: Routes = [
+  { path: '', component: AddListingComponent }
+];
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes)],
   declarations: [AddListingComponent],
   providers: [ItemListingService]
 })

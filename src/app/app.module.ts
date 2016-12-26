@@ -16,6 +16,7 @@ import { ToastrNotificationOptionsFactoryService } from './services/toastr-notif
 import { ToastrNotificationService } from './services/toastr-notification.service';
 import { ToastrNotificationsHandlerComponent } from './toastr-notifications-handler/toastr-notifications-handler.component';
 
+import { AddListingModule } from './add-listing/add-listing.module';
 import { ApiUrlsConfigService } from './services/api-urls-config.service';
 import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
@@ -28,6 +29,7 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +44,7 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
     HomeModule,
     HttpModule,
     UsersModule,
+    AddListingModule,
     ToastModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
