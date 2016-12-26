@@ -13,7 +13,7 @@ const itemListingData = require('./data/item-listing.data')({ ItemListing });
 
 const userController = require('./controllers/user.controller')({ userData, config });
 const itemListingController = require('./controllers/item-listing.controller')({ itemListingData });
-const favoritesController = require('./controllers/favorites.controller')({ userData });
+const favoritesController = require('./controllers/favorites.controller')({ userData, itemListingData });
 
 require('./config/local.passport.config')({ app, userData });
 require('./config/jwt.passport.config')({ app, userData, config });

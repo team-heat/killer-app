@@ -54,10 +54,22 @@ module.exports = function ({User}) {
     });
   }
 
+function updateUser(user){
+  return new Promise((resolve, reject) => {
+      user.save((err) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve(user);
+      });
+    });
+}
+
   return {
     createUser,
     getUserByUsername,
     getUserByEmail,
-    getUserById
+    getUserById,
+    updateUser
   };
 };
