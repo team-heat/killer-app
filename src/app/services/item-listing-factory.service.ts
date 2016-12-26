@@ -4,8 +4,6 @@ import { ItemListing } from '../models/item-listing.model';
 @Injectable()
 export class ItemListingFactoryService {
 
-  constructor() { }
-
   createItemListing(
     make = '',
     model = '',

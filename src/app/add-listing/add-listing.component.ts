@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { UserStorageService } from '../services/user-storage.service';
+
+import { ItemListing } from '../models/item-listing.model';
+import { ItemListingFactoryService } from '../services/item-listing-factory.service';
+import { ItemListingService } from '../services/item-listing.service';
 import { Router } from '@angular/router';
 import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../services/toastr-notification.service';
-import { ItemListingService } from '../services/item-listing.service';
+import { UserStorageService } from '../services/user-storage.service';
 
 @Component({
   selector: 'app-add-listing',
@@ -12,12 +15,18 @@ import { ItemListingService } from '../services/item-listing.service';
 })
 export class AddListingComponent implements OnInit {
 
+  private itemListing: ItemListing;
+
   constructor(
     private appRouter: Router,
     private userStorage: UserStorageService,
     private itemListingService: ItemListingService,
+    private itemListingFactory: ItemListingFactoryService,
     private toastrNotification: ToastrNotificationService,
-    private toastrOptionsFactory: ToastrNotificationOptionsFactoryService) { }
+    private toastrOptionsFactory: ToastrNotificationOptionsFactoryService) {
+
+    this.itemListing = this.itemListingFactory.createItemListing();
+  }
 
   ngOnInit() {
     if (!this.userStorage.isLogged()) {
@@ -31,6 +40,9 @@ export class AddListingComponent implements OnInit {
   }
 
   onsubmit(): void {
-    // this.itemListingService.addItem();
+    this.itemListingService.addItem(this.itemListing)
+      .subscribe((response: any) => {
+        const 
+      });
   }
 }
