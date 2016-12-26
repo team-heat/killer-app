@@ -1,6 +1,6 @@
 export interface ItemListing {
   _id: string;
-  ownser: string;
+  owner: string;
   make: string;
   model: string;
   year: string;
