@@ -43,7 +43,8 @@ var ToastrNotificationService = (function () {
             notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
         }
         var currentTimestamp = Date.now();
-        if (notificationsAreEqual && currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
+        var durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+        if (notificationsAreEqual && durationBetweenToastrsIsValid) {
             return;
         }
         this.notificationsQueue.push(newNotification);

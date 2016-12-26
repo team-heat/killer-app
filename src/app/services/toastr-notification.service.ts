@@ -30,7 +30,8 @@ export class ToastrNotificationService {
     }
 
     const currentTimestamp = Date.now();
-    if (notificationsAreEqual && currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
+    const durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+    if (notificationsAreEqual && durationBetweenToastrsIsValid) {
       return;
     }
 
