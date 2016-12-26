@@ -69,8 +69,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var UserService = (function () {
-    function UserService(httpRequester, httpRequesterOptionsFactory) {
-        this.httpRequester = httpRequester;
+    function UserService(httpRequesterService, httpRequesterOptionsFactory) {
+        this.httpRequesterService = httpRequesterService;
         this.httpRequesterOptionsFactory = httpRequesterOptionsFactory;
         this.userApiUrl = '/api/users';
         this.userLogoutApiUrl = '/api/logout';
@@ -79,22 +79,22 @@ var UserService = (function () {
     UserService.prototype.registerUser = function (user) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(this.userApiUrl, user, this.contentTypeHeaderObject);
-        return this.httpRequester.put(httpRequestOptions);
+        return this.httpRequesterService.put(httpRequestOptions);
     };
     UserService.prototype.loginUser = function (user) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(this.userApiUrl, user, this.contentTypeHeaderObject);
-        return this.httpRequester.post(httpRequestOptions);
+        return this.httpRequesterService.post(httpRequestOptions);
     };
     UserService.prototype.logoutUser = function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userLogoutApiUrl);
-        return this.httpRequester.get(httpRequestOptions);
+        return this.httpRequesterService.get(httpRequestOptions);
     };
     // Using Cookies 
     // { headers: new Headers({ 'Authorization': `JWT ${token}` }) }
     UserService.prototype.getUserDetails = function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userApiUrl);
-        return this.httpRequester.get(httpRequestOptions);
+        return this.httpRequesterService.get(httpRequestOptions);
     };
     UserService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(), 

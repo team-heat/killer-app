@@ -14,32 +14,32 @@ export class UserService {
   private contentTypeHeaderObject: {} = { 'Content-Type': 'application/json' };
 
   constructor(
-    private httpRequester: HttpRequesterService,
+    private httpRequesterService: HttpRequesterService,
     private httpRequesterOptionsFactory: HttpRequesterOptionsFactoryService) { }
 
   registerUser(user: User): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory
       .createHttpRequesterOptions(this.userApiUrl, user, this.contentTypeHeaderObject);
 
-    return this.httpRequester.put(httpRequestOptions);
+    return this.httpRequesterService.put(httpRequestOptions);
   }
 
   loginUser(user: User): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory
       .createHttpRequesterOptions(this.userApiUrl, user, this.contentTypeHeaderObject);
 
-    return this.httpRequester.post(httpRequestOptions);
+    return this.httpRequesterService.post(httpRequestOptions);
   }
 
   logoutUser(): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userLogoutApiUrl);
-    return this.httpRequester.get(httpRequestOptions);
+    return this.httpRequesterService.get(httpRequestOptions);
   }
 
   // Using Cookies 
   // { headers: new Headers({ 'Authorization': `JWT ${token}` }) }
   getUserDetails(): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userApiUrl);
-    return this.httpRequester.get(httpRequestOptions);
+    return this.httpRequesterService.get(httpRequestOptions);
   }
 }
