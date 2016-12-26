@@ -11,17 +11,17 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 ## API Routes
 - Inject ApiUrlsConfigService - all api urls included as properties
 
-## Gallery
+## Gallery ( App Routes )
 - /gallery -> all items
 - /gallery/:id -> item details
 - add item to user favorites
 - bidding and/ or buying items 
 - vote up/ down ( possibly )
 
-## Creating an item
+## Creating an item ( App Routes )
 - /create -> from for creating a new item, logged user
 
-## User
+## User ( App Routes )
 - /favorites -> list user favorite items, logged user
 
 # How to run
