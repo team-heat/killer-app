@@ -1,7 +1,7 @@
 <div class="login-wrapper">
   <h2 id="component-header">Sign In</h2>
   <div class="inner-wrapper">
-    <form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
+    <form *ngIf="isLoading === false" #loginForm="ngForm" (ngSubmit)="onSubmit(); loginForm.reset()">
       <div class="form-group">
         <label> 
       <input #ngName="ngModel" class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_]*">

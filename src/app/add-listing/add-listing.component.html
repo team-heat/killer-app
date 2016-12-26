@@ -1,5 +1,8 @@
 <div class="submit-wrapper">
-  <h2 id="component-header">Submit</h2>
+  <h2 id="component-header">Submit Listing</h2>
   <div class="inner-wrapper">
+    <form *ngIf="!isLoading" #registerForm="ngForm" (ngSubmit)="onSubmit(); registerForm.reset()">
+      
+    </form>
   </div>
 </div>
