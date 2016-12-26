@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 
 const itemListingSchema = new mongoose.Schema({
+  owner: String,
   make: String,
   model: String,
   year: String,
@@ -19,6 +20,7 @@ const itemListingSchema = new mongoose.Schema({
 let ItemListing;
 itemListingSchema.static('createItemListing', function (listing) {
   return new ItemListing({
+    owner: listing.owner,
     make: listing.make,
     model: listing.model,
     year: listing.year,

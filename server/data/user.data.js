@@ -28,6 +28,19 @@ module.exports = function ({User}) {
     });
   }
 
+  function getUserByEmail(email) {
+    return new Promise((resolve, reject) => {
+      User.findOne({
+        email
+      }, (err, user) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve(user);
+      });
+    });
+  }
+
   function getUserById(id) {
     return new Promise((resolve, reject) => {
       User.findOne({
@@ -44,6 +57,7 @@ module.exports = function ({User}) {
   return {
     createUser,
     getUserByUsername,
+    getUserByEmail,
     getUserById
   };
 };
