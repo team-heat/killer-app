@@ -1,3 +1,4 @@
+import { AddToFavoritesComponent } from './add-to-favorites/add-to-favorites.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ListedItemsComponent } from './listed-items/listed-items.component';
 import { LoginComponent } from './login/login.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'facebook-login', component: ProfileComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'favorites', component: FavoritesComponent },
+  { path: 'favorites/:id', component: AddToFavoritesComponent },
   { path: 'listed-items', component: ListedItemsComponent }
 ];
 
