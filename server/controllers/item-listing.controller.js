@@ -41,6 +41,10 @@ module.exports = function ({itemListingData}) {
   }
 
   function updateListing(req, res) {
+    res.status(200).json({ message: 'PUT /api/gallery/:id' });
+  }
+
+  function submitOfferForListing(req, res) {
     res.status(200).json({ message: 'POST /api/gallery/:id' });
   }
 
@@ -48,6 +52,7 @@ module.exports = function ({itemListingData}) {
     index,
     details,
     createListing,
-    updateListing
+    updateListing,
+    submitOfferForListing
   };
 };
