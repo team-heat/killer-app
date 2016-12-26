@@ -6,8 +6,13 @@ export class ItemListingFactoryService {
 
   constructor() { }
 
-  createItemListing(): ItemListing {
+  createItemListing(
     
+  ): ItemListing {
+    const createdOn = new Date().toUTCString();
+    const isActive = true;
+
+    // const itemListing = new ItemListing();
 
     return null;
   }
