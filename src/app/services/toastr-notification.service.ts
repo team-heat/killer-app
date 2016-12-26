@@ -1,3 +1,4 @@
+import { DateProviderService } from './helpers/date-provider.service';
 import { Injectable } from '@angular/core';
 import { ToastrNotificationOptions } from './../models/toasts-notification-options.model';
 
@@ -8,10 +9,18 @@ export class ToastrNotificationService {
 
   private notificationsQueue: ToastrNotificationOptions[];
   private lastItemInQueue: ToastrNotificationOptions;
-  private lastNotificationTimestamp: number = 0;
+  private lastNotificationTimestamp: number;
 
-  constructor() {
+  constructor(private dateProviderService: DateProviderService) {
+
+    this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
     this.notificationsQueue = [];
+    this.lastItemInQueue = {
+      method: '',
+      message: '',
+      heading: '',
+      delay: 1500000
+    };
   }
 
   get hasNotificationsInQueue(): boolean {
@@ -24,19 +33,15 @@ export class ToastrNotificationService {
   }
 
   enqueueNotification(newNotification: ToastrNotificationOptions): void {
-    let notificationsAreEqual = false;
-    if (this.lastItemInQueue) {
-      notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
-    }
-
-    const currentTimestamp = Date.now();
-    const durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
-    if (notificationsAreEqual && durationBetweenToastrsIsValid) {
+    const notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+    const currentTimestamp = this.dateProviderService.currentTimestamp;
+    const durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+    if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
       return;
     }
 
     this.notificationsQueue.push(newNotification);
-    this.lastNotificationTimestamp = Date.now();
+    this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
     this.lastItemInQueue = newNotification;
   }
 

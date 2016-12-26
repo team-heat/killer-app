@@ -4,7 +4,8 @@ webpackJsonp([0,4],{
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16,11 +17,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ToastrNotificationService = (function () {
-    function ToastrNotificationService() {
+    function ToastrNotificationService(dateProviderService) {
+        this.dateProviderService = dateProviderService;
         this.minimumTimeBetweenEnqueueInMs = 200;
-        this.lastNotificationTimestamp = 0;
+        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
         this.notificationsQueue = [];
+        this.lastItemInQueue = {
+            method: '',
+            message: '',
+            heading: '',
+            delay: 1500000
+        };
     }
     Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
         get: function () {
@@ -38,17 +47,14 @@ var ToastrNotificationService = (function () {
         configurable: true
     });
     ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
-        var notificationsAreEqual = false;
-        if (this.lastItemInQueue) {
-            notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
-        }
-        var currentTimestamp = Date.now();
-        var durationBetweenToastrsIsValid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
-        if (notificationsAreEqual && durationBetweenToastrsIsValid) {
+        var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+        var currentTimestamp = this.dateProviderService.currentTimestamp;
+        var durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+        if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
             return;
         }
         this.notificationsQueue.push(newNotification);
-        this.lastNotificationTimestamp = Date.now();
+        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
         this.lastItemInQueue = newNotification;
     };
     ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
@@ -57,10 +63,11 @@ var ToastrNotificationService = (function () {
         return messageIsEqual && headingIsEqual;
     };
     ToastrNotificationService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [])
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */]) === 'function' && _a) || Object])
     ], ToastrNotificationService);
     return ToastrNotificationService;
+    var _a;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
 
@@ -988,28 +995,29 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_module__ = __webpack_require__(533);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_navigation_component__ = __webpack_require__(537);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ng2_toastr_ng2_toastr__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ng2_toastr_ng2_toastr__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(539);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_api_urls_config_service__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_service__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__users_users_module__ = __webpack_require__(542);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_user_storage_service__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_http_requester_service__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_http_requester_options_factory_service__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__ = __webpack_require__(532);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_helpers_date_provider_service__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home_module__ = __webpack_require__(533);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__ = __webpack_require__(537);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_toastr_ng2_toastr__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ng2_toastr_ng2_toastr__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_options_factory_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_service__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(539);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_api_urls_config_service__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_user_service__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__users_users_module__ = __webpack_require__(542);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_user_storage_service__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_http_requester_service__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_http_requester_options_factory_service__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_navigation_hover_directive__ = __webpack_require__(532);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1040,44 +1048,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
             ],
             imports: [
                 // MockedModule,
-                __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_7__home_home_module__["a" /* HomeModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_15__users_users_module__["a" /* UsersModule */],
-                __WEBPACK_IMPORTED_MODULE_9_ng2_toastr_ng2_toastr__["ToastModule"],
-                __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot([
+                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_8__home_home_module__["a" /* HomeModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_16__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_10_ng2_toastr_ng2_toastr__["ToastModule"],
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot([
                     { path: '', redirectTo: '/', pathMatch: 'full' },
                     { path: '**', redirectTo: '/', pathMatch: 'full' }
                 ], { useHash: true })
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_13__services_api_urls_config_service__["a" /* ApiUrlsConfigService */],
-                __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_services_cookies_service__["CookieService"],
-                __WEBPACK_IMPORTED_MODULE_18__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_17__services_http_requester_service__["a" /* HttpRequesterService */],
-                __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_service__["a" /* ToastrNotificationService */],
-                __WEBPACK_IMPORTED_MODULE_14__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_16__services_user_storage_service__["a" /* UserStorageService */]
+                __WEBPACK_IMPORTED_MODULE_14__services_api_urls_config_service__["a" /* ApiUrlsConfigService */],
+                __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__["CookieService"],
+                __WEBPACK_IMPORTED_MODULE_0__services_helpers_date_provider_service__["a" /* DateProviderService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_18__services_http_requester_service__["a" /* HttpRequesterService */],
+                __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_service__["a" /* ToastrNotificationService */],
+                __WEBPACK_IMPORTED_MODULE_15__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_17__services_user_storage_service__["a" /* UserStorageService */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -1867,6 +1877,42 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(410);
 
+
+/***/ },
+
+/***/ 760:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return DateProviderService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DateProviderService = (function () {
+    function DateProviderService() {
+    }
+    Object.defineProperty(DateProviderService.prototype, "currentTimestamp", {
+        get: function () {
+            return Date.now();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    DateProviderService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], DateProviderService);
+    return DateProviderService;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
