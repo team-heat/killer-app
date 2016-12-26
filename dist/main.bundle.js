@@ -448,7 +448,6 @@ var LogoutComponent = (function () {
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
             _this.userStorage.clearLoggedUser();
         }, function (err) {
-            console.log(err);
             var method = 'error';
             var message = 'Please try again.';
             var heading = 'Oops!';
