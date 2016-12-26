@@ -1614,7 +1614,7 @@ module.exports = ""
 /***/ 748:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  favorites works!\n</p>\n"
+module.exports = "<p>\r\n  favorites works!\r\n</p>\r\n"
 
 /***/ },
 
@@ -1663,7 +1663,7 @@ module.exports = ""
 /***/ 751:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  listed-items works!\n</p>\n"
+module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
 
 /***/ }
 
