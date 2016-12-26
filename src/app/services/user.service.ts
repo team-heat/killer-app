@@ -12,6 +12,7 @@ export class UserService {
 
   private userApiUrl: string = '/api/users';
   private logoutApiUrl: string = '/api/logout';
+  private favoritesApiUrl: string = '/api/favorites';
   private contentTypeHeaderObject: {} = { 'Content-Type': 'application/json' };
 
   constructor(
@@ -21,6 +22,7 @@ export class UserService {
 
     this.userApiUrl = this.apiUrlsConfigService.usersApiUrl;
     this.logoutApiUrl = this.apiUrlsConfigService.logoutApiUrl;
+    this.favoritesApiUrl = this.apiUrlsConfigService.favoritesApiUrl;
   }
 
   registerUser(user: User): Observable<Response> {
@@ -47,5 +49,12 @@ export class UserService {
   getUserDetails(): Observable<Response> {
     const httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userApiUrl);
     return this.httpRequesterService.get(httpRequestOptions);
+  }
+
+  addItemToUserFavorites(itemId: string): Observable<Response> {
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(this.favoritesApiUrl, itemId, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.post(httpRequestOptions);
   }
 }

@@ -1,3 +1,4 @@
+import { DateProviderService } from './services/helpers/date-provider.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -55,6 +56,7 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
   providers: [
     ApiUrlsConfigService,
     CookieService,
+    DateProviderService,
     HttpRequesterOptionsFactoryService,
     HttpRequesterService,
     ToastrNotificationOptionsFactoryService,

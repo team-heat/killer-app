@@ -14,6 +14,7 @@ import { UserFactoryService } from './../services/user-factory.service';
 import { UsersComponent } from './users.component';
 import { UserService } from './../services/user.service';
 import { UsersRouterModule } from './users.routes';
+import { AddToFavoritesComponent } from './add-to-favorites/add-to-favorites.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { UsersRouterModule } from './users.routes';
     UsersComponent,
     DateFormatterPipe,
     FavoritesComponent,
-    ListedItemsComponent
+    ListedItemsComponent,
+    AddToFavoritesComponent
   ],
   providers: [
     UserFactoryService,

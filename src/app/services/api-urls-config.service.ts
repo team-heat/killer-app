@@ -14,6 +14,7 @@ export class ApiUrlsConfigService {
   // GET  -> all items
   // POST -> create item
   // GET  /:id -> item details
+  // PUT  /:id -> update listing
   // POST /:id -> submit offer
   galleryApiUrl: string = '/api/gallery';
 
