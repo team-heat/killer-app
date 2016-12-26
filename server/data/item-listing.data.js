@@ -28,6 +28,17 @@ module.exports = function ({ItemListing}) {
     });
   }
 
+  function getAll() {
+    return new Promise((resolve, reject) => {
+      ItemListing.find((err, listings) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve(listings);
+      });
+    });
+  }
+
   function getItemListingById(listingId) {
     return new Promise((resolve, reject) => {
       ItemListing.findOne({
@@ -61,6 +72,7 @@ module.exports = function ({ItemListing}) {
   }
 
   return {
+    getAll,
     createItemListing,
     getItemListingById,
     filterItemListingWithOptions
