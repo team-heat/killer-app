@@ -412,9 +412,9 @@ var ItemListingFactoryService = (function () {
     ItemListingFactoryService.prototype.createItemListing = function (make, model, year, price, enginePower, exteriorColor, interiorColor) {
         if (make === void 0) { make = ''; }
         if (model === void 0) { model = ''; }
-        if (year === void 0) { year = 0; }
-        if (price === void 0) { price = 0; }
-        if (enginePower === void 0) { enginePower = 0; }
+        if (year === void 0) { year = -1; }
+        if (price === void 0) { price = -1; }
+        if (enginePower === void 0) { enginePower = -1; }
         if (exteriorColor === void 0) { exteriorColor = ''; }
         if (interiorColor === void 0) { interiorColor = ''; }
         var itemListing = new __WEBPACK_IMPORTED_MODULE_1__models_item_listing_model__["a" /* ItemListing */]();
@@ -1833,7 +1833,7 @@ var UserStorageService = (function () {
 /***/ 706:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".login-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .login-wrapper > .inner-wrapper {\n    margin-top: auto;\n    margin-bottom: auto; }\n\ninput {\n  color: white;\n  background-color: rgba(0, 0, 0, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 

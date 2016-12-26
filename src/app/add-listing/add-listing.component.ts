@@ -15,7 +15,7 @@ import { UserStorageService } from '../services/user-storage.service';
 })
 export class AddListingComponent implements OnInit {
 
-  private itemListing: ItemListing;
+  itemListing: ItemListing;
 
   constructor(
     private appRouter: Router,
@@ -39,7 +39,7 @@ export class AddListingComponent implements OnInit {
     }
   }
 
-  onsubmit(): void {
+  onSubmit(): void {
     this.itemListingService.addItem(this.itemListing)
       .subscribe((response: any) => {
         const toastrNotificationOptions = this.toastrOptionsFactory

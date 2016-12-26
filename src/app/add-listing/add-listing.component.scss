@@ -1,0 +1,43 @@
+.submit-wrapper {
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-flow: column wrap;
+  >.inner-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+input {
+  color: white;
+  background-color: #2f2f2f;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  &.ng-valid.ng-touched {
+    border-color: #55b559;
+  }
+  &.ng-invalid.ng-touched {
+    border-color: #F55145;
+  }
+}
+
+.btn.btn-success {
+  background-color: #55b559;
+}
+
+.invalid-input-msg {
+  padding: 10px 7.5px;
+  font-size: 1.2rem;
+  color: #FFFEFE;
+  background-color: #F55145;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+#loading {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
