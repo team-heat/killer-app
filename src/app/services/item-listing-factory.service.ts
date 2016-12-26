@@ -7,13 +7,25 @@ export class ItemListingFactoryService {
   constructor() { }
 
   createItemListing(
-    
-  ): ItemListing {
-    const createdOn = new Date().toUTCString();
-    const isActive = true;
+    make = '',
+    model = '',
+    year = 0,
+    price = 0,
+    enginePower = 0,
+    exteriorColor = '',
+    interiorColor = ''): ItemListing {
 
-    // const itemListing = new ItemListing();
+    const itemListing = new ItemListing();
+    itemListing.make = make;
+    itemListing.model = model;
+    itemListing.year = year;
+    itemListing.price = price;
+    itemListing.enginePower = enginePower;
+    itemListing.exteriorColor = exteriorColor;
+    itemListing.interiorColor = interiorColor;
+    itemListing.createdOn = new Date();
+    itemListing.isActive = true;
 
-    return null;
+    return itemListing;
   }
 }
