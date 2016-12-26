@@ -40,6 +40,12 @@ module.exports = function ({userData, config}) {
         if (user) {
           throw new Error('Username already exists.');
         }
+        return userData.getUserByEmail(userObject.email);
+      })
+      .then((user) => {
+        if (user) {
+          throw new Error('Email already exists.');
+        }
       })
       .then(() => {
         return userData.createUser(userObject);
