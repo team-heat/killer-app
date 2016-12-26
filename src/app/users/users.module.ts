@@ -12,6 +12,8 @@ import { UserFactoryService } from './../services/user-factory.service';
 import { UsersComponent } from './users.component';
 import { UserService } from './../services/user.service';
 import { UsersRouterModule } from './users.routes';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { ListedItemsComponent } from './listed-items/listed-items.component';
 
 @NgModule({
   imports: [
@@ -26,7 +28,9 @@ import { UsersRouterModule } from './users.routes';
     ProfileComponent,
     RegisterComponent,
     UsersComponent,
-    DateFormatterPipe
+    DateFormatterPipe,
+    FavoritesComponent,
+    ListedItemsComponent
   ],
   providers: [
     UserFactoryService,
