@@ -18,6 +18,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var ToastrNotificationService = (function () {
     function ToastrNotificationService() {
+        this.minimumTimeBetweenEnqueueInMs = 200;
+        this.lastNotificationTimestamp = 0;
         this.notificationsQueue = [];
     }
     Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
@@ -36,7 +38,13 @@ var ToastrNotificationService = (function () {
         configurable: true
     });
     ToastrNotificationService.prototype.enqueueNotification = function (options) {
+        var currentTimestamp = Date.now();
+        if (currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
+            return;
+        }
+        console.log(currentTimestamp - this.lastNotificationTimestamp);
         this.notificationsQueue.push(options);
+        this.lastNotificationTimestamp = Date.now();
     };
     ToastrNotificationService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 

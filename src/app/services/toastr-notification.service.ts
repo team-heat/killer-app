@@ -4,7 +4,10 @@ import { ToastrNotificationOptions } from './../models/toasts-notification-optio
 @Injectable()
 export class ToastrNotificationService {
 
+  private minimumTimeBetweenEnqueueInMs: number = 200;
+
   private notificationsQueue: ToastrNotificationOptions[];
+  private lastNotificationTimestamp: number = 0;
 
   constructor() {
     this.notificationsQueue = [];
@@ -20,6 +23,14 @@ export class ToastrNotificationService {
   }
 
   enqueueNotification(options: ToastrNotificationOptions): void {
+    const currentTimestamp = Date.now();
+    if (currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs) {
+      return;
+    }
+
+    console.log(currentTimestamp - this.lastNotificationTimestamp);
+
     this.notificationsQueue.push(options);
+    this.lastNotificationTimestamp = Date.now();
   }
 }
