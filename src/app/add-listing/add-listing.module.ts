@@ -6,7 +6,7 @@ import { ItemListingService } from '../services/item-listing.service';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-  { path: '', component: AddListingComponent }
+  { path: 'submit', component: AddListingComponent }
 ];
 
 @NgModule({
