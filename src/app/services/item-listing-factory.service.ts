@@ -7,9 +7,9 @@ export class ItemListingFactoryService {
   createItemListing(
     make = '',
     model = '',
-    year = 0,
-    price = 0,
-    enginePower = 0,
+    year = -1,
+    price = -1,
+    enginePower = -1,
     exteriorColor = '',
     interiorColor = ''): ItemListing {
 
