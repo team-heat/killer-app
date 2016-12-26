@@ -52,10 +52,9 @@ var ToastrNotificationService = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__ = __webpack_require__(753);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__http_requester_service__ = __webpack_require__(752);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__http_requester_options_factory_service__ = __webpack_require__(753);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__http_requester_service__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -69,11 +68,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var UserService = (function () {
-    // private contentTypeHeaders = new Headers({ 'Content-Type': 'application/json' });
-    function UserService(httpService, httpRequester, httpRequesterOptionsFactory) {
-        this.httpService = httpService;
+    function UserService(httpRequester, httpRequesterOptionsFactory) {
         this.httpRequester = httpRequester;
         this.httpRequesterOptionsFactory = httpRequesterOptionsFactory;
         this.userApiUrl = '/api/users';
@@ -84,13 +80,11 @@ var UserService = (function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(this.userApiUrl, user, this.contentTypeHeaderObject);
         return this.httpRequester.put(httpRequestOptions);
-        // return this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
     };
     UserService.prototype.loginUser = function (user) {
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(this.userApiUrl, user, this.contentTypeHeaderObject);
         return this.httpRequester.post(httpRequestOptions);
-        // return this.httpService.post('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
     };
     UserService.prototype.logoutUser = function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory.createHttpRequesterOptions(this.userLogoutApiUrl);
@@ -103,11 +97,11 @@ var UserService = (function () {
         return this.httpRequester.get(httpRequestOptions);
     };
     UserService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__http_requester_service__["a" /* HttpRequesterService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__http_requester_service__["a" /* HttpRequesterService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */]) === 'function' && _c) || Object])
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__http_requester_service__["a" /* HttpRequesterService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__http_requester_service__["a" /* HttpRequesterService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */]) === 'function' && _b) || Object])
     ], UserService);
     return UserService;
-    var _a, _b, _c;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
 
