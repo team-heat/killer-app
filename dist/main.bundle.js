@@ -381,11 +381,10 @@ var HttpRequesterOptionsFactoryService = (function () {
     HttpRequesterOptionsFactoryService.prototype.createHttpRequesterOptions = function (url, content, headers) {
         if (content === void 0) { content = {}; }
         if (headers === void 0) { headers = {}; }
-        return {
-            url: url,
-            content: content,
-            headers: headers
-        };
+        if (typeof content !== 'object') {
+            content = { content: content };
+        }
+        return { url: url, content: content, headers: headers };
     };
     HttpRequesterOptionsFactoryService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
@@ -452,7 +451,9 @@ var HttpRequesterService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__(110);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddToFavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -467,11 +468,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var AddToFavoritesComponent = (function () {
-    function AddToFavoritesComponent(route, router, userService) {
-        this.route = route;
+    function AddToFavoritesComponent(router, route, userService, toastrNotificationService, toastrNotificationOptionsFactoryService) {
         this.router = router;
+        this.route = route;
         this.userService = userService;
+        this.toastrNotificationService = toastrNotificationService;
+        this.toastrNotificationOptionsFactoryService = toastrNotificationOptionsFactoryService;
     }
     AddToFavoritesComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -481,8 +486,20 @@ var AddToFavoritesComponent = (function () {
             return _this.userService.addItemToUserFavorites(itemListingId);
         })
             .subscribe(function (response) {
+            var method = 'success';
+            var message = "Added a new item to favorites.";
+            var heading = 'Yay!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
         }, function (err) {
             console.log(err);
+            var method = 'error';
+            var message = 'User already has this item in favorites.';
+            var heading = 'Oops!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
         }, function () {
             _this.router.navigateByUrl('favorites');
         });
@@ -493,10 +510,10 @@ var AddToFavoritesComponent = (function () {
             template: __webpack_require__(719),
             styles: [__webpack_require__(706)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], AddToFavoritesComponent);
     return AddToFavoritesComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
 
