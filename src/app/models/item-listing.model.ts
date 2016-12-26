@@ -1,15 +1,12 @@
-export interface ItemListing {
+export class ItemListing {
   _id: string;
-  owner: string;
   make: string;
   model: string;
-  year: string;
+  year: number;
   price: number;
+  enginePower: number;
   exteriorColor: string;
   interiorColor: string;
-  engineTorque: number;
-  enginePower: number;
-  history: string;
   createdOn: Date;
   isActive: boolean;
 }

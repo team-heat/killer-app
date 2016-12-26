@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
       .map((res) => res.json())
       .subscribe((responseUser: any) => {
         const method = 'success';
-        const message = 'Successful registration.';
+        const message = 'You have registered successfully.';
         const heading = 'Yay!';
         const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
           .createToastrNotificationOptions(method, message, heading);

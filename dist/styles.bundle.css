@@ -1,8 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(012acbe788ee429da8d7d8d619455fc8.png);
   background-repeat: repeat;
+}
+
+div#content {
+  padding: 25px;
+  min-height: 60vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  box-shadow: 0 5px 20px black;
+  color: rgba(225, 225, 225, 0.77);
+}
+
+#component-header {
+  margin: -25px -25px 10px -25px;
+  padding: 2vh 0;
+  text-align: center;
+  color: #e6e6e6;
+  background-color: #848484;
 }@charset "UTF-8";
 
 /*!
