@@ -11,4 +11,5 @@ export interface ItemListing {
   enginePower: number;
   history: string;
   createdOn: Date;
+  isActive: boolean;
 }
