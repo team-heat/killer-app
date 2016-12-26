@@ -27,6 +27,7 @@ import { HttpRequesterOptionsFactoryService } from './services/http-requester-op
 
 import { NavigationHoverDirective } from './directives/navigation-hover.directive';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
+import { FormDefaultValueDirective } from './directives/form-default-value.directive';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'

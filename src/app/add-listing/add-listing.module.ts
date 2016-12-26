@@ -1,3 +1,4 @@
+import { FormDefaultValueDirective } from './../directives/form-default-value.directive';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AddListingComponent } from './add-listing.component';
@@ -16,7 +17,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes)],
-  declarations: [AddListingComponent],
+  declarations: [
+    AddListingComponent,
+    FormDefaultValueDirective],
   providers: [
     ItemListingService,
     ItemListingFactoryService
