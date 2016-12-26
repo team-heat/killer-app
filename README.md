@@ -8,6 +8,9 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 # Routes
 
+## API Routes
+- Inject ApiUrlsConfigService - all api urls included as properties
+
 ## Gallery
 - /gallery -> all items
 - /gallery/:id -> item details
