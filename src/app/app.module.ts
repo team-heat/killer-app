@@ -19,6 +19,8 @@ import { ToastrNotificationsHandlerComponent } from './toastr-notifications-hand
 import { UserService } from './services/user.service';
 import { UsersModule } from './users/users.module';
 import { UserStorageService } from './services/user-storage.service';
+import { HttpRequesterService } from './services/http-requester.service';
+
 import { NavigationHoverDirective } from './directives/navigation-hover.directive';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 
@@ -50,7 +52,8 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
     ToastrNotificationOptionsFactoryService,
     ToastrNotificationService,
     UserService,
-    UserStorageService
+    UserStorageService,
+    HttpRequesterService
   ],
   bootstrap: [
     AppComponent

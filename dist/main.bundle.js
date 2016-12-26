@@ -52,8 +52,9 @@ var ToastrNotificationService = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__http_requester_service__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -66,10 +67,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var UserService = (function () {
-    function UserService(httpService) {
+    function UserService(httpService, httpRequester) {
         this.httpService = httpService;
-        this.contentTypeHeaders = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        this.httpRequester = httpRequester;
+        this.contentTypeHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
     }
     UserService.prototype.registerUser = function (user) {
         return this.httpService.put('/api/users', JSON.stringify(user), { headers: this.contentTypeHeaders });
@@ -83,14 +86,15 @@ var UserService = (function () {
     // Using Cookies 
     // { headers: new Headers({ 'Authorization': `JWT ${token}` }) }
     UserService.prototype.getUserDetails = function () {
-        return this.httpService.get('/api/users');
+        return this.httpRequester.get({ url: '/api/users', content: {}, headers: { 'Authorization': "JWT not used faketoken" } });
+        // return this.httpService.get('/api/users');
     };
     UserService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__http_requester_service__["a" /* HttpRequesterService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__http_requester_service__["a" /* HttpRequesterService */]) === 'function' && _b) || Object])
     ], UserService);
     return UserService;
-    var _a;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
 
@@ -762,7 +766,8 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_user_service__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__users_users_module__ = __webpack_require__(538);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__ = __webpack_require__(528);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_http_requester_service__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__directives_navigation_hover_directive__ = __webpack_require__(528);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -773,6 +778,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -801,7 +807,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__navigation_navigation_component__["a" /* NavigationComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
+                __WEBPACK_IMPORTED_MODULE_17__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
             ],
             imports: [
                 // MockedModule,
@@ -821,7 +827,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
                 __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_service__["a" /* ToastrNotificationService */],
                 __WEBPACK_IMPORTED_MODULE_13__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__["a" /* UserStorageService */]
+                __WEBPACK_IMPORTED_MODULE_15__services_user_storage_service__["a" /* UserStorageService */],
+                __WEBPACK_IMPORTED_MODULE_16__services_http_requester_service__["a" /* HttpRequesterService */]
             ],
             bootstrap: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]
@@ -1594,6 +1601,53 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(406);
 
+
+/***/ },
+
+/***/ 752:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HttpRequesterService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HttpRequesterService = (function () {
+    function HttpRequesterService(ngHttpService) {
+        this.ngHttpService = ngHttpService;
+    }
+    HttpRequesterService.prototype.get = function (options) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */](options.headers);
+        return this.ngHttpService.get(options.url, { headers: headers });
+    };
+    HttpRequesterService.prototype.post = function (options) {
+        var content = JSON.stringify(options.content);
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */](options.headers);
+        return this.ngHttpService.post(options.url, content, { headers: headers });
+    };
+    HttpRequesterService.prototype.put = function (options) {
+        var content = JSON.stringify(options.content);
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */](options.headers);
+        return this.ngHttpService.put(options.url, content, { headers: headers });
+    };
+    HttpRequesterService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+    ], HttpRequesterService);
+    return HttpRequesterService;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
