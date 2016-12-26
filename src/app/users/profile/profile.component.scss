@@ -10,11 +10,28 @@ img {
 .list-group {
   font-family: planer;
   font-size: 20px;
+  color: rgba(225, 225, 225, 0.77);
   background-color: transparent;
   .list-group-item {
     border: none;
     box-shadow: 0 5px 20px black;
     background-color: transparent;
     margin-bottom: 20px;
+    .btn {
+      font-family: planer;
+      font-size: 17px;
+      background-color: transparent;
+      color: rgba(225, 225, 225, 0.77);
+      border: 1px solid rgba(225, 225, 225, 0.77);
+      border-radius: 0px;
+      box-shadow: 0 5px 20px black;
+      overflow: hidden;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .no-shadow {
+    box-shadow: none;
   }
 }
