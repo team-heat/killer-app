@@ -30,10 +30,7 @@ export class ProfileComponent implements OnInit {
       return;
     }
 
-    const cookie = this.userStorage.getLoggedUser();
-    const token = cookie.auth_token;
-
-    this.userService.getUserDetails(token)
+    this.userService.getUserDetails()
       .map(res => res.json())
       .subscribe(response => {
         response.createdOn = new Date(response.createdOn);
