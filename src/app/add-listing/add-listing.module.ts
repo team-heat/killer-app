@@ -19,7 +19,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)],
   declarations: [
     AddListingComponent,
-    FormDefaultValueDirective],
+    FormDefaultValueDirective
+  ],
   providers: [
     ItemListingService,
     ItemListingFactoryService
