@@ -21,7 +21,6 @@ export class SingleItemComponent implements OnInit {
     }
 
     ngOnInit() {
-
         let id;
 
         this.route.params

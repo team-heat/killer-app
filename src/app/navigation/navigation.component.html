@@ -14,7 +14,7 @@
   <div *ngIf="hasLoggedUser == true" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li appNavigationHover [class.active]="activeItem === 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
-      <li appNavigationHover [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/">Gallery</a></li>
+      <li appNavigationHover [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
       <li appNavigationHover [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
     </ul>
 
