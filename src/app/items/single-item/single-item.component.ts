@@ -13,13 +13,11 @@ import { ItemListingService } from './../../services/item-listing.service';
 })
 
 export class SingleItemComponent implements OnInit {
-    service: ItemListingService;
-    route: ActivatedRoute;
     item: ItemListing;
 
-    constructor(service: ItemListingService, route: ActivatedRoute) {
-        this.service = service;
-        this.route = route;
+    constructor(
+        private service: ItemListingService,
+        private route: ActivatedRoute) {
     }
 
     ngOnInit() {
