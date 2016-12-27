@@ -9,5 +9,7 @@ export class ItemListing {
   exteriorColor: string;
   interiorColor: string;
   createdOn: Date;
-  isActive: boolean;
+  isActive: Boolean;
+  isOwner: Boolean;
+  owner: String;
 }
