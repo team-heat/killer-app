@@ -1,1 +1,6 @@
-<h1>Items collections works maybe!</h1>
+<div *ngFor="let item of this.items" class="gallery-item">
+    <app-carousel *ngIf="this.item && this.item.pictures && this.item.pictures.length > 0" [mylist]="this.item.pictures"></app-carousel>
+    <a routerLink="{{item._id}}">    
+        <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>
+    </a>
+</div>

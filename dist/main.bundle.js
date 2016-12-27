@@ -377,7 +377,8 @@ var ItemsCollectionComponent = (function () {
     ItemsCollectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'items-collection',
-            template: __webpack_require__(732)
+            template: __webpack_require__(732),
+            styles: [__webpack_require__(777)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object])
     ], ItemsCollectionComponent);
@@ -2348,7 +2349,7 @@ module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.
 /***/ 732:
 /***/ function(module, exports) {
 
-module.exports = "<h1>Items collections works maybe!</h1>"
+module.exports = "<div *ngFor=\"let item of this.items\" class=\"gallery-item\">\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <a routerLink=\"{{item._id}}\">    \r\n        <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\r\n    </a>\r\n</div>"
 
 /***/ },
 
@@ -2441,6 +2442,13 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(415);
 
+
+/***/ },
+
+/***/ 777:
+/***/ function(module, exports) {
+
+module.exports = ".gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n"
 
 /***/ },
 
