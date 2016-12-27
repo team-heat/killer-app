@@ -6,7 +6,8 @@ import { ItemListingService } from './../../services/item-listing.service';
 
 @Component({
     selector: 'items-collection',
-    templateUrl: './items-collection.component.html'
+    templateUrl: './items-collection.component.html',
+      styleUrls: ['./items-collection.component.scss']
 })
 
 export class ItemsCollectionComponent implements OnInit {

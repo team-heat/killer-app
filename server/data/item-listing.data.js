@@ -13,7 +13,8 @@ module.exports = function ({ItemListing}) {
     'interiorColor',
     'engineTorque',
     'enginePower',
-    'history'
+    'history',
+    'pictures'
   ];
 
   function createItemListing(listing) {

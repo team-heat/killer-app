@@ -3,10 +3,13 @@ export class ItemListing {
   make: string;
   model: string;
   year: number;
+  pictures: string[];
   price: number;
   enginePower: number;
   exteriorColor: string;
   interiorColor: string;
   createdOn: Date;
-  isActive: boolean;
+  isActive: Boolean;
+  isOwner: Boolean;
+  owner: String;
 }

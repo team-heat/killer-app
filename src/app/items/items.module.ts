@@ -11,6 +11,7 @@ import { ItemsCollectionComponent } from './items-collection/items-collection.co
 import { ItemsRouterModule } from './items.routes';
 
 import { ItemListingService } from './../services/item-listing.service';
+import { UserStorageService } from './../services/user-storage.service';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { ItemListingService } from './../services/item-listing.service';
         CarouselListComponent
     ],
     providers: [
-        ItemListingService
+        ItemListingService,
+        UserStorageService
     ]
 })
 

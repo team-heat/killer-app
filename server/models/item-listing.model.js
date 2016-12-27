@@ -8,13 +8,15 @@ const itemListingSchema = new mongoose.Schema({
   model: String,
   year: String,
   price: Number,
+  pictures: [],
   exteriorColor: String,
   interiorColor: String,
   engineTorque: Number,
   enginePower: Number,
   history: String,
   createdOn: Date,
-  isActive: Boolean
+  isActive: Boolean,
+  owner: String
 });
 
 let ItemListing;
@@ -25,13 +27,15 @@ itemListingSchema.static('createItemListing', function (listing) {
     model: listing.model,
     year: listing.year,
     price: listing.price,
+    pictures: listing.pictures,
     exteriorColor: listing.exteriorColor,
     interiorColor: listing.interiorColor,
     engineTorque: listing.engineTorque,
     enginePower: listing.enginePower,
     history: listing.history,
     createdOn: new Date(),
-    isActive: true
+    isActive: true,
+    owner:listing.owner
   });
 });
 
