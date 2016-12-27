@@ -1,6 +1,9 @@
 <div>
     <app-carousel *ngIf="this.item && this.item.pictures && this.item.pictures.length > 0" [mylist]="this.item.pictures"></app-carousel>
     <!--<div *ngIf="!this.item && !this.item.pictures && !this.item.pictures.length > 0"></div>-->
-    <h2>{{this.item.brand}} {{this.item.model}} {{this.item.year}}</h2>
+    <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>
+    <h3>Engine power: {{this.item.enginePower}}</h3>
+    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>
+    <h3>Interior Color: {{this.item.interiorColor}}</h3>
     <h3>Price: ${{this.item.price}}</h3>
 </div>
