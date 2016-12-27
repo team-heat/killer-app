@@ -3,6 +3,11 @@
   src: url('../../assets/Planer-Regular.otf');
 }
 
+@font-face {
+  font-family: noto;
+  src: url('../../assets/NotoSans-Regular.ttf');
+}
+
 nav {
   margin-top: 1.5%;
   padding-left: 10px;
@@ -11,6 +16,8 @@ nav {
   box-shadow: 0 5px 25px #000000;
   background-color: rgba(0, 0, 0, 0.33);
   text-align: center;
+  font-size: 20px;
+  font-family: noto;
   .btn-default {
     color: rgba(225, 225, 225, 0.77);
     background-color: transparent;
@@ -25,18 +32,19 @@ nav {
     margin-top: 0px;
   }
   a.navbar-brand {
+    color: #fff;
     font-family: planer;
     font-size: 22px;
-  }
-  li>a {
-    font-family: planer;
-    font-size: 20px;
   }
   li.active>a,
   li.open>a {
     background-color: rgba(51, 51, 51, 0.33) !important;
     box-shadow: 0 1px 15px #000000;
-    font-family: planer;
-    font-size: 20px;
+  }
+  ul.dropdown-menu {
+    >li>a {
+      font-size: 1.5rem;
+      color: #444444;
+    }
   }
 }
