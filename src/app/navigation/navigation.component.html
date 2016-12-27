@@ -1,21 +1,19 @@
 <nav class="navbar navbar-inverse" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div *ngIf="hasLoggedUser == true" class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-      aria-expanded="false">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-    <a class="navbar-brand" routerLink="/">DREAMSTIME</a>
+    <a class="navbar-brand" (click)="setActiveItem()" routerLink="/">DREAMSTIME</a>
   </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div *ngIf="hasLoggedUser == true" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li appNavigationHover [class.active]="activeItem === 'Home'" (click)="setActiveItem('Home')"><a routerLink="/">Home</a></li>
-      <li appNavigationHover [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
-      <li appNavigationHover [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
+      <li appNavigationHover class="hvr-glow" [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
+      <li appNavigationHover class="hvr-glow" [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
@@ -33,8 +31,7 @@
   <!-- /.navbar-collapse -->
   <div class="row" *ngIf="hasLoggedUser == false">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-        aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

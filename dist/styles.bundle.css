@@ -5,8 +5,9 @@
 }
 
 body {
-  background-image: url(012acbe788ee429da8d7d8d619455fc8.png);
-  background-repeat: repeat;
+  /*background-image: url('./assets/bg-pattern-11.png');*/
+  /*background-repeat: repeat;*/
+  background-color: #333333;
 }
 
 div#content {
