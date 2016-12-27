@@ -1436,7 +1436,7 @@ var FormDefaultValueDirective = (function () {
     }
     FormDefaultValueDirective.prototype.ngDoCheck = function () {
         if (this.domElement.nativeElement.value === '-1') {
-            this.domElement.nativeElement.value = '0';
+            this.domElement.nativeElement.value = '';
         }
     };
     FormDefaultValueDirective = __decorate([
