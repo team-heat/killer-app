@@ -34,8 +34,10 @@ export class ItemListingService {
   }
 
   getSingleItem(id: number | string): Observable<Response> {
+    const url = this.galleryApiUrl + '/' + id;
+
     const httpRequestOptions = this.httpRequesterOptionsFactory
-      .createHttpRequesterOptions(this.galleryApiUrl, id, this.contentTypeHeaderObject);
+      .createHttpRequesterOptions(url, {}, this.contentTypeHeaderObject);
 
     return this.httpRequesterService.get(httpRequestOptions);
   }
