@@ -12,6 +12,12 @@ export class ItemListingService {
   private galleryApiUrl: string;
   private contentTypeHeaderObject: {} = { 'Content-Type': 'application/json' };
 
+  // GET  -> all items
+  // POST -> create item
+  // GET  /:id -> item details
+  // PUT  /:id -> update listing
+  // POST /:id -> submit offer
+
   constructor(
     private httpRequesterService: HttpRequesterService,
     private httpRequesterOptionsFactory: HttpRequesterOptionsFactoryService,
@@ -25,6 +31,20 @@ export class ItemListingService {
       .createHttpRequesterOptions(this.galleryApiUrl, item, this.contentTypeHeaderObject);
 
     return this.httpRequesterService.post(httpRequestOptions);
+  }
+
+  getSingleItem(id: number | string): Observable<Response> {
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(this.galleryApiUrl, id, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.get(httpRequestOptions);
+  }
+
+  getItemsCollection(): Observable<Response> {
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(this.galleryApiUrl, {}, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.get(httpRequestOptions);
   }
 
   // TODO: 
