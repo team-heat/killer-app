@@ -25,6 +25,8 @@ import { UserStorageService } from './services/user-storage.service';
 import { HttpRequesterService } from './services/http-requester.service';
 import { HttpRequesterOptionsFactoryService } from './services/http-requester-options-factory.service';
 
+import { ItemsModule } from './items/items.module';
+
 import { NavigationHoverDirective } from './directives/navigation-hover.directive';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 import { FormDefaultValueDirective } from './directives/form-default-value.directive';
@@ -41,6 +43,7 @@ import { FormDefaultValueDirective } from './directives/form-default-value.direc
   ],
   imports: [
     // MockedModule,
+    ItemsModule,
     BrowserModule,
     FormsModule,
     HomeModule,
