@@ -10,18 +10,15 @@ import { ItemListingService } from './../../services/item-listing.service';
 })
 
 export class ItemsCollectionComponent implements OnInit {
-    items: ItemListing[];
+    items: any[];
 
     constructor(private service: ItemListingService) {
     }
 
     ngOnInit() {
-        let temp;
 
         this.service.getItemsCollection()
             .map(x => x.json())
-            .subscribe(x => temp = x);
-
-        temp.ForEach(x => this.items.push(x as ItemListing));
+            .subscribe(x => this.items = x);
     }
 }
