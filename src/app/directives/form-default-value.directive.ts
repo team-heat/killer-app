@@ -9,7 +9,7 @@ export class FormDefaultValueDirective implements DoCheck {
 
   ngDoCheck() {
     if (this.domElement.nativeElement.value === '-1') {
-      this.domElement.nativeElement.value = '0';
+      this.domElement.nativeElement.value = '';
     }
   }
 }
