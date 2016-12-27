@@ -418,6 +418,7 @@ var SingleItemComponent = (function () {
             make: null,
             year: null,
             price: null,
+            pictures: [],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
@@ -2354,7 +2355,7 @@ module.exports = "<h1>Items collections works maybe!</h1>"
 /***/ 733:
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\r\n    <h3>Engine power: {{this.item.enginePower}}</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n</div>"
+module.exports = "<div>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n</div>"
 
 /***/ },
 

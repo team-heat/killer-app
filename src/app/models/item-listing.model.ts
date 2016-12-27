@@ -3,6 +3,7 @@ export class ItemListing {
   make: string;
   model: string;
   year: number;
+  pictures: string[];
   price: number;
   enginePower: number;
   exteriorColor: string;
