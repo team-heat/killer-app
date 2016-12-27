@@ -6,6 +6,7 @@ import { CarouselListComponent } from './../../carousel-list/carousel-list.compo
 import { ItemListing } from './../../models/item-listing.model';
 
 import { ItemListingService } from './../../services/item-listing.service';
+import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
     selector: 'single-item',
@@ -18,7 +19,8 @@ export class SingleItemComponent implements OnInit {
     item: ItemListing;
 
     constructor(
-        private service: ItemListingService,
+        private itemListingService: ItemListingService,
+        private userStorageService: UserStorageService,
         private route: ActivatedRoute) {
 
         this.item = {
@@ -32,20 +34,30 @@ export class SingleItemComponent implements OnInit {
             interiorColor: null,
             exteriorColor: null,
             createdOn: null,
-            isActive: null
+            isActive: false,
+            isOwner: false,
+            owner: null
         };
     }
 
     ngOnInit() {
         let id;
+        let username;
+        
+        if (this.userStorageService.isLogged()) {
+            username = this.userStorageService.getLoggedUser().username;
+        }
 
         this.route.params
             .map((params: Params) => params['id'])
             .subscribe(x => id = x);
 
-        this.service.getSingleItem(id)
+        this.itemListingService.getSingleItem(id)
             .map(x => x.json())
-            .subscribe(x => this.item = x as ItemListing);
+            .subscribe(x => {
+                this.item = x as ItemListing;
+                this.item.isOwner = this.item.owner === username;
+        });
     }
 }
 
