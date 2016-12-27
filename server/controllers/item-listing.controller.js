@@ -30,7 +30,8 @@ module.exports = function ({itemListingData}) {
   }
 
   function createListing(req, res) {
-    const newListing = req.body;
+    let newListing = req.body;
+        newListing.ownerId = req.user.id;
     return itemListingData.createItemListing(newListing)
       .then(() => {
         res.status(200).json({ message: 'POST /api/gallery/' });
