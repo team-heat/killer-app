@@ -7,6 +7,7 @@ import { ItemListingService } from '../services/item-listing.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ItemListingFactoryService } from '../services/item-listing-factory.service';
+import { FileUploaderComponent } from '../file-uploader/file-uploader.component';
 
 const routes: Routes = [
   { path: 'submit', component: AddListingComponent }
