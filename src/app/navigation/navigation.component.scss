@@ -41,8 +41,10 @@ nav {
     background-color: rgba(51, 51, 51, 0.33) !important;
     box-shadow: 0 1px 15px #000000;
   }
-  ul.dropdown-menu>li>a {
-    font-size: 1.5rem;
-    color: #444444;
+  ul.dropdown-menu {
+    >li>a {
+      font-size: 1.5rem;
+      color: #444444;
+    }
   }
 }

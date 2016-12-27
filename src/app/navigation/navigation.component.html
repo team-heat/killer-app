@@ -12,8 +12,8 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div *ngIf="hasLoggedUser == true" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li appNavigationHover class="hvr-glow" [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
-      <li appNavigationHover class="hvr-glow" [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
+      <li appNavigationHover class="hvr-overline-reveal" [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
+      <li appNavigationHover class="hvr-overline-reveal" [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
