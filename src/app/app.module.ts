@@ -34,7 +34,6 @@ import { UsersModule } from './users/users.module';
   declarations: [
     AppComponent,
     NavigationComponent,
-    FileUploaderComponent,
     ToastrNotificationsHandlerComponent,
     NavigationHoverDirective
   ],
@@ -65,8 +64,6 @@ import { UsersModule } from './users/users.module';
     UserService,
     UserStorageService
   ],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
