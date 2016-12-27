@@ -23,10 +23,6 @@ module.exports = function ({itemListingData}) {
           throw new Error('Listing not found.');
         }
 
-        if(listing.ownerId === req.user.id){
-          listing.isOwner = true;
-        }
-        
         return res.status(200).json(listing);
       })
       .catch((err) => {
@@ -36,7 +32,7 @@ module.exports = function ({itemListingData}) {
 
   function createListing(req, res) {
     let newListing = req.body;
-        newListing.ownerId = req.user.id;
+        newListing.owner = req.user.username;
     return itemListingData.createItemListing(newListing)
       .then(() => {
         res.status(200).json({ message: 'POST /api/gallery/' });

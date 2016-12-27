@@ -8,7 +8,7 @@ const itemListingSchema = new mongoose.Schema({
   model: String,
   year: String,
   price: Number,
-  pictures: string[],
+  pictures: [],
   exteriorColor: String,
   interiorColor: String,
   engineTorque: Number,
@@ -16,7 +16,7 @@ const itemListingSchema = new mongoose.Schema({
   history: String,
   createdOn: Date,
   isActive: Boolean,
-  ownerId: String
+  owner: String
 });
 
 let ItemListing;
@@ -35,7 +35,7 @@ itemListingSchema.static('createItemListing', function (listing) {
     history: listing.history,
     createdOn: new Date(),
     isActive: true,
-    ownerId:listing.ownerId
+    owner:listing.owner
   });
 });
 
