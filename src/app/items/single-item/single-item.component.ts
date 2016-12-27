@@ -18,10 +18,22 @@ export class SingleItemComponent implements OnInit {
     constructor(
         private service: ItemListingService,
         private route: ActivatedRoute) {
+
+        this.item = {
+            _id: null,
+            model: null,
+            make: null,
+            year: null,
+            price: null,
+            enginePower: null,
+            interiorColor: null,
+            exteriorColor: null,
+            createdOn: null,
+            isActive: null
+        };
     }
 
     ngOnInit() {
-
         let id;
 
         this.route.params
