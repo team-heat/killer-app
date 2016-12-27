@@ -2337,7 +2337,7 @@ module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../asset
 /***/ 728:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  background-color: rgba(0, 0, 0, 0.77); }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\ninput,\nbutton {\n  font-family: planer;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 0; }\n  input.ng-valid.ng-touched,\n  button.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  button.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\ninput,\nbutton {\n  width: 250px; }\n\nbutton.dropdown-toggle {\n  text-align: left; }\n\nbutton[type=\"submit\"]:hover {\n  text-decoration: underline; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
