@@ -22,6 +22,11 @@ module.exports = function ({itemListingData}) {
         if (!listing) {
           throw new Error('Listing not found.');
         }
+
+        if(listing.ownerId === req.user.id){
+          listing.isOwner = true;
+        }
+        
         return res.status(200).json(listing);
       })
       .catch((err) => {
