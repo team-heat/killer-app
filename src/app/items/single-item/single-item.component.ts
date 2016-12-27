@@ -9,7 +9,9 @@ import { ItemListingService } from './../../services/item-listing.service';
 
 @Component({
     selector: 'single-item',
-    templateUrl: './single-item.component.html'
+    templateUrl: './single-item.component.html',
+    styleUrls: ['./single-item.component.scss']
+
 })
 
 export class SingleItemComponent implements OnInit {
