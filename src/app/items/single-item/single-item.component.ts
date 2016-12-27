@@ -3,7 +3,9 @@ import { ActivatedRoute, Params } from '@angular/router'
 
 import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
 
-import { ItemsService } from './../../services/item.service';
+import { ItemListing } from './../../models/item-listing.model';
+
+import { ItemListingService } from './../../services/item-listing.service';
 
 @Component({
     selector: 'single-item',
@@ -11,14 +13,11 @@ import { ItemsService } from './../../services/item.service';
 })
 
 export class SingleItemComponent implements OnInit {
-    service: ItemsService;
+    service: ItemListingService;
     route: ActivatedRoute;
-    item: any;
-    // = {
-    //     pictures: [1, 2, 3, 4]
-    // };
+    item: ItemListing;
 
-    constructor(service: ItemsService, route: ActivatedRoute) {
+    constructor(service: ItemListingService, route: ActivatedRoute) {
         this.service = service;
         this.route = route;
     }
@@ -29,24 +28,11 @@ export class SingleItemComponent implements OnInit {
 
         this.route.params
             .map((params: Params) => params['id'])
-            .subscribe(x => id = x)
+            .subscribe(x => id = x);
 
-        this.item = this.mockedItem;
-
-        // this.service.getSingleItem(id)
-        //     .subscribe(x => this.item = x);
-    }
-
-    private mockedItem = {
-        id: 13,
-        brand: 'Lexus',
-        model: 'LC 500h',
-        year: "2018",
-        pictures: [
-            'http://www.lexus-int.com/models/LC/images/LC-500h.jpg',
-            'https://i.ytimg.com/vi/7v9QpFaQHjE/maxresdefault.jpg'
-            ],
-        price: 100000
+        this.service.getSingleItem(id)
+            .map(x => x.json())
+            .subscribe(x => this.item = x as ItemListing);
     }
 }
 
