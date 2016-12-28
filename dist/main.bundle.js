@@ -1547,6 +1547,7 @@ var FileUploaderComponent = (function () {
         if (data && data.response) {
             data = JSON.parse(data.response);
             this.uploadFile = data;
+            console.log(this.uploadFile);
         }
     };
     FileUploaderComponent.prototype.fileOverBase = function (e) {
@@ -1574,6 +1575,10 @@ var FileUploaderComponent = (function () {
             this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
         }
     };
+    // 1. This is not unique, it's random.
+    // 2. It's NOT an evenly distributed random value.
+    // 3. It's used as a dom element id, thus pointless.
+    // To delete.
     FileUploaderComponent.prototype.generateUniqueId = function () {
         return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
     };
@@ -2464,7 +2469,7 @@ module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" 
 /***/ 744:
 /***/ function(module, exports) {
 
-module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<input type=\"file\"\r\n       ngFileSelect\r\n       [options]=\"options\"\r\n       (onUpload)=\"handleUpload($event)\"\r\n       (beforeUpload)=\"beforeUpload($event)\">\r\n\r\n<!-- drag & drop file example-->\r\n<style>\r\n  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n</style>\r\n<div ngFileDrop\r\n     [options]=\"options\"\r\n     (onUpload)=\"handleUpload($event)\"\r\n     [ngClass]=\"{'file-over': hasBaseDropZoneOver}\"\r\n     (onFileOver)=\"fileOverBase($event)\"\r\n     (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div>\r\nResponse: {{ uploadFile | json }}\r\n</div>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<input type=\"file\"\r\n       ngFileSelect\r\n       [options]=\"options\"\r\n       (onUpload)=\"handleUpload($event)\"\r\n       (beforeUpload)=\"beforeUpload($event)\">\r\n\r\n<!-- drag & drop file example-->\r\n<style>\r\n  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n</style>\r\n<div ngFileDrop\r\n     [options]=\"options\"\r\n     (onUpload)=\"handleUpload($event)\"\r\n     [ngClass]=\"{'file-over': hasBaseDropZoneOver}\"\r\n     (onFileOver)=\"fileOverBase($event)\"\r\n     (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div>\r\nResponse: {{ uploadFile | json }}\r\n<img *ngIf=\"uploadFile\" [src]=\"uploadFile.imageUrl\" alt=\"\" width=\"300px\">\r\n</div>"
 
 /***/ },
 

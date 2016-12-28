@@ -25,4 +25,5 @@
 
 <div>
 Response: {{ uploadFile | json }}
+<img *ngIf="uploadFile" [src]="uploadFile.imageUrl" alt="" width="300px">
 </div>

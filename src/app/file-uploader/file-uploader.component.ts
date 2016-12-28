@@ -8,7 +8,12 @@ import { NgUploaderOptions } from 'ngx-uploader';
 })
 export class FileUploaderComponent implements OnInit {
 
+  // A static prop is unique by definition
+  // Why on earth would you be generating a random value
+  // for something which is always going to exist once per instance of the app ?!
+  // To delete.
   public static id: number;
+
   public labelText: string;
   private initialLabelText: string = 'Choose a file...';
 
@@ -30,6 +35,7 @@ export class FileUploaderComponent implements OnInit {
     if (data && data.response) {
       data = JSON.parse(data.response);
       this.uploadFile = data;
+      console.log(this.uploadFile);
     }
   }
 
@@ -62,6 +68,10 @@ export class FileUploaderComponent implements OnInit {
     }
   }
 
+  // 1. This is not unique, it's random.
+  // 2. It's NOT an evenly distributed random value.
+  // 3. It's used as a dom element id, thus pointless.
+  // To delete.
   private generateUniqueId(): number {
     return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
   }
