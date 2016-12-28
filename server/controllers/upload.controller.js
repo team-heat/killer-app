@@ -31,8 +31,9 @@ module.exports = function ({}) {
     return req.files.file.mv(imageSaveLocation, function (err) {
       if (err) {
         console.log(err);
+        return res.status(400).send('error');
       }
-      res.status(200).send({ imageUrl: `/uploads/${user._id}/${newFileName}${fileExtension}` });
+      return res.status(200).send({ imageUrl: `/uploads/${user._id}/${newFileName}${fileExtension}` });
     });
   }
 
