@@ -1,3 +1,8 @@
+@font-face {
+  font-family: planer;
+  src: url('../../assets/Planer-Regular.otf');
+}
+
 .submit-wrapper {
   text-align: center;
   min-height: 60vh;
@@ -9,10 +14,14 @@
 }
 
 input {
-  color: white;
+  font-family: planer;
+  text-align: center;
+  font-size: 16px;
+  color: rgba(225, 225, 225, 0.77);
   background-color: #2f2f2f;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  width: 250px;
   &.ng-valid.ng-touched {
     border-color: #55b559;
   }
