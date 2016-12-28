@@ -8,6 +8,18 @@
   }
 }
 
+.row {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.content-left {
+  background-image: url('../../assets/home-bg6.jpg');
+  background-repeat: none;
+}
+
 input {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
