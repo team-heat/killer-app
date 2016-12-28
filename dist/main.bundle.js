@@ -63,7 +63,7 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
@@ -111,7 +111,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
 
 /***/ },
 
@@ -155,7 +155,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -190,7 +190,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
 
 /***/ },
 
@@ -227,7 +227,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -274,7 +274,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
@@ -307,7 +307,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/app.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -342,7 +342,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -385,7 +385,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
 
 /***/ },
 
@@ -460,7 +460,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
 
 /***/ },
 
@@ -496,7 +496,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
@@ -548,7 +548,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -623,7 +623,7 @@ var AddToFavoritesComponent = (function () {
     return AddToFavoritesComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
 
 /***/ },
 
@@ -667,7 +667,7 @@ var FavoritesComponent = (function () {
     return FavoritesComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
 
 /***/ },
 
@@ -702,7 +702,7 @@ var ListedItemsComponent = (function () {
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
 
 /***/ },
 
@@ -806,7 +806,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/login.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -877,7 +877,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/logout.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -940,7 +940,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/profile.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -1043,7 +1043,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/register.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -1080,7 +1080,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/main.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
 
 /***/ },
 
@@ -1141,7 +1141,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -1196,7 +1196,7 @@ var AddListingComponent = (function () {
         this.itemListingService.addItem(this.itemListing)
             .subscribe(function (response) {
             var toastrNotificationOptions = _this.toastrOptionsFactory
-                .createToastrNotificationOptions('success', 'You have submitted the item successfully.');
+                .createToastrNotificationOptions('success', 'You have submitted the item successfully.', 'Add Item');
             _this.toastrNotification.enqueueNotification(toastrNotificationOptions);
         });
     };
@@ -1214,7 +1214,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
 
 /***/ },
 
@@ -1222,17 +1222,18 @@ var AddListingComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives_form_default_value_directive__ = __webpack_require__(548);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_uploader__ = __webpack_require__(720);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_uploader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ngx_uploader__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__add_listing_component__ = __webpack_require__(544);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_item_listing_factory_service__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__file_uploader_file_uploader_component__ = __webpack_require__(550);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_listing_component__ = __webpack_require__(544);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__ = __webpack_require__(550);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_form_default_value_directive__ = __webpack_require__(548);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_form_year_validation_directive__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_item_listing_factory_service__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_item_listing_service__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader__ = __webpack_require__(720);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ngx_uploader__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_router__ = __webpack_require__(25);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddListingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1253,37 +1254,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var routes = [
-    { path: 'submit', component: __WEBPACK_IMPORTED_MODULE_3__add_listing_component__["a" /* AddListingComponent */] }
+    { path: 'submit', component: __WEBPACK_IMPORTED_MODULE_0__add_listing_component__["a" /* AddListingComponent */] }
 ];
 var AddListingModule = (function () {
     function AddListingModule() {
     }
     AddListingModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ngx_uploader__["NgUploaderModule"],
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(routes)],
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_9_ngx_uploader__["NgUploaderModule"],
+                __WEBPACK_IMPORTED_MODULE_10__angular_router__["b" /* RouterModule */].forChild(routes)],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__add_listing_component__["a" /* AddListingComponent */],
-                __WEBPACK_IMPORTED_MODULE_0__directives_form_default_value_directive__["a" /* FormDefaultValueDirective */],
-                __WEBPACK_IMPORTED_MODULE_9__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_0__add_listing_component__["a" /* AddListingComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__directives_form_default_value_directive__["a" /* FormDefaultValueDirective */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_form_year_validation_directive__["a" /* FormYearValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
-                __WEBPACK_IMPORTED_MODULE_8__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]
+                __WEBPACK_IMPORTED_MODULE_7__services_item_listing_service__["a" /* ItemListingService */],
+                __WEBPACK_IMPORTED_MODULE_6__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_9__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
             ]
         }), 
         __metadata('design:paramtypes', [])
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
 
 /***/ },
 
@@ -1394,7 +1397,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/app.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -1432,7 +1435,7 @@ var CarouselListComponent = (function () {
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -1470,7 +1473,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -1524,7 +1527,7 @@ var NavigationHoverDirective = (function () {
     return NavigationHoverDirective;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/navigation-hover.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
 
 /***/ },
 
@@ -1554,7 +1557,6 @@ var FileUploaderComponent = (function () {
             url: '/api/upload'
         };
         this.sizeLimit = 2000000;
-        FileUploaderComponent.id = this.generateUniqueId();
         this.labelText = this.initialLabelText;
     }
     FileUploaderComponent.prototype.ngOnInit = function () { };
@@ -1562,7 +1564,7 @@ var FileUploaderComponent = (function () {
         if (data && data.response) {
             data = JSON.parse(data.response);
             this.uploadedFiles.push(data);
-            this.onFileUpload.emit(this.uploadedFiles);
+            this.onFileUpload.emit(this.uploadedFiles.slice());
         }
     };
     FileUploaderComponent.prototype.fileOverBase = function (e) {
@@ -1590,13 +1592,6 @@ var FileUploaderComponent = (function () {
             this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
         }
     };
-    // 1. This is not unique, it's random.
-    // 2. It's NOT an evenly distributed random value.
-    // 3. It's used as a dom element id, thus pointless.
-    // To delete.
-    FileUploaderComponent.prototype.generateUniqueId = function () {
-        return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
-    };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
@@ -1612,7 +1607,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -1653,7 +1648,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -1692,7 +1687,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -1706,7 +1701,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/index.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
 
 /***/ },
 
@@ -1769,7 +1764,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/items.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
 
 /***/ },
 
@@ -1811,7 +1806,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/items.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
 
 /***/ },
 
@@ -1825,7 +1820,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
 
 /***/ },
 
@@ -1839,7 +1834,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user.model.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -1889,7 +1884,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -1923,7 +1918,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -1988,7 +1983,7 @@ var ToastrNotificationsHandlerComponent = (function () {
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -2023,7 +2018,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -2058,7 +2053,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -2139,7 +2134,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -2197,7 +2192,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -2213,7 +2208,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/environment.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -2269,7 +2264,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/polyfills.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -2342,7 +2337,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -2413,14 +2408,14 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
 
 /***/ },
 
 /***/ 724:
 /***/ function(module, exports) {
 
-module.exports = ".submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\ninput {\n  color: white;\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#inputs-container {\n  margin-bottom: 25px; }\n\n.well {\n  background: transparent;\n  box-shadow: 0 5px 25px black;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n\n.content-left {\n  opacity: 0.99;\n  box-shadow: 0 5px 25px black;\n  background-image: url(\"../../assets/home-bg10.jpg\");\n  background-repeat: none;\n  padding-left: 20px; }\n\n.form-group {\n  width: 100%; }\n\ninput {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  width: 100%;\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
@@ -2434,7 +2429,7 @@ module.exports = ""
 /***/ 726:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "#image-uploader {\n  border-top: 1px solid rgba(225, 225, 225, 0.77); }\n\nlabel {\n  margin-top: 25px;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  label:hover {\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #494949;\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n\nlabel,\ninput,\nbutton {\n  width: 250px; }\n\nimg {\n  padding: 10px; }\n\n.well {\n  background-color: transparent;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  margin-top: 25px; }\n"
 
 /***/ },
 
@@ -2462,7 +2457,7 @@ module.exports = "h1 {\n  text-align: center; }\n"
 /***/ 730:
 /***/ function(module, exports) {
 
-module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\n@font-face {\n  font-family: noto;\n  src: url(\"../../assets/NotoSans-Regular.ttf\"); }\n\nnav {\n  margin-top: 1.5%;\n  padding-left: 10px;\n  padding-right: 25px;\n  border: none;\n  box-shadow: 0 5px 25px #000000;\n  background-color: rgba(0, 0, 0, 0.33);\n  text-align: center;\n  font-size: 20px;\n  font-family: noto; }\n  nav .btn-default {\n    color: rgba(225, 225, 225, 0.77);\n    background-color: transparent;\n    border: none;\n    font-size: 24px;\n    margin-top: 0px; }\n  nav h1.app-heading {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    letter-spacing: 1em;\n    margin-top: 0px; }\n  nav a.navbar-brand {\n    color: #fff;\n    font-family: planer;\n    font-size: 22px; }\n  nav li.favorites-item:hover span.glyphicon.glyphicon-heart {\n    color: #DF474B; }\n  nav li.favorites-item span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n  nav span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n    nav span.glyphicon.glyphicon-heart:hover {\n      color: red; }\n  nav li.active > a,\n  nav li.open > a {\n    background-color: rgba(51, 51, 51, 0.33) !important;\n    box-shadow: 0 1px 15px #000000; }\n  nav ul.dropdown-menu > li > a {\n    font-size: 1.5rem;\n    color: #444444; }\n"
+module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\n@font-face {\n  font-family: noto;\n  src: url(\"../../assets/NotoSans-Regular.ttf\"); }\n\nnav {\n  margin-top: 1.5%;\n  padding-left: 10px;\n  padding-right: 25px;\n  border: none;\n  box-shadow: 0 5px 25px #000000;\n  background-color: rgba(0, 0, 0, 0.33);\n  text-align: center;\n  font-size: 20px;\n  font-family: noto; }\n  nav .btn-default {\n    color: rgba(225, 225, 225, 0.77);\n    background-color: transparent;\n    border: none;\n    font-size: 24px;\n    margin-top: 0px; }\n  nav h1.app-heading {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    letter-spacing: 1em;\n    margin-top: 0px; }\n  nav a.navbar-brand {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    font-size: 22px; }\n  nav li.favorites-item:hover span.glyphicon.glyphicon-heart {\n    color: #DF474B; }\n  nav li.favorites-item span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n  nav span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n    nav span.glyphicon.glyphicon-heart:hover {\n      color: red; }\n  nav li.active > a,\n  nav li.open > a {\n    background-color: rgba(51, 51, 51, 0.33) !important;\n    box-shadow: 0 1px 15px #000000; }\n  nav ul.dropdown-menu > li > a {\n    font-size: 1.5rem;\n    color: #444444; }\n"
 
 /***/ },
 
@@ -2518,14 +2513,14 @@ module.exports = ""
 /***/ 738:
 /***/ function(module, exports) {
 
-module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\nimg {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: planer;\n  font-size: 20px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n    .list-group .list-group-item .btn {\n      font-family: planer;\n      font-size: 17px;\n      background-color: transparent;\n      color: rgba(225, 225, 225, 0.77);\n      border: 1px solid rgba(225, 225, 225, 0.77);\n      border-radius: 0px;\n      box-shadow: 0 5px 20px black;\n      overflow: hidden; }\n      .list-group .list-group-item .btn:hover {\n        text-decoration: underline; }\n  .list-group .no-shadow {\n    box-shadow: none; }\n"
+module.exports = "img {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n    .list-group .list-group-item .btn {\n      font-family: planer;\n      font-size: 17px;\n      background-color: transparent;\n      color: rgba(225, 225, 225, 0.77);\n      border: 1px solid rgba(225, 225, 225, 0.77);\n      border-radius: 0px;\n      box-shadow: 0 5px 20px black;\n      overflow: hidden; }\n      .list-group .list-group-item .btn:hover {\n        text-decoration: underline; }\n  .list-group .no-shadow {\n    box-shadow: none; }\n"
 
 /***/ },
 
 /***/ 739:
 /***/ function(module, exports) {
 
-module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\ninput,\nbutton {\n  font-family: planer;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 0; }\n  input.ng-valid.ng-touched,\n  button.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  button.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\ninput,\nbutton {\n  width: 250px; }\n\nbutton.dropdown-toggle {\n  text-align: left; }\n\nbutton[type=\"submit\"]:hover {\n  text-decoration: underline; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = "input,\nbutton {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 0; }\n  input.ng-valid.ng-touched,\n  button.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  button.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\ninput,\nbutton {\n  width: 250px; }\n\nbutton.dropdown-toggle {\n  text-align: left; }\n\nbutton[type=\"submit\"]:hover {\n  text-decoration: underline; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
@@ -2539,56 +2534,56 @@ module.exports = ""
 /***/ 741:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\n  <h2 id=\"component-header\">Submit Listing</h2>\n  <div class=\"inner-wrapper\">\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\n      <div class=\"form-group\">\n        <label>\n          <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label>\n          <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label>\n          <input appFormDefaultValue type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\" placeholder=\"Year\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label>\n          <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\" placeholder=\"Price\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label>\n          <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\" placeholder=\"Engine Power\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label>\n          <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\" placeholder=\"Exterior Color\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label>\n          <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\" placeholder=\"Interior Color\">\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\n      </div>\n      <div class=\"form-group\">\n        <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 742:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"root\" class=\"container\">\n    <app-navigation></app-navigation>\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\n    <div id=\"content\">\n        <router-outlet></router-outlet>\n    </div>\n</div>"
+module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>"
 
 /***/ },
 
 /***/ 743:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n     <!--Indicators -->\n    <ol class=\"carousel-indicators\">\n        <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\"\n        [attr.data-slide-to]=\"i\">\n        </li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div  class=\"carousel-inner\" role=\"listbox\">\n        <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\n            <img [attr.src]=\"item\">\n        </div>\n    </div>\n\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n        <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n    </a>\n\n</div>"
+module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n     <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n        <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\"\r\n        [attr.data-slide-to]=\"i\">\r\n        </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div  class=\"carousel-inner\" role=\"listbox\">\r\n        <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n            <img [attr.src]=\"item\">\r\n        </div>\r\n    </div>\r\n\r\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n        <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>"
 
 /***/ },
 
 /***/ 744:
 /***/ function(module, exports) {
 
-module.exports = "<!--<label>\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\n  <label [for]=\"id\" class=\"file-upl-lb\">\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\n  </label>\n</label>-->\n<!-- app.component.html -->\n<input type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\">\n\n<!-- drag & drop file example-->\n<style>\n  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\n</style>\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\n  (beforeUpload)=\"beforeUpload($event)\">\n</div>\n\n<div>\n  Response: {{ uploadFile | json }}\n  <div *ngIf=\"uploadedFiles.length > 0\">\n    <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" alt=\"\" width=\"300px\">\n  </div>\n</div>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
 
 /***/ },
 
 /***/ 745:
 /***/ function(module, exports) {
 
-module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\n</section>"
+module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
 
 /***/ },
 
 /***/ 746:
 /***/ function(module, exports) {
 
-module.exports = "<div *ngFor=\"let item of this.items\" class=\"gallery-item\">\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\n    <a routerLink=\"{{item._id}}\">    \n        <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\n    </a>\n</div>"
+module.exports = "<div *ngFor=\"let item of this.items\" class=\"gallery-item\">\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <a routerLink=\"{{item._id}}\">    \r\n        <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\r\n    </a>\r\n</div>"
 
 /***/ },
 
 /***/ 747:
 /***/ function(module, exports) {
 
-module.exports = "<div>\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>    \n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\n    <h3>Price: ${{this.item.price}}</h3>\n\n    <!--TODO add right update link when ready-->\n\n    <a *ngIf=\"this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\n\n    <!--TODO add right make offer link when ready-->\n\n    <a *ngIf=\"!this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Make Offer</a>\n</div>"
+module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>    \r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"!this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Make Offer</a>\r\n</div>"
 
 /***/ },
 
 /***/ 748:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\n  </div>\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav\">\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\n    </ul>\n\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li class=\"favorites-item\">\n        <a routerLink=\"/favorites\">\n          <span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>\n        </a>\n      </li>\n      <li class=\"dropdown\">\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\n        <ul class=\"dropdown-menu\">\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\n          <li role=\"separator\" class=\"divider\"></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\n        </ul>\n      </li>\n    </ul>\n  </div>\n  <!-- /.navbar-collapse -->\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <h1>\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\n      <h1>\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n    </div>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand hvr-overline-reveal\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"favorites-item\">\r\n        <a routerLink=\"/favorites\">\r\n          <span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </li>\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle hvr-overline-reveal\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
@@ -2609,56 +2604,56 @@ module.exports = "<p>\n  add-to-favorites works!\n</p>\n"
 /***/ 751:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  facebook-login works!\n</p>\n"
+module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 752:
 /***/ function(module, exports) {
 
-module.exports = "<div>\n  <div *ngFor=\"let favoriteItem of userFavorites\">{{favoriteItem}}</div>\n</div>"
+module.exports = "<div>\r\n  <div *ngFor=\"let favoriteItem of userFavorites\">{{favoriteItem}}</div>\r\n</div>"
 
 /***/ },
 
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  listed-items works!\n</p>\n"
+module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 754:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper\">\n  <h2 id=\"component-header\">Sign In</h2>\n  <div class=\"inner-wrapper\">\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\n      <div class=\"form-group\">\n        <label> \n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between</div>\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label> \n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between</div>\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\n      </div>\n    </form>\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\n  </div>\n</div>\n\n<!-- Carousel testing DELETE -->\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n  <ol class=\"carousel-indicators\">\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\n  </ol>\n  <div class=\"carousel-inner\" role=\"listbox\">\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\n      <img [src]=\"img\" alt=\"slide\">\n    </div>\n  </div>\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>-->"
+module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
 
 /***/ },
 
 /***/ 755:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  logout works!\n</p>\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 756:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"content-left col-xs-6\">\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\n  </div>\n  <div class=\"content-right col-xs-6\">\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>{{user.username}}</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.email}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>{{user.firstName}} {{user.lastName}}</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.gender}}, {{user.age}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>Member since:</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.createdOn | dateFormatter}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item no-shadow row\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\n              <span>View Favorites</span>\n            </a>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\n              <span>View Listed Items</span>\n            </a>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
 
 /***/ },
 
 /***/ 757:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Registration Form</h2>\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n  <div class=\"form-group\">\n    <label> \n      <span>Username: </span>\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Password: </span>\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>First Name: </span>\n      <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Last Name: </span>\n      <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Age: </span>\n      <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\" required>\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <div class=\"dropdown\">\n      <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\n          {{user.gender}}\n        <span class=\"caret\"></span>\n      </button>\n      <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\n          Gender\n        <span class=\"caret\"></span>\n      </button>\n      <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\n        <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\n        <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\n      </ul>\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Email: </span>\n      <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Profile Image: </span>\n      <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label>\n      <button class=\"form-control\" type=\"submit\">Register</button>\n    </label>\n  </div>\n</form>\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+module.exports = "<h2>Registration Form</h2>\r\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Username: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Password: </span>\r\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>First Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Last Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Age: </span>\r\n      <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <div class=\"dropdown\">\r\n      <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n        <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n        <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Email: </span>\r\n      <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Profile Image: </span>\r\n      <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      <button class=\"form-control\" type=\"submit\">Register</button>\r\n    </label>\r\n  </div>\r\n</form>\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
 
 /***/ },
 
 /***/ 758:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  users works!\n</p>\n"
+module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 /***/ },
 
@@ -2667,6 +2662,54 @@ module.exports = "<p>\n  users works!\n</p>\n"
 
 module.exports = __webpack_require__(420);
 
+
+/***/ },
+
+/***/ 791:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FormYearValidationDirective; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FormYearValidationDirective = (function () {
+    function FormYearValidationDirective(domElement) {
+        this.domElement = domElement;
+    }
+    FormYearValidationDirective.prototype.onChange = function () {
+        var value = +this.domElement.nativeElement.value;
+        if (value < 1850) {
+            this.domElement.nativeElement.value = '1850';
+        }
+        if (2017 < value) {
+            this.domElement.nativeElement.value = '2017';
+        }
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('change'), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', void 0)
+    ], FormYearValidationDirective.prototype, "onChange", null);
+    FormYearValidationDirective = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+            selector: '[appFormYearValidation]'
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _a) || Object])
+    ], FormYearValidationDirective);
+    return FormYearValidationDirective;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
 
 /***/ },
 
@@ -2711,7 +2754,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
 
 /***/ }
 

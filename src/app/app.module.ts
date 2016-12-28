@@ -26,6 +26,7 @@ import { ToastrNotificationsHandlerComponent } from './toastr-notifications-hand
 import { UserService } from './services/user.service';
 import { UserStorageService } from './services/user-storage.service';
 import { UsersModule } from './users/users.module';
+import { FormYearValidationDirective } from './directives/form-year-validation.directive';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'

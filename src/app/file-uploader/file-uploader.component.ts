@@ -11,12 +11,6 @@ export class FileUploaderComponent implements OnInit {
 
   @Output() onFileUpload: EventEmitter<FileUploadResponse[]> = new EventEmitter<FileUploadResponse[]>();
 
-  // A static prop is unique by definition
-  // Why on earth would you be generating a random value
-  // for something which is always going to exist once per instance of the app ?!
-  // To delete.
-  public static id: number;
-
   public labelText: string;
   private initialLabelText: string = 'Choose a file...';
 
@@ -28,7 +22,6 @@ export class FileUploaderComponent implements OnInit {
   sizeLimit = 2000000;
 
   constructor() {
-    FileUploaderComponent.id = this.generateUniqueId();
     this.labelText = this.initialLabelText;
   }
 
@@ -38,7 +31,7 @@ export class FileUploaderComponent implements OnInit {
     if (data && data.response) {
       data = JSON.parse(data.response);
       this.uploadedFiles.push(data);
-      this.onFileUpload.emit(this.uploadedFiles);
+      this.onFileUpload.emit([...this.uploadedFiles]);
     }
   }
 
@@ -69,13 +62,5 @@ export class FileUploaderComponent implements OnInit {
 
       this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
     }
-  }
-
-  // 1. This is not unique, it's random.
-  // 2. It's NOT an evenly distributed random value.
-  // 3. It's used as a dom element id, thus pointless.
-  // To delete.
-  private generateUniqueId(): number {
-    return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
   }
 }

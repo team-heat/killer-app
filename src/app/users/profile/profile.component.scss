@@ -1,15 +1,10 @@
-@font-face {
-  font-family: planer;
-  src: url('../../assets/Planer-Regular.otf');
-}
-
 img {
   box-shadow: 0 5px 20px black;
 }
 
 .list-group {
-  font-family: planer;
-  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
   color: rgba(225, 225, 225, 0.77);
   background-color: transparent;
   .list-group-item {

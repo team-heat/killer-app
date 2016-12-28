@@ -1,14 +1,15 @@
-import { FormDefaultValueDirective } from './../directives/form-default-value.directive';
-import { RouterModule, Routes } from '@angular/router';
-import { NgUploaderModule } from 'ngx-uploader';
 import { AddListingComponent } from './add-listing.component';
+import { AppModule } from '../app.module';
 import { CommonModule } from '@angular/common';
+import { FileUploaderComponent } from '../file-uploader/file-uploader.component';
+import { FormDefaultValueDirective } from './../directives/form-default-value.directive';
+import { FormsModule } from '@angular/forms';
+import { FormYearValidationDirective } from './../directives/form-year-validation.directive';
+import { ItemListingFactoryService } from '../services/item-listing-factory.service';
 import { ItemListingService } from '../services/item-listing.service';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ItemListingFactoryService } from '../services/item-listing-factory.service';
-import { AppModule } from '../app.module';
-import { FileUploaderComponent } from '../file-uploader/file-uploader.component';
+import { NgUploaderModule } from 'ngx-uploader';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'submit', component: AddListingComponent }
@@ -23,6 +24,7 @@ const routes: Routes = [
   declarations: [
     AddListingComponent,
     FormDefaultValueDirective,
+    FormYearValidationDirective,
     FileUploaderComponent
   ],
   providers: [

@@ -1,3 +1,11 @@
+#component-header {
+  color: rgba(225, 225, 225, 0.77);
+  background: transparent;
+  border-color: rgba(225, 225, 225, 0.77);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.77);
+  box-shadow: 0 1px 25px black;
+}
+
 .submit-wrapper {
   text-align: center;
   min-height: 60vh;
@@ -8,11 +16,46 @@
   }
 }
 
+#inputs-container {
+  margin-bottom: 25px;
+}
+
+.well {
+  background: transparent;
+  box-shadow: 0 5px 25px black;
+  border-color: rgba(225, 225, 225, 0.77);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.content-left {
+  opacity: 0.99;
+  box-shadow: 0 5px 25px black;
+  background-image: url('../../assets/home-bg10.jpg');
+  background-repeat: none;
+  padding-left: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
 input {
-  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(225, 225, 225, 0.77);
   background-color: #2f2f2f;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  width: 100%;
   &.ng-valid.ng-touched {
     border-color: #55b559;
   }
@@ -22,6 +65,7 @@ input {
 }
 
 .btn.btn-success {
+  width: 100%;
   background-color: #55b559;
 }
 
