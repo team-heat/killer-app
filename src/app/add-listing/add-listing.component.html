@@ -11,37 +11,37 @@
           <div class="well">
             <div class="form-group">
               <label>
-          <input type="text" #ngMake="ngModel" class="form-control" name="make" [(ngModel)]="itemListing.make" placeholder="Make">
+          <input type="text" #ngMake="ngModel" class="form-control" name="make" [(ngModel)]="itemListing.make" placeholder="Make" required minlength="3" maxlength="30" pattern="[A-Za-z0-9]+">
         </label>
             </div>
             <div class="form-group">
               <label>
-          <input type="text" #ngModel="ngModel" class="form-control" name="model" [(ngModel)]="itemListing.model" placeholder="Model">
+          <input type="text" #ngModel="ngModel" class="form-control" name="model" [(ngModel)]="itemListing.model" placeholder="Model" required minlength="3" maxlength="30" pattern="[A-Za-z0-9]+">
         </label>
             </div>
             <div class="form-group">
               <label>
-          <input appFormDefaultValue type="text" #ngYear="ngModel" class="form-control" name="year" [(ngModel)]="itemListing.year" placeholder="Year">
+          <input appFormDefaultValue type="text" #ngYear="ngModel" class="form-control" name="year" [(ngModel)]="itemListing.year" placeholder="Year" required minlength="4" maxlength="4" pattern="[0-9]+">
         </label>
             </div>
             <div class="form-group">
               <label>
-          <input appFormDefaultValue type="text" #ngPrice="ngModel" class="form-control" name="price" [(ngModel)]="itemListing.price" placeholder="Price">
+          <input appFormDefaultValue type="text" #ngPrice="ngModel" class="form-control" name="price" [(ngModel)]="itemListing.price" placeholder="Price" required minlength="1" maxlength="10" pattern="[0-9]+">
         </label>
             </div>
             <div class="form-group">
               <label>
-          <input appFormDefaultValue type="text" #ngEnginePower="ngModel" class="form-control" name="enginePower" [(ngModel)]="itemListing.enginePower" placeholder="Engine Power">
+          <input appFormDefaultValue type="text" #ngEnginePower="ngModel" class="form-control" name="enginePower" [(ngModel)]="itemListing.enginePower" placeholder="Engine Power" required minlength="1" maxlength="4" pattern="[0-9]+">
         </label>
             </div>
             <div class="form-group">
               <label>
-          <input type="text" #ngExteriorColor="ngModel" class="form-control" name="exteriorColor" [(ngModel)]="itemListing.exteriorColor" placeholder="Exterior Color">
+          <input type="text" #ngExteriorColor="ngModel" class="form-control" name="exteriorColor" [(ngModel)]="itemListing.exteriorColor" placeholder="Exterior Color" required minlength="3" maxlength="30" pattern="[A-Za-z]+">
         </label>
             </div>
             <div class="form-group">
               <label>
-          <input type="text" #InteriorColor="ngModel" class="form-control" name="interiorColor" [(ngModel)]="itemListing.interiorColor" placeholder="Interior Color">
+          <input type="text" #InteriorColor="ngModel" class="form-control" name="interiorColor" [(ngModel)]="itemListing.interiorColor" placeholder="Interior Color" required minlength="3" maxlength="30" pattern="[A-Za-z]+">
         </label>
             </div>
             <div class="form-group">
