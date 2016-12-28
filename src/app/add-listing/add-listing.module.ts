@@ -21,12 +21,15 @@ const routes: Routes = [
     RouterModule.forChild(routes)],
   declarations: [
     AddListingComponent,
-    FileUploaderComponent,
-    FormDefaultValueDirective
+    FormDefaultValueDirective,
+    FileUploaderComponent
   ],
   providers: [
     ItemListingService,
     ItemListingFactoryService
+  ],
+  exports: [
+    FileUploaderComponent
   ]
 })
 export class AddListingModule { }
