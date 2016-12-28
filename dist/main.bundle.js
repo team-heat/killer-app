@@ -539,6 +539,7 @@ var ItemListingFactoryService = (function () {
         itemListing.interiorColor = interiorColor;
         itemListing.createdOn = new Date();
         itemListing.isActive = true;
+        itemListing.pictures = [];
         return itemListing;
     };
     ItemListingFactoryService = __decorate([
@@ -1190,6 +1191,9 @@ var AddListingComponent = (function () {
             _this.toastrNotification.enqueueNotification(toastrNotificationOptions);
         });
     };
+    AddListingComponent.prototype.onFileUpload = function (uploadedFiles) {
+        this.itemListing.pictures = uploadedFiles;
+    };
     AddListingComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add-listing',
@@ -1533,8 +1537,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var FileUploaderComponent = (function () {
     function FileUploaderComponent() {
+        this.onFileUpload = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.initialLabelText = 'Choose a file...';
-        this.uploadFiles = [];
+        this.uploadedFiles = [];
         this.hasBaseDropZoneOver = false;
         this.options = {
             url: '/api/upload'
@@ -1547,7 +1552,8 @@ var FileUploaderComponent = (function () {
     FileUploaderComponent.prototype.handleUpload = function (data) {
         if (data && data.response) {
             data = JSON.parse(data.response);
-            this.uploadFiles.push(data);
+            this.uploadedFiles.push(data);
+            this.onFileUpload.emit(this.uploadedFiles);
         }
     };
     FileUploaderComponent.prototype.fileOverBase = function (e) {
@@ -1582,6 +1588,10 @@ var FileUploaderComponent = (function () {
     FileUploaderComponent.prototype.generateUniqueId = function () {
         return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
     };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], FileUploaderComponent.prototype, "onFileUpload", void 0);
     FileUploaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-file-uploader',
@@ -1591,6 +1601,7 @@ var FileUploaderComponent = (function () {
         __metadata('design:paramtypes', [])
     ], FileUploaderComponent);
     return FileUploaderComponent;
+    var _a;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
 
@@ -2448,7 +2459,7 @@ module.exports = ""
 /***/ 741:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <h2 id=\"component-header\">Submit Listing</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\" placeholder=\"Year\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\" placeholder=\"Price\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\" placeholder=\"Engine Power\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\" placeholder=\"Exterior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\" placeholder=\"Interior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <app-file-uploader></app-file-uploader>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <h2 id=\"component-header\">Submit Listing</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\" placeholder=\"Year\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\" placeholder=\"Price\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\" placeholder=\"Engine Power\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\" placeholder=\"Exterior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\" placeholder=\"Interior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
@@ -2469,7 +2480,7 @@ module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" 
 /***/ 744:
 /***/ function(module, exports) {
 
-module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<input type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\">\r\n\r\n<!-- drag & drop file example-->\r\n<style>\r\n  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n</style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div>\r\n  Response: {{ uploadFile | json }}\r\n  <div *ngIf=\"uploadFiles.length > 0\">\r\n    <img *ngFor=\"let file of uploadFiles \" [src]=\"file.imageUrl\" alt=\"\" width=\"300px\">\r\n  </div>\r\n</div>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<input type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\">\r\n\r\n<!-- drag & drop file example-->\r\n<style>\r\n  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n</style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div>\r\n  Response: {{ uploadFile | json }}\r\n  <div *ngIf=\"uploadedFiles.length > 0\">\r\n    <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" alt=\"\" width=\"300px\">\r\n  </div>\r\n</div>"
 
 /***/ },
 

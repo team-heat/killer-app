@@ -23,6 +23,7 @@ export class ItemListingFactoryService {
     itemListing.interiorColor = interiorColor;
     itemListing.createdOn = new Date();
     itemListing.isActive = true;
+    itemListing.pictures = [];
 
     return itemListing;
   }

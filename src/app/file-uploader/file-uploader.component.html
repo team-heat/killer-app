@@ -17,7 +17,7 @@
 
 <div>
   Response: {{ uploadFile | json }}
-  <div *ngIf="uploadFiles.length > 0">
-    <img *ngFor="let file of uploadFiles " [src]="file.imageUrl" alt="" width="300px">
+  <div *ngIf="uploadedFiles.length > 0">
+    <img *ngFor="let file of uploadedFiles " [src]="file.imageUrl" alt="" width="300px">
   </div>
 </div>

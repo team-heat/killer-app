@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FileUploadResponse } from './../models/file-upload-response.model';
 import { NgUploaderOptions } from 'ngx-uploader';
 
@@ -9,6 +9,8 @@ import { NgUploaderOptions } from 'ngx-uploader';
 })
 export class FileUploaderComponent implements OnInit {
 
+  @Output() onFileUpload: EventEmitter<FileUploadResponse[]> = new EventEmitter<FileUploadResponse[]>();
+
   // A static prop is unique by definition
   // Why on earth would you be generating a random value
   // for something which is always going to exist once per instance of the app ?!
@@ -18,7 +20,7 @@ export class FileUploaderComponent implements OnInit {
   public labelText: string;
   private initialLabelText: string = 'Choose a file...';
 
-  uploadFiles: FileUploadResponse[] = [];
+  uploadedFiles: FileUploadResponse[] = [];
   hasBaseDropZoneOver: boolean = false;
   options: NgUploaderOptions = {
     url: '/api/upload'
@@ -32,10 +34,11 @@ export class FileUploaderComponent implements OnInit {
 
   ngOnInit() { }
 
-  handleUpload(data): void {
+  handleUpload(data: any): void {
     if (data && data.response) {
       data = JSON.parse(data.response);
-      this.uploadFiles.push(data);
+      this.uploadedFiles.push(data);
+      this.onFileUpload.emit(this.uploadedFiles);
     }
   }
 
@@ -43,14 +46,14 @@ export class FileUploaderComponent implements OnInit {
     this.hasBaseDropZoneOver = e;
   }
 
-  beforeUpload(uploadingFile): void {
+  beforeUpload(uploadingFile: any): void {
     if (uploadingFile.size > this.sizeLimit) {
       uploadingFile.setAbort();
       alert('File is too large');
     }
   }
 
-  updateLabel(event) {
+  updateLabel(event: any) {
     const target = event.target;
     const maxNameLength = 15;
 
