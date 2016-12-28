@@ -89886,6 +89886,696 @@ if (_global['navigator'] && _global['navigator'].geolocation) {
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61), __webpack_require__(712)))
 
+/***/ },
+/* 773 */,
+/* 774 */,
+/* 775 */,
+/* 776 */,
+/* 777 */,
+/* 778 */,
+/* 779 */,
+/* 780 */,
+/* 781 */,
+/* 782 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_uploaded_file_class__ = __webpack_require__(786);
+/* harmony export (binding) */ __webpack_require__.d(exports, "NgUploaderService", function() { return NgUploaderService; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "NgUploaderServiceProvider", function() { return NgUploaderServiceProvider; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NgUploaderService = (function () {
+    function NgUploaderService() {
+        this._queue = [];
+        this._emitter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._previewEmitter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this._beforeEmitter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    NgUploaderService.prototype.setOptions = function (opts) {
+        this.opts = opts;
+    };
+    NgUploaderService.prototype.uploadFilesInQueue = function () {
+        var _this = this;
+        var newFiles = this._queue.filter(function (f) { return !f.uploading; });
+        newFiles.forEach(function (f) {
+            _this.uploadFile(f);
+        });
+    };
+    ;
+    NgUploaderService.prototype.uploadFile = function (file) {
+        var _this = this;
+        var xhr = new XMLHttpRequest();
+        var form = new FormData();
+        form.append(this.opts.fieldName, file, file.name);
+        Object.keys(this.opts.data).forEach(function (k) {
+            form.append(k, _this.opts.data[k]);
+        });
+        var uploadingFile = new __WEBPACK_IMPORTED_MODULE_1__classes_uploaded_file_class__["a" /* UploadedFile */](this.generateRandomIndex(), file.name, file.size);
+        var queueIndex = this._queue.indexOf(file);
+        var time = new Date().getTime();
+        var load = 0;
+        var speed = 0;
+        var speedHumanized = null;
+        xhr.upload.onprogress = function (e) {
+            if (e.lengthComputable) {
+                if (_this.opts.calculateSpeed) {
+                    time = new Date().getTime() - time;
+                    load = e.loaded - load;
+                    speed = load / time * 1000;
+                    speed = parseInt(speed, 10);
+                    speedHumanized = _this.humanizeBytes(speed);
+                }
+                var percent = Math.round(e.loaded / e.total * 100);
+                if (speed === 0) {
+                    uploadingFile.setProgres({
+                        total: e.total,
+                        loaded: e.loaded,
+                        percent: percent
+                    });
+                }
+                else {
+                    uploadingFile.setProgres({
+                        total: e.total,
+                        loaded: e.loaded,
+                        percent: percent,
+                        speed: speed,
+                        speedHumanized: speedHumanized
+                    });
+                }
+                _this._emitter.emit(uploadingFile);
+            }
+        };
+        xhr.upload.onabort = function (e) {
+            uploadingFile.setAbort();
+            _this._emitter.emit(uploadingFile);
+        };
+        xhr.upload.onerror = function (e) {
+            uploadingFile.setError();
+            _this._emitter.emit(uploadingFile);
+        };
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                uploadingFile.onFinished(xhr.status, xhr.statusText, xhr.response);
+                _this.removeFileFromQueue(queueIndex);
+                _this._emitter.emit(uploadingFile);
+            }
+        };
+        xhr.open(this.opts.method, this.opts.url, true);
+        xhr.withCredentials = this.opts.withCredentials;
+        if (this.opts.customHeaders) {
+            Object.keys(this.opts.customHeaders).forEach(function (key) {
+                xhr.setRequestHeader(key, _this.opts.customHeaders[key]);
+            });
+        }
+        if (this.opts.authToken) {
+            xhr.setRequestHeader('Authorization', this.opts.authTokenPrefix + " " + this.opts.authToken);
+        }
+        this._beforeEmitter.emit(uploadingFile);
+        if (!uploadingFile.abort) {
+            xhr.send(form);
+        }
+        else {
+            this.removeFileFromQueue(queueIndex);
+        }
+    };
+    NgUploaderService.prototype.addFilesToQueue = function (files) {
+        var _this = this;
+        this.clearQueue();
+        [].forEach.call(files, function (file, i) {
+            if (!_this.inQueue(file)) {
+                _this._queue.push(file);
+            }
+        });
+        if (this.opts.previewUrl) {
+            [].forEach.call(files, function (file) { return _this.createFileUrl(file); });
+        }
+        if (this.opts.autoUpload) {
+            this.uploadFilesInQueue();
+        }
+    };
+    NgUploaderService.prototype.createFileUrl = function (file) {
+        var _this = this;
+        var reader = new FileReader();
+        reader.addEventListener('load', function () {
+            _this._previewEmitter.emit(reader.result);
+        });
+        reader.readAsDataURL(file);
+    };
+    NgUploaderService.prototype.removeFileFromQueue = function (i) {
+        this._queue.splice(i, 1);
+    };
+    NgUploaderService.prototype.clearQueue = function () {
+        this._queue = [];
+    };
+    NgUploaderService.prototype.getQueueSize = function () {
+        return this._queue.length;
+    };
+    NgUploaderService.prototype.inQueue = function (file) {
+        var fileInQueue = this._queue.filter(function (f) { return f === file; });
+        return fileInQueue.length ? true : false;
+    };
+    NgUploaderService.prototype.generateRandomIndex = function () {
+        return Math.random().toString(36).substring(7);
+    };
+    NgUploaderService.prototype.humanizeBytes = function (bytes) {
+        if (bytes === 0) {
+            return '0 Byte';
+        }
+        var k = 1024;
+        var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
+        var i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i] + '/s';
+    };
+    NgUploaderService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], NgUploaderService);
+    return NgUploaderService;
+}());
+var NgUploaderServiceProvider = {
+    provide: NgUploaderService, useClass: NgUploaderService
+};
+//# sourceMappingURL=D:/GitHub/killer-app/src/ngx-uploader.js.map
+
+/***/ },
+/* 783 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ng_uploader_options_class__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uploaded_file_class__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upload_rejected_class__ = __webpack_require__(788);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(exports, "NgUploaderOptions", function() { return __WEBPACK_IMPORTED_MODULE_0__ng_uploader_options_class__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(exports, "UploadedFile", function() { return __WEBPACK_IMPORTED_MODULE_1__uploaded_file_class__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(exports, "UploadRejected", function() { return __WEBPACK_IMPORTED_MODULE_2__upload_rejected_class__["a"]; });
+
+
+
+//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+
+/***/ },
+/* 784 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes__ = __webpack_require__(783);
+/* harmony export (binding) */ __webpack_require__.d(exports, "NgFileDropDirective", function() { return NgFileDropDirective; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var NgFileDropDirective = (function () {
+    function NgFileDropDirective(el, uploader) {
+        this.el = el;
+        this.uploader = uploader;
+        this.onUpload = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.onPreviewData = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.onFileOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.onUploadRejected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.beforeUpload = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.files = [];
+    }
+    NgFileDropDirective.prototype.ngOnInit = function () {
+        var _this = this;
+        this.uploader._emitter.subscribe(function (data) {
+            _this.onUpload.emit(data);
+            if (data.done) {
+                _this.files = _this.files.filter(function (f) { return f.name !== data.originalName; });
+            }
+        });
+        this.uploader._previewEmitter.subscribe(function (data) {
+            _this.onPreviewData.emit(data);
+        });
+        this.uploader._beforeEmitter.subscribe(function (uploadingFile) {
+            _this.beforeUpload.emit(uploadingFile);
+        });
+        setTimeout(function () {
+            if (_this.events instanceof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) {
+                _this.events.subscribe(function (data) {
+                    if (data === 'startUpload') {
+                        _this.uploader.uploadFilesInQueue();
+                    }
+                });
+            }
+        });
+        this.initEvents();
+    };
+    NgFileDropDirective.prototype.ngOnChanges = function (changes) {
+        if (!this.options) {
+            return;
+        }
+        this.options = new __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"](this.options);
+        this.uploader.setOptions(this.options);
+    };
+    NgFileDropDirective.prototype.initEvents = function () {
+        var _this = this;
+        if (typeof this.el.nativeElement.addEventListener === 'undefined') {
+            return;
+        }
+        this.el.nativeElement.addEventListener('drop', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            _this.files = Array.from(e.dataTransfer.files);
+            if (_this.files.length) {
+                _this.uploader.addFilesToQueue(_this.files);
+            }
+        }, false);
+        this.el.nativeElement.addEventListener('dragenter', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }, false);
+        this.el.nativeElement.addEventListener('dragover', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }, false);
+    };
+    NgFileDropDirective.prototype.onChange = function () {
+        var _this = this;
+        this.files = this.el.nativeElement.files;
+        if (!this.files) {
+            console.log('return');
+            return;
+        }
+        if (this.options.filterExtensions && this.options.allowedExtensions) {
+            this.files = this.files.filter(function (f) {
+                if (_this.options.allowedExtensions.indexOf(f.type) !== -1) {
+                    return true;
+                }
+                var ext = f.name.split('.').pop();
+                if (_this.options.allowedExtensions.indexOf(ext) !== -1) {
+                    return true;
+                }
+                _this.onUploadRejected.emit({ file: f, reason: __WEBPACK_IMPORTED_MODULE_2__classes__["UploadRejected"].EXTENSION_NOT_ALLOWED });
+                return false;
+            });
+        }
+        if (this.files.length) {
+            this.uploader.addFilesToQueue(this.files);
+        }
+    };
+    NgFileDropDirective.prototype.onDragOver = function (event) {
+        this.onFileOver.emit(true);
+    };
+    NgFileDropDirective.prototype.onDragLeave = function (event) {
+        this.onFileOver.emit(false);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"]) === 'function' && _a) || Object)
+    ], NgFileDropDirective.prototype, "options", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
+        __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _b) || Object)
+    ], NgFileDropDirective.prototype, "events", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _c) || Object)
+    ], NgFileDropDirective.prototype, "onUpload", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _d) || Object)
+    ], NgFileDropDirective.prototype, "onPreviewData", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _e) || Object)
+    ], NgFileDropDirective.prototype, "onFileOver", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _f) || Object)
+    ], NgFileDropDirective.prototype, "onUploadRejected", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _g) || Object)
+    ], NgFileDropDirective.prototype, "beforeUpload", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('change'), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', void 0)
+    ], NgFileDropDirective.prototype, "onChange", null);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('dragover', ['$event']), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', void 0)
+    ], NgFileDropDirective.prototype, "onDragOver", null);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('dragleave', ['$event']), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Object)
+    ], NgFileDropDirective.prototype, "onDragLeave", null);
+    NgFileDropDirective = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+            selector: '[ngFileDrop]'
+        }),
+        __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])),
+        __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__["NgUploaderService"])), 
+        __metadata('design:paramtypes', [(typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _h) || Object, (typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__["NgUploaderService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__["NgUploaderService"]) === 'function' && _j) || Object])
+    ], NgFileDropDirective);
+    return NgFileDropDirective;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/ng-file-drop.js.map
+
+/***/ },
+/* 785 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes__ = __webpack_require__(783);
+/* harmony export (binding) */ __webpack_require__.d(exports, "NgFileSelectDirective", function() { return NgFileSelectDirective; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var NgFileSelectDirective = (function () {
+    function NgFileSelectDirective(el, uploader) {
+        this.el = el;
+        this.uploader = uploader;
+        this.onUpload = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.onPreviewData = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.onUploadRejected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.beforeUpload = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.files = [];
+    }
+    NgFileSelectDirective.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        if (!this.options) {
+            return;
+        }
+        this.uploader.setOptions(new __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"](this.options));
+        this.uploader._emitter.subscribe(function (data) {
+            _this.onUpload.emit(data);
+            if (data.done) {
+                _this.files = _this.files.filter(function (f) { return f.name !== data.originalName; });
+            }
+        });
+        this.uploader._previewEmitter.subscribe(function (data) {
+            _this.onPreviewData.emit(data);
+        });
+        this.uploader._beforeEmitter.subscribe(function (uploadingFile) {
+            _this.beforeUpload.emit(uploadingFile);
+        });
+        if (this.events instanceof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) {
+            this.events.subscribe(function (data) {
+                if (data === 'startUpload') {
+                    _this.uploader.uploadFilesInQueue();
+                }
+            });
+        }
+    };
+    NgFileSelectDirective.prototype.onChange = function () {
+        var _this = this;
+        this.files = this.el.nativeElement.files;
+        if (!this.files) {
+            console.log('return');
+            return;
+        }
+        if (this.options.filterExtensions && this.options.allowedExtensions) {
+            this.files = this.files.filter(function (f) {
+                if (_this.options.allowedExtensions.indexOf(f.type) !== -1) {
+                    return true;
+                }
+                var ext = f.name.split('.').pop();
+                if (_this.options.allowedExtensions.indexOf(ext) !== -1) {
+                    return true;
+                }
+                _this.onUploadRejected.emit({ file: f, reason: __WEBPACK_IMPORTED_MODULE_2__classes__["UploadRejected"].EXTENSION_NOT_ALLOWED });
+                return false;
+            });
+        }
+        if (this.files.length) {
+            this.uploader.addFilesToQueue(this.files);
+        }
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"]) === 'function' && _a) || Object)
+    ], NgFileSelectDirective.prototype, "options", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
+        __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _b) || Object)
+    ], NgFileSelectDirective.prototype, "events", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _c) || Object)
+    ], NgFileSelectDirective.prototype, "onUpload", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _d) || Object)
+    ], NgFileSelectDirective.prototype, "onPreviewData", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _e) || Object)
+    ], NgFileSelectDirective.prototype, "onUploadRejected", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _f) || Object)
+    ], NgFileSelectDirective.prototype, "beforeUpload", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('change'), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', void 0)
+    ], NgFileSelectDirective.prototype, "onChange", null);
+    NgFileSelectDirective = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+            selector: '[ngFileSelect]'
+        }),
+        __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])),
+        __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__["NgUploaderService"])), 
+        __metadata('design:paramtypes', [(typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _g) || Object, (typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__["NgUploaderService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_ngx_uploader__["NgUploaderService"]) === 'function' && _h) || Object])
+    ], NgFileSelectDirective);
+    return NgFileSelectDirective;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/ng-file-select.js.map
+
+/***/ },
+/* 786 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UploadedFile; });
+var UploadedFile = (function () {
+    function UploadedFile(id, originalName, size) {
+        this.id = id;
+        this.originalName = originalName;
+        this.size = size;
+        this.progress = {
+            loaded: 0,
+            total: 0,
+            percent: 0,
+            speed: 0,
+            speedHumanized: null
+        };
+        this.done = false;
+        this.error = false;
+        this.abort = false;
+        this.startTime = new Date().getTime();
+        this.endTime = 0;
+        this.speedAverage = 0;
+        this.speedAverageHumanized = null;
+    }
+    UploadedFile.prototype.setProgres = function (progress) {
+        this.progress = progress;
+    };
+    UploadedFile.prototype.setError = function () {
+        this.error = true;
+        this.done = true;
+    };
+    UploadedFile.prototype.setAbort = function () {
+        this.abort = true;
+        this.done = true;
+    };
+    UploadedFile.prototype.onFinished = function (status, statusText, response) {
+        this.endTime = new Date().getTime();
+        this.speedAverage = this.size / (this.endTime - this.startTime) * 1000;
+        this.speedAverage = parseInt(this.speedAverage, 10);
+        this.speedAverageHumanized = this.humanizeBytes(this.speedAverage);
+        this.status = status;
+        this.statusText = statusText;
+        this.response = response;
+        this.done = true;
+    };
+    UploadedFile.prototype.humanizeBytes = function (bytes) {
+        if (bytes === 0) {
+            return '0 Byte';
+        }
+        var k = 1024;
+        var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
+        var i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i] + '/s';
+    };
+    return UploadedFile;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/uploaded-file.class.js.map
+
+/***/ },
+/* 787 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NgUploaderOptions; });
+var NgUploaderOptions = (function () {
+    function NgUploaderOptions(obj) {
+        this.url = obj.url != null ? obj.url : '';
+        this.cors = obj.cors != null ? obj.cors : true;
+        this.withCredentials = obj.withCredentials != null ? obj.withCredentials : this.withCredentials;
+        this.multiple = obj.multiple != null ? obj.multiple : true;
+        this.maxUploads = obj.maxUploads != null ? obj.maxUploads : 10;
+        this.data = obj.data != null ? obj.data : {};
+        this.autoUpload = obj && obj.autoUpload ? obj.autoUpload : true;
+        this.multipart = obj.multipart != null ? obj.multipart : false;
+        this.method = obj.method != null ? obj.method : 'POST';
+        this.customHeaders = obj.customHeaders != null ? obj.customHeaders : {};
+        this.encodeHeaders = obj.encodeHeaders != null ? obj.encodeHeaders : false;
+        this.authTokenPrefix = obj.authTokenPrefix != null ? obj.authTokenPrefix : 'Bearer';
+        this.authToken = obj.authToken != null ? obj.authToken : null;
+        this.fieldName = obj.fieldName != null ? obj.fieldName : 'file';
+        this.fieldReset = obj.fieldReset != null ? obj.fieldReset : null;
+        this.previewUrl = obj.previewUrl != null ? obj.previewUrl : null;
+        this.calculateSpeed = obj.calculateSpeed != null ? obj.calculateSpeed : true;
+        this.filterExtensions = obj.filterExtensions != null ? obj.filterExtensions : false;
+        this.allowedExtensions = obj && obj.allowedExtensions ? obj.allowedExtensions : [];
+    }
+    return NgUploaderOptions;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/ng-uploader-options.class.js.map
+
+/***/ },
+/* 788 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UploadRejected; });
+var UploadRejected = (function () {
+    function UploadRejected() {
+    }
+    Object.defineProperty(UploadRejected, "EXTENSION_NOT_ALLOWED", {
+        get: function () { return 'ExtensionNotAllowed'; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UploadRejected, "MAX_SIZE_EXCEEDED", {
+        get: function () { return 'MaxSizeExceeded'; },
+        enumerable: true,
+        configurable: true
+    });
+    return UploadRejected;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/upload-rejected.class.js.map
+
+/***/ },
+/* 789 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_ng_file_drop__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_ng_file_select__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_ngx_uploader__ = __webpack_require__(782);
+/* harmony export (binding) */ __webpack_require__.d(exports, "NgUploaderModule", function() { return NgUploaderModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NgUploaderModule = (function () {
+    function NgUploaderModule() {
+    }
+    NgUploaderModule = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_1__directives_ng_file_drop__["NgFileDropDirective"],
+                __WEBPACK_IMPORTED_MODULE_2__directives_ng_file_select__["NgFileSelectDirective"]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_3__services_ngx_uploader__["NgUploaderServiceProvider"]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__directives_ng_file_drop__["NgFileDropDirective"],
+                __WEBPACK_IMPORTED_MODULE_2__directives_ng_file_select__["NgFileSelectDirective"]
+            ]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], NgUploaderModule);
+    return NgUploaderModule;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/ngx-uploader.module.js.map
+
+/***/ },
+/* 790 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+var ng_file_drop_1 = __webpack_require__(784);
+var ng_file_select_1 = __webpack_require__(785);
+__export(__webpack_require__(784));
+__export(__webpack_require__(785));
+__export(__webpack_require__(782));
+var classes_1 = __webpack_require__(783);
+exports.NgUploaderOptions = classes_1.NgUploaderOptions;
+exports.UploadedFile = classes_1.UploadedFile;
+exports.UploadRejected = classes_1.UploadRejected;
+var ngx_uploader_module_1 = __webpack_require__(789);
+exports.NgUploaderModule = ngx_uploader_module_1.NgUploaderModule;
+exports.UPLOAD_DIRECTIVES = [
+    ng_file_select_1.NgFileSelectDirective,
+    ng_file_drop_1.NgFileDropDirective
+];
+
+
 /***/ }
 ]);
 //# sourceMappingURL=vendor.bundle.map

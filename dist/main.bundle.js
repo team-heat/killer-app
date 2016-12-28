@@ -1211,13 +1211,15 @@ var AddListingComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives_form_default_value_directive__ = __webpack_require__(540);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_listing_component__ = __webpack_require__(536);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_item_listing_service__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_item_listing_factory_service__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__file_uploader_file_uploader_component__ = __webpack_require__(542);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_uploader__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_uploader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ngx_uploader__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__add_listing_component__ = __webpack_require__(536);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_item_listing_factory_service__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__file_uploader_file_uploader_component__ = __webpack_require__(542);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddListingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1237,29 +1239,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var routes = [
-    { path: 'submit', component: __WEBPACK_IMPORTED_MODULE_2__add_listing_component__["a" /* AddListingComponent */] }
+    { path: 'submit', component: __WEBPACK_IMPORTED_MODULE_3__add_listing_component__["a" /* AddListingComponent */] }
 ];
 var AddListingModule = (function () {
     function AddListingModule() {
     }
     AddListingModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ngx_uploader__["NgUploaderModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(routes)],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__add_listing_component__["a" /* AddListingComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__add_listing_component__["a" /* AddListingComponent */],
                 __WEBPACK_IMPORTED_MODULE_0__directives_form_default_value_directive__["a" /* FormDefaultValueDirective */],
-                __WEBPACK_IMPORTED_MODULE_8__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_4__services_item_listing_service__["a" /* ItemListingService */],
-                __WEBPACK_IMPORTED_MODULE_7__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]
+                __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
+                __WEBPACK_IMPORTED_MODULE_8__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_8__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -1529,8 +1533,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var FileUploaderComponent = (function () {
     function FileUploaderComponent() {
+        this.initialLabelText = 'Choose a file...';
+        this.hasBaseDropZoneOver = false;
+        this.options = {
+            url: '/api/upload'
+        };
+        this.sizeLimit = 2000000;
+        FileUploaderComponent.id = this.generateUniqueId();
+        this.labelText = this.initialLabelText;
     }
-    FileUploaderComponent.prototype.ngOnInit = function () {
+    FileUploaderComponent.prototype.ngOnInit = function () { };
+    FileUploaderComponent.prototype.handleUpload = function (data) {
+        if (data && data.response) {
+            data = JSON.parse(data.response);
+            this.uploadFile = data;
+        }
+    };
+    FileUploaderComponent.prototype.fileOverBase = function (e) {
+        this.hasBaseDropZoneOver = e;
+    };
+    FileUploaderComponent.prototype.beforeUpload = function (uploadingFile) {
+        if (uploadingFile.size > this.sizeLimit) {
+            uploadingFile.setAbort();
+            alert('File is too large');
+        }
+    };
+    FileUploaderComponent.prototype.updateLabel = function (event) {
+        var target = event.target;
+        var maxNameLength = 15;
+        if (!target.files.length) {
+            this.labelText = this.initialLabelText;
+        }
+        else if (target.files.length > 1) {
+            this.labelText = target.files.length + " files selected.";
+        }
+        else {
+            var fileName = target.value.split('\\').pop();
+            var startIndex = fileName.length - maxNameLength;
+            var shortenedFileName = fileName.substr(startIndex, maxNameLength);
+            this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
+        }
+    };
+    FileUploaderComponent.prototype.generateUniqueId = function () {
+        return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
     };
     FileUploaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2398,7 +2443,7 @@ module.exports = ""
 /***/ 732:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <h2 id=\"component-header\">Submit Listing</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\" placeholder=\"Year\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\" placeholder=\"Price\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\" placeholder=\"Engine Power\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\" placeholder=\"Exterior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\" placeholder=\"Interior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <app-file-uploader></app-file-uploader>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n            <input type=\"file\" name=\"displayImage\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <h2 id=\"component-header\">Submit Listing</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\" placeholder=\"Year\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\" placeholder=\"Price\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\" placeholder=\"Engine Power\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\" placeholder=\"Exterior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>\r\n          <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\" placeholder=\"Interior Color\">\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <app-file-uploader></app-file-uploader>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
@@ -2419,7 +2464,7 @@ module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" 
 /***/ 735:
 /***/ function(module, exports) {
 
-module.exports = "<label>\r\n  <input type=\"file\" name=\"displayImage\">\r\n</label>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<input type=\"file\"\r\n       ngFileSelect\r\n       [options]=\"options\"\r\n       (onUpload)=\"handleUpload($event)\"\r\n       (beforeUpload)=\"beforeUpload($event)\">\r\n\r\n<!-- drag & drop file example-->\r\n<style>\r\n  .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n</style>\r\n<div ngFileDrop\r\n     [options]=\"options\"\r\n     (onUpload)=\"handleUpload($event)\"\r\n     [ngClass]=\"{'file-over': hasBaseDropZoneOver}\"\r\n     (onFileOver)=\"fileOverBase($event)\"\r\n     (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div>\r\nResponse: {{ uploadFile | json }}\r\n</div>"
 
 /***/ },
 
@@ -2447,7 +2492,7 @@ module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this
 /***/ 739:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li appNavigationHover class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\r\n      <li appNavigationHover class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a appNavigationHover href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a appNavigationHover routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a appNavigationHover routerLink='profile'>Settings</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a appNavigationHover routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ },
 

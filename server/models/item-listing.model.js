@@ -15,8 +15,7 @@ const itemListingSchema = new mongoose.Schema({
   enginePower: Number,
   history: String,
   createdOn: Date,
-  isActive: Boolean,
-  owner: String
+  isActive: Boolean
 });
 
 let ItemListing;
@@ -34,8 +33,7 @@ itemListingSchema.static('createItemListing', function (listing) {
     enginePower: listing.enginePower,
     history: listing.history,
     createdOn: new Date(),
-    isActive: true,
-    owner:listing.owner
+    isActive: true
   });
 });
 

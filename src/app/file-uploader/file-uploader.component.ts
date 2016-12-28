@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgUploaderOptions } from 'ngx-uploader';
 
 @Component({
   selector: 'app-file-uploader',
@@ -11,12 +12,37 @@ export class FileUploaderComponent implements OnInit {
   public labelText: string;
   private initialLabelText: string = 'Choose a file...';
 
+  uploadFile: any;
+  hasBaseDropZoneOver: boolean = false;
+  options: NgUploaderOptions = {
+    url: '/api/upload'
+  };
+  sizeLimit = 2000000;
+
   constructor() {
     FileUploaderComponent.id = this.generateUniqueId();
     this.labelText = this.initialLabelText;
   }
 
   ngOnInit() { }
+
+  handleUpload(data): void {
+    if (data && data.response) {
+      data = JSON.parse(data.response);
+      this.uploadFile = data;
+    }
+  }
+
+  fileOverBase(e: any): void {
+    this.hasBaseDropZoneOver = e;
+  }
+
+  beforeUpload(uploadingFile): void {
+    if (uploadingFile.size > this.sizeLimit) {
+      uploadingFile.setAbort();
+      alert('File is too large');
+    }
+  }
 
   updateLabel(event) {
     const target = event.target;
