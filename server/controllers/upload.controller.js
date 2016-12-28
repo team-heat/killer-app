@@ -4,6 +4,9 @@ const fs = require('fs');
 
 module.exports = function ({}) {
   const ROOT_UPLOADS_DIR = './dist/uploads';
+  if (!fs.existsSync(ROOT_UPLOADS_DIR)) {
+    fs.mkdirSync(ROOT_UPLOADS_DIR);
+  }
 
   function createFile(req, res) {
     const user = req.user;

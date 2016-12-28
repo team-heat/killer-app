@@ -1545,7 +1545,6 @@ var FileUploaderComponent = (function () {
             url: '/api/upload'
         };
         this.sizeLimit = 2000000;
-        FileUploaderComponent.id = this.generateUniqueId();
         this.labelText = this.initialLabelText;
     }
     FileUploaderComponent.prototype.ngOnInit = function () { };
@@ -1553,7 +1552,7 @@ var FileUploaderComponent = (function () {
         if (data && data.response) {
             data = JSON.parse(data.response);
             this.uploadedFiles.push(data);
-            this.onFileUpload.emit(this.uploadedFiles);
+            this.onFileUpload.emit(this.uploadedFiles.slice());
         }
     };
     FileUploaderComponent.prototype.fileOverBase = function (e) {
@@ -1580,13 +1579,6 @@ var FileUploaderComponent = (function () {
             var shortenedFileName = fileName.substr(startIndex, maxNameLength);
             this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
         }
-    };
-    // 1. This is not unique, it's random.
-    // 2. It's NOT an evenly distributed random value.
-    // 3. It's used as a dom element id, thus pointless.
-    // To delete.
-    FileUploaderComponent.prototype.generateUniqueId = function () {
-        return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
