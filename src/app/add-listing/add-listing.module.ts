@@ -27,6 +27,9 @@ const routes: Routes = [
   providers: [
     ItemListingService,
     ItemListingFactoryService
+  ],
+  exports: [
+    FileUploaderComponent
   ]
 })
 export class AddListingModule { }

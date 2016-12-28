@@ -1,0 +1,28 @@
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  +label {
+    background-color: #DF474B;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+  }
+  +label:hover {
+    background-color: #c83f43;
+  }
+  +label>span {
+    margin-right: .5em;
+  }
+  &:focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+    background-color: #c83f43;
+  }
+}
