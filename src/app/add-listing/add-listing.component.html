@@ -1,54 +1,59 @@
 <div class="submit-wrapper">
-  <h2 id="component-header">Submit Listing</h2>
+  <div id="component-header">
+    <h2>Submit Listing</h2>
+  </div>
   <div class="inner-wrapper">
     <form *ngIf="!isLoading" #submitForm="ngForm" (ngSubmit)="onSubmit(); submitForm.reset()">
-      <div class="row">
-        <div class="content-left col-xs-4 col-xs-offset-1">
+      <div id="inputs-container" class="row">
+        <div class="content-left col-xs-7 col-xs-offset-1">
         </div>
-        <div id="content-right" class="col-xs-6 col-xs-offset-1">
-          <div class="form-group">
-            <label>
+        <div id="content-right" class="col-xs-4">
+          <div class="well">
+            <div class="form-group">
+              <label>
           <input type="text" #ngMake="ngModel" class="form-control" name="make" [(ngModel)]="itemListing.make" placeholder="Make">
         </label>
-          </div>
-          <div class="form-group">
-            <label>
+            </div>
+            <div class="form-group">
+              <label>
           <input type="text" #ngModel="ngModel" class="form-control" name="model" [(ngModel)]="itemListing.model" placeholder="Model">
         </label>
-          </div>
-          <div class="form-group">
-            <label>
+            </div>
+            <div class="form-group">
+              <label>
           <input appFormDefaultValue type="text" #ngYear="ngModel" class="form-control" name="year" [(ngModel)]="itemListing.year" placeholder="Year">
         </label>
-          </div>
-          <div class="form-group">
-            <label>
+            </div>
+            <div class="form-group">
+              <label>
           <input appFormDefaultValue type="text" #ngPrice="ngModel" class="form-control" name="price" [(ngModel)]="itemListing.price" placeholder="Price">
         </label>
-          </div>
-          <div class="form-group">
-            <label>
+            </div>
+            <div class="form-group">
+              <label>
           <input appFormDefaultValue type="text" #ngEnginePower="ngModel" class="form-control" name="enginePower" [(ngModel)]="itemListing.enginePower" placeholder="Engine Power">
         </label>
-          </div>
-          <div class="form-group">
-            <label>
+            </div>
+            <div class="form-group">
+              <label>
           <input type="text" #ngExteriorColor="ngModel" class="form-control" name="exteriorColor" [(ngModel)]="itemListing.exteriorColor" placeholder="Exterior Color">
         </label>
-          </div>
-          <div class="form-group">
-            <label>
+            </div>
+            <div class="form-group">
+              <label>
           <input type="text" #InteriorColor="ngModel" class="form-control" name="interiorColor" [(ngModel)]="itemListing.interiorColor" placeholder="Interior Color">
         </label>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
           </div>
         </div>
       </div>
       <div id="image-upload" class="form-group">
         <app-file-uploader (onFileUpload)="onFileUpload($event)"></app-file-uploader>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-success">Submit</button>
-      </div>
+
     </form>
   </div>
 </div>

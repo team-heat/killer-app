@@ -26,6 +26,10 @@
 //     background-color: #c83f43;
 //   }
 // }
+#image-uploader {
+  border-top: 1px solid rgba(225, 225, 225, 0.77);
+}
+
 label {
   margin-top: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -44,7 +48,8 @@ label {
 }
 
 label,
-input {
+input,
+button {
   width: 250px;
 }
 
