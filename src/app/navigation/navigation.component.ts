@@ -1,4 +1,5 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
+
 import { User } from './../models/user.model';
 import { UserService } from './../services/user.service';
 import { UserStorageService } from './../services/user-storage.service';
