@@ -17,6 +17,7 @@ import { UserStorageService } from './../../services/user-storage.service';
 
 export class SingleItemComponent implements OnInit {
     item: ItemListing;
+    isLogged: Boolean;
 
     constructor(
         private itemListingService: ItemListingService,
@@ -45,6 +46,7 @@ export class SingleItemComponent implements OnInit {
         let username;
         
         if (this.userStorageService.isLogged()) {
+            this.isLogged = true;
             username = this.userStorageService.getLoggedUser().username;
         }
 
