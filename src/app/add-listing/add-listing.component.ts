@@ -1,3 +1,4 @@
+import { FileUploadResponse } from './../models/file-upload-response.model';
 import { Component, OnInit } from '@angular/core';
 
 import { ItemListing } from '../models/item-listing.model';
@@ -47,5 +48,9 @@ export class AddListingComponent implements OnInit {
 
         this.toastrNotification.enqueueNotification(toastrNotificationOptions);
       });
+  }
+
+  onFileUpload(uploadedFiles: FileUploadResponse[]): void {
+    this.itemListing.pictures = uploadedFiles;
   }
 }

@@ -1,9 +1,11 @@
+import { FileUploadResponse } from './file-upload-response.model';
+
 export class ItemListing {
   _id: string;
   make: string;
   model: string;
   year: number;
-  pictures: string[];
+  pictures: FileUploadResponse[];
   price: number;
   enginePower: number;
   exteriorColor: string;

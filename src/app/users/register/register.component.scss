@@ -1,5 +1,36 @@
-input {
-  background-color: rgba(0, 0, 0, 0.77);
+@font-face {
+  font-family: planer;
+  src: url('../../assets/Planer-Regular.otf');
+}
+
+input,
+button {
+  font-family: planer;
+  font-size: 16px;
+  color: rgba(225, 225, 225, 0.77);
+  background-color: #2f2f2f;
+  border-radius: 0;
+  &.ng-valid.ng-touched {
+    border-color: #55b559;
+  }
+  &.ng-invalid.ng-touched {
+    border-color: #F55145;
+  }
+}
+
+input,
+button {
+  width: 250px;
+}
+
+button.dropdown-toggle {
+  text-align: left;
+}
+
+button[type="submit"] {
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 #loading {

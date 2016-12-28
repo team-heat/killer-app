@@ -1,6 +1,6 @@
 import { FormDefaultValueDirective } from './../directives/form-default-value.directive';
 import { RouterModule, Routes } from '@angular/router';
-
+import { NgUploaderModule } from 'ngx-uploader';
 import { AddListingComponent } from './add-listing.component';
 import { CommonModule } from '@angular/common';
 import { ItemListingService } from '../services/item-listing.service';
@@ -18,11 +18,12 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    NgUploaderModule,
     RouterModule.forChild(routes)],
   declarations: [
     AddListingComponent,
-    FileUploaderComponent,
-    FormDefaultValueDirective
+    FormDefaultValueDirective,
+    FileUploaderComponent
   ],
   providers: [
     ItemListingService,
