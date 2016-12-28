@@ -36,6 +36,20 @@ nav {
     font-family: planer;
     font-size: 22px;
   }
+  li.favorites-item {
+    &:hover span.glyphicon.glyphicon-heart {
+      color: #DF474B;
+    }
+    span.glyphicon.glyphicon-heart {
+      font-size: 2.5rem;
+    }
+  }
+  span.glyphicon.glyphicon-heart {
+    font-size: 2.5rem;
+    &:hover {
+      color: red;
+    }
+  }
   li.active>a,
   li.open>a {
     background-color: rgba(51, 51, 51, 0.33) !important;

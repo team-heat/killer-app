@@ -17,6 +17,11 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
+      <li class="favorites-item">
+        <a routerLink="/favorites">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+        </a>
+      </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUserName}}<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -29,7 +34,7 @@
     </ul>
   </div>
   <!-- /.navbar-collapse -->
-  <div class="row" *ngIf="hasLoggedUser == false">
+  <div class="row public-container" *ngIf="hasLoggedUser == false">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
