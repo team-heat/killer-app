@@ -1,3 +1,6 @@
 <label>
-  <input type="file" name="displayImage">
+  <input [id]="id" type="file" name="fileUpload" (change)="updateLabel($event)" multiple>
+  <label [for]="id" class="file-upl-lb">
+    <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> {{labelText}}
+  </label>
 </label>

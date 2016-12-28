@@ -12,18 +12,18 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div *ngIf="hasLoggedUser == true" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li appNavigationHover class="hvr-overline-reveal" [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
-      <li appNavigationHover class="hvr-overline-reveal" [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
+      <li class="hvr-overline-reveal" [class.active]="activeItem === 'Gallery'" (click)="setActiveItem('Gallery')"><a routerLink="/gallery">Gallery</a></li>
+      <li class="hvr-overline-reveal" [class.active]="activeItem === 'Create'" (click)="setActiveItem('Create')"><a routerLink="/submit">Create</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a appNavigationHover href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUserName}}<span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{loggedUserName}}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li (click)="setActiveItem('None')"><a appNavigationHover routerLink='profile'>Profile</a></li>
-          <li (click)="setActiveItem('None')"><a appNavigationHover routerLink='profile'>Settings</a></li>
+          <li (click)="setActiveItem('None')"><a routerLink='profile'>Profile</a></li>
+          <li (click)="setActiveItem('None')"><a routerLink='profile'>Settings</a></li>
           <li role="separator" class="divider"></li>
-          <li (click)="setActiveItem('None')"><a appNavigationHover routerLink="logout">Logout</a></li>
+          <li (click)="setActiveItem('None')"><a routerLink="logout">Logout</a></li>
         </ul>
       </li>
     </ul>

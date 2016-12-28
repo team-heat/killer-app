@@ -7,9 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FileUploaderComponent implements OnInit {
 
-  constructor() { }
+  public static id: number;
+  public labelText: string;
+  private initialLabelText: string = 'Choose a file...';
 
-  ngOnInit() {
+  constructor() {
+    FileUploaderComponent.id = this.generateUniqueId();
+    this.labelText = this.initialLabelText;
   }
 
+  ngOnInit() { }
+
+  updateLabel(event) {
+    const target = event.target;
+    const maxNameLength = 15;
+
+    if (!target.files.length) {
+      this.labelText = this.initialLabelText;
+    } else if (target.files.length > 1) {
+      this.labelText = `${target.files.length} files selected.`;
+    } else {
+      const fileName = target.value.split('\\').pop();
+
+      const startIndex = fileName.length - maxNameLength;
+      const shortenedFileName = fileName.substr(startIndex, maxNameLength);
+
+      this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
+    }
+  }
+
+  private generateUniqueId(): number {
+    return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
+  }
 }
