@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = function ({ app, userController, itemListingController, favoritesController, uploadController }) {
   const apiRouter = new express.Router();
   apiRouter
-    .post('/upload', uploadController.createFile)
+    .post('/upload', passport.authenticate('jwt'), uploadController.createFile)
     .get('/users', passport.authenticate('jwt'), userController.profile)
     .post('/users', passport.authenticate('local'), userController.login)
     .put('/users', userController.register)
