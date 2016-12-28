@@ -26,7 +26,7 @@ itemListingSchema.static('createItemListing', function (listing) {
     model: listing.model,
     year: listing.year,
     price: listing.price,
-    pictures: listing.pictures,
+    pictures: listing.pictures || [],
     exteriorColor: listing.exteriorColor,
     interiorColor: listing.interiorColor,
     engineTorque: listing.engineTorque,
