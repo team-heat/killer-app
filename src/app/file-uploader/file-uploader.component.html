@@ -5,7 +5,8 @@
   </label>
 </label>-->
 <!-- app.component.html -->
-<label class="btn btn-default btn-file">
+<div id="image-uploader">
+  <label class="btn btn-default btn-file">
   Upload Image <input style="display: none;" type="file" ngFileSelect [options]="options" (onUpload)="handleUpload($event)" (beforeUpload)="beforeUpload($event)" accept="image/*">
 </label>
 <!-- drag & drop file example-->
@@ -18,4 +19,5 @@
 
 <div *ngIf="uploadedFiles.length > 0" class="well" id="uploaded">
   <img *ngFor="let file of uploadedFiles " [src]="file.imageUrl" height="150px" alt="image">
+</div>
 </div>
