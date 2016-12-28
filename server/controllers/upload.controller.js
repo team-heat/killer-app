@@ -13,18 +13,23 @@ module.exports = function ({}) {
       fs.mkdirSync(userUploadsDirName);
     }
 
-    const userFilesCount = fs.readdirSync(userUploadsDirName).length;
+    let newFileName = fs.readdirSync(userUploadsDirName).length + '';
     const fileExtension = getFileTypeExtension(req.files.file.mimetype);
     if (!fileExtension) {
       return res.status(400).json({ message: 'Incorrect file type' });
     }
 
-    const imageUrl = `${userUploadsDirName}/${userFilesCount}${fileExtension}`;
-    return req.files.file.mv(imageUrl, function (err) {
+    let imageSaveLocation = `${userUploadsDirName}/${newFileName}${fileExtension}`;
+    while (fs.existsSync(imageSaveLocation)) {
+      newFileName = newFileName + randomChar();
+      imageSaveLocation = `${userUploadsDirName}/${newFileName}${fileExtension}`;
+    }
+
+    return req.files.file.mv(imageSaveLocation, function (err) {
       if (err) {
         console.log(err);
       }
-      res.status(200).send({ imageUrl: `/uploads/${user._id}/${userFilesCount}${fileExtension}` });
+      res.status(200).send({ imageUrl: `/uploads/${user._id}/${newFileName}${fileExtension}` });
     });
   }
 
@@ -36,6 +41,10 @@ module.exports = function ({}) {
       fileExtension = '.png';
     }
     return fileExtension;
+  }
+
+  function randomChar() {
+    return 'z';
   }
 
   return {
