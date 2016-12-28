@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FileUploadResponse } from './../models/file-upload-response.model';
 import { NgUploaderOptions } from 'ngx-uploader';
 
 @Component({
@@ -17,7 +18,7 @@ export class FileUploaderComponent implements OnInit {
   public labelText: string;
   private initialLabelText: string = 'Choose a file...';
 
-  uploadFile: any;
+  uploadFiles: FileUploadResponse[] = [];
   hasBaseDropZoneOver: boolean = false;
   options: NgUploaderOptions = {
     url: '/api/upload'
@@ -34,8 +35,7 @@ export class FileUploaderComponent implements OnInit {
   handleUpload(data): void {
     if (data && data.response) {
       data = JSON.parse(data.response);
-      this.uploadFile = data;
-      console.log(this.uploadFile);
+      this.uploadFiles.push(data);
     }
   }
 

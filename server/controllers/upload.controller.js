@@ -16,7 +16,7 @@ module.exports = function ({}) {
     const userFilesCount = fs.readdirSync(userUploadsDirName).length;
     const fileExtension = getFileTypeExtension(req.files.file.mimetype);
     if (!fileExtension) {
-      return res.status(400).json({ message: 'Incorrect fily type' });
+      return res.status(400).json({ message: 'Incorrect file type' });
     }
 
     const imageUrl = `${userUploadsDirName}/${userFilesCount}${fileExtension}`;
