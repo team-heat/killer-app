@@ -42,6 +42,4 @@ import { UsersModule } from '../users/users.module';
     ]
 })
 
-export class ItemsModule {
-
-}
+export class ItemsModule { }

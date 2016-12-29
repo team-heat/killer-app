@@ -392,7 +392,7 @@ var ItemsCollectionComponent = (function () {
     };
     ItemsCollectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'items-collection',
+            selector: 'app-items-collection',
             template: __webpack_require__(751),
             styles: [__webpack_require__(732)]
         }), 
