@@ -30,6 +30,7 @@ import { FormYearValidationDirective } from './directives/form-year-validation.d
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
+import { AddToFavoritesComponent } from './users/add-to-favorites/add-to-favorites.component';
 
 @NgModule({
   declarations: [
