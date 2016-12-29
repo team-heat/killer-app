@@ -14,9 +14,27 @@ export class ItemsCollectionComponent implements OnInit {
 
   items: ItemListing[];
   activeItem: ItemListing;
+  activeItemIndex: number;
 
   constructor(private service: ItemListingService) {
     this.items = [];
+    this.activeItemIndex = 0;
+  }
+
+  onPrevious() {
+    if (this.activeItemIndex > 0) {
+      this.activeItemIndex -= 1;
+    }
+
+    this.activeItem = this.items[this.activeItemIndex];
+  }
+
+  onNext() {
+    if (this.activeItemIndex < this.items.length - 1) {
+      this.activeItemIndex += 1;
+    }
+
+    this.activeItem = this.items[this.activeItemIndex];
   }
 
   ngOnInit() {
@@ -28,7 +46,7 @@ export class ItemsCollectionComponent implements OnInit {
         console.log(err);
       }, () => {
         if (this.items.length > 0) {
-          this.activeItem = this.items[1];
+          this.activeItem = this.items[this.activeItemIndex];
         }
       });
   }
