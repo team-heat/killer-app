@@ -32,7 +32,7 @@ module.exports = function ({itemListingData}) {
 
   function createListing(req, res) {
     let newListing = req.body;
-        newListing.owner = req.user.username;
+    newListing.owner = req.user.username;
     return itemListingData.createItemListing(newListing)
       .then(() => {
         res.status(200).json({ message: 'POST /api/gallery/' });
@@ -47,7 +47,19 @@ module.exports = function ({itemListingData}) {
   }
 
   function submitOfferForListing(req, res) {
-    res.status(200).json({ message: 'POST /api/gallery/:id' });
+    let newOffer = req.body;
+    newOffer.username = req.user.username;
+    return itemListingData.addOfferToItemListing(newOffer)
+      .then((itemListing) => {
+        if (!itemListing) {
+          throw new Error('Listing not found.');
+        }
+
+        res.status(200).json(itemListing);
+      })
+      .catch(err => {
+        res.status(400).json({ message: err.message });
+      })
   }
 
   return {

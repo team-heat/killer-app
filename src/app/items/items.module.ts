@@ -8,10 +8,14 @@ import { CarouselListComponent } from './../carousel-list/carousel-list.componen
 
 import { SingleItemComponent } from './single-item/single-item.component';
 import { ItemsCollectionComponent } from './items-collection/items-collection.component';
+import { OffersListComponent } from './offers/offers-list.component';
+import { MakeOfferComponent } from './offers/make-offer.component';
 import { ItemsRouterModule } from './items.routes';
 
 import { ItemListingService } from './../services/item-listing.service';
 import { UserStorageService } from './../services/user-storage.service';
+import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
+import { ToastrNotificationService } from '../services/toastr-notification.service';
 
 @NgModule({
     imports: [
@@ -23,11 +27,15 @@ import { UserStorageService } from './../services/user-storage.service';
     declarations: [
         SingleItemComponent,
         ItemsCollectionComponent,
-        CarouselListComponent
+        CarouselListComponent,
+        OffersListComponent,
+        MakeOfferComponent
     ],
     providers: [
         ItemListingService,
-        UserStorageService
+        UserStorageService,
+        ToastrNotificationOptionsFactoryService,
+        ToastrNotificationService
     ]
 })
 

@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router'
-
-import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
+import { Component } from '@angular/core';
+import { Params, ActivatedRoute } from '@angular/router';
 
 import { ItemListing } from './../../models/item-listing.model';
 
@@ -9,13 +7,11 @@ import { ItemListingService } from './../../services/item-listing.service';
 import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
-    selector: 'single-item',
-    templateUrl: './single-item.component.html',
-    styleUrls: ['./single-item.component.scss']
-
+    selector: 'offers-list',
+    templateUrl: './offers-list.component.html'
 })
 
-export class SingleItemComponent implements OnInit {
+export class OffersListComponent {
     item: ItemListing;
     isLogged: Boolean;
     isOwner: Boolean;
@@ -31,8 +27,8 @@ export class SingleItemComponent implements OnInit {
             make: null,
             year: null,
             price: null,
+            offers: [],
             pictures: [],
-            offers:[],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
@@ -63,6 +59,3 @@ export class SingleItemComponent implements OnInit {
             });
     }
 }
-
-
-
