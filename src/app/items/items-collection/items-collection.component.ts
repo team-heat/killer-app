@@ -5,21 +5,31 @@ import { ItemListing } from './../../models/item-listing.model';
 import { ItemListingService } from './../../services/item-listing.service';
 
 @Component({
-    selector: 'items-collection',
-    templateUrl: './items-collection.component.html',
-      styleUrls: ['./items-collection.component.scss']
+  selector: 'items-collection',
+  templateUrl: './items-collection.component.html',
+  styleUrls: ['./items-collection.component.scss']
 })
 
 export class ItemsCollectionComponent implements OnInit {
-    items: any[];
 
-    constructor(private service: ItemListingService) {
-    }
+  items: ItemListing[];
+  activeItem: ItemListing;
 
-    ngOnInit() {
+  constructor(private service: ItemListingService) {
+    this.items = [];
+  }
 
-        this.service.getItemsCollection()
-            .map(x => x.json())
-            .subscribe(x => this.items = x);
-    }
+  ngOnInit() {
+    this.service.getItemsCollection()
+      .map(response => response.json())
+      .subscribe((response) => {
+        this.items = response;
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        if (this.items.length > 0) {
+          this.activeItem = this.items[1];
+        }
+      });
+  }
 }

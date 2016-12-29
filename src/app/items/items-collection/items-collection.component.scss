@@ -1,3 +1,21 @@
+#component-header {
+  color: rgba(225, 225, 225, 0.77);
+  background: transparent;
+  border-color: rgba(225, 225, 225, 0.77);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.77);
+  box-shadow: 0 1px 25px black;
+}
+
+.submit-wrapper {
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-flow: column wrap;
+  >.inner-wrapper {
+    margin: 5vh;
+  }
+}
+
 .gallery-item {
     min-width: 300px;
     max-width: 500px;

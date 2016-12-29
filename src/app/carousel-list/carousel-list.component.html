@@ -8,7 +8,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div *ngFor="let item of mylist; let i=index" class="item" [class.active]="i===0">
-            <img [attr.src]="item.imageUrl" height="450px">
+            <img [attr.src]="item.imageUrl">
         </div>
     </div>
 

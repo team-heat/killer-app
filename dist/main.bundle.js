@@ -367,12 +367,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ItemsCollectionComponent = (function () {
     function ItemsCollectionComponent(service) {
         this.service = service;
+        this.items = [];
     }
     ItemsCollectionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.service.getItemsCollection()
-            .map(function (x) { return x.json(); })
-            .subscribe(function (x) { return _this.items = x; });
+            .map(function (response) { return response.json(); })
+            .subscribe(function (response) {
+            _this.items = response;
+        }, function (err) {
+            console.log(err);
+        }, function () {
+            if (_this.items.length > 0) {
+                _this.activeItem = _this.items[1];
+            }
+        });
     };
     ItemsCollectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1430,7 +1439,7 @@ var CarouselListComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-carousel',
             template: __webpack_require__(744),
-            styles: [".carousel-inner .item img {min-width:100%;}"]
+            styles: [__webpack_require__(792)]
         }), 
         __metadata('design:paramtypes', [])
     ], CarouselListComponent);
@@ -2492,7 +2501,7 @@ module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
 /***/ 729:
 /***/ function(module, exports) {
 
-module.exports = ".gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
 
 /***/ },
 
@@ -2597,7 +2606,7 @@ module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation><
 /***/ 744:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n        <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n        </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n            <img [attr.src]=\"item.imageUrl\" height=\"450px\">\r\n        </div>\r\n    </div>\r\n\r\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n        <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>"
+module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n        <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n        </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n        <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n            <img [attr.src]=\"item.imageUrl\">\r\n        </div>\r\n    </div>\r\n\r\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n        <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>"
 
 /***/ },
 
@@ -2618,7 +2627,7 @@ module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.
 /***/ 747:
 /***/ function(module, exports) {
 
-module.exports = "<div *ngFor=\"let item of this.items\" class=\"gallery-item\">\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <a routerLink=\"{{item._id}}\">    \r\n        <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\r\n    </a>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <a *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n      <h3>\r\n        <span>{{this.activeItem.make}}</span>\r\n        <span>{{this.activeItem.model}}</span>\r\n        <span>{{this.activeItem.year}}</span>\r\n      </h3>\r\n    </a>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div id=\"carousel-container\" class=\"col-xs-6 col-xs-offset-3\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
@@ -2711,6 +2720,13 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(420);
 
+
+/***/ },
+
+/***/ 792:
+/***/ function(module, exports) {
+
+module.exports = ".carousel {\n  max-height: 400px;\n  overflow: hidden; }\n  .carousel .item img {\n    width: 100%;\n    height: 400px; }\n"
 
 /***/ },
 
