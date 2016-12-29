@@ -1,3 +1,4 @@
+import { AddToFavoritesComponent } from './../users/add-to-favorites/add-to-favorites.component';
 import { NgModule } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -16,7 +17,6 @@ import { ItemListingService } from './../services/item-listing.service';
 import { UserStorageService } from './../services/user-storage.service';
 import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../services/toastr-notification.service';
-import { AddToFavoritesComponent } from '../users/add-to-favorites/add-to-favorites.component';
 import { UsersModule } from '../users/users.module';
 
 @NgModule({
