@@ -9,6 +9,8 @@ module.exports = function ({ItemListing}) {
     'model',
     'year',
     'price',
+    'pictures',
+    'offers',
     'exteriorColor',
     'interiorColor',
     'engineTorque',
@@ -53,6 +55,32 @@ module.exports = function ({ItemListing}) {
     });
   }
 
+  function addOfferToItemListing(offer) {
+    const offerForAdd = {
+      'username': offer.username,
+      'offeredPrice': offer.offeredPrice,
+      'status': 'active'
+    }
+
+    return new Promise((resolve, reject) => {
+      getItemListingById(offer.id)
+        .then(itemListing => {
+          itemListing.offers.push(offerForAdd);
+
+          itemListing.save(err => {
+            if (err) {
+              reject(err);
+            }
+
+            resolve(itemListing);
+          })
+        })
+        .catch(err => {
+          reject(err);
+        })
+    })
+  }
+
   function filterItemListingWithOptions(options) {
     const filter = {};
     const optionsKeys = Object.keys(options);
@@ -76,6 +104,7 @@ module.exports = function ({ItemListing}) {
     getAll,
     createItemListing,
     getItemListingById,
-    filterItemListingWithOptions
+    filterItemListingWithOptions,
+    addOfferToItemListing
   };
 };
