@@ -6,12 +6,12 @@ export class ItemListing {
   model: string;
   year: number;
   pictures: FileUploadResponse[];
+  offers: any[];
   price: number;
   enginePower: number;
   exteriorColor: string;
   interiorColor: string;
   createdOn: Date;
   isActive: Boolean;
-  isOwner: Boolean;
   owner: String;
 }

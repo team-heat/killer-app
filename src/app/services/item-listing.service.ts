@@ -6,6 +6,8 @@ import { ItemListing } from '../models/item-listing.model';
 import { Observable } from 'rxjs';
 import { Response } from '@angular/http';
 
+import { Offer } from './../models/offer.model';
+
 @Injectable()
 export class ItemListingService {
 
@@ -47,6 +49,15 @@ export class ItemListingService {
       .createHttpRequesterOptions(this.galleryApiUrl, {}, this.contentTypeHeaderObject);
 
     return this.httpRequesterService.get(httpRequestOptions);
+  }
+
+  makeOffer(offer: Offer) {
+    const url = this.galleryApiUrl + '/' + offer.id;
+
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(url, offer, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.post(httpRequestOptions);
   }
 
   // TODO: 
