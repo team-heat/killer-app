@@ -1,5 +1,5 @@
 <div>
-    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>    
+    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>
     <app-carousel *ngIf="this.item && this.item.pictures && this.item.pictures.length > 0" [mylist]="this.item.pictures"></app-carousel>
     <!--<div *ngIf="!this.item && !this.item.pictures && !this.item.pictures.length > 0"></div>-->
     <h3>Engine power: {{this.item.enginePower}}hp</h3>
@@ -14,4 +14,6 @@
     <!--TODO add right make offer link when ready-->
 
     <a *ngIf="this.isLogged && !this.item.isOwner" class="btn btn-primary" routerLink="/gallery/{{this.item._id}}">Make Offer</a>
+
+    <a class="btn btn-primary" routerLink="/gallery/{{this.item._id}}/offers">Show offers</a>
 </div>
