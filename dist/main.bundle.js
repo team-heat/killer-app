@@ -44,7 +44,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
 
 /***/ },
 
@@ -88,7 +88,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -123,7 +123,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
 
 /***/ },
 
@@ -160,7 +160,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -207,7 +207,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
@@ -268,7 +268,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -301,7 +301,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/app.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -336,7 +336,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -401,7 +401,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
 
 /***/ },
 
@@ -529,7 +529,7 @@ var MakeOfferComponent = (function () {
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
 
 /***/ },
 
@@ -604,7 +604,7 @@ var OffersListComponent = (function () {
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
 
 /***/ },
 
@@ -680,7 +680,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
 
 /***/ },
 
@@ -716,7 +716,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
@@ -768,7 +768,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -843,7 +843,7 @@ var AddToFavoritesComponent = (function () {
     return AddToFavoritesComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
 
 /***/ },
 
@@ -887,7 +887,7 @@ var FavoritesComponent = (function () {
     return FavoritesComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
 
 /***/ },
 
@@ -922,7 +922,7 @@ var ListedItemsComponent = (function () {
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
 
 /***/ },
 
@@ -1026,7 +1026,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/login.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -1097,7 +1097,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/logout.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -1160,7 +1160,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/profile.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -1263,7 +1263,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/register.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -1300,7 +1300,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/main.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
 
 /***/ },
 
@@ -1373,7 +1373,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -1446,7 +1446,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
 
 /***/ },
 
@@ -1518,7 +1518,7 @@ var AddListingModule = (function () {
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
 
 /***/ },
 
@@ -1629,7 +1629,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/app.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -1667,7 +1667,7 @@ var CarouselListComponent = (function () {
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -1705,7 +1705,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -1753,7 +1753,7 @@ var FormYearValidationDirective = (function () {
     return FormYearValidationDirective;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/form-year-validation.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
 
 /***/ },
 
@@ -1807,7 +1807,7 @@ var NavigationHoverDirective = (function () {
     return NavigationHoverDirective;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/navigation-hover.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
 
 /***/ },
 
@@ -1887,7 +1887,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -1928,7 +1928,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -1967,7 +1967,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/home.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -1981,7 +1981,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/index.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
 
 /***/ },
 
@@ -2056,7 +2056,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/items.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
 
 /***/ },
 
@@ -2104,7 +2104,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/items.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
 
 /***/ },
 
@@ -2118,7 +2118,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
 
 /***/ },
 
@@ -2132,7 +2132,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user.model.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -2182,7 +2182,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -2216,7 +2216,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -2281,7 +2281,7 @@ var ToastrNotificationsHandlerComponent = (function () {
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -2316,7 +2316,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -2351,7 +2351,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -2432,7 +2432,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -2490,7 +2490,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/users.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -2506,7 +2506,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/environment.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -2562,7 +2562,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/polyfills.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -2607,7 +2607,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
 
 /***/ },
 
@@ -2680,7 +2680,7 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
@@ -2751,7 +2751,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/killer-app/src/user.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
 
 /***/ },
 
@@ -2891,70 +2891,70 @@ module.exports = ""
 /***/ 746:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h3>Submit Listing</h3>\n  </div>\n  <div class=\"inner-wrapper\">\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\n      <div id=\"inputs-container\" class=\"row\">\n        <div class=\"content-left col-xs-8\">\n        </div>\n        <div id=\"content-right\" class=\"col-xs-4\">\n          <div class=\"well\">\n            <div class=\"form-group\">\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\n                minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\n                required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\n            </div>\n            <div class=\"form-group\">\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div id=\"image-upload\" class=\"form-group\">\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\n      </div>\n\n    </form>\n  </div>\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 747:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"root\" class=\"container\">\n    <app-navigation></app-navigation>\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\n    <div id=\"content\">\n        <router-outlet></router-outlet>\n    </div>\n</div>"
+module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>"
 
 /***/ },
 
 /***/ 748:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"well\">\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n    <!--Indicators -->\n    <ol class=\"carousel-indicators\">\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\n      </li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\n        <img [attr.src]=\"item.imageUrl\">\n      </div>\n    </div>\n\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Next</span>\n    </a>\n  </div>\n</div>"
+module.exports = "<div class=\"well\">\r\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n      </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n        <img [attr.src]=\"item.imageUrl\">\r\n      </div>\r\n    </div>\r\n\r\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 749:
 /***/ function(module, exports) {
 
-module.exports = "<!--<label>\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\n  <label [for]=\"id\" class=\"file-upl-lb\">\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\n  </label>\n</label>-->\n<!-- app.component.html -->\n<div id=\"image-uploader\">\n  <label class=\"btn btn-default btn-file\">\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\n</label>\n<!-- drag & drop file example-->\n<style>\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\n  </style>\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\n  (beforeUpload)=\"beforeUpload($event)\">\n</div>\n\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\n</div>\n</div>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
 
 /***/ },
 
 /***/ 750:
 /***/ function(module, exports) {
 
-module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\n</section>"
+module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
 
 /***/ },
 
 /***/ 751:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h2 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h2>\n    <h2 *ngIf=\"this.items.length !== 0\">\n      <span>{{this.activeItem.make}}</span>\n      <span>{{this.activeItem.model}}</span>\n      <span>{{this.activeItem.year}}</span>\n      <a class=\"add-to-favorites-btn\"><span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span></a>\n    </h2>\n  </div>\n  <div class=\"row\">\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\n    </div>\n  </div>\n  <div id=\"controls\">\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Previous\n        </a>\n      </div>\n      <div class=\"col-xs-4 col-xs-offset-1\">\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\n          More Details\n        </a>\n      </div>\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Next\n        </a>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h2 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h2>\r\n    <h2 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <a class=\"add-to-favorites-btn\"><span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span></a>\r\n    </h2>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 752:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"text-center\">\n    <img src=\"{{this.item.pictures[0].imageURL}}\">\n    <h3>StartPrice: {{this.item.price}}</h3>\n    <h3>Highest offer: {{this.maxOffer}}</h3>\n\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\n        <div class=\"form-group\">\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\n        </div>\n        <div class=\"form-group\">\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n        </div>\n    </form>\n</div>"
+module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pictures[0].imageURL}}\">\r\n    <h3>StartPrice: {{this.item.price}}</h3>\r\n    <h3>Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ },
 
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<h1>Offers list works .... maybe!</h1>\n\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\n    <h3>{{offer.offeredPrice}}</h3>\n    <p>By: {{offer.username}}</p>\n</div>"
+module.exports = "<h1>Offers list works .... maybe!</h1>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
 
 /***/ },
 
 /***/ 754:
 /***/ function(module, exports) {
 
-module.exports = "<div>\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\n    <h3>Price: ${{this.item.price}}</h3>\n\n    <!--TODO add right update link when ready-->\n\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\n\n    <!--TODO add right make offer link when ready-->\n\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\n\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\n</div>"
+module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\r\n\r\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\r\n</div>"
 
 /***/ },
 
 /***/ 755:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\n  </div>\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav\">\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\n    </ul>\n\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li class=\"dropdown\">\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\n        <ul class=\"dropdown-menu\">\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink='favorites'>Favorites</a></li>\n          <li role=\"separator\" class=\"divider\"></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\n        </ul>\n      </li>\n    </ul>\n  </div>\n  <!-- /.navbar-collapse -->\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <h1>\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\n      <h1>\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n    </div>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='favorites'>Favorites</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
@@ -2975,28 +2975,28 @@ module.exports = "<p>\n  add-to-favorites works!\n</p>\n"
 /***/ 758:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  facebook-login works!\n</p>\n"
+module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 759:
 /***/ function(module, exports) {
 
-module.exports = "<div>\n  <div *ngFor=\"let favoriteItem of userFavorites\">{{favoriteItem}}</div>\n</div>"
+module.exports = "<div>\r\n  <div *ngFor=\"let favoriteItem of userFavorites\">{{favoriteItem}}</div>\r\n</div>"
 
 /***/ },
 
 /***/ 760:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  listed-items works!\n</p>\n"
+module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 761:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper\">\n  <h2 id=\"component-header\">Sign In</h2>\n  <div class=\"inner-wrapper\">\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\n      <div class=\"form-group\">\n        <label> \n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between</div>\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label> \n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between</div>\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\n      </div>\n    </form>\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\n  </div>\n</div>\n\n<!-- Carousel testing DELETE -->\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n  <ol class=\"carousel-indicators\">\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\n  </ol>\n  <div class=\"carousel-inner\" role=\"listbox\">\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\n      <img [src]=\"img\" alt=\"slide\">\n    </div>\n  </div>\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>-->"
+module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
 
 /***/ },
 
@@ -3010,21 +3010,21 @@ module.exports = ""
 /***/ 763:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"content-left col-xs-6\">\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\n  </div>\n  <div class=\"content-right col-xs-6\">\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>{{user.username}}</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.email}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>{{user.firstName}} {{user.lastName}}</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.gender}}, {{user.age}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>Member since:</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.createdOn | dateFormatter}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item no-shadow row\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\n              <span>View Favorites</span>\n            </a>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\n              <span>View Listed Items</span>\n            </a>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
 
 /***/ },
 
 /***/ 764:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Registration Form</h2>\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n  <div class=\"form-group\">\n    <label> \n      <span>Username: </span>\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Password: </span>\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>First Name: </span>\n      <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Last Name: </span>\n      <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Age: </span>\n      <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\" required>\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <div class=\"dropdown\">\n      <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\n          {{user.gender}}\n        <span class=\"caret\"></span>\n      </button>\n      <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\n          Gender\n        <span class=\"caret\"></span>\n      </button>\n      <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\n        <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\n        <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\n      </ul>\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Email: </span>\n      <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label> \n      <span>Profile Image: </span>\n      <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label>\n      <button class=\"form-control\" type=\"submit\">Register</button>\n    </label>\n  </div>\n</form>\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+module.exports = "<h2>Registration Form</h2>\r\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Username: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Password: </span>\r\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>First Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Last Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Age: </span>\r\n      <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <div class=\"dropdown\">\r\n      <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n        <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n        <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Email: </span>\r\n      <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Profile Image: </span>\r\n      <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      <button class=\"form-control\" type=\"submit\">Register</button>\r\n    </label>\r\n  </div>\r\n</form>\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
 
 /***/ },
 
 /***/ 765:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  users works!\n</p>\n"
+module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 /***/ },
 
