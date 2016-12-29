@@ -4,6 +4,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router'
 import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
 
 import { ItemListing } from './../../models/item-listing.model';
+import { Offer } from './../../models/offer.model';
 
 import { ItemListingService } from './../../services/item-listing.service';
 import { UserStorageService } from './../../services/user-storage.service';
@@ -19,6 +20,7 @@ import { ToastrNotificationService } from './../../services/toastr-notification.
 export class MakeOfferComponent implements OnInit {
     item: ItemListing;
     maxOffer: String | Number;
+    offer: Offer;
 
     constructor(
         private itemListingService: ItemListingService,
@@ -46,6 +48,11 @@ export class MakeOfferComponent implements OnInit {
         };
 
         this.maxOffer = 'No offers';
+
+        this.offer = {
+            offeredPrice: 0,
+            id: '0'
+        };
     }
 
     ngOnInit() {
@@ -68,7 +75,10 @@ export class MakeOfferComponent implements OnInit {
 
         this.route.params
             .map((params: Params) => params['id'])
-            .subscribe(x => id = x);
+            .subscribe(x => {
+                id = x;
+                this.offer.id = x;
+            });
 
         this.itemListingService.getSingleItem(id)
             .map(x => x.json())
@@ -78,6 +88,7 @@ export class MakeOfferComponent implements OnInit {
 
                 if (this.getMaxOffer() !== 0) {
                     this.maxOffer = this.getMaxOffer();
+                    this.offer.offeredPrice = this.maxOffer;
                 }
 
                 if (this.item.owner === username) {
@@ -103,6 +114,18 @@ export class MakeOfferComponent implements OnInit {
         }
 
         return max;
+    }
+
+    onSubmit(): void {
+        this.itemListingService.makeOffer(this.offer)
+            .map(x => x.json())
+            .subscribe((x: any) => {
+                this.item = x as ItemListing;
+                const toastrNotificationOptions = this.toastrOptionsFactory
+                    .createToastrNotificationOptions('success', 'You have submitted the offer successfully.', 'Add Item');
+
+                this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+            });
     }
 }
 
