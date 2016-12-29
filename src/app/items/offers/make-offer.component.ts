@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router'
+import { ActivatedRoute, Params, Router } from '@angular/router'
 
 import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
 
@@ -7,21 +7,27 @@ import { ItemListing } from './../../models/item-listing.model';
 
 import { ItemListingService } from './../../services/item-listing.service';
 import { UserStorageService } from './../../services/user-storage.service';
+import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
+import { ToastrNotificationService } from './../../services/toastr-notification.service';
 
 @Component({
     selector: 'make-offer',
-    templateUrl: './make-offer.component.html'
+    templateUrl: './make-offer.component.html',
+    styleUrls: ['./make-offer.component.scss']
 })
 
 export class MakeOfferComponent implements OnInit {
     item: ItemListing;
-    isLogged: Boolean;
-    isOwner: Boolean;
+    maxOffer: String | Number;
 
     constructor(
         private itemListingService: ItemListingService,
         private userStorageService: UserStorageService,
-        private route: ActivatedRoute) {
+        private route: ActivatedRoute,
+        private appRouter: Router,
+        private toastrNotification: ToastrNotificationService,
+        private toastrOptionsFactory: ToastrNotificationOptionsFactoryService
+    ) {
 
         this.item = {
             _id: null,
@@ -30,7 +36,7 @@ export class MakeOfferComponent implements OnInit {
             year: null,
             price: null,
             pictures: [],
-            offers:[],
+            offers: [],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
@@ -38,14 +44,25 @@ export class MakeOfferComponent implements OnInit {
             isActive: false,
             owner: null
         };
+
+        this.maxOffer = 'No offers';
     }
 
     ngOnInit() {
+
+        if (!this.userStorageService.isLogged()) {
+            const toastrNotificationOptions = this.toastrOptionsFactory
+                .createToastrNotificationOptions('error', 'You must be logged in to continue.', 'Oops');
+
+            this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+
+            this.appRouter.navigateByUrl('login');
+        }
+
         let id;
         let username: String;
 
         if (this.userStorageService.isLogged()) {
-            this.isLogged = true;
             username = this.userStorageService.getLoggedUser().username;
         }
 
@@ -57,8 +74,35 @@ export class MakeOfferComponent implements OnInit {
             .map(x => x.json())
             .subscribe(x => {
                 this.item = x as ItemListing;
-                this.isOwner = this.item.owner === username;
+                // this.item.offers = [{ offeredPrice: 5 }];
+
+                if (this.getMaxOffer() !== 0) {
+                    this.maxOffer = this.getMaxOffer();
+                }
+
+                if (this.item.owner === username) {
+                    const toastrNotificationOptions = this.toastrOptionsFactory
+                        .createToastrNotificationOptions('error', 'Make offers for your own car is not allowed!', 'Oops');
+
+                    this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+
+                    this.appRouter.navigateByUrl('/gallery/' + id + '/offers');
+                }
             });
+    }
+
+    getMaxOffer() {
+        let max = 0;
+
+        if (!this.item.offers) {
+            return max;
+        }
+
+        for (let i of this.item.offers) {
+            max = Math.max(max, i.offeredPrice);
+        }
+
+        return max;
     }
 }
 
