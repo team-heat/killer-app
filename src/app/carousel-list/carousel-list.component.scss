@@ -1,0 +1,11 @@
+.well {
+  background-color: transparent;
+  border: none;
+  .carousel {
+    max-height: 400px;
+    overflow: hidden;
+    .item img {
+      height: 600px;
+    }
+  }
+}

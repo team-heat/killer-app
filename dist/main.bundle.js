@@ -1,75 +1,5 @@
 webpackJsonp([0,4],{
 
-<<<<<<< HEAD
-/***/ 112:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api_urls_config_service__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__http_requester_service__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemListingService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var ItemListingService = (function () {
-    // GET  -> all items
-    // POST -> create item
-    // GET  /:id -> item details
-    // PUT  /:id -> update listing
-    // POST /:id -> submit offer
-    function ItemListingService(httpRequesterService, httpRequesterOptionsFactory, apiUrlsConfigService) {
-        this.httpRequesterService = httpRequesterService;
-        this.httpRequesterOptionsFactory = httpRequesterOptionsFactory;
-        this.apiUrlsConfigService = apiUrlsConfigService;
-        this.contentTypeHeaderObject = { 'Content-Type': 'application/json' };
-        this.galleryApiUrl = this.apiUrlsConfigService.galleryApiUrl;
-    }
-    ItemListingService.prototype.addItem = function (item) {
-        var httpRequestOptions = this.httpRequesterOptionsFactory
-            .createHttpRequesterOptions(this.galleryApiUrl, item, this.contentTypeHeaderObject);
-        return this.httpRequesterService.post(httpRequestOptions);
-    };
-    ItemListingService.prototype.getSingleItem = function (id) {
-        var url = this.galleryApiUrl + '/' + id;
-        var httpRequestOptions = this.httpRequesterOptionsFactory
-            .createHttpRequesterOptions(url, {}, this.contentTypeHeaderObject);
-        return this.httpRequesterService.get(httpRequestOptions);
-    };
-    ItemListingService.prototype.getItemsCollection = function () {
-        var httpRequestOptions = this.httpRequesterOptionsFactory
-            .createHttpRequesterOptions(this.galleryApiUrl, {}, this.contentTypeHeaderObject);
-        return this.httpRequesterService.get(httpRequestOptions);
-    };
-    // TODO: 
-    ItemListingService.prototype.removeItem = function (Item) {
-        return null;
-    };
-    ;
-    ItemListingService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__http_requester_service__["a" /* HttpRequesterService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__http_requester_service__["a" /* HttpRequesterService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__api_urls_config_service__["a" /* ApiUrlsConfigService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__api_urls_config_service__["a" /* ApiUrlsConfigService */]) === 'function' && _c) || Object])
-    ], ItemListingService);
-    return ItemListingService;
-    var _a, _b, _c;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
-
-/***/ },
-
-=======
->>>>>>> offers
 /***/ 159:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -167,7 +97,7 @@ var ApiUrlsConfigService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5__ = __webpack_require__(783);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HashingService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -338,7 +268,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -364,7 +294,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(746),
+            template: __webpack_require__(747),
             styles: [__webpack_require__(728)]
         }), 
         __metadata('design:paramtypes', [])
@@ -399,8 +329,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
-            template: __webpack_require__(749),
-            styles: [__webpack_require__(730)]
+            template: __webpack_require__(750),
+            styles: [__webpack_require__(731)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
@@ -415,7 +345,7 @@ var HomeComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__ = __webpack_require__(71);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsCollectionComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -431,18 +361,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ItemsCollectionComponent = (function () {
     function ItemsCollectionComponent(service) {
         this.service = service;
+        this.items = [];
+        this.activeItemIndex = 0;
     }
+    ItemsCollectionComponent.prototype.onPrevious = function () {
+        if (this.activeItemIndex > 0) {
+            this.activeItemIndex -= 1;
+        }
+        this.activeItem = this.items[this.activeItemIndex];
+    };
+    ItemsCollectionComponent.prototype.onNext = function () {
+        if (this.activeItemIndex < this.items.length - 1) {
+            this.activeItemIndex += 1;
+        }
+        this.activeItem = this.items[this.activeItemIndex];
+    };
     ItemsCollectionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.service.getItemsCollection()
-            .map(function (x) { return x.json(); })
-            .subscribe(function (x) { return _this.items = x; });
+            .map(function (response) { return response.json(); })
+            .subscribe(function (response) {
+            _this.items = response;
+        }, function (err) {
+            console.log(err);
+        }, function () {
+            if (_this.items.length > 0) {
+                _this.activeItem = _this.items[_this.activeItemIndex];
+            }
+        });
     };
     ItemsCollectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'items-collection',
-            template: __webpack_require__(750),
-            styles: [__webpack_require__(731)]
+            template: __webpack_require__(751),
+            styles: [__webpack_require__(732)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object])
     ], ItemsCollectionComponent);
@@ -459,10 +411,10 @@ var ItemsCollectionComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MakeOfferComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -569,15 +521,15 @@ var MakeOfferComponent = (function () {
     MakeOfferComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'make-offer',
-            template: __webpack_require__(751),
-            styles: [__webpack_require__(732)]
+            template: __webpack_require__(752),
+            styles: [__webpack_require__(733)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
     ], MakeOfferComponent);
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
 
 /***/ },
 
@@ -587,7 +539,7 @@ var MakeOfferComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return OffersListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -645,14 +597,14 @@ var OffersListComponent = (function () {
     OffersListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'offers-list',
-            template: __webpack_require__(752)
+            template: __webpack_require__(753)
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], OffersListComponent);
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
 
 /***/ },
 
@@ -662,7 +614,7 @@ var OffersListComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SingleItemComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -720,8 +672,8 @@ var SingleItemComponent = (function () {
     SingleItemComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'single-item',
-            template: __webpack_require__(753),
-            styles: [__webpack_require__(733)]
+            template: __webpack_require__(754),
+            styles: [__webpack_require__(734)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], SingleItemComponent);
@@ -824,13 +776,13 @@ var ItemListingFactoryService = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__ = __webpack_require__(768);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__ = __webpack_require__(769);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_service__ = __webpack_require__(72);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddToFavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -883,8 +835,8 @@ var AddToFavoritesComponent = (function () {
     AddToFavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-add-to-favorites',
-            template: __webpack_require__(756),
-            styles: [__webpack_require__(736)]
+            template: __webpack_require__(757),
+            styles: [__webpack_require__(737)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_service__["a" /* UserService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], AddToFavoritesComponent);
@@ -900,7 +852,7 @@ var AddToFavoritesComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__(72);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -927,8 +879,8 @@ var FavoritesComponent = (function () {
     FavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-favorites',
-            template: __webpack_require__(758),
-            styles: [__webpack_require__(738)]
+            template: __webpack_require__(759),
+            styles: [__webpack_require__(739)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object])
     ], FavoritesComponent);
@@ -963,8 +915,8 @@ var ListedItemsComponent = (function () {
     ListedItemsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-listed-items',
-            template: __webpack_require__(759),
-            styles: [__webpack_require__(739)]
+            template: __webpack_require__(760),
+            styles: [__webpack_require__(740)]
         }), 
         __metadata('design:paramtypes', [])
     ], ListedItemsComponent);
@@ -983,10 +935,10 @@ var ListedItemsComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1066,8 +1018,8 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-login',
-            template: __webpack_require__(760),
-            styles: [__webpack_require__(740)]
+            template: __webpack_require__(761),
+            styles: [__webpack_require__(741)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */]) === 'function' && _g) || Object])
     ], LoginComponent);
@@ -1084,9 +1036,9 @@ var LoginComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LogoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1137,8 +1089,8 @@ var LogoutComponent = (function () {
     LogoutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-logout',
-            template: __webpack_require__(761),
-            styles: [__webpack_require__(741)]
+            template: __webpack_require__(762),
+            styles: [__webpack_require__(742)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], LogoutComponent);
@@ -1158,7 +1110,7 @@ var LogoutComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1200,8 +1152,8 @@ var ProfileComponent = (function () {
     ProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-profile',
-            template: __webpack_require__(762),
-            styles: [__webpack_require__(742)]
+            template: __webpack_require__(763),
+            styles: [__webpack_require__(743)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _d) || Object])
     ], ProfileComponent);
@@ -1221,10 +1173,10 @@ var ProfileComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1303,27 +1255,19 @@ var RegisterComponent = (function () {
     RegisterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(763),
-            styles: [__webpack_require__(743)]
+            template: __webpack_require__(764),
+            styles: [__webpack_require__(744)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */]) === 'function' && _g) || Object])
     ], RegisterComponent);
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
 
 /***/ },
 
-/***/ 419:
-=======
-//# sourceMappingURL=E:/MyRepos/killer-app/src/register.component.js.map
-
-/***/ },
-
 /***/ 421:
->>>>>>> offers
 /***/ function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -1332,27 +1276,11 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-<<<<<<< HEAD
-webpackEmptyContext.id = 419;
-=======
 webpackEmptyContext.id = 421;
->>>>>>> offers
 
 
 /***/ },
 
-<<<<<<< HEAD
-/***/ 420:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(567);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(512);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(566);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(554);
-=======
 /***/ 422:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1363,7 +1291,6 @@ webpackEmptyContext.id = 421;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(568);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(556);
->>>>>>> offers
 
 
 
@@ -1373,19 +1300,17 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-<<<<<<< HEAD
 //# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
 
 /***/ },
 
-/***/ 44:
+/***/ 45:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular2_cookie_services_cookies_service__ = __webpack_require__(361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular2_cookie_services_cookies_service__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserStorageService; });
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1397,48 +1322,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var UserStorageService = (function () {
-    function UserStorageService(cookieService) {
-        this.cookieService = cookieService;
-        this.cookieName = 'com.herokuapps.killerapp';
+var ToastrNotificationService = (function () {
+    function ToastrNotificationService(dateProviderService) {
+        this.dateProviderService = dateProviderService;
+        this.minimumTimeBetweenEnqueueInMs = 200;
+        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
+        this.notificationsQueue = [];
+        this.lastItemInQueue = {
+            method: '',
+            message: '',
+            heading: '',
+            delay: 1500000
+        };
     }
-    Object.defineProperty(UserStorageService.prototype, "loggedUser", {
+    Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
         get: function () {
-            var loggedUser = this.getLoggedUser();
-            if (loggedUser) {
-                return loggedUser.username;
-            }
-            return undefined;
+            return this.notificationsQueue.length > 0;
         },
         enumerable: true,
         configurable: true
     });
-    UserStorageService.prototype.isLogged = function () {
-        var loggedUser = this.getLoggedUser();
-        return loggedUser ? true : false;
+    Object.defineProperty(ToastrNotificationService.prototype, "nextNotificationInQueue", {
+        get: function () {
+            var nextNotification = this.notificationsQueue.shift();
+            return nextNotification;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
+        var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+        var currentTimestamp = this.dateProviderService.currentTimestamp;
+        var durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+        if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
+            return;
+        }
+        this.notificationsQueue.push(newNotification);
+        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
+        this.lastItemInQueue = newNotification;
     };
-    UserStorageService.prototype.getLoggedUser = function () {
-        var cookieContent = this.cookieService.getObject(this.cookieName);
-        return cookieContent;
+    ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
+        var messageIsEqual = newNotification.message === lastNotification.message;
+        var headingIsEqual = newNotification.heading === lastNotification.heading;
+        return messageIsEqual && headingIsEqual;
     };
-    UserStorageService.prototype.setLoggedUser = function (authResponse) {
-        var expirationDate = new Date(2050, 12, 12);
-        this.cookieService.putObject(this.cookieName, authResponse, { expires: expirationDate });
-    };
-    UserStorageService.prototype.clearLoggedUser = function () {
-        this.cookieService.remove(this.cookieName);
-    };
-    UserStorageService = __decorate([
+    ToastrNotificationService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_angular2_cookie_services_cookies_service__["CookieService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0_angular2_cookie_services_cookies_service__["CookieService"]) === 'function' && _a) || Object])
-    ], UserStorageService);
-    return UserStorageService;
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */]) === 'function' && _a) || Object])
+    ], ToastrNotificationService);
+    return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
-=======
-//# sourceMappingURL=E:/MyRepos/killer-app/src/main.js.map
->>>>>>> offers
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -1448,10 +1383,10 @@ var UserStorageService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__ = __webpack_require__(30);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddListingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1503,7 +1438,7 @@ var AddListingComponent = (function () {
     AddListingComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add-listing',
-            template: __webpack_require__(745),
+            template: __webpack_require__(746),
             styles: [__webpack_require__(727)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__["a" /* ItemListingFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
@@ -1526,7 +1461,7 @@ var AddListingComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_form_year_validation_directive__ = __webpack_require__(551);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_item_listing_factory_service__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_item_listing_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader__ = __webpack_require__(723);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ngx_uploader__);
@@ -1597,7 +1532,7 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_listing_add_listing_module__ = __webpack_require__(547);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_urls_config_service__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__ = __webpack_require__(363);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_helpers_date_provider_service__ = __webpack_require__(354);
@@ -1610,10 +1545,10 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__navigation_navigation_component__ = __webpack_require__(561);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_navigation_hover_directive__ = __webpack_require__(552);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(563);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_user_service__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_storage_service__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__users_users_module__ = __webpack_require__(566);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
@@ -1725,8 +1660,8 @@ var CarouselListComponent = (function () {
     CarouselListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-carousel',
-            template: __webpack_require__(747),
-            styles: [".carousel-inner .item img {min-width:100%;}"]
+            template: __webpack_require__(748),
+            styles: [__webpack_require__(729)]
         }), 
         __metadata('design:paramtypes', [])
     ], CarouselListComponent);
@@ -1944,8 +1879,8 @@ var FileUploaderComponent = (function () {
     FileUploaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-file-uploader',
-            template: __webpack_require__(748),
-            styles: [__webpack_require__(729)]
+            template: __webpack_require__(749),
+            styles: [__webpack_require__(730)]
         }), 
         __metadata('design:paramtypes', [])
     ], FileUploaderComponent);
@@ -2057,17 +1992,17 @@ var HomeRouterModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__carousel_list_carousel_list_component__ = __webpack_require__(549);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__single_item_single_item_component__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__items_collection_items_collection_component__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__offers_offers_list_component__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__offers_make_offer_component__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__items_routes__ = __webpack_require__(558);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_item_listing_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_item_listing_service__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_user_storage_service__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_options_factory_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2239,8 +2174,8 @@ var NavigationComponent = (function () {
     NavigationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navigation',
-            template: __webpack_require__(754),
-            styles: [__webpack_require__(734)]
+            template: __webpack_require__(755),
+            styles: [__webpack_require__(735)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object])
     ], NavigationComponent);
@@ -2290,7 +2225,7 @@ var DateFormatterPipe = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationsHandlerComponent; });
@@ -2338,8 +2273,8 @@ var ToastrNotificationsHandlerComponent = (function () {
     ToastrNotificationsHandlerComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-toastr-notifications-handler',
-            template: __webpack_require__(755),
-            styles: [__webpack_require__(735)]
+            template: __webpack_require__(756),
+            styles: [__webpack_require__(736)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _c) || Object])
     ], ToastrNotificationsHandlerComponent);
@@ -2374,8 +2309,8 @@ var FacebookLoginComponent = (function () {
     FacebookLoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-facebook-login',
-            template: __webpack_require__(757),
-            styles: [__webpack_require__(737)]
+            template: __webpack_require__(758),
+            styles: [__webpack_require__(738)]
         }), 
         __metadata('design:paramtypes', [])
     ], FacebookLoginComponent);
@@ -2409,8 +2344,8 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-users',
-            template: __webpack_require__(764),
-            styles: [__webpack_require__(744)]
+            template: __webpack_require__(765),
+            styles: [__webpack_require__(745)]
         }), 
         __metadata('design:paramtypes', [])
     ], UsersComponent);
@@ -2609,7 +2544,7 @@ var environment = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(585);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(788);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -2631,7 +2566,52 @@ var environment = {
 
 /***/ },
 
-/***/ 69:
+/***/ 59:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationOptionsFactoryService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ToastrNotificationOptionsFactoryService = (function () {
+    function ToastrNotificationOptionsFactoryService() {
+    }
+    ToastrNotificationOptionsFactoryService.prototype.createToastrNotificationOptions = function (method, message, heading, delay) {
+        if (method === void 0) { method = ''; }
+        if (message === void 0) { message = ''; }
+        if (heading === void 0) { heading = ''; }
+        if (delay === void 0) { delay = 0; }
+        method = method || 'info';
+        message = message || 'Hello World!';
+        heading = heading || 'Toastr';
+        delay = delay || 0;
+        return {
+            method: method,
+            message: message,
+            heading: heading,
+            delay: delay
+        };
+    };
+    ToastrNotificationOptionsFactoryService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], ToastrNotificationOptionsFactoryService);
+    return ToastrNotificationOptionsFactoryService;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
+
+/***/ },
+
+/***/ 71:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2700,84 +2680,11 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
-/***/ 70:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ToastrNotificationService = (function () {
-    function ToastrNotificationService(dateProviderService) {
-        this.dateProviderService = dateProviderService;
-        this.minimumTimeBetweenEnqueueInMs = 200;
-        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
-        this.notificationsQueue = [];
-        this.lastItemInQueue = {
-            method: '',
-            message: '',
-            heading: '',
-            delay: 1500000
-        };
-    }
-    Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
-        get: function () {
-            return this.notificationsQueue.length > 0;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ToastrNotificationService.prototype, "nextNotificationInQueue", {
-        get: function () {
-            var nextNotification = this.notificationsQueue.shift();
-            return nextNotification;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
-        var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
-        var currentTimestamp = this.dateProviderService.currentTimestamp;
-        var durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
-        if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
-            return;
-        }
-        this.notificationsQueue.push(newNotification);
-        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
-        this.lastItemInQueue = newNotification;
-    };
-    ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
-        var messageIsEqual = newNotification.message === lastNotification.message;
-        var headingIsEqual = newNotification.heading === lastNotification.heading;
-        return messageIsEqual && headingIsEqual;
-    };
-    ToastrNotificationService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */]) === 'function' && _a) || Object])
-    ], ToastrNotificationService);
-    return ToastrNotificationService;
-    var _a;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
-
-/***/ },
-
-/***/ 71:
+/***/ 72:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2865,49 +2772,49 @@ module.exports = ""
 /***/ 729:
 /***/ function(module, exports) {
 
-module.exports = "#image-uploader {\n  border-top: 1px solid rgba(225, 225, 225, 0.77); }\n\nlabel {\n  margin-top: 25px;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  label:hover {\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #494949;\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n\nlabel,\ninput,\nbutton {\n  width: 250px; }\n\nimg {\n  padding: 10px; }\n\n.well {\n  background-color: transparent;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  margin-top: 25px; }\n"
+module.exports = ".well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden; }\n    .well .carousel .item img {\n      height: 600px; }\n"
 
 /***/ },
 
 /***/ 730:
 /***/ function(module, exports) {
 
-module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
+module.exports = "#image-uploader {\n  border-top: 1px solid rgba(225, 225, 225, 0.77); }\n\nlabel {\n  margin-top: 25px;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  label:hover {\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #494949;\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n\nlabel,\ninput,\nbutton {\n  width: 250px; }\n\nimg {\n  padding: 10px; }\n\n.well {\n  background-color: transparent;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  margin-top: 25px; }\n"
 
 /***/ },
 
 /***/ 731:
 /***/ function(module, exports) {
 
-module.exports = ".gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
+module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
 
 /***/ },
 
 /***/ 732:
 /***/ function(module, exports) {
 
-module.exports = "img {\n  max-width: 300px; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
 
 /***/ },
 
 /***/ 733:
 /***/ function(module, exports) {
 
-module.exports = "h1 {\n  text-align: center; }\n"
+module.exports = "img {\n  max-width: 300px; }\n"
 
 /***/ },
 
 /***/ 734:
 /***/ function(module, exports) {
 
-module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\n@font-face {\n  font-family: noto;\n  src: url(\"../../assets/NotoSans-Regular.ttf\"); }\n\nnav {\n  margin-top: 1.5%;\n  padding-left: 10px;\n  padding-right: 25px;\n  border: none;\n  box-shadow: 0 5px 25px #000000;\n  background-color: rgba(0, 0, 0, 0.33);\n  text-align: center;\n  font-size: 20px;\n  font-family: noto; }\n  nav .btn-default {\n    color: rgba(225, 225, 225, 0.77);\n    background-color: transparent;\n    border: none;\n    font-size: 24px;\n    margin-top: 0px; }\n  nav h1.app-heading {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    letter-spacing: 1em;\n    margin-top: 0px; }\n  nav a.navbar-brand {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    font-size: 22px; }\n  nav li.favorites-item:hover span.glyphicon.glyphicon-heart {\n    color: #DF474B; }\n  nav li.favorites-item span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n  nav span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n    nav span.glyphicon.glyphicon-heart:hover {\n      color: red; }\n  nav li.active > a,\n  nav li.open > a {\n    background-color: rgba(51, 51, 51, 0.33) !important;\n    box-shadow: 0 1px 15px #000000; }\n  nav ul.dropdown-menu > li > a {\n    font-size: 1.5rem;\n    color: #444444; }\n"
+module.exports = "h1 {\n  text-align: center; }\n"
 
 /***/ },
 
 /***/ 735:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\n@font-face {\n  font-family: noto;\n  src: url(\"../../assets/NotoSans-Regular.ttf\"); }\n\nnav {\n  margin-top: 1.5%;\n  padding-left: 10px;\n  padding-right: 25px;\n  border: none;\n  box-shadow: 0 5px 25px #000000;\n  background-color: rgba(0, 0, 0, 0.33);\n  text-align: center;\n  font-size: 20px;\n  font-family: noto; }\n  nav .btn-default {\n    color: rgba(225, 225, 225, 0.77);\n    background-color: transparent;\n    border: none;\n    font-size: 24px;\n    margin-top: 0px; }\n  nav h1.app-heading {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    letter-spacing: 1em;\n    margin-top: 0px; }\n  nav a.navbar-brand {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    font-size: 22px; }\n  nav li.favorites-item:hover span.glyphicon.glyphicon-heart {\n    color: #DF474B; }\n  nav li.favorites-item span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n  nav span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n    nav span.glyphicon.glyphicon-heart:hover {\n      color: red; }\n  nav li.active > a,\n  nav li.open > a {\n    background-color: rgba(51, 51, 51, 0.33) !important;\n    box-shadow: 0 1px 15px #000000; }\n  nav ul.dropdown-menu > li > a {\n    font-size: 1.5rem;\n    color: #444444; }\n"
 
 /***/ },
 
@@ -2942,230 +2849,192 @@ module.exports = ""
 /***/ 740:
 /***/ function(module, exports) {
 
-module.exports = ".login-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .login-wrapper > .inner-wrapper {\n    margin-top: auto;\n    margin-bottom: auto; }\n\ninput {\n  color: white;\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 741:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".login-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .login-wrapper > .inner-wrapper {\n    margin-top: auto;\n    margin-bottom: auto; }\n\ninput {\n  color: white;\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
 /***/ 742:
 /***/ function(module, exports) {
 
-module.exports = "img {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n    .list-group .list-group-item .btn {\n      font-family: planer;\n      font-size: 17px;\n      background-color: transparent;\n      color: rgba(225, 225, 225, 0.77);\n      border: 1px solid rgba(225, 225, 225, 0.77);\n      border-radius: 0px;\n      box-shadow: 0 5px 20px black;\n      overflow: hidden; }\n      .list-group .list-group-item .btn:hover {\n        text-decoration: underline; }\n  .list-group .no-shadow {\n    box-shadow: none; }\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 743:
 /***/ function(module, exports) {
 
-module.exports = "input,\nbutton {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 0; }\n  input.ng-valid.ng-touched,\n  button.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  button.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\ninput,\nbutton {\n  width: 250px; }\n\nbutton.dropdown-toggle {\n  text-align: left; }\n\nbutton[type=\"submit\"]:hover {\n  text-decoration: underline; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = "img {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n    .list-group .list-group-item .btn {\n      font-family: planer;\n      font-size: 17px;\n      background-color: transparent;\n      color: rgba(225, 225, 225, 0.77);\n      border: 1px solid rgba(225, 225, 225, 0.77);\n      border-radius: 0px;\n      box-shadow: 0 5px 20px black;\n      overflow: hidden; }\n      .list-group .list-group-item .btn:hover {\n        text-decoration: underline; }\n  .list-group .no-shadow {\n    box-shadow: none; }\n"
 
 /***/ },
 
 /***/ 744:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "input,\nbutton {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 0; }\n  input.ng-valid.ng-touched,\n  button.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  button.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\ninput,\nbutton {\n  width: 250px; }\n\nbutton.dropdown-toggle {\n  text-align: left; }\n\nbutton[type=\"submit\"]:hover {\n  text-decoration: underline; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
 /***/ 745:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
+module.exports = ""
 
 /***/ },
 
 /***/ 746:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 747:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n     <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n        <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\"\r\n        [attr.data-slide-to]=\"i\">\r\n        </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div  class=\"carousel-inner\" role=\"listbox\">\r\n        <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n            <img [attr.src]=\"item\">\r\n        </div>\r\n    </div>\r\n\r\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n        <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n\r\n</div>"
+module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>"
 
 /***/ },
 
 /***/ 748:
 /***/ function(module, exports) {
 
-module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
+module.exports = "<div class=\"well\">\r\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n      </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n        <img [attr.src]=\"item.imageUrl\">\r\n      </div>\r\n    </div>\r\n\r\n    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 749:
 /***/ function(module, exports) {
 
-module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
 
 /***/ },
 
 /***/ 750:
 /***/ function(module, exports) {
 
-module.exports = "<div *ngFor=\"let item of this.items\" class=\"gallery-item\">\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <a routerLink=\"{{item._id}}\">    \r\n        <h2>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h2>\r\n    </a>\r\n</div>"
+module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
 
 /***/ },
 
 /***/ 751:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pictures[0].imageURL}}\">\r\n    <h3>StartPrice: {{this.item.price}}</h3>\r\n    <h3>Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 752:
 /***/ function(module, exports) {
 
-module.exports = "<h1>Offers list works .... maybe!</h1>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
+module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pictures[0].imageURL}}\">\r\n    <h3>StartPrice: {{this.item.price}}</h3>\r\n    <h3>Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ },
 
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\r\n\r\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\r\n</div>"
+module.exports = "<h1>Offers list works .... maybe!</h1>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
 
 /***/ },
 
 /***/ 754:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand hvr-overline-reveal\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"favorites-item\">\r\n        <a routerLink=\"/favorites\">\r\n          <span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </li>\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle hvr-overline-reveal\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\r\n\r\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\r\n</div>"
 
 /***/ },
 
 /***/ 755:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand hvr-overline-reveal\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Gallery'\" (click)=\"setActiveItem('Gallery')\"><a routerLink=\"/gallery\">Gallery</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"favorites-item\">\r\n        <a routerLink=\"/favorites\">\r\n          <span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </li>\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle hvr-overline-reveal\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
 /***/ 756:
 /***/ function(module, exports) {
 
-module.exports = "<p>\n  add-to-favorites works!\n</p>\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 757:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
+module.exports = "<p>\n  add-to-favorites works!\n</p>\n"
 
 /***/ },
 
 /***/ 758:
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n  <div *ngFor=\"let favoriteItem of userFavorites\">{{favoriteItem}}</div>\r\n</div>"
+module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 759:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
+module.exports = "<div>\r\n  <div *ngFor=\"let favoriteItem of userFavorites\">{{favoriteItem}}</div>\r\n</div>"
 
 /***/ },
 
 /***/ 760:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
+module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 761:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
 
 /***/ },
 
 /***/ 762:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
+module.exports = ""
 
 /***/ },
 
 /***/ 763:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Registration Form</h2>\r\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Username: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Password: </span>\r\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>First Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Last Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Age: </span>\r\n      <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <div class=\"dropdown\">\r\n      <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n        <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n        <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Email: </span>\r\n      <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Profile Image: </span>\r\n      <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      <button class=\"form-control\" type=\"submit\">Register</button>\r\n    </label>\r\n  </div>\r\n</form>\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
 
 /***/ },
 
 /***/ 764:
 /***/ function(module, exports) {
 
+module.exports = "<h2>Registration Form</h2>\r\n<form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Username: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Password: </span>\r\n      <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>First Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Last Name: </span>\r\n      <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Age: </span>\r\n      <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <div class=\"dropdown\">\r\n      <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n        aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n        <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n        <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Email: </span>\r\n      <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label> \r\n      <span>Profile Image: </span>\r\n      <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      <button class=\"form-control\" type=\"submit\">Register</button>\r\n    </label>\r\n  </div>\r\n</form>\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+
+/***/ },
+
+/***/ 765:
+/***/ function(module, exports) {
+
 module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 /***/ },
 
-/***/ 788:
+/***/ 789:
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(422);
 
 
-/***/ },
-
-/***/ 85:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationOptionsFactoryService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ToastrNotificationOptionsFactoryService = (function () {
-    function ToastrNotificationOptionsFactoryService() {
-    }
-    ToastrNotificationOptionsFactoryService.prototype.createToastrNotificationOptions = function (method, message, heading, delay) {
-        if (method === void 0) { method = ''; }
-        if (message === void 0) { message = ''; }
-        if (heading === void 0) { heading = ''; }
-        if (delay === void 0) { delay = 0; }
-        method = method || 'info';
-        message = message || 'Hello World!';
-        heading = heading || 'Toastr';
-        delay = delay || 0;
-        return {
-            method: method,
-            message: message,
-            heading: heading,
-            delay: delay
-        };
-    };
-    ToastrNotificationOptionsFactoryService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [])
-    ], ToastrNotificationOptionsFactoryService);
-    return ToastrNotificationOptionsFactoryService;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
-
 /***/ }
 
-},[788]);
+},[789]);
 //# sourceMappingURL=main.bundle.map

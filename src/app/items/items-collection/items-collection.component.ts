@@ -5,21 +5,49 @@ import { ItemListing } from './../../models/item-listing.model';
 import { ItemListingService } from './../../services/item-listing.service';
 
 @Component({
-    selector: 'items-collection',
-    templateUrl: './items-collection.component.html',
-      styleUrls: ['./items-collection.component.scss']
+  selector: 'items-collection',
+  templateUrl: './items-collection.component.html',
+  styleUrls: ['./items-collection.component.scss']
 })
 
 export class ItemsCollectionComponent implements OnInit {
-    items: any[];
 
-    constructor(private service: ItemListingService) {
+  items: ItemListing[];
+  activeItem: ItemListing;
+  activeItemIndex: number;
+
+  constructor(private service: ItemListingService) {
+    this.items = [];
+    this.activeItemIndex = 0;
+  }
+
+  onPrevious() {
+    if (this.activeItemIndex > 0) {
+      this.activeItemIndex -= 1;
     }
 
-    ngOnInit() {
+    this.activeItem = this.items[this.activeItemIndex];
+  }
 
-        this.service.getItemsCollection()
-            .map(x => x.json())
-            .subscribe(x => this.items = x);
+  onNext() {
+    if (this.activeItemIndex < this.items.length - 1) {
+      this.activeItemIndex += 1;
     }
+
+    this.activeItem = this.items[this.activeItemIndex];
+  }
+
+  ngOnInit() {
+    this.service.getItemsCollection()
+      .map(response => response.json())
+      .subscribe((response) => {
+        this.items = response;
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        if (this.items.length > 0) {
+          this.activeItem = this.items[this.activeItemIndex];
+        }
+      });
+  }
 }
