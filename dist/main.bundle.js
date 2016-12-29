@@ -267,8 +267,6 @@ var AddToFavoritesComponent = (function () {
             var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
-        }, function () {
-            _this.router.navigateByUrl('favorites');
         });
     };
     AddToFavoritesComponent = __decorate([

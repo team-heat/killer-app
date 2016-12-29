@@ -45,8 +45,6 @@ export class AddToFavoritesComponent implements OnInit {
           .createToastrNotificationOptions(method, message, heading);
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
-      }, () => {
-        this.router.navigateByUrl('favorites');
       });
   }
 }
