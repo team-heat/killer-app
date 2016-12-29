@@ -43,8 +43,8 @@ export class SingleItemComponent implements OnInit {
 
     ngOnInit() {
         let id;
-        let username;
-        
+        let username: String;
+
         if (this.userStorageService.isLogged()) {
             this.isLogged = true;
             username = this.userStorageService.getLoggedUser().username;
@@ -59,7 +59,7 @@ export class SingleItemComponent implements OnInit {
             .subscribe(x => {
                 this.item = x as ItemListing;
                 this.item.isOwner = this.item.owner === username;
-        });
+            });
     }
 }
 
