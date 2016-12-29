@@ -1,53 +1,68 @@
-<h2>Registration Form</h2>
-<form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <input class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required
-      minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+<div class="submit-wrapper">
+
+  <div id="component-header">
+    <h2>Registration Form</h2>
   </div>
-  <div class="form-group">
-    <input class="form-control" type="password" name="password" [(ngModel)]="user.password" placeholder="Enter your password"
-      required minlength="6" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Enter your first name"
-      minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="Enter your last name" minlength="3"
-      maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="number" name="age" [(ngModel)]="user.age" placeholder="Enter your age" min="0" max="120"
-      required>
-  </div>
-  <div class="form-group">
-    <div class="dropdown">
-      <button *ngIf="user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="true" name="gender">
+  <div class="inner-wrapper">
+
+    <form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit()">
+      <div id="inputs-container" class="row">
+        <div class="content-left col-xs-8">
+        </div>
+        <div id="content-right" class="col-xs-4">
+          <div class="well">
+            <div class="form-group">
+              <input class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required
+                minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="password" name="password" [(ngModel)]="user.password" placeholder="Enter your password"
+                required minlength="6" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Enter your first name"
+                minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="Enter your last name" minlength="3"
+                maxlength="30" pattern="[a-zA-Z0-9\-_]*">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="number" name="age" [(ngModel)]="user.age" placeholder="Enter your age" min="0" max="120"
+                required>
+            </div>
+            <div class="form-group">
+              <div class="dropdown">
+                <button *ngIf="user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="true" name="gender">
           {{user.gender}}
         <span class="caret"></span>
       </button>
-      <button *ngIf="!user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="true" name="gender">
+                <button *ngIf="!user.gender" class="btn btn-default dropdown-toggle" type="button" id="gender-select" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="true" name="gender">
           Gender
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" aria-labelledby="gender-select">
-        <li (click)="onGenderSelect('Male')"><a>Male</a></li>
-        <li (click)="onGenderSelect('Female')"><a>Female</a></li>
-      </ul>
-    </div>
+                <ul class="dropdown-menu" aria-labelledby="gender-select">
+                  <li (click)="onGenderSelect('Male')"><a>Male</a></li>
+                  <li (click)="onGenderSelect('Female')"><a>Female</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="url" name="image" [(ngModel)]="user.image" placeholder="Enter an url to your profile image">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" type="submit">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <input class="form-control" type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" required>
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="url" name="image" [(ngModel)]="user.image" placeholder="Enter an url to your profile image">
-  </div>
-  <div class="form-group">
-    <label>
-      <button class="form-control btn btn-success" type="submit">Register</button>
-    </label>
-  </div>
-</form>
+</div>
+
 <img *ngIf="isLoading === true" id="loading" src="../../../assets/load.gif" alt="Be patient..." width="50px" />

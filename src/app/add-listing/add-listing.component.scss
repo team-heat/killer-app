@@ -67,6 +67,9 @@ input {
 .btn.btn-success {
   width: 100%;
   background-color: #55b559;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .invalid-input-msg {
