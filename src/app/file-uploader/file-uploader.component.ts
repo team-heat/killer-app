@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FileUploadResponse } from './../models/file-upload-response.model';
+import { NgUploaderOptions } from 'ngx-uploader';
 
 @Component({
   selector: 'app-file-uploader',
@@ -7,18 +9,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FileUploaderComponent implements OnInit {
 
-  public static id: number;
+  @Output() onFileUpload: EventEmitter<FileUploadResponse[]> = new EventEmitter<FileUploadResponse[]>();
+
   public labelText: string;
   private initialLabelText: string = 'Choose a file...';
 
+  uploadedFiles: FileUploadResponse[] = [];
+  hasBaseDropZoneOver: boolean = false;
+  options: NgUploaderOptions = {
+    url: '/api/upload'
+  };
+  sizeLimit = 2000000;
+
   constructor() {
-    FileUploaderComponent.id = this.generateUniqueId();
     this.labelText = this.initialLabelText;
   }
 
   ngOnInit() { }
 
-  updateLabel(event) {
+  handleUpload(data: any): void {
+    if (data && data.response) {
+      data = JSON.parse(data.response);
+      this.uploadedFiles.push(data);
+      this.onFileUpload.emit([...this.uploadedFiles]);
+    }
+  }
+
+  fileOverBase(e: any): void {
+    this.hasBaseDropZoneOver = e;
+  }
+
+  beforeUpload(uploadingFile: any): void {
+    if (uploadingFile.size > this.sizeLimit) {
+      uploadingFile.setAbort();
+      alert('File is too large');
+    }
+  }
+
+  updateLabel(event: any) {
     const target = event.target;
     const maxNameLength = 15;
 
@@ -34,9 +62,5 @@ export class FileUploaderComponent implements OnInit {
 
       this.labelText = fileName.length < maxNameLength ? fileName : '...' + shortenedFileName;
     }
-  }
-
-  private generateUniqueId(): number {
-    return Math.floor(FileUploaderComponent.id || 0 + Math.random() * 10000007);
   }
 }

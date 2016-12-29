@@ -1,6 +1,23 @@
-<label>
+<!--<label>
   <input [id]="id" type="file" name="fileUpload" (change)="updateLabel($event)" multiple>
   <label [for]="id" class="file-upl-lb">
     <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> {{labelText}}
   </label>
+</label>-->
+<!-- app.component.html -->
+<div id="image-uploader">
+  <label class="btn btn-default btn-file">
+    Upload Image <input style="display: none;" type="file" ngFileSelect [options]="options" (onUpload)="handleUpload($event)" (beforeUpload)="beforeUpload($event)" accept="image/*">
 </label>
+<!-- drag & drop file example-->
+<style>
+    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+  </style>
+<div ngFileDrop [options]="options" (onUpload)="handleUpload($event)" [ngClass]="{'file-over': hasBaseDropZoneOver}" (onFileOver)="fileOverBase($event)"
+  (beforeUpload)="beforeUpload($event)">
+</div>
+
+<div *ngIf="uploadedFiles.length > 0" class="well" id="uploaded">
+  <img *ngFor="let file of uploadedFiles " [src]="file.imageUrl" height="150px" alt="image">
+</div>
+</div>

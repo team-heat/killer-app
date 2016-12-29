@@ -32,9 +32,23 @@ nav {
     margin-top: 0px;
   }
   a.navbar-brand {
-    color: #fff;
+    color: rgba(225, 225, 225, 0.77);
     font-family: planer;
     font-size: 22px;
+  }
+  li.favorites-item {
+    &:hover span.glyphicon.glyphicon-heart {
+      color: #DF474B;
+    }
+    span.glyphicon.glyphicon-heart {
+      font-size: 2.5rem;
+    }
+  }
+  span.glyphicon.glyphicon-heart {
+    font-size: 2.5rem;
+    &:hover {
+      color: red;
+    }
   }
   li.active>a,
   li.open>a {
