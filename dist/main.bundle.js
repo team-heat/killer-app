@@ -2151,12 +2151,13 @@ var ItemsModule = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__single_item_single_item_component__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__items_collection_items_collection_component__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offers_offers_list_component__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__offers_make_offer_component__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__users_add_to_favorites_add_to_favorites_component__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__single_item_single_item_component__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__items_collection_items_collection_component__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__offers_offers_list_component__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__offers_make_offer_component__ = __webpack_require__(351);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsRouterModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2173,19 +2174,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var routes = [
-    { path: 'gallery/:id/offers', component: __WEBPACK_IMPORTED_MODULE_4__offers_offers_list_component__["a" /* OffersListComponent */] },
-    { path: 'gallery/:id/offer', component: __WEBPACK_IMPORTED_MODULE_5__offers_make_offer_component__["a" /* MakeOfferComponent */] },
-    { path: 'gallery/:id', component: __WEBPACK_IMPORTED_MODULE_2__single_item_single_item_component__["a" /* SingleItemComponent */] },
-    { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_3__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */] },
+    { path: 'gallery/:id/offers', component: __WEBPACK_IMPORTED_MODULE_5__offers_offers_list_component__["a" /* OffersListComponent */] },
+    { path: 'gallery/:id/offer', component: __WEBPACK_IMPORTED_MODULE_6__offers_make_offer_component__["a" /* MakeOfferComponent */] },
+    { path: 'gallery/:id', component: __WEBPACK_IMPORTED_MODULE_3__single_item_single_item_component__["a" /* SingleItemComponent */] },
+    { path: 'gallery', component: __WEBPACK_IMPORTED_MODULE_4__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */] },
+    { path: 'gallery/add/:id', component: __WEBPACK_IMPORTED_MODULE_0__users_add_to_favorites_add_to_favorites_component__["a" /* AddToFavoritesComponent */] }
 ];
 var ItemsRouterModule = (function () {
     function ItemsRouterModule() {
     }
     ItemsRouterModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(routes)],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            imports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forChild(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */]]
         }), 
         __metadata('design:paramtypes', [])
     ], ItemsRouterModule);
@@ -2883,7 +2886,7 @@ module.exports = "img {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  f
 /***/ 744:
 /***/ function(module, exports) {
 
-module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#inputs-container {\n  margin-bottom: 25px; }\n\n.well {\n  background: transparent;\n  box-shadow: 0 5px 25px black;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n\n.content-left {\n  opacity: 0.99;\n  box-shadow: 0 5px 25px black;\n  background-image: url(\"../../assets/home-bg10.jpg\");\n  background-repeat: none;\n  padding-left: 20px; }\n\n.form-group {\n  width: 100%; }\n\ninput,\n.dropdown-toggle {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n  input.ng-valid.ng-touched,\n  .dropdown-toggle.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  .dropdown-toggle.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  width: 100%;\n  background-color: #55b559; }\n  .btn.btn-success:hover {\n    text-decoration: underline; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#inputs-container {\n  margin-bottom: 25px; }\n\n.well {\n  background: transparent;\n  box-shadow: 0 5px 25px black;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n\n.content-left {\n  opacity: 0.99;\n  box-shadow: 0 5px 25px black;\n  background-image: url(\"../../assets/home-bg2.jpg\");\n  background-repeat: none;\n  padding-left: 20px; }\n\n.form-group {\n  width: 100%; }\n\ninput,\n.dropdown-toggle {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n  input.ng-valid.ng-touched,\n  .dropdown-toggle.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  .dropdown-toggle.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  width: 100%;\n  background-color: #55b559; }\n  .btn.btn-success:hover {\n    text-decoration: underline; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
@@ -2932,7 +2935,7 @@ module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.
 /***/ 751:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <a class=\"add-to-favorites-btn\">\r\n        <app-add-to-favorites></app-add-to-favorites>\r\n      </a>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <a routerLink='gallery/add/{{this.activeItem._id}}' class=\"add-to-favorites-btn\">\r\n      Add\r\n      </a>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
