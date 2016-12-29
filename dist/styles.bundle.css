@@ -6,6 +6,7 @@
 
 body {
   background-image: url(012acbe788ee429da8d7d8d619455fc8.png);
+  /*background-image: url('./assets/bg-pattern-08.png');*/
   background-repeat: repeat;
   /*background-color: #333333 !important;*/
 }
@@ -20,10 +21,12 @@ div#content {
 
 #component-header {
   margin: -25px -25px 10px -25px;
-  padding: 2vh 0;
+  padding: 2vh 20px;
   text-align: center;
   color: #e6e6e6;
-  background-color: #848484;
+  /*background-color: #848484;*/
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAAAAACMmsGiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABdJREFUCB1jUlGRkWH6CQRMf//y8oJZAFUaCmUwcfODAAAAAElFTkSuQmCC);
+  /*background-image: url('./assets/bg-pattern-11.png');*/
 }@charset "UTF-8";
 
 /*!

@@ -6,6 +6,7 @@
 
 body {
   background-image: url('./assets/bg-pattern-11.png');
+  /*background-image: url('./assets/bg-pattern-08.png');*/
   background-repeat: repeat;
   /*background-color: #333333 !important;*/
 }
@@ -20,8 +21,10 @@ div#content {
 
 #component-header {
   margin: -25px -25px 10px -25px;
-  padding: 2vh 0;
+  padding: 2vh 20px;
   text-align: center;
   color: #e6e6e6;
-  background-color: #848484;
+  /*background-color: #848484;*/
+  background-image: url('./assets/bg-pattern-08.png');
+  /*background-image: url('./assets/bg-pattern-11.png');*/
 }
