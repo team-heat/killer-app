@@ -1,15 +1,14 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-     <!--Indicators -->
+    <!--Indicators -->
     <ol class="carousel-indicators">
-        <li [class.active]="i===0" *ngFor="let item of mylist; let i = index" data-target="#carousel-example-generic"
-        [attr.data-slide-to]="i">
+        <li [class.active]="i===0" *ngFor="let item of mylist; let i = index" data-target="#carousel-example-generic" [attr.data-slide-to]="i">
         </li>
     </ol>
 
     <!-- Wrapper for slides -->
-    <div  class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox">
         <div *ngFor="let item of mylist; let i=index" class="item" [class.active]="i===0">
-            <img [attr.src]="item">
+            <img [attr.src]="item.imageUrl" height="450px">
         </div>
     </div>
 
