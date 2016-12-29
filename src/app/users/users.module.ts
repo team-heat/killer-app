@@ -38,6 +38,9 @@ import { UsersRouterModule } from './users.routes';
   providers: [
     UserFactoryService,
     HashingService
+  ],
+  exports: [
+    AddToFavoritesComponent
   ]
 })
 export class UsersModule { }

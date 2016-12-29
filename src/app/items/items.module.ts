@@ -17,13 +17,15 @@ import { ItemListingService } from './../services/item-listing.service';
 import { UserStorageService } from './../services/user-storage.service';
 import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../services/toastr-notification.service';
+import { UsersModule } from '../users/users.module';
 
 @NgModule({
     imports: [
         ItemsRouterModule,
         CommonModule,
         FormsModule,
-        BrowserModule
+        BrowserModule,
+        UsersModule
     ],
     declarations: [
         SingleItemComponent,
@@ -40,6 +42,4 @@ import { ToastrNotificationService } from '../services/toastr-notification.servi
     ]
 })
 
-export class ItemsModule {
-
-}
+export class ItemsModule { }

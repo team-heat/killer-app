@@ -5,7 +5,7 @@ import { ItemListing } from './../../models/item-listing.model';
 import { ItemListingService } from './../../services/item-listing.service';
 
 @Component({
-  selector: 'items-collection',
+  selector: 'app-items-collection',
   templateUrl: './items-collection.component.html',
   styleUrls: ['./items-collection.component.scss']
 })
