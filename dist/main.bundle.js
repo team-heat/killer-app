@@ -2984,7 +2984,7 @@ module.exports = ""
 /***/ 757:
 /***/ function(module, exports) {
 
-module.exports = "<a class=\"add-btn\">\r\n  <span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>\r\n</a>"
+module.exports = ""
 
 /***/ },
 
