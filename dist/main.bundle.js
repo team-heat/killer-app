@@ -437,6 +437,7 @@ var SingleItemComponent = (function () {
         var id;
         var username;
         if (this.userStorageService.isLogged()) {
+            this.isLogged = true;
             username = this.userStorageService.getLoggedUser().username;
         }
         this.route.params
@@ -2461,7 +2462,7 @@ module.exports = "<div *ngFor=\"let item of this.items\" class=\"gallery-item\">
 /***/ 738:
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>    \r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"!this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Make Offer</a>\r\n</div>"
+module.exports = "<div>\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>    \r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.item.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Make Offer</a>\r\n</div>"
 
 /***/ },
 
