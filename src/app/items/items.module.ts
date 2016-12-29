@@ -14,6 +14,7 @@ import { ItemsRouterModule } from './items.routes';
 
 import { ItemListingService } from './../services/item-listing.service';
 import { UserStorageService } from './../services/user-storage.service';
+import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import { UserStorageService } from './../services/user-storage.service';
     ],
     providers: [
         ItemListingService,
-        UserStorageService
+        UserStorageService,
+        ToastrNotificationOptionsFactoryService
     ]
 })
 
