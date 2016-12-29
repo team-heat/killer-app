@@ -30,6 +30,12 @@ nav {
     font-family: planer;
     letter-spacing: 1em;
     margin-top: 0px;
+    &:hover {
+      color: white;
+    }
+  }
+  a.navbar-btn:hover {
+    color: white;
   }
   a.navbar-brand {
     color: rgba(225, 225, 225, 0.77);

@@ -23,7 +23,7 @@ let ItemListing;
 itemListingSchema.static('createItemListing', function (listing) {
   if(!listing.pictures || listing.pictures.length === 0){
     listing.pictures = [{
-      imageUrl: '/default-image.jpeg'
+      imageUrl: '/assets/default-image.jpeg'
     }];
   }
   return new ItemListing({

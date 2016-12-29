@@ -6,21 +6,27 @@ module.exports = function ({userData, itemListingData}) {
   }
 
   function create(req, res) {
-    const loggedUser = req.user;   
-    const itemListingId = req.body.id;
+    const loggedUser = req.user;
+    const itemListingId = req.body.content;
     return itemListingData.getItemListingById(itemListingId)
       .then((listing) => {
         if (!listing) {
-          throw new Error('Listing with this ID not found.'); 
+          throw new Error('Listing with this ID not found.');
+        }
+        const listingExists = loggedUser.favorites.some(l => {
+          return l._id.toString() === listing.id.toString();
+        });
+        if (listingExists) {
+          throw new Error('User already has this item in favorites.');
         }
         loggedUser.favorites.push(listing);
-        return userData.updateUser(loggedUser);        
+        return userData.updateUser(loggedUser);
       })
       .then(() => {
-        res.status(200).json({message: 'Successfully added listing.'});        
+        res.status(200).json({ message: 'Successfully added listing.' });
       })
-      .catch((err)=>{
-        return res.status(400).json({message: err.message});
+      .catch((err) => {
+        return res.status(400, { error: err.message });
       });
   }
 
