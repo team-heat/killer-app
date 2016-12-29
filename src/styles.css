@@ -24,7 +24,5 @@ div#content {
   padding: 2vh 20px;
   text-align: center;
   color: #e6e6e6;
-  /*background-color: #848484;*/
-  background-image: url('./assets/bg-pattern-08.png');
-  /*background-image: url('./assets/bg-pattern-11.png');*/
+  background-color: #848484;
 }
