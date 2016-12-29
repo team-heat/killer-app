@@ -31,6 +31,7 @@ export class SingleItemComponent implements OnInit {
             year: null,
             price: null,
             pictures: [],
+            offers:[],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
