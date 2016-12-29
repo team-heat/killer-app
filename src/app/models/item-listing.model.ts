@@ -13,6 +13,5 @@ export class ItemListing {
   interiorColor: string;
   createdOn: Date;
   isActive: Boolean;
-  isOwner: Boolean;
   owner: String;
 }

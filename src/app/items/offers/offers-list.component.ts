@@ -14,6 +14,7 @@ import { UserStorageService } from './../../services/user-storage.service';
 export class OffersListComponent {
     item: ItemListing;
     isLogged: Boolean;
+    isOwner: Boolean;
 
     constructor(
         private itemListingService: ItemListingService,
@@ -26,13 +27,13 @@ export class OffersListComponent {
             make: null,
             year: null,
             price: null,
+            offers: [],
             pictures: [],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
             createdOn: null,
             isActive: false,
-            isOwner: false,
             owner: null
         };
     }
@@ -54,7 +55,7 @@ export class OffersListComponent {
             .map(x => x.json())
             .subscribe(x => {
                 this.item = x as ItemListing;
-                this.item.isOwner = this.item.owner === username;
+                this.isOwner = this.item.owner === username;
             });
     }
 }

@@ -9,11 +9,11 @@
 
     <!--TODO add right update link when ready-->
 
-    <a *ngIf="this.item.isOwner" class="btn btn-primary" routerLink="/gallery/{{this.item._id}}">Update</a>
+    <a *ngIf="this.isOwner" class="btn btn-primary" routerLink="/gallery/{{this.item._id}}">Update</a>
 
     <!--TODO add right make offer link when ready-->
 
-    <a *ngIf="this.isLogged && !this.item.isOwner" class="btn btn-primary" routerLink="/gallery/{{this.item._id}}">Make Offer</a>
+    <a *ngIf="this.isLogged && !this.isOwner" class="btn btn-primary" routerLink="/gallery/{{this.item._id}}">Make Offer</a>
 
     <a class="btn btn-primary" routerLink="/gallery/{{this.item._id}}/offers">Show offers</a>
 </div>

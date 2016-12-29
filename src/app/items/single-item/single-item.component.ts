@@ -18,6 +18,7 @@ import { UserStorageService } from './../../services/user-storage.service';
 export class SingleItemComponent implements OnInit {
     item: ItemListing;
     isLogged: Boolean;
+    isOwner: Boolean;
 
     constructor(
         private itemListingService: ItemListingService,
@@ -37,7 +38,6 @@ export class SingleItemComponent implements OnInit {
             exteriorColor: null,
             createdOn: null,
             isActive: false,
-            isOwner: false,
             owner: null
         };
     }
@@ -59,7 +59,7 @@ export class SingleItemComponent implements OnInit {
             .map(x => x.json())
             .subscribe(x => {
                 this.item = x as ItemListing;
-                this.item.isOwner = this.item.owner === username;
+                this.isOwner = this.item.owner === username;
             });
     }
 }
