@@ -21,6 +21,11 @@ const itemListingSchema = new mongoose.Schema({
 
 let ItemListing;
 itemListingSchema.static('createItemListing', function (listing) {
+  if(!listing.pictures || listing.pictures.length === 0){
+    listing.pictures = [{
+      imageUrl: '/default-image.jpeg'
+    }];
+  }
   return new ItemListing({
     owner: listing.owner,
     make: listing.make,
