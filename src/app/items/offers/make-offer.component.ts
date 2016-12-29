@@ -9,10 +9,8 @@ import { ItemListingService } from './../../services/item-listing.service';
 import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
-    selector: 'single-item',
-    templateUrl: './make-offer.component.html',
-    styleUrls: ['./make-offer.component.scss']
-
+    selector: 'make-offer',
+    templateUrl: './make-offer.component.html'
 })
 
 export class MakeOfferComponent implements OnInit {
