@@ -5,8 +5,8 @@
       <span>{{this.activeItem.make}}</span>
       <span>{{this.activeItem.model}}</span>
       <span>{{this.activeItem.year}}</span>
-      <a class="add-to-favorites-btn">
-        <app-add-to-favorites></app-add-to-favorites>
+      <a routerLink='gallery/add/{{this.activeItem._id}}' class="add-to-favorites-btn">
+      Add
       </a>
     </h3>
   </div>
