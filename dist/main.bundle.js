@@ -2627,7 +2627,7 @@ module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.
 /***/ 747:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div id=\"carousel-container\" class=\"col-xs-6 col-xs-offset-3\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
@@ -2726,7 +2726,7 @@ module.exports = __webpack_require__(420);
 /***/ 792:
 /***/ function(module, exports) {
 
-module.exports = ".well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden; }\n    .well .carousel .item img {\n      height: 400px; }\n"
+module.exports = ".well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden; }\n    .well .carousel .item img {\n      height: 600px; }\n"
 
 /***/ },
 
