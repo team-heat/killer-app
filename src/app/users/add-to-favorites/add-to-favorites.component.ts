@@ -1,8 +1,10 @@
 import 'rxjs/add/operator/switchMap';
-import { ApiUrlsConfigService } from './../../services/api-urls-config.service';
+
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
+import { ApiUrlsConfigService } from './../../services/api-urls-config.service';
 import { Observable } from 'rxjs/Observable';
-import { Router, ActivatedRoute, Params } from '@angular/router';
 import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { UserService } from './../../services/user.service';
