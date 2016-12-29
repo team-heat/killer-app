@@ -1,34 +1,24 @@
 <h2>Registration Form</h2>
 <form *ngIf="isLoading === false" #registerForm="ngForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
-    <label> 
-      <span>Username: </span>
-      <input class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-    </label>
+    <input class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Enter your username" required
+      minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
   </div>
   <div class="form-group">
-    <label> 
-      <span>Password: </span>
-      <input class="form-control" type="password" name="password" [(ngModel)]="user.password" placeholder="Enter your password" required minlength="6" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-    </label>
+    <input class="form-control" type="password" name="password" [(ngModel)]="user.password" placeholder="Enter your password"
+      required minlength="6" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
   </div>
   <div class="form-group">
-    <label> 
-      <span>First Name: </span>
-      <input class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Enter your first name" minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-    </label>
+    <input class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Enter your first name"
+      minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
   </div>
   <div class="form-group">
-    <label> 
-      <span>Last Name: </span>
-      <input class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="Enter your last name" minlength="3" maxlength="30" pattern="[a-zA-Z0-9\-_]*">
-    </label>
+    <input class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="Enter your last name" minlength="3"
+      maxlength="30" pattern="[a-zA-Z0-9\-_]*">
   </div>
   <div class="form-group">
-    <label> 
-      <span>Age: </span>
-      <input class="form-control" type="number" name="age" [(ngModel)]="user.age" placeholder="Enter your age" min="0" max="120" required>
-    </label>
+    <input class="form-control" type="number" name="age" [(ngModel)]="user.age" placeholder="Enter your age" min="0" max="120"
+      required>
   </div>
   <div class="form-group">
     <div class="dropdown">
@@ -49,20 +39,14 @@
     </div>
   </div>
   <div class="form-group">
-    <label> 
-      <span>Email: </span>
-      <input class="form-control" type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" required>
-    </label>
+    <input class="form-control" type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" required>
   </div>
   <div class="form-group">
-    <label> 
-      <span>Profile Image: </span>
-      <input class="form-control" type="url" name="image" [(ngModel)]="user.image" placeholder="Enter an url to your profile image">
-    </label>
+    <input class="form-control" type="url" name="image" [(ngModel)]="user.image" placeholder="Enter an url to your profile image">
   </div>
   <div class="form-group">
     <label>
-      <button class="form-control" type="submit">Register</button>
+      <button class="form-control btn btn-success" type="submit">Register</button>
     </label>
   </div>
 </form>

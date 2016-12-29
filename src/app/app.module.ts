@@ -1,3 +1,4 @@
+import { AddToFavoritesComponent } from './users/add-to-favorites/add-to-favorites.component';
 import { Router, RouterModule } from '@angular/router';
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
 

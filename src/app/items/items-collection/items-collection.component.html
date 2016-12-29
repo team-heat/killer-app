@@ -1,12 +1,12 @@
 <div class="submit-wrapper">
   <div id="component-header">
-    <h2 *ngIf="this.items.length === 0">Dreamstime Gallery</h2>
-    <h2 *ngIf="this.items.length !== 0">
+    <h3 *ngIf="this.items.length === 0">Dreamstime Gallery</h3>
+    <h3 *ngIf="this.items.length !== 0">
       <span>{{this.activeItem.make}}</span>
       <span>{{this.activeItem.model}}</span>
       <span>{{this.activeItem.year}}</span>
       <a class="add-to-favorites-btn"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a>
-    </h2>
+    </h3>
   </div>
   <div class="row">
     <h3 *ngIf="this.items.length === 0">Be the first to post a new item!</h3>

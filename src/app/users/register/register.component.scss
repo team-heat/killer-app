@@ -1,10 +1,12 @@
 input,
 button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
   font-size: 12px;
   color: rgba(225, 225, 225, 0.77);
   background-color: #2f2f2f;
-  border-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   &.ng-valid.ng-touched {
     border-color: #55b559;
   }
@@ -16,6 +18,11 @@ button {
 input,
 button {
   width: 250px;
+}
+
+.btn.btn-success {
+  color: white;
+  background-color: #55b559;
 }
 
 button.dropdown-toggle {

@@ -1,3 +1,4 @@
+import { AddToFavoritesComponent } from './../users/add-to-favorites/add-to-favorites.component';
 import { NgModule } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
