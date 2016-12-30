@@ -1,9 +1,9 @@
 import 'rxjs/add/operator/map';
-
 import { Component, OnInit, Input } from '@angular/core';
 import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { UserService } from './../../services/user.service';
+import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
   selector: 'app-add-to-favorites',
@@ -12,12 +12,24 @@ import { UserService } from './../../services/user.service';
 })
 export class AddToFavoritesComponent implements OnInit {
 
-  @Input() itemIdToFavorite: string;
+  private _itemIdToFavorite: string;
+  private itemIsFavorite: boolean;
 
   constructor(
     private userService: UserService,
+    private userStorage: UserStorageService,
     private toastrNotificationService: ToastrNotificationService,
     private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService, ) { }
+
+  get itemIdToFavorite(): string {
+    return this._itemIdToFavorite;
+  }
+
+  @Input() set itemIdToFavorite(value: string) {
+    this._itemIdToFavorite = value;
+    const savedUserFavorites = this.userStorage.getLoggedUserFavorites();
+    this.itemIsFavorite = savedUserFavorites.some(item => item === this.itemIdToFavorite);
+  }
 
   ngOnInit() { }
 
@@ -32,6 +44,8 @@ export class AddToFavoritesComponent implements OnInit {
           .createToastrNotificationOptions(method, message, heading);
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        this.userStorage.setLoggedUserFavorites(response.favorites);
+        this.itemIsFavorite = true;
       }, (err) => {
         const method = 'error';
         const message = 'Item already exists in your favorites list.';
@@ -41,5 +55,9 @@ export class AddToFavoritesComponent implements OnInit {
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
       }, () => { });
+  }
+
+  removeToFavorites() {
+    console.log('remove from favorites');
   }
 }

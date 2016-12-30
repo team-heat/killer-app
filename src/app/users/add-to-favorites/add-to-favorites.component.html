@@ -1,3 +1,6 @@
-<a (click)="addToFavorites()">
-  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+<a *ngIf="!this.itemIsFavorite" (click)="addToFavorites()">
+  <span class="glyphicon glyphicon-heart add-to-favorites" aria-hidden="true"></span>
+</a>
+<a *ngIf="this.itemIsFavorite" (click)="removeToFavorites()">
+  <span class="glyphicon glyphicon-heart remove-to-favorites" aria-hidden="true"></span>
 </a>

@@ -23,7 +23,7 @@ module.exports = function ({userData, itemListingData}) {
         return userData.updateUser(loggedUser);
       })
       .then(() => {
-        res.status(200).send({ message: 'Successfully added listing.' });
+        res.status(200).json({ favorites: req.user.favorites.map(f => f._id) });
       })
       .catch((err) => {
         return res.status(400, { error: err.message }).send();

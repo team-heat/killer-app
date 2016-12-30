@@ -47,7 +47,7 @@ export class UserStorageService {
     localStorage.setItem(this.localStorageFavoritesKey, favoritesJson);
   }
 
-  getLoggedUserFavorites(): ItemListing[] {
+  getLoggedUserFavorites(): string[] {
     const favoritesJson = localStorage.getItem(this.localStorageFavoritesKey);
     return JSON.parse(favoritesJson);
   }
