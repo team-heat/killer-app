@@ -81,25 +81,24 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_urls_config_service__ = __webpack_require__(645);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(399);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(385);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__items_comment_section_comment_section_component__ = __webpack_require__(678);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_cookie_services_cookies_service__ = __webpack_require__(692);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_cookie_services_cookies_service__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_helpers_date_provider_service__ = __webpack_require__(683);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_forms__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__home_home_module__ = __webpack_require__(733);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__(664);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_http_requester_options_factory_service__ = __webpack_require__(647);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_http_requester_service__ = __webpack_require__(648);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__items_items_module__ = __webpack_require__(735);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__navigation_navigation_component__ = __webpack_require__(739);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__ = __webpack_require__(731);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_options_factory_service__ = __webpack_require__(590);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_service__ = __webpack_require__(587);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(741);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_service__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_user_storage_service__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__users_users_module__ = __webpack_require__(691);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__ = __webpack_require__(692);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_helpers_date_provider_service__ = __webpack_require__(683);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_home_module__ = __webpack_require__(733);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(664);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_http_requester_options_factory_service__ = __webpack_require__(647);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_http_requester_service__ = __webpack_require__(648);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__items_items_module__ = __webpack_require__(735);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__navigation_navigation_component__ = __webpack_require__(739);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_navigation_hover_directive__ = __webpack_require__(731);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(587);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(741);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_user_service__ = __webpack_require__(596);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_storage_service__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__users_users_module__ = __webpack_require__(691);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -133,29 +132,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_17__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_16__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */],
-                __WEBPACK_IMPORTED_MODULE_6__items_comment_section_comment_section_component__["a" /* CommentSectionComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
             ],
             imports: [
                 // MockedModule,
-                __WEBPACK_IMPORTED_MODULE_14__items_items_module__["a" /* ItemsModule */],
+                __WEBPACK_IMPORTED_MODULE_13__items_items_module__["a" /* ItemsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_9__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_10__home_home_module__["a" /* HomeModule */],
-                __WEBPACK_IMPORTED_MODULE_11__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_23__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_9__home_home_module__["a" /* HomeModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_22__users_users_module__["a" /* UsersModule */],
                 __WEBPACK_IMPORTED_MODULE_2__add_listing_add_listing_module__["a" /* AddListingModule */],
                 __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__["ToastModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot([
@@ -165,14 +162,14 @@ var AppModule = (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__services_api_urls_config_service__["a" /* ApiUrlsConfigService */],
-                __WEBPACK_IMPORTED_MODULE_7_angular2_cookie_services_cookies_service__["CookieService"],
-                __WEBPACK_IMPORTED_MODULE_8__services_helpers_date_provider_service__["a" /* DateProviderService */],
-                __WEBPACK_IMPORTED_MODULE_12__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_13__services_http_requester_service__["a" /* HttpRequesterService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_service__["a" /* ToastrNotificationService */],
-                __WEBPACK_IMPORTED_MODULE_21__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_22__services_user_storage_service__["a" /* UserStorageService */]
+                __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_services_cookies_service__["CookieService"],
+                __WEBPACK_IMPORTED_MODULE_7__services_helpers_date_provider_service__["a" /* DateProviderService */],
+                __WEBPACK_IMPORTED_MODULE_11__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_12__services_http_requester_service__["a" /* HttpRequesterService */],
+                __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__["a" /* ToastrNotificationService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_21__services_user_storage_service__["a" /* UserStorageService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         }), 

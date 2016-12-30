@@ -6,7 +6,6 @@ import { AddToFavoritesComponent } from './users/add-to-favorites/add-to-favorit
 import { ApiUrlsConfigService } from './services/api-urls-config.service';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommentSectionComponent } from './items/comment-section/comment-section.component';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 import { DateProviderService } from './services/helpers/date-provider.service';
@@ -38,8 +37,7 @@ import { UsersModule } from './users/users.module';
     AppComponent,
     NavigationComponent,
     ToastrNotificationsHandlerComponent,
-    NavigationHoverDirective,
-    CommentSectionComponent
+    NavigationHoverDirective
   ],
   imports: [
     // MockedModule,
