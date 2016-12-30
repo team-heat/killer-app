@@ -1,14 +1,17 @@
 import { AuthenticationResponseModel } from './../models/authentication-response.model';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { Injectable } from '@angular/core';
+import { ItemListing } from './../models/item-listing.model';
 
 @Injectable()
 export class UserStorageService {
 
-  private cookieName; string;
+  private cookieName: string;
+  private localStorageFavoritesKey: string;
 
   constructor(private cookieService: CookieService) {
     this.cookieName = 'com.herokuapps.killerapp';
+    this.localStorageFavoritesKey = 'killerappuserfavorites';
   }
 
   get loggedUser(): string {
@@ -37,5 +40,19 @@ export class UserStorageService {
 
   clearLoggedUser(): void {
     this.cookieService.remove(this.cookieName);
+  }
+
+  setLoggedUserFavorites(favorites: any[]): void {
+    const favoritesJson = JSON.stringify(favorites);
+    localStorage.setItem(this.localStorageFavoritesKey, favoritesJson);
+  }
+
+  getLoggedUserFavorites(): ItemListing[] {
+    const favoritesJson = localStorage.getItem(this.localStorageFavoritesKey);
+    return JSON.parse(favoritesJson);
+  }
+
+  clearLoggedUserFavorites(): void {
+    localStorage.removeItem(this.localStorageFavoritesKey);
   }
 }

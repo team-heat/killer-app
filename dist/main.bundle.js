@@ -305,6 +305,7 @@ var UserStorageService = (function () {
     function UserStorageService(cookieService) {
         this.cookieService = cookieService;
         this.cookieName = 'com.herokuapps.killerapp';
+        this.localStorageFavoritesKey = 'killerappuserfavorites';
     }
     Object.defineProperty(UserStorageService.prototype, "loggedUser", {
         get: function () {
@@ -331,6 +332,17 @@ var UserStorageService = (function () {
     };
     UserStorageService.prototype.clearLoggedUser = function () {
         this.cookieService.remove(this.cookieName);
+    };
+    UserStorageService.prototype.setLoggedUserFavorites = function (favorites) {
+        var favoritesJson = JSON.stringify(favorites);
+        localStorage.setItem(this.localStorageFavoritesKey, favoritesJson);
+    };
+    UserStorageService.prototype.getLoggedUserFavorites = function () {
+        var favoritesJson = localStorage.getItem(this.localStorageFavoritesKey);
+        return JSON.parse(favoritesJson);
+    };
+    UserStorageService.prototype.clearLoggedUserFavorites = function () {
+        localStorage.removeItem(this.localStorageFavoritesKey);
     };
     UserStorageService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
@@ -996,6 +1008,7 @@ var LoginComponent = (function () {
                 throw new Error('Incorrect response');
             }
             _this.userStorage.setLoggedUser(response);
+            _this.userStorage.setLoggedUserFavorites(response.favorites);
             var method = 'success';
             var message = "Welcome back " + _this.userStorage.loggedUser;
             var heading = 'Yay!';
@@ -1077,6 +1090,7 @@ var LogoutComponent = (function () {
                 .createToastrNotificationOptions(method, message, heading);
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
             _this.userStorage.clearLoggedUser();
+            _this.userStorage.clearLoggedUserFavorites();
         }, function (err) {
             var method = 'error';
             var message = 'Please try again.';

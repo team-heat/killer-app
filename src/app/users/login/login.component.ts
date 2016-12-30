@@ -61,8 +61,8 @@ export class LoginComponent implements OnInit {
           throw new Error('Incorrect response');
         }
 
-        console.log(response.favorites);
         this.userStorage.setLoggedUser(response as AuthenticationResponseModel);
+        this.userStorage.setLoggedUserFavorites(response.favorites);
 
         const method = 'success';
         const message = `Welcome back ${this.userStorage.loggedUser}`;
