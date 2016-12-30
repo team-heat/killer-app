@@ -37,7 +37,7 @@ export class MakeOfferComponent implements OnInit {
             make: null,
             year: null,
             price: null,
-            pictures: [],
+            pictures: [{ imageUrl: null }],
             offers: [],
             enginePower: null,
             interiorColor: null,
@@ -66,7 +66,7 @@ export class MakeOfferComponent implements OnInit {
             this.appRouter.navigateByUrl('login');
         }
 
-        let id;
+        let id: string;
         let username: String;
 
         if (this.userStorageService.isLogged()) {
@@ -120,11 +120,12 @@ export class MakeOfferComponent implements OnInit {
         this.itemListingService.makeOffer(this.offer)
             .map(x => x.json())
             .subscribe((x: any) => {
-                this.item = x as ItemListing;
                 const toastrNotificationOptions = this.toastrOptionsFactory
                     .createToastrNotificationOptions('success', 'You have submitted the offer successfully.', 'Add Item');
 
                 this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+
+                this.appRouter.navigateByUrl('/gallery/' + x._id + '/offers');
             });
     }
 }
