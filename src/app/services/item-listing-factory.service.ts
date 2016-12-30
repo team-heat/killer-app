@@ -24,6 +24,7 @@ export class ItemListingFactoryService {
     itemListing.createdOn = new Date();
     itemListing.isActive = true;
     itemListing.pictures = [];
+    itemListing.comments = [];
 
     return itemListing;
   }

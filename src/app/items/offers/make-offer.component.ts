@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router'
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
 
@@ -38,6 +38,7 @@ export class MakeOfferComponent implements OnInit {
             year: null,
             price: null,
             pictures: [{ imageUrl: null }],
+            comments: [],
             offers: [],
             enginePower: null,
             interiorColor: null,

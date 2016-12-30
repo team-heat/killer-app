@@ -31,14 +31,16 @@ import { FormYearValidationDirective } from './directives/form-year-validation.d
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
+import { CommentSectionComponent } from './comment-section/comment-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     ToastrNotificationsHandlerComponent,
-    NavigationHoverDirective
-  ],
+    NavigationHoverDirective,
+    CommentSectionComponent
+],
   imports: [
     // MockedModule,
     ItemsModule,

@@ -4,7 +4,7 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 
-module.exports = function ({ app, userController, itemListingController, favoritesController, uploadController }) {
+module.exports = function({ app, userController, itemListingController, favoritesController, uploadController }) {
   const apiRouter = new express.Router();
   apiRouter
     .post('/upload', passport.authenticate('jwt'), uploadController.createFile)
@@ -18,17 +18,18 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .get('/gallery/:id', itemListingController.details)
     .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing)
     .post('/gallery/:id', passport.authenticate('jwt'), itemListingController.submitOfferForListing)
-    .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing);
+    .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing)
+    .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing);
 
   app.use('/api', apiRouter);
 
   app
-    .get('/', function (req, res) {
+    .get('/', function(req, res) {
       res
         .status(200)
         .sendFile(path.join(__dirname, '/../../dist/index.html'));
     })
-    .get('*', function (req, res) {
+    .get('*', function(req, res) {
       res
         .status(200)
         .sendFile(path.join(__dirname, '/../../dist/index.html'));
