@@ -1,5 +1,7 @@
 <h2>Offers for:</h2>
-<a routerLink='/gallery/{{this.item._id}}'><img src="{{this.item.pictures[0].imageUrl}}"></a>
+<a routerLink="/gallery/{{this.item._id}}"><img src="{{this.item.pictures[0].imageUrl}}"></a>
+
+<a *ngIf="this.isLogged && !this.isOwner" routerLink="/gallery/{{this.item._id}}/offer" class="btn btn-primary">Make offer</a>
 
 <h3 *ngIf="!this.item.offers.length">No offers at this moment!</h3>
 

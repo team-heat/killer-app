@@ -36,6 +36,9 @@ export class OffersListComponent {
             isActive: false,
             owner: null
         };
+
+        this.isLogged = false;
+        this.isOwner = false;
     }
 
     ngOnInit() {
