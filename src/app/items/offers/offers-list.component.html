@@ -5,7 +5,29 @@
 
 <h3 *ngIf="!this.item.offers.length">No offers at this moment!</h3>
 
-<div *ngFor="let offer of this.item.offers" class="offer">
-    <h3>{{offer.offeredPrice}}</h3>
-    <p>By: {{offer.username}}</p>
+<div *ngIf="this.item.offers.length">
+    <h2>Active offers:</h2>
+    <div *ngFor="let offer of this.item.offers" class="offer">
+        <div *ngIf="offer.status === 'active'">
+            <h3>{{offer.offeredPrice}}</h3>
+            <p>By: {{offer.username}}</p>
+            <!--<div class="btn btn-primary" (click)="WasClicked($event, offer)">Click FFS</div>--> 
+        </div>
+    </div>
+
+    <h2>Rejected offers:</h2>
+    <div *ngFor="let offer of this.item.offers" class="offer">
+        <div *ngIf="offer.status === 'rejected'">
+            <h3>{{offer.offeredPrice}}</h3>
+            <p>By: {{offer.username}}</p>
+        </div>
+    </div>
+
+    <h2>Canceled offers:</h2>
+    <div *ngFor="let offer of this.item.offers" class="offer">
+        <div *ngIf="offer.status === 'canceled'">
+            <h3>{{offer.offeredPrice}}</h3>
+            <p>By: {{offer.username}}</p>
+        </div>
+    </div>
 </div>

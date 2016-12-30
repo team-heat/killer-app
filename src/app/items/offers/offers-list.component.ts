@@ -61,4 +61,12 @@ export class OffersListComponent {
                 this.isOwner = this.item.owner === username;
             });
     }
+
+    // WasClicked($event, offer) {
+    //     console.log($event);
+    //     console.log('-----------------------');
+    //     console.log(offer);
+    //     console.log('-----------------------');
+    //     this.item.offers[0].status = 'canceled';        
+    // }
 }
