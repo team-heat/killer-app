@@ -34,7 +34,6 @@ export class AddToFavoritesComponent implements OnInit {
       })
       .map(response => response.json())
       .subscribe((response) => {
-        console.log('here');
         const method = 'success';
         const message = `Added a new item to favorites.`;
         const heading = 'Yay!';
@@ -42,8 +41,9 @@ export class AddToFavoritesComponent implements OnInit {
           .createToastrNotificationOptions(method, message, heading);
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+
+        this.location.back();
       }, (err) => {
-        console.log(err);
         const method = 'error';
         const message = 'Item already exists in your favorites list.';
         const heading = 'Oops!';
@@ -53,9 +53,6 @@ export class AddToFavoritesComponent implements OnInit {
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
 
         this.location.back();
-      }, () => {
-        console.log('here2');
-        this.location.back();
-      });
+      }, () => { });
   }
 }

@@ -261,15 +261,14 @@ var AddToFavoritesComponent = (function () {
         })
             .map(function (response) { return response.json(); })
             .subscribe(function (response) {
-            console.log('here');
             var method = 'success';
             var message = "Added a new item to favorites.";
             var heading = 'Yay!';
             var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+            _this.location.back();
         }, function (err) {
-            console.log(err);
             var method = 'error';
             var message = 'Item already exists in your favorites list.';
             var heading = 'Oops!';
@@ -277,10 +276,7 @@ var AddToFavoritesComponent = (function () {
                 .createToastrNotificationOptions(method, message, heading);
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
             _this.location.back();
-        }, function () {
-            console.log('here2');
-            _this.location.back();
-        });
+        }, function () { });
     };
     AddToFavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
