@@ -1,8 +1,12 @@
-# KillerApp
+# [KillerApp](https://team-heat-killer-app.herokuapp.com/)
 
-![image](./src/assets/screenshot.png)
+![image](./src/assets/screenshot3.png)
 
-![image](./src/assets/screenshot2.png)
+![image](./src/assets/screenshot4.png)
+
+![image](./src/assets/screenshot5.png)
+
+![image](./src/assets/screenshot6.png)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
