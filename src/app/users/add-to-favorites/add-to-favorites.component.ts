@@ -1,12 +1,6 @@
-import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/map';
 
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-
-import { ApiUrlsConfigService } from './../../services/api-urls-config.service';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit, Input } from '@angular/core';
 import { ToastrNotificationOptionsFactoryService } from './../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './../../services/toastr-notification.service';
 import { UserService } from './../../services/user.service';
@@ -18,20 +12,17 @@ import { UserService } from './../../services/user.service';
 })
 export class AddToFavoritesComponent implements OnInit {
 
+  @Input() itemIdToFavorite: string;
+
   constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private location: Location,
     private userService: UserService,
     private toastrNotificationService: ToastrNotificationService,
     private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService, ) { }
 
-  ngOnInit() {
-    this.route.params
-      .switchMap((params: Params) => {
-        const itemListingId = params['id'];
-        return this.userService.addItemToUserFavorites(itemListingId);
-      })
+  ngOnInit() { }
+
+  addToFavorites() {
+    return this.userService.addItemToUserFavorites(this.itemIdToFavorite)
       .map(response => response.json())
       .subscribe((response) => {
         const method = 'success';
@@ -41,8 +32,6 @@ export class AddToFavoritesComponent implements OnInit {
           .createToastrNotificationOptions(method, message, heading);
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
-
-        this.location.back();
       }, (err) => {
         const method = 'error';
         const message = 'Item already exists in your favorites list.';
@@ -51,8 +40,6 @@ export class AddToFavoritesComponent implements OnInit {
           .createToastrNotificationOptions(method, message, heading);
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
-
-        this.location.back();
       }, () => { });
   }
 }

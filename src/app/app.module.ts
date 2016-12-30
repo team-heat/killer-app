@@ -64,7 +64,8 @@ import { FormYearValidationDirective } from './directives/form-year-validation.d
     ToastrNotificationOptionsFactoryService,
     ToastrNotificationService,
     UserService,
-    UserStorageService
+    UserStorageService,
+    AddToFavoritesComponent
   ],
   bootstrap: [AppComponent]
 })
