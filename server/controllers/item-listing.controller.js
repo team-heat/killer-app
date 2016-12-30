@@ -63,7 +63,7 @@ module.exports = function({ itemListingData }) {
   }
 
   function addCommentToListing(req, res) {
-    console.log(req);
+    const listingId = req.params.id;
 
     // return itemListingData.addCommentToItemListing()
     //   .then(itemListing => {
