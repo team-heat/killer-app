@@ -59,13 +59,23 @@ module.exports = function ({ItemListing}) {
     const offerForAdd = {
       'username': offer.username,
       'offeredPrice': offer.offeredPrice,
-      'status': 'active'
+      'status': offer.status
     }
 
     return new Promise((resolve, reject) => {
       getItemListingById(offer.id)
         .then(itemListing => {
-          itemListing.offers.push(offerForAdd);
+
+          // if same offer from same person already exsist and active directly resolve
+          for (let i of itemListing.offers) {
+            if (i.username === offer.username &&
+              i.offeredPrice === offer.offeredPrice &&
+              i.status === 'active') {
+              resolve(itemListing);
+            }
+          }
+
+          itemListing.offers.unshift(offerForAdd);
 
           itemListing.save(err => {
             if (err) {
