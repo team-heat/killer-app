@@ -32903,7 +32903,7 @@ var NgUploaderService = (function () {
 var NgUploaderServiceProvider = {
     provide: NgUploaderService, useClass: NgUploaderService
 };
-//# sourceMappingURL=E:/MyRepos/killer-app/src/ngx-uploader.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ngx-uploader.js.map
 
 /***/ },
 /* 159 */,
@@ -45610,7 +45610,7 @@ function TreeNode_tsickle_Closure_declarations() {
 
 
 
-//# sourceMappingURL=E:/MyRepos/killer-app/src/index.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/index.js.map
 
 /***/ },
 /* 227 */
@@ -45787,7 +45787,7 @@ var NgFileDropDirective = (function () {
     return NgFileDropDirective;
     var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/ng-file-drop.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ng-file-drop.js.map
 
 /***/ },
 /* 228 */
@@ -45913,7 +45913,7 @@ var NgFileSelectDirective = (function () {
     return NgFileSelectDirective;
     var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/ng-file-select.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ng-file-select.js.map
 
 /***/ },
 /* 229 */,
@@ -64464,7 +64464,7 @@ var UploadedFile = (function () {
     };
     return UploadedFile;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/uploaded-file.class.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/uploaded-file.class.js.map
 
 /***/ },
 /* 349 */,
@@ -83903,7 +83903,7 @@ var NgUploaderOptions = (function () {
     }
     return NgUploaderOptions;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/ng-uploader-options.class.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ng-uploader-options.class.js.map
 
 /***/ },
 /* 545 */
@@ -83926,7 +83926,7 @@ var UploadRejected = (function () {
     });
     return UploadRejected;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/upload-rejected.class.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/upload-rejected.class.js.map
 
 /***/ },
 /* 546 */
@@ -83972,7 +83972,7 @@ var NgUploaderModule = (function () {
     ], NgUploaderModule);
     return NgUploaderModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/ngx-uploader.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ngx-uploader.module.js.map
 
 /***/ },
 /* 547 */,
