@@ -29,6 +29,7 @@ export class OffersListComponent {
             price: null,
             offers: [],
             pictures: [{ imageUrl: null }],
+            comments: [],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
