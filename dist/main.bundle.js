@@ -282,7 +282,26 @@ var AddToFavoritesComponent = (function () {
         }, function () { });
     };
     AddToFavoritesComponent.prototype.removeToFavorites = function () {
-        console.log('remove from favorites');
+        var _this = this;
+        return this.userService.removeItemToUserFavorites(this.itemIdToFavorite)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (response) {
+            var method = 'success';
+            var message = "Removed an item from favorites.";
+            var heading = 'Yay!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+            _this.userStorage.setLoggedUserFavorites(response.favorites);
+            _this.itemIsFavorite = false;
+        }, function (err) {
+            var method = 'error';
+            var message = 'Item already exists in your favorites list.';
+            var heading = 'Oops!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        }, function () { });
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"])(), 
@@ -2852,6 +2871,11 @@ var UserService = (function () {
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(this.favoritesApiUrl, id, this.contentTypeHeaderObject);
         return this.httpRequesterService.post(httpRequestOptions);
+    };
+    UserService.prototype.removeItemToUserFavorites = function (id) {
+        var httpRequestOptions = this.httpRequesterOptionsFactory
+            .createHttpRequesterOptions(this.favoritesApiUrl, id, this.contentTypeHeaderObject);
+        return this.httpRequesterService.put(httpRequestOptions);
     };
     UserService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(), 

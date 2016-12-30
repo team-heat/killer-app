@@ -58,6 +58,26 @@ export class AddToFavoritesComponent implements OnInit {
   }
 
   removeToFavorites() {
-    console.log('remove from favorites');
+    return this.userService.removeItemToUserFavorites(this.itemIdToFavorite)
+      .map(response => response.json())
+      .subscribe((response) => {
+        const method = 'success';
+        const message = `Removed an item from favorites.`;
+        const heading = 'Yay!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        this.userStorage.setLoggedUserFavorites(response.favorites);
+        this.itemIsFavorite = false;
+      }, (err) => {
+        const method = 'error';
+        const message = 'Item already exists in your favorites list.';
+        const heading = 'Oops!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      }, () => { });
   }
 }

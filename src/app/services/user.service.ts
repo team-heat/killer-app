@@ -57,4 +57,11 @@ export class UserService {
 
     return this.httpRequesterService.post(httpRequestOptions);
   }
+
+  removeItemToUserFavorites(id: string): Observable<Response> {
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(this.favoritesApiUrl, id, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.put(httpRequestOptions);
+  }
 }

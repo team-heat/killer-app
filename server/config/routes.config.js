@@ -4,7 +4,7 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 
-module.exports = function({ app, userController, itemListingController, favoritesController, uploadController }) {
+module.exports = function ({ app, userController, itemListingController, favoritesController, uploadController }) {
   const apiRouter = new express.Router();
   apiRouter
     .post('/upload', passport.authenticate('jwt'), uploadController.createFile)
@@ -14,6 +14,7 @@ module.exports = function({ app, userController, itemListingController, favorite
     .get('/logout', passport.authenticate('jwt'), userController.logout)
     .get('/favorites', passport.authenticate('jwt'), favoritesController.index)
     .post('/favorites', passport.authenticate('jwt'), favoritesController.create)
+    .put('/favorites', passport.authenticate('jwt'), favoritesController.remove)
     .get('/gallery', itemListingController.index)
     .get('/gallery/:id', itemListingController.details)
     .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing)
@@ -24,12 +25,12 @@ module.exports = function({ app, userController, itemListingController, favorite
   app.use('/api', apiRouter);
 
   app
-    .get('/', function(req, res) {
+    .get('/', function (req, res) {
       res
         .status(200)
         .sendFile(path.join(__dirname, '/../../dist/index.html'));
     })
-    .get('*', function(req, res) {
+    .get('*', function (req, res) {
       res
         .status(200)
         .sendFile(path.join(__dirname, '/../../dist/index.html'));
