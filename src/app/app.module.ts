@@ -64,7 +64,8 @@ import { UsersModule } from './users/users.module';
     ToastrNotificationOptionsFactoryService,
     ToastrNotificationService,
     UserService,
-    UserStorageService
+    UserStorageService,
+    AddToFavoritesComponent
   ],
   bootstrap: [AppComponent]
 })

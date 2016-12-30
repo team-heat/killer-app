@@ -1,11 +1,17 @@
-a.add-btn {
-  span.glyphicon-heart {
-    cursor: pointer;
-    font-size: 3.5rem;
-    color: #E6E6E6;
-    // color: #9D9D9D;
-  }
-  &:hover>span.glyphicon-heart {
+span.add-to-favorites {
+  cursor: pointer;
+  font-size: 3.5rem;
+  color: #E6E6E6;
+  &:hover {
     color: #DF474B;
+  }
+}
+
+span.remove-to-favorites {
+  cursor: pointer;
+  font-size: 3.5rem;
+  color: #DF474B;
+  &:hover {
+    color: #E6E6E6;
   }
 }

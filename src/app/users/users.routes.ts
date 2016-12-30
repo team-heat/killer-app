@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'facebook-login', component: ProfileComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'favorites', component: FavoritesComponent },
-  { path: 'favorites/:id', component: AddToFavoritesComponent },
   { path: 'listed-items', component: ListedItemsComponent }
 ];
 
