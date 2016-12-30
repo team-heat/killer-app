@@ -23,10 +23,10 @@ module.exports = function ({userData, itemListingData}) {
         return userData.updateUser(loggedUser);
       })
       .then(() => {
-        res.status(200).json({ message: 'Successfully added listing.' });
+        res.status(200).send({ message: 'Successfully added listing.' });
       })
       .catch((err) => {
-        return res.status(400, { error: err.message });
+        return res.status(400, { error: err.message }).send();
       });
   }
 

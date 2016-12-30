@@ -1,4 +1,5 @@
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/map';
 
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -26,36 +27,35 @@ export class AddToFavoritesComponent implements OnInit {
     private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService, ) { }
 
   ngOnInit() {
-    const observable = this.route.params
+    this.route.params
       .switchMap((params: Params) => {
         const itemListingId = params['id'];
         return this.userService.addItemToUserFavorites(itemListingId);
+      })
+      .map(response => response.json())
+      .subscribe((response) => {
+        console.log('here');
+        const method = 'success';
+        const message = `Added a new item to favorites.`;
+        const heading = 'Yay!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      }, (err) => {
+        console.log(err);
+        const method = 'error';
+        const message = 'Item already exists in your favorites list.';
+        const heading = 'Oops!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+
+        this.location.back();
+      }, () => {
+        console.log('here2');
+        this.location.back();
       });
-
-    observable.subscribe((response) => {
-      console.log('here');
-      const method = 'success';
-      const message = `Added a new item to favorites.`;
-      const heading = 'Yay!';
-      const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
-        .createToastrNotificationOptions(method, message, heading);
-
-      this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
-    }, (err) => {
-      const method = 'error';
-      const message = err;
-      const heading = 'Oops!';
-      const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
-        .createToastrNotificationOptions(method, message, heading);
-
-      this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
-
-      this.location.back();
-    }, () => {
-      console.log('here2');
-      this.location.back();
-    });
-
-    this.location.back();
   }
 }
