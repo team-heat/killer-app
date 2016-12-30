@@ -649,7 +649,7 @@ var OffersListComponent = (function () {
             year: null,
             price: null,
             offers: [],
-            pictures: [],
+            pictures: [{ imageUrl: null }],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
@@ -657,6 +657,8 @@ var OffersListComponent = (function () {
             isActive: false,
             owner: null
         };
+        this.isLogged = false;
+        this.isOwner = false;
     }
     OffersListComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2956,7 +2958,7 @@ module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pict
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<h1>Offers list works .... maybe!</h1>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
+module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
 
 /***/ },
 
