@@ -1007,8 +1007,11 @@ var LoginComponent = (function () {
             if (!response.username || !response.auth_token) {
                 throw new Error('Incorrect response');
             }
-            _this.userStorage.setLoggedUser(response);
             _this.userStorage.setLoggedUserFavorites(response.favorites);
+            _this.userStorage.setLoggedUser({
+                auth_token: response.auth_token,
+                username: response.username
+            });
             var method = 'success';
             var message = "Welcome back " + _this.userStorage.loggedUser;
             var heading = 'Yay!';

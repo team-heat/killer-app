@@ -20,7 +20,7 @@ module.exports = function ({userData, config}) {
     res.status(200).json({
       username: req.user.username,
       auth_token: jsonWebToken.sign(webTokenObject, webTokenSecret),
-      favorites: req.user.favorites
+      favorites: req.user.favorites.map(f => f._id)
     });
   }
 
