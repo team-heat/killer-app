@@ -16,4 +16,6 @@
     <a *ngIf="this.isLogged && !this.isOwner" class="btn btn-primary" routerLink="/gallery/{{this.item._id}}/offer">Make Offer</a>
 
     <a class="btn btn-primary" routerLink="/gallery/{{this.item._id}}/offers">Show offers</a>
+
+    <app-comment-section></app-comment-section>
 </div>

@@ -30,6 +30,7 @@ export class LogoutComponent implements OnInit {
 
         this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
         this.userStorage.clearLoggedUser();
+        this.userStorage.clearLoggedUserFavorites();
       }, (err) => {
         const method = 'error';
         const message = 'Please try again.';

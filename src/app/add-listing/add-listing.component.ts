@@ -1,6 +1,6 @@
-import { FileUploadResponse } from './../models/file-upload-response.model';
 import { Component, OnInit } from '@angular/core';
 
+import { FileUploadResponse } from './../models/file-upload-response.model';
 import { ItemListing } from '../models/item-listing.model';
 import { ItemListingFactoryService } from '../services/item-listing-factory.service';
 import { ItemListingService } from '../services/item-listing.service';

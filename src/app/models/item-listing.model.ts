@@ -7,6 +7,7 @@ export class ItemListing {
   year: number;
   pictures: FileUploadResponse[];
   offers: any[];
+  comments: any[];
   price: number;
   enginePower: number;
   exteriorColor: string;

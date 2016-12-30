@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function ({itemListingData}) {
+module.exports = function({ itemListingData }) {
 
   function index(req, res) {
     return itemListingData.getAll()
@@ -50,7 +50,7 @@ module.exports = function ({itemListingData}) {
     let newOffer = req.body;
     newOffer.username = req.user.username;
     return itemListingData.addOfferToItemListing(newOffer)
-      .then((itemListing) => {
+      .then(itemListing => {
         if (!itemListing) {
           throw new Error('Listing not found.');
         }
@@ -62,11 +62,21 @@ module.exports = function ({itemListingData}) {
       })
   }
 
+  function addCommentToListing(req, res) {
+    const listingId = req.params.id;
+
+    // return itemListingData.addCommentToItemListing()
+    //   .then(itemListing => {
+
+    //   })
+  }
+
   return {
     index,
     details,
     createListing,
     updateListing,
+    addCommentToListing,
     submitOfferForListing
   };
 };
