@@ -1,4 +1,7 @@
-<h1>Offers list works .... maybe!</h1>
+<h2>Offers for:</h2>
+<a routerLink='/gallery/{{this.item._id}}'><img src="{{this.item.pictures[0].imageUrl}}"></a>
+
+<h3 *ngIf="!this.item.offers.length">No offers at this moment!</h3>
 
 <div *ngFor="let offer of this.item.offers" class="offer">
     <h3>{{offer.offeredPrice}}</h3>
