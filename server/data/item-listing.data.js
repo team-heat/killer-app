@@ -16,7 +16,8 @@ module.exports = function ({ItemListing}) {
     'engineTorque',
     'enginePower',
     'history',
-    'pictures'
+    'owner',
+    'isActive'
   ];
 
   function createItemListing(listing) {
@@ -108,6 +109,30 @@ module.exports = function ({ItemListing}) {
         return resolve(result);
       });
     });
+  }
+
+  function updateItelListing(listingForUpdate) {
+    return new Promise((resolve, reject) => {
+      getItemListingById(listingForUpdate._id)
+        .then(listing => {
+          
+          for (const key in availableModelProperties) {
+            listing[key] = listingForUpdate[key];
+          }
+
+          listing.save(err => {
+            if (err) {
+              reject(err);
+            }
+
+            resolve(listing);
+          })
+
+        })
+        .catch(err => {
+          reject(err);
+        })
+    })
   }
 
   return {
