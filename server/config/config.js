@@ -15,7 +15,8 @@ module.exports = function({ environment }) {
       webTokenSecret: process.env.WEB_TOKEN_SECRET,
       sessionSecret: process.env.SESSION_SECRET,
       connectionString: process.env.CONNECTION_STRING,
-      port: process.env.PORT
+      port: process.env.PORT,
+      errorResponseCode: 400
     }
   };
 
