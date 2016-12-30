@@ -43,6 +43,19 @@ module.exports = function ({itemListingData}) {
   }
 
   function updateListing(req, res) {
+    let listingForUpdate = req.body;
+    return itemListingData.updateListing(listingForUpdate)
+      .then(listing => {
+        if (!listing) {
+          throw new Error('Listing not found.');
+        }
+
+        res.status(200).json(listing);
+      })
+      .catch(err => {
+        res.status(400).json({ message: err.message });
+      })
+
     res.status(200).json({ message: 'PUT /api/gallery/:id' });
   }
 
