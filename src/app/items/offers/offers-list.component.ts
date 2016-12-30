@@ -28,7 +28,7 @@ export class OffersListComponent {
             year: null,
             price: null,
             offers: [],
-            pictures: [],
+            pictures: [{ imageUrl: null }],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
@@ -36,6 +36,9 @@ export class OffersListComponent {
             isActive: false,
             owner: null
         };
+
+        this.isLogged = false;
+        this.isOwner = false;
     }
 
     ngOnInit() {
