@@ -44,7 +44,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user-factory.service.js.map
 
 /***/ },
 
@@ -88,7 +88,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -123,7 +123,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/hashing.service.js.map
 
 /***/ },
 
@@ -160,7 +160,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -207,7 +207,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
@@ -219,7 +219,7 @@ var HttpRequesterService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_service__ = __webpack_require__(72);
@@ -289,11 +289,11 @@ var AddToFavoritesComponent = (function () {
     return AddToFavoritesComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-to-favorites.component.js.map
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -350,7 +350,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -383,7 +383,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -418,7 +418,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -483,7 +483,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items-collection.component.js.map
 
 /***/ },
 
@@ -494,7 +494,7 @@ var ItemsCollectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MakeOfferComponent; });
@@ -527,7 +527,7 @@ var MakeOfferComponent = (function () {
             make: null,
             year: null,
             price: null,
-            pictures: [],
+            pictures: [{ imageUrl: null }],
             offers: [],
             enginePower: null,
             interiorColor: null,
@@ -594,10 +594,10 @@ var MakeOfferComponent = (function () {
         this.itemListingService.makeOffer(this.offer)
             .map(function (x) { return x.json(); })
             .subscribe(function (x) {
-            _this.item = x;
             var toastrNotificationOptions = _this.toastrOptionsFactory
                 .createToastrNotificationOptions('success', 'You have submitted the offer successfully.', 'Add Item');
             _this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+            _this.appRouter.navigateByUrl('/gallery/' + x._id + '/offers');
         });
     };
     MakeOfferComponent = __decorate([
@@ -611,7 +611,7 @@ var MakeOfferComponent = (function () {
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/make-offer.component.js.map
 
 /***/ },
 
@@ -622,7 +622,7 @@ var MakeOfferComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return OffersListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -686,7 +686,7 @@ var OffersListComponent = (function () {
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/offers-list.component.js.map
 
 /***/ },
 
@@ -697,7 +697,7 @@ var OffersListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SingleItemComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -762,7 +762,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/single-item.component.js.map
 
 /***/ },
 
@@ -798,7 +798,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
@@ -850,7 +850,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -894,7 +894,7 @@ var FavoritesComponent = (function () {
     return FavoritesComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/favorites.component.js.map
 
 /***/ },
 
@@ -929,7 +929,7 @@ var ListedItemsComponent = (function () {
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/listed-items.component.js.map
 
 /***/ },
 
@@ -946,7 +946,7 @@ var ListedItemsComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1033,7 +1033,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -1046,7 +1046,7 @@ var LoginComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LogoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1104,7 +1104,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -1118,7 +1118,7 @@ var LogoutComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1167,7 +1167,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -1184,7 +1184,7 @@ var ProfileComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1270,7 +1270,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -1279,7 +1279,7 @@ var RegisterComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_to_favorites_add_to_favorites_component__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pipes_date_formatter_pipe__ = __webpack_require__(563);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__facebook_login_facebook_login_component__ = __webpack_require__(565);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__favorites_favorites_component__ = __webpack_require__(357);
@@ -1354,7 +1354,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -1391,7 +1391,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/main.js.map
 
 /***/ },
 
@@ -1464,7 +1464,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -1478,7 +1478,7 @@ var ToastrNotificationService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddListingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1537,7 +1537,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.component.js.map
 
 /***/ },
 
@@ -1546,7 +1546,7 @@ var AddListingComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_listing_component__ = __webpack_require__(547);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__ = __webpack_require__(554);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_form_default_value_directive__ = __webpack_require__(551);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(145);
@@ -1609,7 +1609,7 @@ var AddListingModule = (function () {
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.module.js.map
 
 /***/ },
 
@@ -1640,7 +1640,7 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(564);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_storage_service__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__users_users_module__ = __webpack_require__(363);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1720,7 +1720,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -1758,7 +1758,7 @@ var CarouselListComponent = (function () {
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -1796,7 +1796,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -1844,7 +1844,7 @@ var FormYearValidationDirective = (function () {
     return FormYearValidationDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/form-year-validation.directive.js.map
 
 /***/ },
 
@@ -1898,7 +1898,7 @@ var NavigationHoverDirective = (function () {
     return NavigationHoverDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation-hover.directive.js.map
 
 /***/ },
 
@@ -1978,7 +1978,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -1988,7 +1988,7 @@ var FileUploaderComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_routes__ = __webpack_require__(556);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_component__ = __webpack_require__(350);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2019,7 +2019,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -2058,7 +2058,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -2072,7 +2072,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/index.js.map
 
 /***/ },
 
@@ -2081,7 +2081,7 @@ var HomeRouterModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__carousel_list_carousel_list_component__ = __webpack_require__(550);
@@ -2091,7 +2091,7 @@ var HomeRouterModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__offers_make_offer_component__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__items_routes__ = __webpack_require__(559);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_item_listing_service__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_user_storage_service__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_options_factory_service__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_toastr_notification_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__users_users_module__ = __webpack_require__(363);
@@ -2150,7 +2150,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items.module.js.map
 
 /***/ },
 
@@ -2201,7 +2201,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items.routes.js.map
 
 /***/ },
 
@@ -2215,7 +2215,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.model.js.map
 
 /***/ },
 
@@ -2229,7 +2229,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -2238,7 +2238,7 @@ var User = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_storage_service__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_storage_service__ = __webpack_require__(31);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NavigationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2279,7 +2279,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -2313,7 +2313,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -2378,7 +2378,7 @@ var ToastrNotificationsHandlerComponent = (function () {
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -2413,7 +2413,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -2448,7 +2448,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -2506,7 +2506,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -2522,7 +2522,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -2578,7 +2578,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -2623,7 +2623,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification-options-factory.service.js.map
 
 /***/ },
 
@@ -2696,7 +2696,7 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
@@ -2767,7 +2767,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user.service.js.map
 
 /***/ },
 
@@ -2949,7 +2949,7 @@ module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header
 /***/ 752:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pictures[0].imageURL}}\">\r\n    <h3>StartPrice: {{this.item.price}}</h3>\r\n    <h3>Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
+module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n    <h3>StartPrice: {{this.item.price}}</h3>\r\n    <h3>Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ },
 
