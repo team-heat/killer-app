@@ -1,8 +1,8 @@
-import { AddToFavoritesComponent } from './users/add-to-favorites/add-to-favorites.component';
 import { Router, RouterModule } from '@angular/router';
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
 
 import { AddListingModule } from './add-listing/add-listing.module';
+import { AddToFavoritesComponent } from './users/add-to-favorites/add-to-favorites.component';
 import { ApiUrlsConfigService } from './services/api-urls-config.service';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +11,7 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 import { DateProviderService } from './services/helpers/date-provider.service';
 import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 import { FormDefaultValueDirective } from './directives/form-default-value.directive';
+import { FormYearValidationDirective } from './directives/form-year-validation.directive';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
@@ -27,20 +28,17 @@ import { ToastrNotificationsHandlerComponent } from './toastr-notifications-hand
 import { UserService } from './services/user.service';
 import { UserStorageService } from './services/user-storage.service';
 import { UsersModule } from './users/users.module';
-import { FormYearValidationDirective } from './directives/form-year-validation.directive';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
-import { CommentSectionComponent } from './comment-section/comment-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     ToastrNotificationsHandlerComponent,
-    NavigationHoverDirective,
-    CommentSectionComponent
-],
+    NavigationHoverDirective
+  ],
   imports: [
     // MockedModule,
     ItemsModule,
