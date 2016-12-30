@@ -517,6 +517,7 @@ var MakeOfferComponent = (function () {
             year: null,
             price: null,
             pictures: [{ imageUrl: null }],
+            comments: [],
             offers: [],
             enginePower: null,
             interiorColor: null,
@@ -639,6 +640,7 @@ var OffersListComponent = (function () {
             price: null,
             offers: [],
             pictures: [{ imageUrl: null }],
+            comments: [],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,
@@ -715,6 +717,7 @@ var SingleItemComponent = (function () {
             year: null,
             price: null,
             pictures: [],
+            comments: [],
             offers: [],
             enginePower: null,
             interiorColor: null,
@@ -833,6 +836,7 @@ var ItemListingFactoryService = (function () {
         itemListing.createdOn = new Date();
         itemListing.isActive = true;
         itemListing.pictures = [];
+        itemListing.comments = [];
         return itemListing;
     };
     ItemListingFactoryService = __decorate([
@@ -1634,6 +1638,7 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_user_storage_service__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__users_users_module__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__comment_section_comment_section_component__ = __webpack_require__(798);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1668,8 +1673,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/** MOCK */
-// import { MockedModule } from './mocked-module/mocked.module'
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -1679,7 +1683,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__navigation_navigation_component__["a" /* NavigationComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
+                __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */],
+                __WEBPACK_IMPORTED_MODULE_24__comment_section_comment_section_component__["a" /* CommentSectionComponent */]
             ],
             imports: [
                 // MockedModule,
@@ -3040,6 +3045,55 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(423);
 
+
+/***/ },
+
+/***/ 798:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CommentSectionComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CommentSectionComponent = (function () {
+    function CommentSectionComponent() {
+    }
+    CommentSectionComponent.prototype.ngOnInit = function () {
+    };
+    CommentSectionComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-comment-section',
+            template: __webpack_require__(800),
+            styles: [__webpack_require__(799)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], CommentSectionComponent);
+    return CommentSectionComponent;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/comment-section.component.js.map
+
+/***/ },
+
+/***/ 799:
+/***/ function(module, exports) {
+
+module.exports = ""
+
+/***/ },
+
+/***/ 800:
+/***/ function(module, exports) {
+
+module.exports = "<p>\r\n  comment-section works!\r\n</p>"
 
 /***/ }
 

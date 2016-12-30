@@ -14,7 +14,8 @@ module.exports = function ({userData, config}) {
   function login(req, res) {
     const webTokenObject = {
       _id: req.user.id,
-      username: req.user.username
+      username: req.user.username,
+      favorites: req.user.favorites
     };
 
     res.status(200).json({
