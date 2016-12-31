@@ -11,11 +11,11 @@
           <div class="well">
             <div class="form-group">
               <input type="text" #ngMake="ngModel" class="form-control" name="make" [(ngModel)]="itemListing.make" placeholder="Make" required
-                minlength="3" maxlength="30" pattern="[A-Za-z0-9]+">
+                minlength="1" maxlength="30" pattern="[A-Za-z0-9\- ]+">
             </div>
             <div class="form-group">
               <input type="text" #ngModel="ngModel" class="form-control" name="model" [(ngModel)]="itemListing.model" placeholder="Model"
-                required minlength="3" maxlength="30" pattern="[A-Za-z0-9]+">
+                required minlength="1" maxlength="30" pattern="[A-Za-z0-9\- ]+">
             </div>
             <div class="form-group">
               <input appFormDefaultValue appFormYearValidation type="text" #ngYear="ngModel" class="form-control" name="year" [(ngModel)]="itemListing.year"
@@ -31,11 +31,11 @@
             </div>
             <div class="form-group">
               <input type="text" #ngExteriorColor="ngModel" class="form-control" name="exteriorColor" [(ngModel)]="itemListing.exteriorColor"
-                placeholder="Exterior Color" required minlength="3" maxlength="30" pattern="[A-Za-z]+">
+                placeholder="Exterior Color" required minlength="3" maxlength="30" pattern="[A-Za-z \-]+">
             </div>
             <div class="form-group">
               <input type="text" #InteriorColor="ngModel" class="form-control" name="interiorColor" [(ngModel)]="itemListing.interiorColor"
-                placeholder="Interior Color" required minlength="3" maxlength="30" pattern="[A-Za-z]+">
+                placeholder="Interior Color" required minlength="3" maxlength="30" pattern="[A-Za-z \-]+">
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-success">Submit</button>
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div id="image-upload" class="form-group">
-        <app-file-uploader (onFileUpload)="onFileUpload($event)"></app-file-uploader>
+        <app-file-uploader [resetState]="this.resetState" (onFileUpload)="onFileUpload($event)"></app-file-uploader>
       </div>
 
     </form>

@@ -17,6 +17,7 @@ import { UserStorageService } from '../services/user-storage.service';
 export class AddListingComponent implements OnInit {
 
   itemListing: ItemListing;
+  resetState: boolean;
 
   constructor(
     private appRouter: Router,
@@ -27,6 +28,7 @@ export class AddListingComponent implements OnInit {
     private toastrOptionsFactory: ToastrNotificationOptionsFactoryService) {
 
     this.itemListing = this.itemListingFactory.createItemListing();
+    this.resetState = false;
   }
 
   ngOnInit() {
@@ -47,6 +49,7 @@ export class AddListingComponent implements OnInit {
           .createToastrNotificationOptions('success', 'You have submitted the item successfully.', 'Add Item');
 
         this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+        this.resetState = true;
       });
   }
 

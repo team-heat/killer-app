@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FileUploadResponse } from './../models/file-upload-response.model';
 import { NgUploaderOptions } from 'ngx-uploader';
 
@@ -7,7 +7,7 @@ import { NgUploaderOptions } from 'ngx-uploader';
   templateUrl: './file-uploader.component.html',
   styleUrls: ['./file-uploader.component.scss']
 })
-export class FileUploaderComponent implements OnInit {
+export class FileUploaderComponent {
 
   @Output() onFileUpload: EventEmitter<FileUploadResponse[]> = new EventEmitter<FileUploadResponse[]>();
 
@@ -25,7 +25,12 @@ export class FileUploaderComponent implements OnInit {
     this.labelText = this.initialLabelText;
   }
 
-  ngOnInit() { }
+  @Input() set resetState(shouldReset: boolean) {
+    if (shouldReset) {
+      this.uploadedFiles = [];
+      this.onFileUpload.emit([...this.uploadedFiles]);
+    }
+  }
 
   handleUpload(data: any): void {
     if (data && data.response) {

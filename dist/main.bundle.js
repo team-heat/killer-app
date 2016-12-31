@@ -1651,6 +1651,7 @@ var AddListingComponent = (function () {
         this.toastrNotification = toastrNotification;
         this.toastrOptionsFactory = toastrOptionsFactory;
         this.itemListing = this.itemListingFactory.createItemListing();
+        this.resetState = false;
     }
     AddListingComponent.prototype.ngOnInit = function () {
         if (!this.userStorage.isLogged()) {
@@ -1667,6 +1668,7 @@ var AddListingComponent = (function () {
             var toastrNotificationOptions = _this.toastrOptionsFactory
                 .createToastrNotificationOptions('success', 'You have submitted the item successfully.', 'Add Item');
             _this.toastrNotification.enqueueNotification(toastrNotificationOptions);
+            _this.resetState = true;
         });
     };
     AddListingComponent.prototype.onFileUpload = function (uploadedFiles) {
@@ -2079,7 +2081,16 @@ var FileUploaderComponent = (function () {
         this.sizeLimit = 2000000;
         this.labelText = this.initialLabelText;
     }
-    FileUploaderComponent.prototype.ngOnInit = function () { };
+    Object.defineProperty(FileUploaderComponent.prototype, "resetState", {
+        set: function (shouldReset) {
+            if (shouldReset) {
+                this.uploadedFiles = [];
+                this.onFileUpload.emit(this.uploadedFiles.slice());
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     FileUploaderComponent.prototype.handleUpload = function (data) {
         if (data && data.response) {
             data = JSON.parse(data.response);
@@ -2116,6 +2127,11 @@ var FileUploaderComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
     ], FileUploaderComponent.prototype, "onFileUpload", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
+        __metadata('design:type', Boolean), 
+        __metadata('design:paramtypes', [Boolean])
+    ], FileUploaderComponent.prototype, "resetState", null);
     FileUploaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-file-uploader',
@@ -3086,7 +3102,7 @@ module.exports = ""
 /***/ 748:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader [resetState]=\"this.resetState\" (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
