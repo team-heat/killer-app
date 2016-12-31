@@ -136,9 +136,9 @@ module.exports = function({ ItemListing }) {
           }       
 
           listing.save(err => {
-            if (err) {
-              reject(err);
-            }
+            // if (err) {
+            //   reject(err);
+            // }
 
             resolve(listing);
           })

@@ -56,6 +56,8 @@ module.exports = function ({ itemListingData }) {
         res.status(200).json(listing);
       })
       .catch(err => {
+        
+          console.log(err)
         res.status(400).json({ message: err.message });
       })
 
