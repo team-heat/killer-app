@@ -18,7 +18,7 @@ module.exports = function ({ ItemListing }) {
     'history',
     'owner',
     'isActive',
-    'comments',
+    'comments'
   ];
 
   function createItemListing(listing) {
@@ -34,7 +34,7 @@ module.exports = function ({ ItemListing }) {
   }
 
   function getAll() {
-    return filterItemListingWithOptions({ isActive: true })
+    return filterItemListingWithOptions({ isActive: true });
   }
 
   function getItemListingById(listingId) {
@@ -55,7 +55,7 @@ module.exports = function ({ ItemListing }) {
       'username': offer.username,
       'offeredPrice': offer.offeredPrice,
       'status': offer.status
-    }
+    };
 
     return new Promise((resolve, reject) => {
       getItemListingById(offer.id)
@@ -78,9 +78,9 @@ module.exports = function ({ ItemListing }) {
             } else {
               resolve(itemListing);
             }
-          })
+          });
         }).catch(reject);
-    })
+    });
   }
 
   function addCommentToItemListing(listingId, comment) {
@@ -95,7 +95,7 @@ module.exports = function ({ ItemListing }) {
             } else {
               resolve(itemListing);
             }
-          })
+          });
         }).catch(reject);
     });
   }
@@ -134,13 +134,13 @@ module.exports = function ({ ItemListing }) {
             // }
 
             resolve(listing);
-          })
+          });
 
         })
         .catch(err => {
           reject(err);
-        })
-    })
+        });
+    });
   }
 
   return {
