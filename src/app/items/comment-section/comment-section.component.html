@@ -1,6 +1,8 @@
 <div class="comment-section">
   <div class="comments-wrapper">
-    <ul></ul>
+    <ul>
+      <li *ngFor="let comment of listingComments">{{comment}}</li>
+    </ul>
   </div>
   <div class="comment-wrapper">
     <textarea name="comment" id="comment" [(ngModel)]="comment"></textarea>

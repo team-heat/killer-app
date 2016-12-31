@@ -3041,7 +3041,7 @@ module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
 /***/ 733:
 /***/ function(module, exports) {
 
-module.exports = "div.comment-section {\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto; }\n  div.comment-section div.comment-wrapper #comment {\n    resize: none;\n    padding: 15px;\n    font-size: 2rem;\n    color: #272727;\n    width: 100%;\n    height: 30vh; }\n"
+module.exports = "div.comment-section {\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto; }\n  div.comment-section div.comment-wrapper #comment {\n    resize: none;\n    padding: 15px;\n    font-size: 2rem;\n    color: #272727;\n    width: 60%;\n    height: 30vh; }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comment-wrapper #comment {\n        width: 100%; } }\n"
 
 /***/ },
 
@@ -3181,7 +3181,7 @@ module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jp
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul></ul>\n  </div>\n  <div class=\"comment-wrapper\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment\"></textarea>\n  </div>\n</div>"
+module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments\">{{comment}}</li>\n    </ul>\n  </div>\n  <div class=\"comment-wrapper\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment\"></textarea>\n  </div>\n</div>"
 
 /***/ },
 

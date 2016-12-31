@@ -9,8 +9,11 @@ div.comment-section {
       padding: 15px;
       font-size: 2rem;
       color: #272727;
-      width: 100%;
+      width: 60%;
       height: 30vh;
+      @media only screen and (max-device-width: 480px) {
+        width: 100%;
+      }
     }
   }
 }
