@@ -57,7 +57,7 @@ export class AddToFavoritesComponent implements OnInit {
       }, () => { });
   }
 
-  removeToFavorites() {
+  removeFromFavorites() {
     return this.userService.removeItemToUserFavorites(this.itemIdToFavorite)
       .map(response => response.json())
       .subscribe((response) => {

@@ -354,7 +354,7 @@ var AddToFavoritesComponent = (function () {
             _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
         }, function () { });
     };
-    AddToFavoritesComponent.prototype.removeToFavorites = function () {
+    AddToFavoritesComponent.prototype.removeFromFavorites = function () {
         var _this = this;
         return this.userService.removeItemToUserFavorites(this.itemIdToFavorite)
             .map(function (response) { return response.json(); })
@@ -369,7 +369,7 @@ var AddToFavoritesComponent = (function () {
             _this.itemIsFavorite = false;
         }, function (err) {
             var method = 'error';
-            var message = 'Item already exists in your favorites list.';
+            var message = 'Item dows not exist in your favorites list.';
             var heading = 'Oops!';
             var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
