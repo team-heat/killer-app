@@ -1,13 +1,23 @@
+.carousel-slide {
+  background-color: transparent;
+}
+
+.carousel-control {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+
 .well {
   background-color: transparent;
   border: none;
   .carousel {
     max-height: 400px;
     overflow: hidden;
+    background-color: transparent;
     .item img {
       width: 100%;
       margin-top: -100px;
       height: 600px;
+      object-fit: contain;
     }
   }
 }

@@ -28,6 +28,8 @@ export class ItemsCollectionComponent implements OnInit {
   onPrevious() {
     if (this.activeItemIndex > 0) {
       this.activeItemIndex -= 1;
+    } else {
+      this.activeItemIndex = this.items.length - 1;
     }
 
     this.activeItem = this.items[this.activeItemIndex];
@@ -36,6 +38,8 @@ export class ItemsCollectionComponent implements OnInit {
   onNext() {
     if (this.activeItemIndex < this.items.length - 1) {
       this.activeItemIndex += 1;
+    } else {
+      this.activeItemIndex = 0;
     }
 
     this.activeItem = this.items[this.activeItemIndex];
