@@ -539,7 +539,8 @@ var MakeOfferComponent = (function () {
         this.maxOffer = 'No offers';
         this.offer = {
             offeredPrice: 0,
-            id: '0'
+            id: '0',
+            status: 'active'
         };
     }
     MakeOfferComponent.prototype.ngOnInit = function () {
@@ -2958,7 +2959,7 @@ module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pict
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
+module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <!--<div class=\"btn btn-primary\" (click)=\"WasClicked($event, offer)\">Click FFS</div>--> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
 
