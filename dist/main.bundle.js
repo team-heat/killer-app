@@ -2982,7 +2982,7 @@ module.exports = ""
 /***/ 730:
 /***/ function(module, exports) {
 
-module.exports = ".carousel-slide {\n  background-color: transparent; }\n\n.carousel-control {\n  background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.0001) 100%); }\n\n.well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden;\n    background-color: transparent; }\n    .well .carousel .item img {\n      width: 100%;\n      margin-top: -100px;\n      height: 600px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n"
+module.exports = ".carousel-control {\n  background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.0001) 100%);\n  color: #2098D1; }\n\n.well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden;\n    background-color: transparent; }\n    .well .carousel .item img {\n      width: 100%;\n      margin-top: -100px;\n      height: 600px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n"
 
 /***/ },
 
