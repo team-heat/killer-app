@@ -17,7 +17,8 @@ module.exports = function({ ItemListing }) {
     'enginePower',
     'history',
     'owner',
-    'isActive'
+    'isActive',
+    'comments',
   ];
 
   function createItemListing(listing) {
