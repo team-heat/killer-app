@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Params, ActivatedRoute } from '@angular/router';
 
 import { ItemListing } from './../../models/item-listing.model';
+import { Offer } from './../../models/offer.model';
 
 import { ItemListingService } from './../../services/item-listing.service';
 import { UserStorageService } from './../../services/user-storage.service';
@@ -15,6 +16,7 @@ export class OffersListComponent {
     item: ItemListing;
     isLogged: Boolean;
     isOwner: Boolean;
+    loggedUser: String;
 
     constructor(
         private itemListingService: ItemListingService,
@@ -44,11 +46,10 @@ export class OffersListComponent {
 
     ngOnInit() {
         let id;
-        let username: String;
 
         if (this.userStorageService.isLogged()) {
             this.isLogged = true;
-            username = this.userStorageService.getLoggedUser().username;
+            this.loggedUser = this.userStorageService.getLoggedUser().username;
         }
 
         this.route.params
@@ -59,7 +60,52 @@ export class OffersListComponent {
             .map(x => x.json())
             .subscribe(x => {
                 this.item = x as ItemListing;
-                this.isOwner = this.item.owner === username;
+                this.isOwner = this.item.owner === this.loggedUser;
             });
+    }
+
+    acceptOffer($event: EventEmitter<any>, offer: Offer) {
+        // TODO Add logging somewhere with successfull deals ... maybe!
+        if (this.loggedUser === this.item.owner) {
+            for (let o of this.item.offers) {
+                if (o.username === offer.username &&
+                    o.offeredPrice === offer.offeredPrice &&
+                    o.status === 'active') {
+
+                    // all other offers been canceled 1st
+                    for (let ofr of this.item.offers) {
+                        ofr.status = 'canceled';
+                    }
+
+                    o.status = 'accepted';
+                    this.item.isActive = false;
+
+                    this.itemListingService.updateItem(this.item)
+                        .map(x => x.json())
+                        .subscribe(x => this.item = x as ItemListing);
+                }
+            }
+        }
+    }
+
+    rejectOffer($event: EventEmitter<any>, offer: Offer) {
+        this.changeOfferStatus($event, offer, 'rejected', (str: String) => this.loggedUser === this.item.owner);
+    }
+
+    cencelOffer($event: EventEmitter<any>, offer: Offer) {
+        this.changeOfferStatus($event, offer, 'canceled', (str: String) => str === this.loggedUser);
+    }
+
+    changeOfferStatus($event: EventEmitter<any>, offer: Offer, status: String, allowed: (str: String) => Boolean) {
+        for (let o of this.item.offers) {
+            if (allowed(o.username) &&
+                o.offeredPrice === offer.offeredPrice &&
+                o.status === 'active') {
+                o.status = status;
+                this.itemListingService.updateItem(this.item)
+                    .map(x => x.json())
+                    .subscribe(x => this.item = x as ItemListing);
+            }
+        }
     }
 }

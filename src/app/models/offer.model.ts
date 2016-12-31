@@ -1,4 +1,6 @@
 export interface Offer {
     offeredPrice: Number,
-    id: String
+    id: String,
+    status: String,
+    username: String
 }

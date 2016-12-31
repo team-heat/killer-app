@@ -46,6 +46,21 @@ module.exports = function ({ itemListingData }) {
   }
 
   function updateListing(req, res) {
+    let listingForUpdate = req.body;
+    return itemListingData.updateItemListing(listingForUpdate)
+      .then(listing => {
+        if (!listing) {
+          throw new Error('Listing not found.');
+        }
+
+        res.status(200).json(listing);
+      })
+      .catch(err => {
+        
+          console.log(err)
+        res.status(400).json({ message: err.message });
+      })
+
     res.status(200).json({ message: 'PUT /api/gallery/:id' });
   }
 
@@ -67,6 +82,24 @@ module.exports = function ({ itemListingData }) {
 
   function addCommentToListing(req, res) {
     const listingId = req.params.id;
+
+    // // Suggestion
+
+    // const comment = req.body;
+    // // if needed
+    // comment.from = req.user.username;
+
+    // return itemListingData.addCommentToListing(listingId, comment)
+    //   .then(itemListing => {
+    //     if (!itemListing) {
+    //       throw new Error('Listing not found.');
+    //     }
+
+    //     res.status(200).json(itemListing);
+    //   })
+    //   .catch(err => {
+    //     res.status(400).json({ message: err.message });
+    //   })
 
     // return itemListingData.addCommentToItemListing()
     //   .then(itemListing => {

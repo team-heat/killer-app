@@ -44,7 +44,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user-factory.service.js.map
 
 /***/ },
 
@@ -117,7 +117,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -161,7 +161,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -196,7 +196,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/hashing.service.js.map
 
 /***/ },
 
@@ -233,7 +233,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -280,7 +280,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
@@ -391,7 +391,7 @@ var AddToFavoritesComponent = (function () {
     return AddToFavoritesComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-to-favorites.component.js.map
 
 /***/ },
 
@@ -424,7 +424,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -459,7 +459,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -527,7 +527,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items-collection.component.js.map
 
 /***/ },
 
@@ -584,7 +584,8 @@ var MakeOfferComponent = (function () {
         this.maxOffer = 'No offers';
         this.offer = {
             offeredPrice: 0,
-            id: '0'
+            id: '0',
+            status: 'active'
         };
     }
     MakeOfferComponent.prototype.ngOnInit = function () {
@@ -656,7 +657,7 @@ var MakeOfferComponent = (function () {
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/make-offer.component.js.map
 
 /***/ },
 
@@ -709,10 +710,9 @@ var OffersListComponent = (function () {
     OffersListComponent.prototype.ngOnInit = function () {
         var _this = this;
         var id;
-        var username;
         if (this.userStorageService.isLogged()) {
             this.isLogged = true;
-            username = this.userStorageService.getLoggedUser().username;
+            this.loggedUser = this.userStorageService.getLoggedUser().username;
         }
         this.route.params
             .map(function (params) { return params['id']; })
@@ -721,8 +721,53 @@ var OffersListComponent = (function () {
             .map(function (x) { return x.json(); })
             .subscribe(function (x) {
             _this.item = x;
-            _this.isOwner = _this.item.owner === username;
+            _this.isOwner = _this.item.owner === _this.loggedUser;
         });
+    };
+    OffersListComponent.prototype.acceptOffer = function ($event, offer) {
+        var _this = this;
+        // TODO Add logging somewhere with successfull deals ... maybe!
+        if (this.loggedUser === this.item.owner) {
+            for (var _i = 0, _a = this.item.offers; _i < _a.length; _i++) {
+                var o = _a[_i];
+                if (o.username === offer.username &&
+                    o.offeredPrice === offer.offeredPrice &&
+                    o.status === 'active') {
+                    // all other offers been canceled 1st
+                    for (var _b = 0, _c = this.item.offers; _b < _c.length; _b++) {
+                        var ofr = _c[_b];
+                        ofr.status = 'canceled';
+                    }
+                    o.status = 'accepted';
+                    this.item.isActive = false;
+                    this.itemListingService.updateItem(this.item)
+                        .map(function (x) { return x.json(); })
+                        .subscribe(function (x) { return _this.item = x; });
+                }
+            }
+        }
+    };
+    OffersListComponent.prototype.rejectOffer = function ($event, offer) {
+        var _this = this;
+        this.changeOfferStatus($event, offer, 'rejected', function (str) { return _this.loggedUser === _this.item.owner; });
+    };
+    OffersListComponent.prototype.cencelOffer = function ($event, offer) {
+        var _this = this;
+        this.changeOfferStatus($event, offer, 'canceled', function (str) { return str === _this.loggedUser; });
+    };
+    OffersListComponent.prototype.changeOfferStatus = function ($event, offer, status, allowed) {
+        var _this = this;
+        for (var _i = 0, _a = this.item.offers; _i < _a.length; _i++) {
+            var o = _a[_i];
+            if (allowed(o.username) &&
+                o.offeredPrice === offer.offeredPrice &&
+                o.status === 'active') {
+                o.status = status;
+                this.itemListingService.updateItem(this.item)
+                    .map(function (x) { return x.json(); })
+                    .subscribe(function (x) { return _this.item = x; });
+            }
+        }
     };
     OffersListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -734,7 +779,7 @@ var OffersListComponent = (function () {
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/offers-list.component.js.map
 
 /***/ },
 
@@ -811,7 +856,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/single-item.component.js.map
 
 /***/ },
 
@@ -847,7 +892,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
@@ -900,7 +945,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -944,7 +989,7 @@ var FavoritesComponent = (function () {
     return FavoritesComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/favorites.component.js.map
 
 /***/ },
 
@@ -979,7 +1024,7 @@ var ListedItemsComponent = (function () {
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/listed-items.component.js.map
 
 /***/ },
 
@@ -1087,7 +1132,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -1159,7 +1204,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -1222,7 +1267,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -1325,7 +1370,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -1409,7 +1454,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -1482,7 +1527,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -1519,7 +1564,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/main.js.map
 
 /***/ },
 
@@ -1564,7 +1609,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification-options-factory.service.js.map
 
 /***/ },
 
@@ -1637,7 +1682,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.component.js.map
 
 /***/ },
 
@@ -1709,7 +1754,7 @@ var AddListingModule = (function () {
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.module.js.map
 
 /***/ },
 
@@ -1823,7 +1868,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -1861,7 +1906,7 @@ var CarouselListComponent = (function () {
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -1899,7 +1944,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -1947,7 +1992,7 @@ var FormYearValidationDirective = (function () {
     return FormYearValidationDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/form-year-validation.directive.js.map
 
 /***/ },
 
@@ -2001,7 +2046,7 @@ var NavigationHoverDirective = (function () {
     return NavigationHoverDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation-hover.directive.js.map
 
 /***/ },
 
@@ -2081,7 +2126,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -2122,7 +2167,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -2161,7 +2206,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -2175,7 +2220,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/index.js.map
 
 /***/ },
 
@@ -2226,7 +2271,7 @@ var CommentSectionComponent = (function () {
     return CommentSectionComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/comment-section.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/comment-section.component.js.map
 
 /***/ },
 
@@ -2307,7 +2352,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items.module.js.map
 
 /***/ },
 
@@ -2358,7 +2403,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items.routes.js.map
 
 /***/ },
 
@@ -2372,7 +2417,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.model.js.map
 
 /***/ },
 
@@ -2386,7 +2431,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -2436,7 +2481,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -2470,7 +2515,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -2535,7 +2580,7 @@ var ToastrNotificationsHandlerComponent = (function () {
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -2570,7 +2615,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -2605,7 +2650,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -2660,7 +2705,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -2676,7 +2721,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -2732,7 +2777,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -2799,6 +2844,12 @@ var ItemListingService = (function () {
             .createHttpRequesterOptions(url, comment, this.contentTypeHeaderObject);
         return this.httpRequesterService.put(httpRequestOptions);
     };
+    ItemListingService.prototype.updateItem = function (item) {
+        var url = this.galleryApiUrl + '/' + item._id;
+        var httpRequestOptions = this.httpRequesterOptionsFactory
+            .createHttpRequesterOptions(url, item, this.contentTypeHeaderObject);
+        return this.httpRequesterService.put(httpRequestOptions);
+    };
     // TODO: 
     ItemListingService.prototype.removeItem = function (Item) {
         return null;
@@ -2811,7 +2862,7 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
@@ -2887,7 +2938,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user.service.js.map
 
 /***/ },
 
@@ -3090,7 +3141,7 @@ module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pict
 /***/ 756:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n    <h3>{{offer.offeredPrice}}</h3>\r\n    <p>By: {{offer.username}}</p>\r\n</div>"
+module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>             \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div> \r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
 
