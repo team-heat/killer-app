@@ -59,9 +59,7 @@ module.exports = function ({ itemListingData }) {
         
           console.log(err)
         res.status(400).json({ message: err.message });
-      })
-
-    res.status(200).json({ message: 'PUT /api/gallery/:id' });
+      });
   }
 
   function submitOfferForListing(req, res) {
@@ -77,7 +75,7 @@ module.exports = function ({ itemListingData }) {
       })
       .catch(err => {
         res.status(400).json({ message: err.message });
-      })
+      });
   }
 
   function addCommentToListing(req, res) {
