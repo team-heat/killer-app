@@ -2321,7 +2321,11 @@ var CommentSectionComponent = (function () {
         this.userStorageService = userStorageService;
         this.toastrNotification = toastrNotification;
         this.toastrOptions = toastrOptions;
-        this.comment = '';
+        this.comment = {
+            listingId: '',
+            username: '',
+            content: ''
+        };
     }
     CommentSectionComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2334,6 +2338,8 @@ var CommentSectionComponent = (function () {
             .subscribe(function (listing) { return _this.listingComments = listing.comments; });
     };
     CommentSectionComponent.prototype.onSubmit = function () {
+        if (this.userStorageService.loggedUser) {
+        }
         // this.listingComments.push(this.comment);
     };
     CommentSectionComponent = __decorate([
@@ -3193,7 +3199,7 @@ module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jp
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments\">{{comment}}</li>\n    </ul>\n  </div>\n  <div class=\"comment-wrapper\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
+module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments\">{{comment.content}}</li>\n    </ul>\n  </div>\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
 
 /***/ },
 

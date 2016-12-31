@@ -1,11 +1,11 @@
 <div class="comment-section">
   <div class="comments-wrapper">
     <ul>
-      <li *ngFor="let comment of listingComments">{{comment}}</li>
+      <li *ngFor="let comment of listingComments">{{comment.content}}</li>
     </ul>
   </div>
-  <div class="comment-wrapper">
-    <textarea name="comment" id="comment" [(ngModel)]="comment"></textarea>
+  <div class="comment-wrapper" *ngIf="this.userStorageService.loggedUser">
+    <textarea name="comment" id="comment" [(ngModel)]="comment.content"></textarea>
     <br>
     <button class="btn btn-success" (click)="onSubmit()">Submit Comment</button>
   </div>

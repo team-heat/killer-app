@@ -1,6 +1,7 @@
 import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+import { Comment } from '../../models/comment.model';
 import { ItemListing } from '../../models/item-listing.model';
 import { ItemListingService } from '../../services/item-listing.service';
 import { ToastrNotificationOptionsFactoryService } from '../../services/toastr-notification-options-factory.service';
@@ -14,7 +15,7 @@ import { UserStorageService } from '../../services/user-storage.service';
 })
 export class CommentSectionComponent implements OnInit {
 
-  comment: string = '';
+  comment: Comment;
   listingComments: Comment[];
 
   constructor(
@@ -22,8 +23,14 @@ export class CommentSectionComponent implements OnInit {
     private itemListingService: ItemListingService,
     private userStorageService: UserStorageService,
     private toastrNotification: ToastrNotificationService,
-    private toastrOptions: ToastrNotificationOptionsFactoryService
-  ) { }
+    private toastrOptions: ToastrNotificationOptionsFactoryService) {
+
+    this.comment = {
+      listingId: '',
+      username: '',
+      content: ''
+    };
+  }
 
   ngOnInit() {
     let listingId;
@@ -38,7 +45,9 @@ export class CommentSectionComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (this.userStorageService.loggedUser) {
+
+    }
     // this.listingComments.push(this.comment);
   }
-
 }
