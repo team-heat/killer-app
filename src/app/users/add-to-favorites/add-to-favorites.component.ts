@@ -57,7 +57,7 @@ export class AddToFavoritesComponent implements OnInit {
       }, () => { });
   }
 
-  removeToFavorites() {
+  removeFromFavorites() {
     return this.userService.removeItemToUserFavorites(this.itemIdToFavorite)
       .map(response => response.json())
       .subscribe((response) => {
@@ -72,7 +72,7 @@ export class AddToFavoritesComponent implements OnInit {
         this.itemIsFavorite = false;
       }, (err) => {
         const method = 'error';
-        const message = 'Item already exists in your favorites list.';
+        const message = 'Item does not exist in your favorites list.';
         const heading = 'Oops!';
         const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
           .createToastrNotificationOptions(method, message, heading);

@@ -52,7 +52,9 @@ export class MakeOfferComponent implements OnInit {
 
         this.offer = {
             offeredPrice: 0,
-            id: '0'
+            id: '0',
+            status: 'active',
+            username: ''
         };
     }
 

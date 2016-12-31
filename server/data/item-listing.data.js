@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports = function({ ItemListing }) {
+module.exports = function ({ ItemListing }) {
 
   const availableModelProperties = [
     'make',
@@ -16,7 +16,9 @@ module.exports = function({ ItemListing }) {
     'engineTorque',
     'enginePower',
     'history',
-    'pictures'
+    'owner',
+    'isActive',
+    'comments'
   ];
 
   function createItemListing(listing) {
@@ -32,14 +34,7 @@ module.exports = function({ ItemListing }) {
   }
 
   function getAll() {
-    return new Promise((resolve, reject) => {
-      ItemListing.find((err, listings) => {
-        if (err) {
-          return reject(err);
-        }
-        return resolve(listings);
-      });
-    });
+    return filterItemListingWithOptions({ isActive: true });
   }
 
   function getItemListingById(listingId) {
@@ -59,13 +54,23 @@ module.exports = function({ ItemListing }) {
     const offerForAdd = {
       'username': offer.username,
       'offeredPrice': offer.offeredPrice,
-      'status': 'active'
-    }
+      'status': offer.status
+    };
 
     return new Promise((resolve, reject) => {
       getItemListingById(offer.id)
         .then(itemListing => {
-          itemListing.offers.push(offerForAdd);
+
+          // if same offer from same person already exsist and active directly resolve
+          for (let i of itemListing.offers) {
+            if (i.username === offer.username &&
+              i.offeredPrice === offer.offeredPrice &&
+              i.status === 'active') {
+              resolve(itemListing);
+            }
+          }
+
+          itemListing.offers.unshift(offerForAdd);
 
           itemListing.save(err => {
             if (err) {
@@ -73,9 +78,9 @@ module.exports = function({ ItemListing }) {
             } else {
               resolve(itemListing);
             }
-          })
+          });
         }).catch(reject);
-    })
+    });
   }
 
   function addCommentToItemListing(listingId, comment) {
@@ -90,7 +95,7 @@ module.exports = function({ ItemListing }) {
             } else {
               resolve(itemListing);
             }
-          })
+          });
         }).catch(reject);
     });
   }
@@ -114,12 +119,37 @@ module.exports = function({ ItemListing }) {
     });
   }
 
+  function updateItemListing(listingForUpdate) {
+    return new Promise((resolve, reject) => {
+      getItemListingById(listingForUpdate._id)
+        .then(listing => {
+
+          for (const key of availableModelProperties) {
+            listing[key] = listingForUpdate[key];
+          }
+
+          listing.save(err => {
+            // if (err) {
+            //   reject(err);
+            // }
+
+            resolve(listing);
+          });
+
+        })
+        .catch(err => {
+          reject(err);
+        });
+    });
+  }
+
   return {
     getAll,
     createItemListing,
     getItemListingById,
     addOfferToItemListing,
     addCommentToItemListing,
-    filterItemListingWithOptions
+    filterItemListingWithOptions,
+    updateItemListing
   };
 };

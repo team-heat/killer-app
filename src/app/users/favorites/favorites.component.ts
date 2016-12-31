@@ -11,14 +11,50 @@ import { UserStorageService } from '../../services/user-storage.service';
 })
 export class FavoritesComponent implements OnInit {
 
-  userFavorites: any[];
-  constructor(private userService: UserService) {
-    this.userFavorites = [];
+  items: any[];
+  activeItem: any;
+  activeItemIndex: number;
+
+  constructor(
+    private userService: UserService,
+    private userStorage: UserStorageService) {
+
+    this.items = [];
+    this.activeItemIndex = 0;
   }
 
   ngOnInit() {
-    const userData = this.userService
-      .getUserDetails()
-      .subscribe(resp => this.userFavorites = resp.json().favorites);
+    this.userService.getUserDetails()
+      .map(response => response.json())
+      .subscribe((responseJson) => {
+        this.items = responseJson.favorites;
+        console.log(this.items);
+      }, (err) => {
+        console.log(err);
+      }, () => {
+        if (this.items.length > 0) {
+          this.activeItem = this.items[this.activeItemIndex];
+        }
+      });
+  }
+
+  onPrevious() {
+    if (this.activeItemIndex > 0) {
+      this.activeItemIndex -= 1;
+    } else {
+      this.activeItemIndex = this.items.length - 1;
+    }
+
+    this.activeItem = this.items[this.activeItemIndex];
+  }
+
+  onNext() {
+    if (this.activeItemIndex < this.items.length - 1) {
+      this.activeItemIndex += 1;
+    } else {
+      this.activeItemIndex = 0;
+    }
+
+    this.activeItem = this.items[this.activeItemIndex];
   }
 }
