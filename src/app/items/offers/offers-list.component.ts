@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Params, ActivatedRoute } from '@angular/router';
 
 import { ItemListing } from './../../models/item-listing.model';
+import { Offer } from './../../models/offer.model';
 
 import { ItemListingService } from './../../services/item-listing.service';
 import { UserStorageService } from './../../services/user-storage.service';
@@ -15,6 +16,7 @@ export class OffersListComponent {
     item: ItemListing;
     isLogged: Boolean;
     isOwner: Boolean;
+    loggedUser: String;
 
     constructor(
         private itemListingService: ItemListingService,
@@ -44,11 +46,10 @@ export class OffersListComponent {
 
     ngOnInit() {
         let id;
-        let username: String;
 
         if (this.userStorageService.isLogged()) {
             this.isLogged = true;
-            username = this.userStorageService.getLoggedUser().username;
+            this.loggedUser = this.userStorageService.getLoggedUser().username;
         }
 
         this.route.params
@@ -59,8 +60,29 @@ export class OffersListComponent {
             .map(x => x.json())
             .subscribe(x => {
                 this.item = x as ItemListing;
-                this.isOwner = this.item.owner === username;
+                this.isOwner = this.item.owner === this.loggedUser;
             });
+    }
+
+    cencelOffer($event: EventEmitter<any>, offer: Offer) {
+        this.changeOfferStatus($event, offer, 'canceled');
+    }
+
+    rejectOffer($event: EventEmitter<any>, offer: Offer) {
+        this.changeOfferStatus($event, offer, 'rejected');
+    }
+
+    changeOfferStatus($event: EventEmitter<any>, offer: Offer, status: String) {
+        for (let o of this.item.offers) {
+            if (o.username === this.loggedUser
+                && o.offeredPrice === offer.offeredPrice
+                && o.status === 'active') {
+                o.status = status;
+                this.itemListingService.updateItem(this.item)
+                    .map(x => x.json())
+                    .subscribe(x => this.item = x as ItemListing);
+            }
+        }
     }
 
     // WasClicked($event, offer) {
