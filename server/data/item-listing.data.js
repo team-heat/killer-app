@@ -126,14 +126,14 @@ module.exports = function({ ItemListing }) {
     });
   }
 
-  function updateItelListing(listingForUpdate) {
+  function updateItemListing(listingForUpdate) {
     return new Promise((resolve, reject) => {
       getItemListingById(listingForUpdate._id)
         .then(listing => {
           
-          for (const key in availableModelProperties) {
+          for (const key of availableModelProperties) {
             listing[key] = listingForUpdate[key];
-          }
+          }       
 
           listing.save(err => {
             if (err) {
@@ -156,6 +156,7 @@ module.exports = function({ ItemListing }) {
     getItemListingById,
     addOfferToItemListing,
     addCommentToItemListing,
-    filterItemListingWithOptions
+    filterItemListingWithOptions,
+    updateItemListing
   };
 };
