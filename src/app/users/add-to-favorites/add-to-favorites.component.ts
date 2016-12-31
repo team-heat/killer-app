@@ -72,7 +72,7 @@ export class AddToFavoritesComponent implements OnInit {
         this.itemIsFavorite = false;
       }, (err) => {
         const method = 'error';
-        const message = 'Item already exists in your favorites list.';
+        const message = 'Item dows not exist in your favorites list.';
         const heading = 'Oops!';
         const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
           .createToastrNotificationOptions(method, message, heading);
