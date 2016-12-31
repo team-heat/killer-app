@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports = function({ ItemListing }) {
+module.exports = function ({ ItemListing }) {
 
   const availableModelProperties = [
     'make',
@@ -34,14 +34,7 @@ module.exports = function({ ItemListing }) {
   }
 
   function getAll() {
-    return new Promise((resolve, reject) => {
-      ItemListing.find((err, listings) => {
-        if (err) {
-          return reject(err);
-        }
-        return resolve(listings);
-      });
-    });
+    return filterItemListingWithOptions({ isActive: true })
   }
 
   function getItemListingById(listingId) {
@@ -130,10 +123,10 @@ module.exports = function({ ItemListing }) {
     return new Promise((resolve, reject) => {
       getItemListingById(listingForUpdate._id)
         .then(listing => {
-          
+
           for (const key of availableModelProperties) {
             listing[key] = listingForUpdate[key];
-          }       
+          }
 
           listing.save(err => {
             // if (err) {
