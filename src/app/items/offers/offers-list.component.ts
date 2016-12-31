@@ -64,19 +64,24 @@ export class OffersListComponent {
             });
     }
 
-    cencelOffer($event: EventEmitter<any>, offer: Offer) {
-        this.changeOfferStatus($event, offer, 'canceled');
+    acceptOffer($event: EventEmitter<any>, offer: Offer) {
+        // TODO accepting
     }
+
 
     rejectOffer($event: EventEmitter<any>, offer: Offer) {
-        this.changeOfferStatus($event, offer, 'rejected');
+        this.changeOfferStatus($event, offer, 'rejected', (str: String) => this.loggedUser === this.item.owner);
     }
 
-    changeOfferStatus($event: EventEmitter<any>, offer: Offer, status: String) {
+    cencelOffer($event: EventEmitter<any>, offer: Offer) {
+        this.changeOfferStatus($event, offer, 'canceled', (str: String) => str === this.loggedUser);
+    }
+
+    changeOfferStatus($event: EventEmitter<any>, offer: Offer, status: String, allowed: (str: String) => Boolean) {
         for (let o of this.item.offers) {
-            if (o.username === this.loggedUser
-                && o.offeredPrice === offer.offeredPrice
-                && o.status === 'active') {
+            if (allowed(o.username) &&
+                o.offeredPrice === offer.offeredPrice &&
+                o.status === 'active') {
                 o.status = status;
                 this.itemListingService.updateItem(this.item)
                     .map(x => x.json())
@@ -84,12 +89,4 @@ export class OffersListComponent {
             }
         }
     }
-
-    // WasClicked($event, offer) {
-    //     console.log($event);
-    //     console.log('-----------------------');
-    //     console.log(offer);
-    //     console.log('-----------------------');
-    //     this.item.offers[0].status = 'canceled';        
-    // }
 }
