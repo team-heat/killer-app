@@ -5,7 +5,7 @@
       <span>{{this.activeItem.make}}</span>
       <span>{{this.activeItem.model}}</span>
       <span>{{this.activeItem.year}}</span>
-      <app-add-to-favorites [itemIdToFavorite]="this.activeItem._id" class="add-to-favorites-btn"></app-add-to-favorites>
+      <app-add-to-favorites *ngIf="this.userStorage.isLogged()" [itemIdToFavorite]="this.activeItem._id" class="add-to-favorites-btn"></app-add-to-favorites>
     </h3>
   </div>
   <div class="row">
