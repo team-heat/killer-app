@@ -11,7 +11,9 @@
         <div *ngIf="offer.status === 'active'">
             <h3>{{offer.offeredPrice}}</h3>
             <p>By: {{offer.username}}</p>
-            <!--<div class="btn btn-primary" (click)="WasClicked($event, offer)">Click FFS</div>--> 
+            <div *ngIf="this.isOwner" class="btn btn-success" (click)="acceptOffer($event, offer)">Accept offer</div>             
+            <div *ngIf="this.isOwner" class="btn btn-danger" (click)="rejectOffer($event, offer)">Reject offer</div> 
+            <div *ngIf="this.loggedUser===offer.username" class="btn btn-warning" (click)="cencelOffer($event, offer)">Cancel offer</div> 
         </div>
     </div>
 
