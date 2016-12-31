@@ -70,6 +70,15 @@ export class ItemListingService {
     return this.httpRequesterService.put(httpRequestOptions);
   }
 
+  updateItem(item: ItemListing) {
+    const url = this.galleryApiUrl + '/' + item._id;
+
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(url, item, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.put(httpRequestOptions);
+  }
+
   // TODO: 
   removeItem(Item: ItemListing): Observable<Response> {
     return null;
