@@ -61,8 +61,8 @@ export class ItemListingService {
     return this.httpRequesterService.post(httpRequestOptions);
   }
 
-  addComment(comment: Comment) {
-    const url = `${this.galleryApiUrl}/id/comments`;
+  addComment(comment: Comment): Observable<Response> {
+    const url = `${this.galleryApiUrl}/${comment.listingId}/comments`;
 
     const httpRequestOptions = this.httpRequesterOptionsFactory
       .createHttpRequesterOptions(url, comment, this.contentTypeHeaderObject);

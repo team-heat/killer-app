@@ -2335,12 +2335,27 @@ var CommentSectionComponent = (function () {
             .subscribe(function (id) { return listingId = id; });
         this.itemListingService.getSingleItem(listingId)
             .map(function (response) { return response.json(); })
-            .subscribe(function (listing) { return _this.listingComments = listing.comments; });
+            .subscribe(function (listing) {
+            _this.comment.listingId = listing._id;
+            _this.listingComments = listing.comments;
+        });
     };
     CommentSectionComponent.prototype.onSubmit = function () {
+        var _this = this;
         if (this.userStorageService.loggedUser) {
+            this.comment.username = this.userStorageService.loggedUser;
+            this.itemListingService.addComment(this.comment)
+                .subscribe(function (response) {
+                var toastrOptions = _this.toastrOptions
+                    .createToastrNotificationOptions('success', 'Comment submitted successfully.');
+                _this.toastrNotification.enqueueNotification(toastrOptions);
+            });
         }
-        // this.listingComments.push(this.comment);
+        else {
+            var toastrOptions = this.toastrOptions
+                .createToastrNotificationOptions('error', 'You must be logged in.');
+            this.toastrNotification.enqueueNotification(toastrOptions);
+        }
     };
     CommentSectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
@@ -2918,7 +2933,7 @@ var ItemListingService = (function () {
         return this.httpRequesterService.post(httpRequestOptions);
     };
     ItemListingService.prototype.addComment = function (comment) {
-        var url = this.galleryApiUrl + "/id/comments";
+        var url = this.galleryApiUrl + "/" + comment.listingId + "/comments";
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(url, comment, this.contentTypeHeaderObject);
         return this.httpRequesterService.put(httpRequestOptions);

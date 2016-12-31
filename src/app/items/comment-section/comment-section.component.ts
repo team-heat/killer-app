@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Comment } from '../../models/comment.model';
 import { ItemListing } from '../../models/item-listing.model';
 import { ItemListingService } from '../../services/item-listing.service';
+import { Response } from '@angular/http';
 import { ToastrNotificationOptionsFactoryService } from '../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../../services/toastr-notification.service';
 import { UserStorageService } from '../../services/user-storage.service';
@@ -41,13 +42,26 @@ export class CommentSectionComponent implements OnInit {
 
     this.itemListingService.getSingleItem(listingId)
       .map(response => response.json())
-      .subscribe((listing: ItemListing) => this.listingComments = listing.comments);
+      .subscribe((listing: ItemListing) => {
+        this.comment.listingId = listing._id;
+        this.listingComments = listing.comments;
+      });
   }
 
   onSubmit(): void {
     if (this.userStorageService.loggedUser) {
+      this.comment.username = this.userStorageService.loggedUser;
 
+      this.itemListingService.addComment(this.comment)
+        .subscribe((response: Response) => {
+          let toastrOptions = this.toastrOptions
+            .createToastrNotificationOptions('success', 'Comment submitted successfully.');
+          this.toastrNotification.enqueueNotification(toastrOptions);
+        });
+    } else {
+      let toastrOptions = this.toastrOptions
+        .createToastrNotificationOptions('error', 'You must be logged in.');
+      this.toastrNotification.enqueueNotification(toastrOptions);
     }
-    // this.listingComments.push(this.comment);
   }
 }
