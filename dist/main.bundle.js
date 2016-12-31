@@ -369,7 +369,7 @@ var AddToFavoritesComponent = (function () {
             _this.itemIsFavorite = false;
         }, function (err) {
             var method = 'error';
-            var message = 'Item dows not exist in your favorites list.';
+            var message = 'Item does not exist in your favorites list.';
             var heading = 'Oops!';
             var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
                 .createToastrNotificationOptions(method, message, heading);
@@ -2960,7 +2960,7 @@ module.exports = ""
 /***/ 730:
 /***/ function(module, exports) {
 
-module.exports = ".well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden; }\n    .well .carousel .item img {\n      height: 600px; }\n"
+module.exports = ".well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden; }\n    .well .carousel .item img {\n      width: 100%;\n      margin-top: -100px;\n      height: 600px; }\n"
 
 /***/ },
 
