@@ -1,3 +1,4 @@
+import { AppModule } from './../app.module';
 import { AddToFavoritesComponent } from './../users/add-to-favorites/add-to-favorites.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CarouselListComponent } from './../carousel-list/carousel-list.component';
@@ -29,7 +30,6 @@ import { UsersModule } from '../users/users.module';
         SingleItemComponent,
         ItemsCollectionComponent,
         CommentSectionComponent,
-        CarouselListComponent,
         OffersListComponent,
         MakeOfferComponent
     ],

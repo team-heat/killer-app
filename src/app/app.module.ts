@@ -1,3 +1,4 @@
+import { CarouselListComponent } from './carousel-list/carousel-list.component';
 import { Router, RouterModule } from '@angular/router';
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
 
