@@ -1,5 +1,7 @@
+import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+import { ItemListing } from '../../models/item-listing.model';
 import { ItemListingService } from '../../services/item-listing.service';
 import { ToastrNotificationOptionsFactoryService } from '../../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../../services/toastr-notification.service';
@@ -16,6 +18,7 @@ export class CommentSectionComponent implements OnInit {
   listingComments: Comment[];
 
   constructor(
+    private route: ActivatedRoute,
     private itemListingService: ItemListingService,
     private userStorageService: UserStorageService,
     private toastrNotification: ToastrNotificationService,
@@ -23,9 +26,19 @@ export class CommentSectionComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let listingId;
+
+    this.route.params
+      .map((params: Params) => params['id'])
+      .subscribe(id => listingId = id);
+
+    this.itemListingService.getSingleItem(listingId)
+      .map(response => response.json())
+      .subscribe((listing: ItemListing) => this.listingComments = listing.comments);
   }
 
-  onSubmit() {
+  onSubmit(): void {
+    // this.listingComments.push(this.comment);
   }
 
 }

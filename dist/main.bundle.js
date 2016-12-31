@@ -2292,11 +2292,12 @@ var HomeRouterModule = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_storage_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(18);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CommentSectionComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2312,8 +2313,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CommentSectionComponent = (function () {
-    function CommentSectionComponent(itemListingService, userStorageService, toastrNotification, toastrOptions) {
+    function CommentSectionComponent(route, itemListingService, userStorageService, toastrNotification, toastrOptions) {
+        this.route = route;
         this.itemListingService = itemListingService;
         this.userStorageService = userStorageService;
         this.toastrNotification = toastrNotification;
@@ -2321,19 +2324,28 @@ var CommentSectionComponent = (function () {
         this.comment = '';
     }
     CommentSectionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var listingId;
+        this.route.params
+            .map(function (params) { return params['id']; })
+            .subscribe(function (id) { return listingId = id; });
+        this.itemListingService.getSingleItem(listingId)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (listing) { return _this.listingComments = listing.comments; });
     };
     CommentSectionComponent.prototype.onSubmit = function () {
+        // this.listingComments.push(this.comment);
     };
     CommentSectionComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-comment-section',
             template: __webpack_require__(753),
             styles: [__webpack_require__(733)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _d) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], CommentSectionComponent);
     return CommentSectionComponent;
-    var _a, _b, _c, _d;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/comment-section.component.js.map
 
@@ -3041,7 +3053,7 @@ module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
 /***/ 733:
 /***/ function(module, exports) {
 
-module.exports = "div.comment-section {\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto; }\n  div.comment-section div.comment-wrapper #comment {\n    resize: none;\n    padding: 15px;\n    font-size: 2rem;\n    color: #272727;\n    width: 60%;\n    height: 30vh; }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comment-wrapper #comment {\n        width: 100%; } }\n"
+module.exports = "div.comment-section {\n  width: 80%;\n  border: 1px solid red;\n  margin-left: auto;\n  margin-right: auto; }\n  div.comment-section div.comment-wrapper #comment {\n    resize: none;\n    padding: 15px;\n    font-size: 2rem;\n    color: #272727;\n    width: 60%;\n    height: 30vh; }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comment-wrapper #comment {\n        width: 100%; } }\n"
 
 /***/ },
 
@@ -3181,7 +3193,7 @@ module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jp
 /***/ 753:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments\">{{comment}}</li>\n    </ul>\n  </div>\n  <div class=\"comment-wrapper\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment\"></textarea>\n  </div>\n</div>"
+module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments\">{{comment}}</li>\n    </ul>\n  </div>\n  <div class=\"comment-wrapper\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
 
 /***/ },
 
