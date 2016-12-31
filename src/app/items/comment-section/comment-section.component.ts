@@ -15,7 +15,6 @@ import { UserStorageService } from '../../services/user-storage.service';
   styleUrls: ['./comment-section.component.scss']
 })
 export class CommentSectionComponent implements OnInit {
-
   comment: Comment;
   listingComments: Comment[];
 
@@ -37,7 +36,6 @@ export class CommentSectionComponent implements OnInit {
   }
 
   ngOnInit() {
-
     let listingId;
 
     this.route.params
@@ -53,7 +51,6 @@ export class CommentSectionComponent implements OnInit {
   }
 
   onSubmit(): void {
-
     this.comment.username = this.userStorageService.loggedUser;
     let isContentLengthInRange: boolean =
       this.comment.content.length < this.minContentLength ||
@@ -65,11 +62,14 @@ export class CommentSectionComponent implements OnInit {
       this.toastrNotification.enqueueNotification(toastrOptions);
     } else if (isContentLengthInRange) {
       let toastrOptions = this.toastrOptions
-        .createToastrNotificationOptions('error', `Content length must be between ${this.minContentLength} and ${this.maxContentLength}`);
+        .createToastrNotificationOptions('error', `Content length must be between ${this.minContentLength} and ${this.maxContentLength}.`);
       this.toastrNotification.enqueueNotification(toastrOptions);
     } else {
       this.itemListingService.addComment(this.comment)
         .subscribe((response: Response) => {
+          let comment = JSON.parse(JSON.stringify(this.comment));
+          this.listingComments.push(comment);
+
           let toastrOptions = this.toastrOptions
             .createToastrNotificationOptions('success', 'Comment submitted successfully.');
           this.toastrNotification.enqueueNotification(toastrOptions);

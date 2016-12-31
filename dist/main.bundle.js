@@ -2354,12 +2354,14 @@ var CommentSectionComponent = (function () {
         }
         else if (isContentLengthInRange) {
             var toastrOptions = this.toastrOptions
-                .createToastrNotificationOptions('error', "Content length must be between " + this.minContentLength + " and " + this.maxContentLength);
+                .createToastrNotificationOptions('error', "Content length must be between " + this.minContentLength + " and " + this.maxContentLength + ".");
             this.toastrNotification.enqueueNotification(toastrOptions);
         }
         else {
             this.itemListingService.addComment(this.comment)
                 .subscribe(function (response) {
+                var comment = JSON.parse(JSON.stringify(_this.comment));
+                _this.listingComments.push(comment);
                 var toastrOptions = _this.toastrOptions
                     .createToastrNotificationOptions('success', 'Comment submitted successfully.');
                 _this.toastrNotification.enqueueNotification(toastrOptions);
