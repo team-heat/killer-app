@@ -710,10 +710,9 @@ var OffersListComponent = (function () {
     OffersListComponent.prototype.ngOnInit = function () {
         var _this = this;
         var id;
-        var username;
         if (this.userStorageService.isLogged()) {
             this.isLogged = true;
-            username = this.userStorageService.getLoggedUser().username;
+            this.loggedUser = this.userStorageService.getLoggedUser().username;
         }
         this.route.params
             .map(function (params) { return params['id']; })
@@ -722,8 +721,33 @@ var OffersListComponent = (function () {
             .map(function (x) { return x.json(); })
             .subscribe(function (x) {
             _this.item = x;
-            _this.isOwner = _this.item.owner === username;
+            _this.isOwner = _this.item.owner === _this.loggedUser;
         });
+    };
+    OffersListComponent.prototype.acceptOffer = function ($event, offer) {
+        // TODO accepting
+    };
+    OffersListComponent.prototype.rejectOffer = function ($event, offer) {
+        var _this = this;
+        this.changeOfferStatus($event, offer, 'rejected', function (str) { return _this.loggedUser === _this.item.owner; });
+    };
+    OffersListComponent.prototype.cencelOffer = function ($event, offer) {
+        var _this = this;
+        this.changeOfferStatus($event, offer, 'canceled', function (str) { return str === _this.loggedUser; });
+    };
+    OffersListComponent.prototype.changeOfferStatus = function ($event, offer, status, allowed) {
+        var _this = this;
+        for (var _i = 0, _a = this.item.offers; _i < _a.length; _i++) {
+            var o = _a[_i];
+            if (allowed(o.username) &&
+                o.offeredPrice === offer.offeredPrice &&
+                o.status === 'active') {
+                o.status = status;
+                this.itemListingService.updateItem(this.item)
+                    .map(function (x) { return x.json(); })
+                    .subscribe(function (x) { return _this.item = x; });
+            }
+        }
     };
     OffersListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2800,6 +2824,12 @@ var ItemListingService = (function () {
             .createHttpRequesterOptions(url, comment, this.contentTypeHeaderObject);
         return this.httpRequesterService.put(httpRequestOptions);
     };
+    ItemListingService.prototype.updateItem = function (item) {
+        var url = this.galleryApiUrl + '/' + item._id;
+        var httpRequestOptions = this.httpRequesterOptionsFactory
+            .createHttpRequesterOptions(url, item, this.contentTypeHeaderObject);
+        return this.httpRequesterService.put(httpRequestOptions);
+    };
     // TODO: 
     ItemListingService.prototype.removeItem = function (Item) {
         return null;
@@ -3091,7 +3121,7 @@ module.exports = "<div class=\"text-center\">\r\n    <img src=\"{{this.item.pict
 /***/ 756:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <!--<div class=\"btn btn-primary\" (click)=\"WasClicked($event, offer)\">Click FFS</div>--> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>             \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div> \r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
 
