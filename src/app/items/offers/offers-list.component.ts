@@ -65,9 +65,28 @@ export class OffersListComponent {
     }
 
     acceptOffer($event: EventEmitter<any>, offer: Offer) {
-        // TODO accepting
-    }
+        // TODO Add logging somewhere with successfull deals ... maybe!
+        if (this.loggedUser === this.item.owner) {
+            for (let o of this.item.offers) {
+                if (o.username === offer.username &&
+                    o.offeredPrice === offer.offeredPrice &&
+                    o.status === 'active') {
 
+                    // all other offers been canceled 1st
+                    for (let ofr of this.item.offers) {
+                        ofr.status = 'canceled';
+                    }
+
+                    o.status = 'accepted';
+                    this.item.isActive = false;
+
+                    this.itemListingService.updateItem(this.item)
+                        .map(x => x.json())
+                        .subscribe(x => this.item = x as ItemListing);
+                }
+            }
+        }
+    }
 
     rejectOffer($event: EventEmitter<any>, offer: Offer) {
         this.changeOfferStatus($event, offer, 'rejected', (str: String) => this.loggedUser === this.item.owner);
