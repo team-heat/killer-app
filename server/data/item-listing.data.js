@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports = function ({ItemListing}) {
+module.exports = function({ ItemListing }) {
 
   const availableModelProperties = [
     'make',
@@ -81,15 +81,29 @@ module.exports = function ({ItemListing}) {
           itemListing.save(err => {
             if (err) {
               reject(err);
+            } else {
+              resolve(itemListing);
             }
-
-            resolve(itemListing);
           })
-        })
-        .catch(err => {
-          reject(err);
-        })
+        }).catch(reject);
     })
+  }
+
+  function addCommentToItemListing(listingId, comment) {
+    return new Promise((resolve, reject) => {
+      getItemListingById(listingId)
+        .then(itemListing => {
+          itemListing.comments.push(comment);
+
+          itemListing.save(err => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(itemListing);
+            }
+          })
+        }).catch(reject);
+    });
   }
 
   function filterItemListingWithOptions(options) {
@@ -139,7 +153,8 @@ module.exports = function ({ItemListing}) {
     getAll,
     createItemListing,
     getItemListingById,
-    filterItemListingWithOptions,
-    addOfferToItemListing
+    addOfferToItemListing,
+    addCommentToItemListing,
+    filterItemListingWithOptions
   };
 };

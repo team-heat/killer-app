@@ -1,3 +1,4 @@
+import { UserStorageService } from './../../services/user-storage.service';
 import { Component, OnInit } from '@angular/core';
 
 import { ItemListing } from './../../models/item-listing.model';
@@ -16,7 +17,10 @@ export class ItemsCollectionComponent implements OnInit {
   activeItem: ItemListing;
   activeItemIndex: number;
 
-  constructor(private service: ItemListingService) {
+  constructor(
+    private userStorage: UserStorageService,
+    private service: ItemListingService) {
+
     this.items = [];
     this.activeItemIndex = 0;
   }

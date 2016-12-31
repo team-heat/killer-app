@@ -14,11 +14,13 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .get('/logout', passport.authenticate('jwt'), userController.logout)
     .get('/favorites', passport.authenticate('jwt'), favoritesController.index)
     .post('/favorites', passport.authenticate('jwt'), favoritesController.create)
+    .put('/favorites', passport.authenticate('jwt'), favoritesController.remove)
     .get('/gallery', itemListingController.index)
     .get('/gallery/:id', itemListingController.details)
     .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing)
     .post('/gallery/:id', passport.authenticate('jwt'), itemListingController.submitOfferForListing)
-    .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing);
+    .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing)
+    .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing);
 
   app.use('/api', apiRouter);
 

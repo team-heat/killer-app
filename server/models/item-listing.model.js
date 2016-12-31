@@ -9,6 +9,7 @@ const itemListingSchema = new mongoose.Schema({
   year: String,
   price: Number,
   pictures: [],
+  comments: [],
   offers: [],
   exteriorColor: String,
   interiorColor: String,
@@ -20,8 +21,8 @@ const itemListingSchema = new mongoose.Schema({
 });
 
 let ItemListing;
-itemListingSchema.static('createItemListing', function (listing) {
-  if(!listing.pictures || listing.pictures.length === 0){
+itemListingSchema.static('createItemListing', function(listing) {
+  if (!listing.pictures || listing.pictures.length === 0) {
     listing.pictures = [{
       imageUrl: '/assets/default-image.jpeg'
     }];
@@ -33,6 +34,7 @@ itemListingSchema.static('createItemListing', function (listing) {
     year: listing.year,
     price: listing.price,
     pictures: listing.pictures || [],
+    comments: [],
     offers: [],
     exteriorColor: listing.exteriorColor,
     interiorColor: listing.interiorColor,
@@ -47,6 +49,6 @@ itemListingSchema.static('createItemListing', function (listing) {
 mongoose.model('ItemListing', itemListingSchema);
 ItemListing = mongoose.model('ItemListing');
 
-module.exports = function ({}) {
+module.exports = function({}) {
   return ItemListing;
 };

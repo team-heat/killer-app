@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router'
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { CarouselListComponent } from './../../carousel-list/carousel-list.component';
 
@@ -32,7 +32,8 @@ export class SingleItemComponent implements OnInit {
             year: null,
             price: null,
             pictures: [],
-            offers:[],
+            comments: [],
+            offers: [],
             enginePower: null,
             interiorColor: null,
             exteriorColor: null,

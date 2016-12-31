@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Response } from '@angular/http';
 
 import { Offer } from './../models/offer.model';
+import { Comment } from '../models/comment.model';
 
 @Injectable()
 export class ItemListingService {
@@ -58,6 +59,15 @@ export class ItemListingService {
       .createHttpRequesterOptions(url, offer, this.contentTypeHeaderObject);
 
     return this.httpRequesterService.post(httpRequestOptions);
+  }
+
+  addComment(comment: Comment) {
+    const url = `${this.galleryApiUrl}/id/comments`;
+
+    const httpRequestOptions = this.httpRequesterOptionsFactory
+      .createHttpRequesterOptions(url, comment, this.contentTypeHeaderObject);
+
+    return this.httpRequesterService.put(httpRequestOptions);
   }
 
   // TODO: 
