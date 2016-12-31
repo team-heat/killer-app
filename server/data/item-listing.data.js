@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports = function ({ ItemListing }) {
+module.exports = function({ ItemListing }) {
 
   const availableModelProperties = [
     'make',
@@ -83,11 +83,11 @@ module.exports = function ({ ItemListing }) {
     });
   }
 
-  function addCommentToItemListing(listingId, comment) {
+  function addCommentToItemListing(comment) {
     return new Promise((resolve, reject) => {
-      getItemListingById(listingId)
+      getItemListingById(comment.listingId)
         .then(itemListing => {
-          itemListing.comments.push(comment);
+          itemListing.comments.push({ username: comment.username, content: comment.content });
 
           itemListing.save(err => {
             if (err) {

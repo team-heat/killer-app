@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function ({ itemListingData }) {
+module.exports = function({ itemListingData }) {
 
   function index(req, res) {
     return itemListingData.getAll()
@@ -54,10 +54,9 @@ module.exports = function ({ itemListingData }) {
         }
 
         res.status(200).json(listing);
-      })
-      .catch(err => {
-        
-          console.log(err)
+      }).catch(err => {
+
+        console.log(err);
         res.status(400).json({ message: err.message });
       });
   }
@@ -72,37 +71,24 @@ module.exports = function ({ itemListingData }) {
         }
 
         res.status(200).json(itemListing);
-      })
-      .catch(err => {
+      }).catch(err => {
         res.status(400).json({ message: err.message });
       });
   }
 
   function addCommentToListing(req, res) {
-    const listingId = req.params.id;
+    const comment = req.body;
 
-    // // Suggestion
+    return itemListingData.addCommentToItemListing(comment)
+      .then(itemListing => {
+        if (!itemListing) {
+          res.status(404).json({ message: 'Listing not found.' });
+        }
 
-    // const comment = req.body;
-    // // if needed
-    // comment.from = req.user.username;
-
-    // return itemListingData.addCommentToListing(listingId, comment)
-    //   .then(itemListing => {
-    //     if (!itemListing) {
-    //       throw new Error('Listing not found.');
-    //     }
-
-    //     res.status(200).json(itemListing);
-    //   })
-    //   .catch(err => {
-    //     res.status(400).json({ message: err.message });
-    //   })
-
-    // return itemListingData.addCommentToItemListing()
-    //   .then(itemListing => {
-
-    //   })
+        res.status(200).json(itemListing);
+      }).catch(err => {
+        res.status(400).json({ message: err.message });
+      });
   }
 
   function shuffle(items) {

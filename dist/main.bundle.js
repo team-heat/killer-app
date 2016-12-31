@@ -2342,20 +2342,17 @@ var CommentSectionComponent = (function () {
     };
     CommentSectionComponent.prototype.onSubmit = function () {
         var _this = this;
-        if (this.userStorageService.loggedUser) {
-            this.comment.username = this.userStorageService.loggedUser;
-            this.itemListingService.addComment(this.comment)
-                .subscribe(function (response) {
-                var toastrOptions = _this.toastrOptions
-                    .createToastrNotificationOptions('success', 'Comment submitted successfully.');
-                _this.toastrNotification.enqueueNotification(toastrOptions);
-            });
-        }
-        else {
-            var toastrOptions = this.toastrOptions
+        this.comment.username = this.userStorageService.loggedUser;
+        this.itemListingService.addComment(this.comment)
+            .subscribe(function (response) {
+            var toastrOptions = _this.toastrOptions
+                .createToastrNotificationOptions('success', 'Comment submitted successfully.');
+            _this.toastrNotification.enqueueNotification(toastrOptions);
+        }, function (err) {
+            var toastrOptions = _this.toastrOptions
                 .createToastrNotificationOptions('error', 'You must be logged in.');
-            this.toastrNotification.enqueueNotification(toastrOptions);
-        }
+            _this.toastrNotification.enqueueNotification(toastrOptions);
+        }, function () { return _this.comment.content = ''; });
     };
     CommentSectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({

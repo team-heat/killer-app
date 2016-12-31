@@ -49,19 +49,17 @@ export class CommentSectionComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.userStorageService.loggedUser) {
-      this.comment.username = this.userStorageService.loggedUser;
+    this.comment.username = this.userStorageService.loggedUser;
 
-      this.itemListingService.addComment(this.comment)
-        .subscribe((response: Response) => {
-          let toastrOptions = this.toastrOptions
-            .createToastrNotificationOptions('success', 'Comment submitted successfully.');
-          this.toastrNotification.enqueueNotification(toastrOptions);
-        });
-    } else {
-      let toastrOptions = this.toastrOptions
-        .createToastrNotificationOptions('error', 'You must be logged in.');
-      this.toastrNotification.enqueueNotification(toastrOptions);
-    }
+    this.itemListingService.addComment(this.comment)
+      .subscribe((response: Response) => {
+        let toastrOptions = this.toastrOptions
+          .createToastrNotificationOptions('success', 'Comment submitted successfully.');
+        this.toastrNotification.enqueueNotification(toastrOptions);
+      }, err => {
+        let toastrOptions = this.toastrOptions
+          .createToastrNotificationOptions('error', 'You must be logged in.');
+        this.toastrNotification.enqueueNotification(toastrOptions);
+      }, () => this.comment.content = '');
   }
 }
