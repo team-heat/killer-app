@@ -725,7 +725,27 @@ var OffersListComponent = (function () {
         });
     };
     OffersListComponent.prototype.acceptOffer = function ($event, offer) {
-        // TODO accepting
+        var _this = this;
+        // TODO Add logging somewhere with successfull deals ... maybe!
+        if (this.loggedUser === this.item.owner) {
+            for (var _i = 0, _a = this.item.offers; _i < _a.length; _i++) {
+                var o = _a[_i];
+                if (o.username === offer.username &&
+                    o.offeredPrice === offer.offeredPrice &&
+                    o.status === 'active') {
+                    // all other offers been canceled 1st
+                    for (var _b = 0, _c = this.item.offers; _b < _c.length; _b++) {
+                        var ofr = _c[_b];
+                        ofr.status = 'canceled';
+                    }
+                    o.status = 'accepted';
+                    this.item.isActive = false;
+                    this.itemListingService.updateItem(this.item)
+                        .map(function (x) { return x.json(); })
+                        .subscribe(function (x) { return _this.item = x; });
+                }
+            }
+        }
     };
     OffersListComponent.prototype.rejectOffer = function ($event, offer) {
         var _this = this;
