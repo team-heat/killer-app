@@ -2321,6 +2321,8 @@ var CommentSectionComponent = (function () {
         this.userStorageService = userStorageService;
         this.toastrNotification = toastrNotification;
         this.toastrOptions = toastrOptions;
+        this.minContentLength = 10;
+        this.maxContentLength = 150;
         this.comment = {
             listingId: '',
             username: '',
@@ -2343,16 +2345,30 @@ var CommentSectionComponent = (function () {
     CommentSectionComponent.prototype.onSubmit = function () {
         var _this = this;
         this.comment.username = this.userStorageService.loggedUser;
-        this.itemListingService.addComment(this.comment)
-            .subscribe(function (response) {
-            var toastrOptions = _this.toastrOptions
-                .createToastrNotificationOptions('success', 'Comment submitted successfully.');
-            _this.toastrNotification.enqueueNotification(toastrOptions);
-        }, function (err) {
-            var toastrOptions = _this.toastrOptions
+        var isContentLengthInRange = this.comment.content.length < this.minContentLength ||
+            this.comment.content.length > this.maxContentLength;
+        if (!this.comment.username) {
+            var toastrOptions = this.toastrOptions
                 .createToastrNotificationOptions('error', 'You must be logged in.');
-            _this.toastrNotification.enqueueNotification(toastrOptions);
-        }, function () { return _this.comment.content = ''; });
+            this.toastrNotification.enqueueNotification(toastrOptions);
+        }
+        else if (isContentLengthInRange) {
+            var toastrOptions = this.toastrOptions
+                .createToastrNotificationOptions('error', "Content length must be between " + this.minContentLength + " and " + this.maxContentLength);
+            this.toastrNotification.enqueueNotification(toastrOptions);
+        }
+        else {
+            this.itemListingService.addComment(this.comment)
+                .subscribe(function (response) {
+                var toastrOptions = _this.toastrOptions
+                    .createToastrNotificationOptions('success', 'Comment submitted successfully.');
+                _this.toastrNotification.enqueueNotification(toastrOptions);
+            }, function (err) {
+                var toastrOptions = _this.toastrOptions
+                    .createToastrNotificationOptions('error', 'You must be logged in.');
+                _this.toastrNotification.enqueueNotification(toastrOptions);
+            }, function () { return _this.comment.content = ''; });
+        }
     };
     CommentSectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({

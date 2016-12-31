@@ -19,6 +19,9 @@ export class CommentSectionComponent implements OnInit {
   comment: Comment;
   listingComments: Comment[];
 
+  private minContentLength: number = 10;
+  private maxContentLength: number = 150;
+
   constructor(
     private route: ActivatedRoute,
     private itemListingService: ItemListingService,
@@ -52,16 +55,29 @@ export class CommentSectionComponent implements OnInit {
   onSubmit(): void {
 
     this.comment.username = this.userStorageService.loggedUser;
+    let isContentLengthInRange: boolean =
+      this.comment.content.length < this.minContentLength ||
+      this.comment.content.length > this.maxContentLength;
 
-    this.itemListingService.addComment(this.comment)
-      .subscribe((response: Response) => {
-        let toastrOptions = this.toastrOptions
-          .createToastrNotificationOptions('success', 'Comment submitted successfully.');
-        this.toastrNotification.enqueueNotification(toastrOptions);
-      }, err => {
-        let toastrOptions = this.toastrOptions
-          .createToastrNotificationOptions('error', 'You must be logged in.');
-        this.toastrNotification.enqueueNotification(toastrOptions);
-      }, () => this.comment.content = '');
+    if (!this.comment.username) {
+      let toastrOptions = this.toastrOptions
+        .createToastrNotificationOptions('error', 'You must be logged in.');
+      this.toastrNotification.enqueueNotification(toastrOptions);
+    } else if (isContentLengthInRange) {
+      let toastrOptions = this.toastrOptions
+        .createToastrNotificationOptions('error', `Content length must be between ${this.minContentLength} and ${this.maxContentLength}`);
+      this.toastrNotification.enqueueNotification(toastrOptions);
+    } else {
+      this.itemListingService.addComment(this.comment)
+        .subscribe((response: Response) => {
+          let toastrOptions = this.toastrOptions
+            .createToastrNotificationOptions('success', 'Comment submitted successfully.');
+          this.toastrNotification.enqueueNotification(toastrOptions);
+        }, err => {
+          let toastrOptions = this.toastrOptions
+            .createToastrNotificationOptions('error', 'You must be logged in.');
+          this.toastrNotification.enqueueNotification(toastrOptions);
+        }, () => this.comment.content = '');
+    }
   }
 }
