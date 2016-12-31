@@ -34,6 +34,7 @@ export class CommentSectionComponent implements OnInit {
   }
 
   ngOnInit() {
+
     let listingId;
 
     this.route.params
@@ -49,6 +50,7 @@ export class CommentSectionComponent implements OnInit {
   }
 
   onSubmit(): void {
+
     this.comment.username = this.userStorageService.loggedUser;
 
     this.itemListingService.addComment(this.comment)
