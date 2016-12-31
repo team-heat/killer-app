@@ -47,7 +47,7 @@ module.exports = function ({ itemListingData }) {
 
   function updateListing(req, res) {
     let listingForUpdate = req.body;
-    return itemListingData.updateListing(listingForUpdate)
+    return itemListingData.updateItemListing(listingForUpdate)
       .then(listing => {
         if (!listing) {
           throw new Error('Listing not found.');
