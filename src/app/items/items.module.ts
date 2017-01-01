@@ -18,6 +18,15 @@ import { ToastrNotificationService } from '../services/toastr-notification.servi
 import { UserStorageService } from './../services/user-storage.service';
 import { UsersModule } from '../users/users.module';
 
+import { ExteriorColorFilterPipe } from './../pipes/exterior-color.pipe';
+import { MakeFilterPipe } from './../pipes/make-filter.pipe';
+import { ModelFilterPipe } from './../pipes/model-filter.pipe';
+import { PriceGreaterThenPipe } from './../pipes/price-greater-then.pipe';
+import { PriceLessThenPipe } from './../pipes/price-less-then.pipe';
+import { YearGreaterThenPipe } from './../pipes/year-greater-then.pipe';
+import { YearLessThenPipe } from './../pipes/year-less-then.pipe';
+
+
 @NgModule({
     imports: [
         ItemsRouterModule,
@@ -31,7 +40,14 @@ import { UsersModule } from '../users/users.module';
         ItemsCollectionComponent,
         CommentSectionComponent,
         OffersListComponent,
-        MakeOfferComponent
+        MakeOfferComponent,
+        ExteriorColorFilterPipe,
+        MakeFilterPipe,
+        ModelFilterPipe,
+        PriceGreaterThenPipe,
+        PriceLessThenPipe,
+        YearGreaterThenPipe,
+        YearLessThenPipe
     ],
     providers: [
         ItemListingService,
