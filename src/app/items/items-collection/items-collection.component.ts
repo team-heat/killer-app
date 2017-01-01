@@ -66,6 +66,11 @@ export class ItemsCollectionComponent implements OnInit {
     this.applyFiltersToItems();
   }
 
+  onColorFilter(colorFilterValue: string): void {
+    this.colorFilter = colorFilterValue;
+    this.applyFiltersToItems();
+  }
+
   applyFiltersToItems() {
     this.items = [...this.originalItems];
     if (this.makeFilter) {

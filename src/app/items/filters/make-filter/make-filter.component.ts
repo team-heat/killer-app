@@ -14,7 +14,6 @@ export class MakeFilterComponent {
   constructor() { }
 
   updateValue() {
-    console.log(this.makeFilterValue);
     this.onMakeFilter.emit(this.makeFilterValue);
   }
 }
