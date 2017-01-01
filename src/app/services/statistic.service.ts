@@ -69,4 +69,12 @@ export class StatisticService {
         return this.httpRequesterService.get(httpRequestOptions);
     }
 
+    getMostCommentedItems() {
+        const url = this.apiUrlsConfigService.mostCommentedItemsUrl;
+
+        const httpRequestOptions = this.httpRequesterOptionsFactory
+            .createHttpRequesterOptions(url, {}, this.contentTypeHeaderObject);
+
+        return this.httpRequesterService.get(httpRequestOptions);
+    }
 }
