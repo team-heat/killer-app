@@ -14,12 +14,13 @@ const itemListingData = require('./data/item-listing.data')({ ItemListing });
 const userController = require('./controllers/user.controller')({ userData, config });
 const itemListingController = require('./controllers/item-listing.controller')({ itemListingData });
 const favoritesController = require('./controllers/favorites.controller')({ userData, itemListingData });
+const statistcsController = require('./controllers/statistics.controller')({ userData, itemListingData });
 const uploadController = require('./controllers/upload.controller')({});
 
 require('./config/local.passport.config')({ app, userData });
 require('./config/jwt.passport.config')({ app, userData, config });
 
-require('./config/routes.config')({ app, userController, itemListingController, favoritesController, uploadController });
+require('./config/routes.config')({ app, userController, itemListingController, favoritesController, uploadController, statistcsController });
 
 require('./config/mongoose.config')({ config });
 
