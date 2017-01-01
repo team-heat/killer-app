@@ -30,6 +30,7 @@ export class CommentSectionComponent implements OnInit {
     private toastrNotification: ToastrNotificationService,
     private toastrOptions: ToastrNotificationOptionsFactoryService) {
 
+    this.listingComments = [];
     this.comment = {
       listingId: '',
       username: '',

@@ -2376,6 +2376,7 @@ var CommentSectionComponent = (function () {
         this.toastrOptions = toastrOptions;
         this.minContentLength = 10;
         this.maxContentLength = 150;
+        this.listingComments = [];
         this.comment = {
             listingId: '',
             username: '',
@@ -3580,7 +3581,7 @@ module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jp
 /***/ 770:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\n        <div class=\"comment-list-item\">\n          <div class=\"author-wrapper\">\n            <h3 class=\"author\">{{comment.username}}</h3>\n          </div>\n          <div class=\"content-wrapper\">\n            <span>{{comment.content}}</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\n  </div>\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
+module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\" *ngIf=\"listingComments.length\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\n        <div class=\"comment-list-item\">\n          <div class=\"author-wrapper\">\n            <h3 class=\"author\">{{comment.username}}</h3>\n          </div>\n          <div class=\"content-wrapper\">\n            <span>{{comment.content}}</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\n  </div>\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
 
 /***/ },
 
