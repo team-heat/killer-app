@@ -3568,7 +3568,7 @@ module.exports = "<!--<label>\n  <input [id]=\"id\" type=\"file\" name=\"fileUpl
 /***/ 768:
 /***/ function(module, exports) {
 
-module.exports = "<!--<footer>\n  <div class=\"well\">\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\n      <p>Team Heat - Killer App @ GitHub</p>\n    </a>\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\n      <p>Iliyan Kupenov</p>\n    </a>\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\n      <p>Hristo Todorov</p>\n    </a>\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\n      <p>Stoiko Neykov</p>\n    </a>\n  </div>\n</footer>-->\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\n      aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    <!--<a class=\"navbar-brand\" href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\n      Team Heat - Killer App @ GitHub\n    </a>-->\n  </div>\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav text-center\">\n      <li>\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\n      Team Heat - Killer App @ GitHub\n    </a>\n      </li>\n      <li>\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">\n          Iliyan Kupenov\n        </a>\n      </li>\n      <li>\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">\n      Hristo Todorov\n        </a>\n      </li>\n      <li>\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\n      Stoiko Neykov\n        </a>\n      </li>\n    </ul>\n  </div>\n</nav>"
+module.exports = "<!--<footer>\n  <div class=\"well\">\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\n      <p>Team Heat - Killer App @ GitHub</p>\n    </a>\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\n      <p>Iliyan Kupenov</p>\n    </a>\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\n      <p>Hristo Todorov</p>\n    </a>\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\n      <p>Stoiko Neykov</p>\n    </a>\n  </div>\n</footer>-->\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav text-center\">\n      <li>\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\n      Team Heat - Killer App @ GitHub\n    </a>\n      </li>\n      <li>\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\n      </li>\n      <li>\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\n      </li>\n      <li>\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\n      </li>\n      <li>\n        <a routerLink=\"/contact\">Contact Us</a>\n      </li>\n    </ul>\n  </div>\n</nav>"
 
 /***/ },
 
@@ -3704,6 +3704,8 @@ module.exports = __webpack_require__(428);
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__ = __webpack_require__(42);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3715,14 +3717,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ContactComponent = (function () {
-    function ContactComponent() {
+    function ContactComponent(toastrNotification, toastrOptions) {
+        this.toastrNotification = toastrNotification;
+        this.toastrOptions = toastrOptions;
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent.prototype.onSubmit = function () {
-        console.log(this.emailAddress);
-        console.log(this.name);
     };
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3730,9 +3734,10 @@ var ContactComponent = (function () {
             template: __webpack_require__(818),
             styles: [__webpack_require__(817)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _b) || Object])
     ], ContactComponent);
     return ContactComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/contact.component.js.map
 
