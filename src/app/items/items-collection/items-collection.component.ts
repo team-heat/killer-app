@@ -18,6 +18,7 @@ import { ItemListingService } from './../../services/item-listing.service';
 export class ItemsCollectionComponent implements OnInit {
 
   items: ItemListing[];
+  originalItems: ItemListing[];
   activeItem: ItemListing;
   activeItemIndex: number;
 
@@ -36,6 +37,7 @@ export class ItemsCollectionComponent implements OnInit {
     private service: ItemListingService) {
 
     this.items = [];
+    this.originalItems = [];
     this.activeItemIndex = 0;
   }
 
@@ -65,6 +67,7 @@ export class ItemsCollectionComponent implements OnInit {
   }
 
   applyFiltersToItems() {
+    this.items = [...this.originalItems];
     if (this.makeFilter) {
       this.items = this.makeFilterPipe.transform(this.items, this.makeFilter);
     }
@@ -80,13 +83,16 @@ export class ItemsCollectionComponent implements OnInit {
     if (this.maximumPriceFilter) {
       this.items = this.maximumPricePipe.transform(this.items, this.maximumPriceFilter);
     }
+
+    this.activeItem = this.items[0];
   }
 
   ngOnInit() {
     this.service.getItemsCollection()
       .map(response => response.json())
       .subscribe((response) => {
-        this.items = response;
+        this.originalItems = response;
+        this.items = [...this.originalItems];
       }, (err) => {
         console.log(err);
       }, () => {

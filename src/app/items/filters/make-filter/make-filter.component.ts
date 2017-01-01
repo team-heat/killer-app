@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-make-filter',
@@ -9,11 +9,12 @@ export class MakeFilterComponent {
 
   @Output() onMakeFilter: EventEmitter<string> = new EventEmitter<string>();
 
-  private makeFilterValue: string;
+  makeFilterValue: string;
 
   constructor() { }
 
-  onModelChange() {
+  updateValue() {
+    console.log(this.makeFilterValue);
     this.onMakeFilter.emit(this.makeFilterValue);
   }
 }

@@ -5,13 +5,13 @@
       <span>{{this.activeItem.make}}</span>
       <span>{{this.activeItem.model}}</span>
       <span>{{this.activeItem.year}}</span>
-      <app-add-to-favorites (onMakeFilter)="onMakeFilter($event)" *ngIf="this.userStorage.isLogged()" [itemIdToFavorite]="this.activeItem._id"
+      <app-add-to-favorites *ngIf="this.userStorage.isLogged()" [itemIdToFavorite]="this.activeItem._id"
         class="add-to-favorites-btn"></app-add-to-favorites>
     </h3>
   </div>
   <div class="row">
-    <div *ngIf="this.items.length !== 0" class="row">
-      <app-make-filter></app-make-filter>
+    <div *ngIf="this.originalItems.length !== 0" class="row">
+      <app-make-filter  (onMakeFilter)="onMakeFilter($event)"></app-make-filter>
     </div>
     <h3 *ngIf="this.items.length === 0">Be the first to post a new item!</h3>
     <div *ngIf="this.items.length !== 0" id="carousel-container" class="col-xs-8 col-xs-offset-2">
