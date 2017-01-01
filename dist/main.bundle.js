@@ -2409,6 +2409,13 @@ var CommentSectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_service__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_user_storage_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__users_users_module__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_exterior_color_pipe__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pipes_make_filter_pipe__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pipes_model_filter_pipe__ = __webpack_require__(801);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pipes_price_greater_then_pipe__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pipes_price_less_then_pipe__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pipes_year_greater_then_pipe__ = __webpack_require__(804);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_less_then_pipe__ = __webpack_require__(805);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2419,6 +2426,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
+
+
 
 
 
@@ -2451,7 +2465,14 @@ var ItemsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */],
                 __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__["a" /* CommentSectionComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__offers_offers_list_component__["a" /* OffersListComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__offers_make_offer_component__["a" /* MakeOfferComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__offers_make_offer_component__["a" /* MakeOfferComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_16__pipes_make_filter_pipe__["a" /* MakeFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_17__pipes_model_filter_pipe__["a" /* ModelFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_18__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_19__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_20__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_21__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__services_item_listing_service__["a" /* ItemListingService */],
@@ -3346,6 +3367,265 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 module.exports = __webpack_require__(423);
 
+
+/***/ },
+
+/***/ 799:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ExteriorColorFilterPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExteriorColorFilterPipe = (function () {
+    function ExteriorColorFilterPipe() {
+    }
+    ExteriorColorFilterPipe.prototype.transform = function (array, exteriorColorFilter) {
+        if (!exteriorColorFilter) {
+            return array;
+        }
+        return array.filter(function (x) { return x.exteriorColor === exteriorColorFilter; });
+    };
+    ExteriorColorFilterPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'exteriorColorFilter'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ExteriorColorFilterPipe);
+    return ExteriorColorFilterPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/exterior-color.pipe.js.map
+
+/***/ },
+
+/***/ 800:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MakeFilterPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MakeFilterPipe = (function () {
+    function MakeFilterPipe() {
+    }
+    MakeFilterPipe.prototype.transform = function (array, makefilter) {
+        if (!makefilter) {
+            return array;
+        }
+        return array.filter(function (x) { return x.make === makefilter; });
+    };
+    MakeFilterPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'makeFilter'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MakeFilterPipe);
+    return MakeFilterPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/make-filter.pipe.js.map
+
+/***/ },
+
+/***/ 801:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ModelFilterPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ModelFilterPipe = (function () {
+    function ModelFilterPipe() {
+    }
+    ModelFilterPipe.prototype.transform = function (array, modelFilter) {
+        if (!modelFilter) {
+            return array;
+        }
+        return array.filter(function (x) { return x.model === modelFilter; });
+    };
+    ModelFilterPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'modelFilter'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ModelFilterPipe);
+    return ModelFilterPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/model-filter.pipe.js.map
+
+/***/ },
+
+/***/ 802:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return PriceGreaterThenPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PriceGreaterThenPipe = (function () {
+    function PriceGreaterThenPipe() {
+    }
+    PriceGreaterThenPipe.prototype.transform = function (array, priceGreaterThen) {
+        if (!priceGreaterThen) {
+            return array;
+        }
+        return array.filter(function (x) { return x.price >= priceGreaterThen; });
+    };
+    PriceGreaterThenPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'priceGreaterThen'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], PriceGreaterThenPipe);
+    return PriceGreaterThenPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/price-greater-then.pipe.js.map
+
+/***/ },
+
+/***/ 803:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return PriceLessThenPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PriceLessThenPipe = (function () {
+    function PriceLessThenPipe() {
+    }
+    PriceLessThenPipe.prototype.transform = function (array, priceLessThen) {
+        if (!priceLessThen) {
+            return array;
+        }
+        return array.filter(function (x) { return x.price <= priceLessThen; });
+    };
+    PriceLessThenPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'priceLessThen'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], PriceLessThenPipe);
+    return PriceLessThenPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/price-less-then.pipe.js.map
+
+/***/ },
+
+/***/ 804:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return YearGreaterThenPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var YearGreaterThenPipe = (function () {
+    function YearGreaterThenPipe() {
+    }
+    YearGreaterThenPipe.prototype.transform = function (array, yearGreaterThen) {
+        if (!yearGreaterThen) {
+            return array;
+        }
+        return array.filter(function (x) { return x.year >= yearGreaterThen; });
+    };
+    YearGreaterThenPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'yearGreaterThen'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], YearGreaterThenPipe);
+    return YearGreaterThenPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/year-greater-then.pipe.js.map
+
+/***/ },
+
+/***/ 805:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return YearLessThenPipe; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var YearLessThenPipe = (function () {
+    function YearLessThenPipe() {
+    }
+    YearLessThenPipe.prototype.transform = function (array, yearLessThen) {
+        if (!yearLessThen) {
+            return array;
+        }
+        return array.filter(function (x) { return x.year <= yearLessThen; });
+    };
+    YearLessThenPipe = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+            name: 'yearLessThen'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], YearLessThenPipe);
+    return YearLessThenPipe;
+}());
+//# sourceMappingURL=E:/MyRepos/killer-app/src/year-less-then.pipe.js.map
 
 /***/ }
 
