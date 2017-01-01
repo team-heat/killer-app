@@ -1,12 +1,15 @@
 'use strict';
 
 module.exports = function ({itemListingData}) {
+    const numberOfElements = 10;
+
     function mostExpensiveItems(req, res) {
         itemListingData.getAllWithoutFilters()
             .then(listings => {
 
                 let result = listings
-                    .sort((a, b) => b.price - a.price);
+                    .sort((a, b) => b.price - a.price)
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
             })
@@ -35,7 +38,8 @@ module.exports = function ({itemListingData}) {
                         return allNames;
                     }, {})
                     // sort
-                    .sort((a, b) => b - a);
+                    .sort((a, b) => b - a)
+                    .slice(0, numberOfElements);                    
 
                 res.status(200).json(result);
             })
@@ -49,7 +53,8 @@ module.exports = function ({itemListingData}) {
             .then(listings => {
 
                 let result = listings
-                    .sort((a, b) => b.offers.length - a.offers.length);
+                    .sort((a, b) => b.offers.length - a.offers.length)
+                    .slice(0, numberOfElements);                    
 
                 res.status(200).json(result);
             })
@@ -63,7 +68,8 @@ module.exports = function ({itemListingData}) {
             .then(listings => {
 
                 let result = listings
-                    .sort((a, b) => b.comments.length - a.comments.length);
+                    .sort((a, b) => b.comments.length - a.comments.length)
+                    .slice(0, numberOfElements);                   
 
                 res.status(200).json(result);
             })
@@ -96,7 +102,8 @@ module.exports = function ({itemListingData}) {
                         return allNames;
                     }, {})
                     // sort
-                    .sort((a, b) => b - a);
+                    .sort((a, b) => b - a)
+                    .slice(0, numberOfElements);                    
 
                 res.status(200).json(result);
             })
@@ -123,7 +130,8 @@ module.exports = function ({itemListingData}) {
 
                         return allNames;
                     }, {})
-                    .sort((a, b) => b - a);
+                    .sort((a, b) => b - a)
+                    .slice(0, numberOfElements);                    
 
                 res.status(200).json(result);
 
@@ -153,7 +161,8 @@ module.exports = function ({itemListingData}) {
 
                         return allNames;
                     }, {})
-                    .sort((a, b) => b - a);
+                    .sort((a, b) => b - a)
+                    .slice(0, numberOfElements);                    
 
                 res.status(200).json(result);
 
