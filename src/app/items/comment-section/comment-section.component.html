@@ -1,7 +1,16 @@
 <div class="comment-section">
   <div class="comments-wrapper">
     <ul>
-      <li *ngFor="let comment of listingComments">{{comment.content}}</li>
+      <li *ngFor="let comment of listingComments">
+        <div class="comment-list-item">
+          <div class="author-wrapper">
+            <h3 class="author">{{comment.username}}</h3>
+          </div>
+          <div class="content-wrapper">
+            <span>{{comment.content}}</span>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="comment-wrapper" *ngIf="this.userStorageService.loggedUser">
