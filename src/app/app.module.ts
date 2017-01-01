@@ -30,6 +30,7 @@ import { ToastrNotificationsHandlerComponent } from './toastr-notifications-hand
 import { UserService } from './services/user.service';
 import { UserStorageService } from './services/user-storage.service';
 import { UsersModule } from './users/users.module';
+import { FooterComponent } from './footer/footer.component';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
@@ -39,7 +40,8 @@ import { UsersModule } from './users/users.module';
     AppComponent,
     NavigationComponent,
     ToastrNotificationsHandlerComponent,
-    NavigationHoverDirective
+    NavigationHoverDirective,
+    FooterComponent
   ],
   imports: [
     // MockedModule,
