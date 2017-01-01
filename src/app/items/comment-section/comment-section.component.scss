@@ -17,6 +17,7 @@ div.comment-section {
       }
       li {
         text-align: left;
+        word-wrap: break-word;
         padding: 10px;
         border-bottom: 1px solid #ccc;
         color: #282828;
@@ -30,6 +31,7 @@ div.comment-section {
   div.comment-wrapper {
     margin-top: 5vh;
     #comment {
+      background-color: #F9F9F9;
       resize: none;
       padding: 15px;
       font-size: 2rem;
