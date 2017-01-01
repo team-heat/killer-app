@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ItemListingService } from '../../services/item-listing.service';
+import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { UserStorageService } from '../../services/user-storage.service';
 
@@ -16,6 +16,7 @@ export class FavoritesComponent implements OnInit {
   activeItemIndex: number;
 
   constructor(
+    private appRouter: Router,
     private userService: UserService,
     private userStorage: UserStorageService) {
 
@@ -24,11 +25,15 @@ export class FavoritesComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (!this.userStorage.isLogged()) {
+      this.appRouter.navigateByUrl('login');
+      return;
+    }
+
     this.userService.getUserDetails()
       .map(response => response.json())
       .subscribe((responseJson) => {
         this.items = responseJson.favorites;
-        console.log(this.items);
       }, (err) => {
         console.log(err);
       }, () => {
