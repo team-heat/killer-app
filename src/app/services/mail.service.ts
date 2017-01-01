@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 import { Mail } from '../models/mail.model';
 
 @Injectable()
-export class MailServiceService {
+export class MailService {
 
   private mailApiUrl: string;
   private contentTypeHeaderObject: {} = { 'Content-Type': 'application/json' };

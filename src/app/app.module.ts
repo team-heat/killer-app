@@ -32,6 +32,7 @@ import { ToastrNotificationsHandlerComponent } from './toastr-notifications-hand
 import { UserService } from './services/user.service';
 import { UserStorageService } from './services/user-storage.service';
 import { UsersModule } from './users/users.module';
+import { MailService } from './services/mail.service';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { UsersModule } from './users/users.module';
     ToastrNotificationService,
     UserService,
     UserStorageService,
-    AddToFavoritesComponent
+    AddToFavoritesComponent,
+    MailService
   ],
   bootstrap: [AppComponent]
 })
