@@ -21,8 +21,12 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .post('/gallery/:id', passport.authenticate('jwt'), itemListingController.submitOfferForListing)
     .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing)
     .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing)
-    .get('/statistics/users', statistcsController.getUsersStatistics)
-    .get('/statistics/items', statistcsController.getItemsStatistics);
+    .get('/statistics/items/mostExpensiveItems', statistcsController.mostExpensiveItems)
+    .get('/statistics/items/mostSaledMakes', statistcsController.mostSaledMakes)
+    .get('/statistics/items/mostOfferedItems', statistcsController.mostOfferedItems)
+    .get('/statistics/users/topSellers', statistcsController.topSellers)
+    .get('/statistics/users/topBuyers', statistcsController.topBuyers)
+    .get('/statistics/users/topActiveUsers', statistcsController.topActiveUsers);
 
   app.use('/api', apiRouter);
 
