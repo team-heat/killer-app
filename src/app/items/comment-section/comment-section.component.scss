@@ -51,8 +51,16 @@ div.comment-section {
       &.disabled {
         cursor: default;
       }
+      a,
+      span {
+        font-size: 1.5rem !important;
+      }
       a {
-        color: #fff;
+        color: #fff !important;
+        &:hover {
+          background-color: #79c1f1 !important;
+          text-decoration: none;
+        }
       }
     }
   }
