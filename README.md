@@ -8,7 +8,7 @@
 
 ![image](./src/assets/screenshot6.png)
 
-![image](./src/assets/screenshot7.png)
+![image](./src/assets/screenshot8.png)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 

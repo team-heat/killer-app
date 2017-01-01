@@ -9,7 +9,30 @@
     </h3>
   </div>
   <div class="row">
-    <h3 *ngIf="this.items.length === 0">Be the first to post a new item!</h3>
+    <div *ngIf="this.originalItems.length !== 0" class="well">
+      <div class="row">
+        <div class="col-xs-2">
+          <app-make-filter (onMakeFilter)="onMakeFilter($event)"></app-make-filter>
+        </div>
+        <div class="col-xs-2">
+          <app-color-filter (onColorFilter)="onColorFilter($event)"></app-color-filter>
+        </div>
+        <div class="col-xs-2">
+          <app-minimum-year-filter (onMinimumYearFilter)="onMinimumYearFilter($event)"></app-minimum-year-filter>
+        </div>
+        <div class="col-xs-2">
+          <app-maximum-year-filter (onMaximumYearFilter)="onMaximumYearFilter($event)"></app-maximum-year-filter>
+        </div>
+        <div class="col-xs-2">
+          <app-minimum-price-filter (onMinimumPriceFilter)="onMinimumPriceFilter($event)"></app-minimum-price-filter>
+        </div>
+        <div class="col-xs-2">
+          <app-maximum-price-filter (onMaximumPriceFilter)="onMaximumPriceFilter($event)"></app-maximum-price-filter>
+        </div>
+      </div>
+    </div>
+    <h3 *ngIf="this.originalItems.length === 0">Be the first to post a new item!</h3>
+    <h3 *ngIf="this.items.length === 0">No matching items found.</h3>
     <div *ngIf="this.items.length !== 0" id="carousel-container" class="col-xs-8 col-xs-offset-2">
       <app-carousel *ngIf="this.activeItem" [mylist]="this.activeItem.pictures"></app-carousel>
     </div>

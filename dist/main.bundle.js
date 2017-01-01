@@ -476,9 +476,15 @@ var HomeComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pipes_price_less_then_pipe__ = __webpack_require__(575);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_year_less_then_pipe__ = __webpack_require__(577);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pipes_price_greater_then_pipe__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_year_greater_then_pipe__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_exterior_color_pipe__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_make_filter_pipe__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__ = __webpack_require__(60);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsCollectionComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -492,11 +498,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
 var ItemsCollectionComponent = (function () {
     function ItemsCollectionComponent(userStorage, service) {
         this.userStorage = userStorage;
         this.service = service;
+        this.makeFilterPipe = new __WEBPACK_IMPORTED_MODULE_5__pipes_make_filter_pipe__["a" /* MakeFilterPipe */]();
+        this.colorFilterPipe = new __WEBPACK_IMPORTED_MODULE_4__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */]();
+        this.minimumYearPipe = new __WEBPACK_IMPORTED_MODULE_3__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */]();
+        this.maximumYearPipe = new __WEBPACK_IMPORTED_MODULE_1__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */]();
+        this.minimuPricePipe = new __WEBPACK_IMPORTED_MODULE_2__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */]();
+        this.maximumPricePipe = new __WEBPACK_IMPORTED_MODULE_0__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */]();
+        this.makeFilter = '';
+        this.colorFilter = '';
+        this.minimumYearFilter = 0;
+        this.maximumYearFilter = 0;
+        this.minimumPriceFilter = 0;
+        this.maximumPriceFilter = 0;
         this.items = [];
+        this.originalItems = [];
         this.activeItemIndex = 0;
     }
     ItemsCollectionComponent.prototype.onPrevious = function () {
@@ -517,12 +542,59 @@ var ItemsCollectionComponent = (function () {
         }
         this.activeItem = this.items[this.activeItemIndex];
     };
+    ItemsCollectionComponent.prototype.onMakeFilter = function (makeFilterValue) {
+        this.makeFilter = makeFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onColorFilter = function (colorFilterValue) {
+        this.colorFilter = colorFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onMinimumYearFilter = function (minimumYearFilterValue) {
+        this.minimumYearFilter = minimumYearFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onMaximumYearFilter = function (maximumYearFilterValue) {
+        this.maximumYearFilter = maximumYearFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onMinimumPriceFilter = function (minimumPriceFilterValue) {
+        this.minimumPriceFilter = minimumPriceFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onMaximumPriceFilter = function (maximumPriceFilterValue) {
+        this.maximumPriceFilter = maximumPriceFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.applyFiltersToItems = function () {
+        this.items = this.originalItems.slice();
+        if (this.makeFilter) {
+            this.items = this.makeFilterPipe.transform(this.items, this.makeFilter);
+        }
+        if (this.colorFilter) {
+            this.items = this.colorFilterPipe.transform(this.items, this.colorFilter);
+        }
+        if (this.minimumYearFilter) {
+            this.items = this.minimumYearPipe.transform(this.items, this.minimumYearFilter);
+        }
+        if (this.maximumYearFilter) {
+            this.items = this.maximumYearPipe.transform(this.items, this.maximumYearFilter);
+        }
+        if (this.minimumPriceFilter) {
+            this.items = this.minimuPricePipe.transform(this.items, this.minimumPriceFilter);
+        }
+        if (this.maximumPriceFilter) {
+            this.items = this.maximumPricePipe.transform(this.items, this.maximumPriceFilter);
+        }
+        this.activeItem = this.items[0];
+    };
     ItemsCollectionComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.service.getItemsCollection()
             .map(function (response) { return response.json(); })
             .subscribe(function (response) {
-            _this.items = response;
+            _this.originalItems = response;
+            _this.items = _this.originalItems.slice();
         }, function (err) {
             console.log(err);
         }, function () {
@@ -532,12 +604,12 @@ var ItemsCollectionComponent = (function () {
         });
     };
     ItemsCollectionComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__angular_core__["Component"])({
             selector: 'app-items-collection',
             template: __webpack_require__(771),
             styles: [__webpack_require__(750)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object])
     ], ItemsCollectionComponent);
     return ItemsCollectionComponent;
     var _a, _b;
@@ -2471,6 +2543,12 @@ var CommentSectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__users_users_module__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__ = __webpack_require__(576);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__ = __webpack_require__(577);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__ = __webpack_require__(820);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(824);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(822);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__ = __webpack_require__(823);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__ = __webpack_require__(821);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2481,6 +2559,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
+
 
 
 
@@ -2529,7 +2613,13 @@ var ItemsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_14__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */],
                 __WEBPACK_IMPORTED_MODULE_15__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */],
                 __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */]
+                __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__["a" /* MakeFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__["a" /* ColorFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__["a" /* MinimumYearFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__["a" /* MaximumYearFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__["a" /* MinimumPriceFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__["a" /* MaximumPriceFilterComponent */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
@@ -3443,7 +3533,7 @@ module.exports = "div.comment-section {\n  width: 80%;\n  margin: 7.5vh auto; }\
 /***/ 750:
 /***/ function(module, exports) {
 
-module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n\n.well {\n  background-color: transparent;\n  border: none; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
 
 /***/ },
 
@@ -3590,7 +3680,7 @@ module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapp
 /***/ 771:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\n    <h3 *ngIf=\"this.items.length !== 0\">\n      <span>{{this.activeItem.make}}</span>\n      <span>{{this.activeItem.model}}</span>\n      <span>{{this.activeItem.year}}</span>\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\n    </h3>\n  </div>\n  <div class=\"row\">\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\n    </div>\n  </div>\n  <div id=\"controls\">\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Previous\n        </a>\n      </div>\n      <div class=\"col-xs-4 col-xs-offset-1\">\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\n          More Details\n        </a>\n      </div>\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Next\n        </a>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\n    <h3 *ngIf=\"this.items.length !== 0\">\n      <span>{{this.activeItem.make}}</span>\n      <span>{{this.activeItem.model}}</span>\n      <span>{{this.activeItem.year}}</span>\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\n    </h3>\n  </div>\n  <div class=\"row\">\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\n      <div class=\"row\">\n        <div class=\"col-xs-2\">\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\n        </div>\n      </div>\n    </div>\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\n    </div>\n  </div>\n  <div id=\"controls\">\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Previous\n        </a>\n      </div>\n      <div class=\"col-xs-4 col-xs-offset-1\">\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\n          More Details\n        </a>\n      </div>\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Next\n        </a>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ },
 
@@ -3755,6 +3845,342 @@ module.exports = "div.contact-wrapper {\n  display: -webkit-box;\n  display: -ms
 /***/ function(module, exports) {
 
 module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"name\">\n    <br>\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"emailAddress\">\n    <br>\n    <textarea name=\"content\" id=\"content\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
+
+/***/ },
+
+/***/ 819:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ColorFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ColorFilterComponent = (function () {
+    function ColorFilterComponent() {
+        this.onColorFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    ColorFilterComponent.prototype.updateValue = function () {
+        this.onColorFilter.emit(this.colorFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], ColorFilterComponent.prototype, "onColorFilter", void 0);
+    ColorFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-color-filter',
+            template: __webpack_require__(831),
+            styles: [__webpack_require__(825)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ColorFilterComponent);
+    return ColorFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/color-filter.component.js.map
+
+/***/ },
+
+/***/ 820:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MakeFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MakeFilterComponent = (function () {
+    function MakeFilterComponent() {
+        this.onMakeFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MakeFilterComponent.prototype.updateValue = function () {
+        this.onMakeFilter.emit(this.makeFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MakeFilterComponent.prototype, "onMakeFilter", void 0);
+    MakeFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-make-filter',
+            template: __webpack_require__(832),
+            styles: [__webpack_require__(826)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MakeFilterComponent);
+    return MakeFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/make-filter.component.js.map
+
+/***/ },
+
+/***/ 821:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MaximumPriceFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MaximumPriceFilterComponent = (function () {
+    function MaximumPriceFilterComponent() {
+        this.onMaximumPriceFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MaximumPriceFilterComponent.prototype.updateValue = function () {
+        this.onMaximumPriceFilter.emit(+this.maximumPriceFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MaximumPriceFilterComponent.prototype, "onMaximumPriceFilter", void 0);
+    MaximumPriceFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-maximum-price-filter',
+            template: __webpack_require__(833),
+            styles: [__webpack_require__(827)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MaximumPriceFilterComponent);
+    return MaximumPriceFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/maximum-price-filter.component.js.map
+
+/***/ },
+
+/***/ 822:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MaximumYearFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MaximumYearFilterComponent = (function () {
+    function MaximumYearFilterComponent() {
+        this.onMaximumYearFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MaximumYearFilterComponent.prototype.updateValue = function () {
+        this.onMaximumYearFilter.emit(+this.maximumYearFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MaximumYearFilterComponent.prototype, "onMaximumYearFilter", void 0);
+    MaximumYearFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-maximum-year-filter',
+            template: __webpack_require__(834),
+            styles: [__webpack_require__(828)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MaximumYearFilterComponent);
+    return MaximumYearFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/maximum-year-filter.component.js.map
+
+/***/ },
+
+/***/ 823:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MinimumPriceFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MinimumPriceFilterComponent = (function () {
+    function MinimumPriceFilterComponent() {
+        this.onMinimumPriceFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MinimumPriceFilterComponent.prototype.updateValue = function () {
+        this.onMinimumPriceFilter.emit(+this.minimumPriceFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MinimumPriceFilterComponent.prototype, "onMinimumPriceFilter", void 0);
+    MinimumPriceFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-minimum-price-filter',
+            template: __webpack_require__(835),
+            styles: [__webpack_require__(829)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MinimumPriceFilterComponent);
+    return MinimumPriceFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/minimum-price-filter.component.js.map
+
+/***/ },
+
+/***/ 824:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MinimumYearFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MinimumYearFilterComponent = (function () {
+    function MinimumYearFilterComponent() {
+        this.onMinimumYearFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MinimumYearFilterComponent.prototype.updateValue = function () {
+        this.onMinimumYearFilter.emit(+this.minimumYearFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MinimumYearFilterComponent.prototype, "onMinimumYearFilter", void 0);
+    MinimumYearFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-minimum-year-filter',
+            template: __webpack_require__(836),
+            styles: [__webpack_require__(830)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MinimumYearFilterComponent);
+    return MinimumYearFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/minimum-year-filter.component.js.map
+
+/***/ },
+
+/***/ 825:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 826:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 827:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 828:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 829:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 830:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 831:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\n    placeholder=\"Color Filter\">\n</div>"
+
+/***/ },
+
+/***/ 832:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.makeFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\"\n    placeholder=\"Make Filter\">\n</div>"
+
+/***/ },
+
+/***/ 833:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\n    placeholder=\"Maximum Price\">\n</div>"
+
+/***/ },
+
+/***/ 834:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\n    placeholder=\"Maximum Year\">\n</div>"
+
+/***/ },
+
+/***/ 835:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\n    placeholder=\"Minimum Price\">\n</div>"
+
+/***/ },
+
+/***/ 836:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\n    placeholder=\"Minimum Year\">\n</div>"
 
 /***/ }
 

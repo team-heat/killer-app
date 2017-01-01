@@ -25,6 +25,12 @@ import { UserStorageService } from './../services/user-storage.service';
 import { UsersModule } from '../users/users.module';
 import { YearGreaterThenPipe } from './../pipes/year-greater-then.pipe';
 import { YearLessThenPipe } from './../pipes/year-less-then.pipe';
+import { MakeFilterComponent } from './filters/make-filter/make-filter.component';
+import { ColorFilterComponent } from './filters/color-filter/color-filter.component';
+import { MinimumYearFilterComponent } from './filters/minimum-year-filter/minimum-year-filter.component';
+import { MaximumYearFilterComponent } from './filters/maximum-year-filter/maximum-year-filter.component';
+import { MinimumPriceFilterComponent } from './filters/minimum-price-filter/minimum-price-filter.component';
+import { MaximumPriceFilterComponent } from './filters/maximum-price-filter/maximum-price-filter.component';
 
 @NgModule({
     imports: [
@@ -47,7 +53,13 @@ import { YearLessThenPipe } from './../pipes/year-less-then.pipe';
         PriceGreaterThenPipe,
         PriceLessThenPipe,
         YearGreaterThenPipe,
-        YearLessThenPipe
+        YearLessThenPipe,
+        MakeFilterComponent,
+        ColorFilterComponent,
+        MinimumYearFilterComponent,
+        MaximumYearFilterComponent,
+        MinimumPriceFilterComponent,
+        MaximumPriceFilterComponent
     ],
     providers: [
         ItemListingService,
