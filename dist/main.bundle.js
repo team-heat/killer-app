@@ -2137,18 +2137,18 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_http_requester_options_factory_service__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_http_requester_service__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__items_items_module__ = __webpack_require__(578);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__ = __webpack_require__(582);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__directives_navigation_hover_directive__ = __webpack_require__(565);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ng2_pagination__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_ng2_pagination__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__users_users_module__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_mail_service__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_mail_service__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__navigation_navigation_component__ = __webpack_require__(582);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_pagination__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_ng2_pagination__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_toastr_notification_service__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(586);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_service__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_user_storage_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__users_users_module__ = __webpack_require__(370);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2191,12 +2191,12 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_20__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_21__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */],
+                __WEBPACK_IMPORTED_MODULE_18__navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */],
                 __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__["a" /* FooterComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["a" /* ContactComponent */]
             ],
@@ -2206,10 +2206,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_12__home_home_module__["a" /* HomeModule */],
                 __WEBPACK_IMPORTED_MODULE_13__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_26__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_27__users_users_module__["a" /* UsersModule */],
                 __WEBPACK_IMPORTED_MODULE_2__add_listing_add_listing_module__["a" /* AddListingModule */],
                 __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__["ToastModule"],
-                __WEBPACK_IMPORTED_MODULE_19_ng2_pagination__["Ng2PaginationModule"],
+                __WEBPACK_IMPORTED_MODULE_20_ng2_pagination__["Ng2PaginationModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot([
                     { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["a" /* ContactComponent */] },
                     { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -2222,12 +2222,12 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__services_helpers_date_provider_service__["a" /* DateProviderService */],
                 __WEBPACK_IMPORTED_MODULE_14__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
                 __WEBPACK_IMPORTED_MODULE_15__services_http_requester_service__["a" /* HttpRequesterService */],
-                __WEBPACK_IMPORTED_MODULE_21__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_service__["a" /* ToastrNotificationService */],
-                __WEBPACK_IMPORTED_MODULE_24__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_25__services_user_storage_service__["a" /* UserStorageService */],
+                __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_23__services_toastr_notification_service__["a" /* ToastrNotificationService */],
+                __WEBPACK_IMPORTED_MODULE_25__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_26__services_user_storage_service__["a" /* UserStorageService */],
                 __WEBPACK_IMPORTED_MODULE_3__users_add_to_favorites_add_to_favorites_component__["a" /* AddToFavoritesComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__services_mail_service__["a" /* MailService */]
+                __WEBPACK_IMPORTED_MODULE_17__services_mail_service__["a" /* MailService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         }), 
@@ -2304,10 +2304,18 @@ var ContactComponent = (function () {
         this.mailService = mailService;
         this.toastrNotification = toastrNotification;
         this.toastrOptions = toastrOptions;
+        this.mail = {
+            senderName: '',
+            senderEmail: '',
+            subject: '',
+            content: ''
+        };
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent.prototype.onSubmit = function () {
+        console.log(this.mail);
+        this.mailService.sendMail(this.mail);
     };
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -4049,7 +4057,7 @@ module.exports = "<div class=\"well\">\n  <div id=\"carousel-example-generic\" c
 /***/ 782:
 /***/ function(module, exports) {
 
-module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"name\">\n    <br>\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"emailAddress\">\n    <br>\n    <textarea name=\"content\" id=\"content\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
+module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\n    <br>\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\n    <br>\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\n    <br>\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
 
 /***/ },
 
