@@ -24,6 +24,7 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .get('/statistics/items/mostExpensiveItems', statistcsController.mostExpensiveItems)
     .get('/statistics/items/mostSaledMakes', statistcsController.mostSaledMakes)
     .get('/statistics/items/mostOfferedItems', statistcsController.mostOfferedItems)
+    .get('/statistics/items/mostCommentedItems', statistcsController.mostCommentedItems)
     .get('/statistics/users/topSellers', statistcsController.topSellers)
     .get('/statistics/users/topBuyers', statistcsController.topBuyers)
     .get('/statistics/users/topActiveUsers', statistcsController.topActiveUsers);
