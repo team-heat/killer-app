@@ -475,13 +475,15 @@ var HomeComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pipes_price_greater_then_pipe__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_year_greater_then_pipe__ = __webpack_require__(576);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pipes_exterior_color_pipe__ = __webpack_require__(571);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_make_filter_pipe__ = __webpack_require__(572);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_item_listing_service__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pipes_price_less_then_pipe__ = __webpack_require__(575);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_year_less_then_pipe__ = __webpack_require__(577);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pipes_price_greater_then_pipe__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_year_greater_then_pipe__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_exterior_color_pipe__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_make_filter_pipe__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__ = __webpack_require__(60);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsCollectionComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -499,17 +501,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var ItemsCollectionComponent = (function () {
     function ItemsCollectionComponent(userStorage, service) {
         this.userStorage = userStorage;
         this.service = service;
-        this.makeFilterPipe = new __WEBPACK_IMPORTED_MODULE_3__pipes_make_filter_pipe__["a" /* MakeFilterPipe */]();
-        this.colorFilterPipe = new __WEBPACK_IMPORTED_MODULE_2__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */]();
-        this.minimumYearPipe = new __WEBPACK_IMPORTED_MODULE_1__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */]();
-        this.maximumPricePipe = new __WEBPACK_IMPORTED_MODULE_0__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */]();
+        this.makeFilterPipe = new __WEBPACK_IMPORTED_MODULE_5__pipes_make_filter_pipe__["a" /* MakeFilterPipe */]();
+        this.colorFilterPipe = new __WEBPACK_IMPORTED_MODULE_4__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */]();
+        this.minimumYearPipe = new __WEBPACK_IMPORTED_MODULE_3__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */]();
+        this.maximumYearPipe = new __WEBPACK_IMPORTED_MODULE_1__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */]();
+        this.minimuPricePipe = new __WEBPACK_IMPORTED_MODULE_2__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */]();
+        this.maximumPricePipe = new __WEBPACK_IMPORTED_MODULE_0__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */]();
         this.makeFilter = '';
         this.colorFilter = '';
         this.minimumYearFilter = 0;
+        this.maximumYearFilter = 0;
+        this.minimumPriceFilter = 0;
         this.maximumPriceFilter = 0;
         this.items = [];
         this.originalItems = [];
@@ -541,6 +549,14 @@ var ItemsCollectionComponent = (function () {
         this.colorFilter = colorFilterValue;
         this.applyFiltersToItems();
     };
+    ItemsCollectionComponent.prototype.onMinimumYearFilter = function (minimumYearFilterValue) {
+        this.minimumYearFilter = minimumYearFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onMaximumYearFilter = function (maximumYearFilterValue) {
+        this.maximumYearFilter = maximumYearFilterValue;
+        this.applyFiltersToItems();
+    };
     ItemsCollectionComponent.prototype.applyFiltersToItems = function () {
         this.items = this.originalItems.slice();
         if (this.makeFilter) {
@@ -551,6 +567,12 @@ var ItemsCollectionComponent = (function () {
         }
         if (this.minimumYearFilter) {
             this.items = this.minimumYearPipe.transform(this.items, this.minimumYearFilter);
+        }
+        if (this.maximumYearFilter) {
+            this.items = this.maximumYearPipe.transform(this.items, this.maximumYearFilter);
+        }
+        if (this.minimumPriceFilter) {
+            this.items = this.minimuPricePipe.transform(this.items, this.minimumPriceFilter);
         }
         if (this.maximumPriceFilter) {
             this.items = this.maximumPricePipe.transform(this.items, this.maximumPriceFilter);
@@ -573,12 +595,12 @@ var ItemsCollectionComponent = (function () {
         });
     };
     ItemsCollectionComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__angular_core__["Component"])({
             selector: 'app-items-collection',
             template: __webpack_require__(771),
             styles: [__webpack_require__(750)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object])
     ], ItemsCollectionComponent);
     return ItemsCollectionComponent;
     var _a, _b;
@@ -2513,6 +2535,8 @@ var CommentSectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__ = __webpack_require__(577);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__ = __webpack_require__(816);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(822);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(825);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2523,6 +2547,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -2575,7 +2601,9 @@ var ItemsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
                 __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */],
                 __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__["a" /* MakeFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__["a" /* ColorFilterComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__["a" /* ColorFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__["a" /* MinimumYearFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__["a" /* MaximumYearFilterComponent */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
@@ -3636,7 +3664,7 @@ module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wra
 /***/ 771:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div  class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2 col-xs-offset-1\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found!</h3>   \r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
@@ -3855,6 +3883,118 @@ module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\n    placeholder=\"Color Filter\">\n</div>"
+
+/***/ },
+
+/***/ 822:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MinimumYearFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MinimumYearFilterComponent = (function () {
+    function MinimumYearFilterComponent() {
+        this.onMinimumYearFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MinimumYearFilterComponent.prototype.updateValue = function () {
+        this.onMinimumYearFilter.emit(+this.minimumYearFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MinimumYearFilterComponent.prototype, "onMinimumYearFilter", void 0);
+    MinimumYearFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-minimum-year-filter',
+            template: __webpack_require__(824),
+            styles: [__webpack_require__(823)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MinimumYearFilterComponent);
+    return MinimumYearFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-year-filter.component.js.map
+
+/***/ },
+
+/***/ 823:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 824:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\n    placeholder=\"Minimum Year\">\n</div>"
+
+/***/ },
+
+/***/ 825:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MaximumYearFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MaximumYearFilterComponent = (function () {
+    function MaximumYearFilterComponent() {
+        this.onMaximumYearFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MaximumYearFilterComponent.prototype.updateValue = function () {
+        this.onMaximumYearFilter.emit(+this.maximumYearFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MaximumYearFilterComponent.prototype, "onMaximumYearFilter", void 0);
+    MaximumYearFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-maximum-year-filter',
+            template: __webpack_require__(827),
+            styles: [__webpack_require__(826)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MaximumYearFilterComponent);
+    return MaximumYearFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-year-filter.component.js.map
+
+/***/ },
+
+/***/ 826:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 827:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\n    placeholder=\"Maximum Year\">\n</div>"
 
 /***/ }
 

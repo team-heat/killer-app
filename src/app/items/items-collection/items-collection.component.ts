@@ -1,3 +1,5 @@
+import { PriceLessThenPipe } from './../../pipes/price-less-then.pipe';
+import { YearLessThenPipe } from './../../pipes/year-less-then.pipe';
 import { PriceGreaterThenPipe } from './../../pipes/price-greater-then.pipe';
 import { YearGreaterThenPipe } from './../../pipes/year-greater-then.pipe';
 import { ExteriorColorFilterPipe } from './../../pipes/exterior-color.pipe';
@@ -25,11 +27,15 @@ export class ItemsCollectionComponent implements OnInit {
   makeFilterPipe = new MakeFilterPipe();
   colorFilterPipe = new ExteriorColorFilterPipe();
   minimumYearPipe = new YearGreaterThenPipe();
-  maximumPricePipe = new PriceGreaterThenPipe();
+  maximumYearPipe = new YearLessThenPipe();
+  minimuPricePipe = new PriceGreaterThenPipe();
+  maximumPricePipe = new PriceLessThenPipe();
 
   makeFilter: string = '';
   colorFilter: string = '';
   minimumYearFilter: number = 0;
+  maximumYearFilter: number = 0;
+  minimumPriceFilter: number = 0;
   maximumPriceFilter: number = 0;
 
   constructor(
@@ -71,6 +77,16 @@ export class ItemsCollectionComponent implements OnInit {
     this.applyFiltersToItems();
   }
 
+  onMinimumYearFilter(minimumYearFilterValue: number): void {
+    this.minimumYearFilter = minimumYearFilterValue;
+    this.applyFiltersToItems();
+  }
+
+  onMaximumYearFilter(maximumYearFilterValue: number): void {
+    this.maximumYearFilter = maximumYearFilterValue;
+    this.applyFiltersToItems();
+  }
+
   applyFiltersToItems() {
     this.items = [...this.originalItems];
     if (this.makeFilter) {
@@ -83,6 +99,14 @@ export class ItemsCollectionComponent implements OnInit {
 
     if (this.minimumYearFilter) {
       this.items = this.minimumYearPipe.transform(this.items, this.minimumYearFilter);
+    }
+
+    if (this.maximumYearFilter) {
+      this.items = this.maximumYearPipe.transform(this.items, this.maximumYearFilter);
+    }
+
+    if (this.minimumPriceFilter) {
+      this.items = this.minimuPricePipe.transform(this.items, this.minimumPriceFilter);
     }
 
     if (this.maximumPriceFilter) {

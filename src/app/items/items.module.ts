@@ -27,6 +27,8 @@ import { YearGreaterThenPipe } from './../pipes/year-greater-then.pipe';
 import { YearLessThenPipe } from './../pipes/year-less-then.pipe';
 import { MakeFilterComponent } from './filters/make-filter/make-filter.component';
 import { ColorFilterComponent } from './filters/color-filter/color-filter.component';
+import { MinimumYearFilterComponent } from './filters/minimum-year-filter/minimum-year-filter.component';
+import { MaximumYearFilterComponent } from './filters/maximum-year-filter/maximum-year-filter.component';
 
 @NgModule({
     imports: [
@@ -51,7 +53,9 @@ import { ColorFilterComponent } from './filters/color-filter/color-filter.compon
         YearGreaterThenPipe,
         YearLessThenPipe,
         MakeFilterComponent,
-        ColorFilterComponent
+        ColorFilterComponent,
+        MinimumYearFilterComponent,
+        MaximumYearFilterComponent
     ],
     providers: [
         ItemListingService,
