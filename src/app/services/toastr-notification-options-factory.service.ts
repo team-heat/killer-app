@@ -9,7 +9,7 @@ export class ToastrNotificationOptionsFactoryService {
   createToastrNotificationOptions(method = '', message = '', heading = '', delay = 0): ToastrNotificationOptions {
     method = method || 'info';
     message = message || 'Hello World!';
-    heading = heading || 'Toastr';
+    heading = heading || '';
     delay = delay || 0;
 
     return {

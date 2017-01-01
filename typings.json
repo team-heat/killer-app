@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "nodemailer": "registry:dt/nodemailer#1.3.2+20160811111312"
+  }
+}

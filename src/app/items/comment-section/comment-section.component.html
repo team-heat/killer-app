@@ -1,8 +1,22 @@
 <div class="comment-section">
-  <div class="comments-wrapper">
-    <ul></ul>
+  <div class="comments-wrapper" *ngIf="listingComments.length">
+    <ul>
+      <li *ngFor="let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }">
+        <div class="comment-list-item">
+          <div class="author-wrapper">
+            <h3 class="author">{{comment.username}}</h3>
+          </div>
+          <div class="content-wrapper">
+            <span>{{comment.content}}</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <pagination-controls class="pagination-controls" (pageChange)="p = $event"></pagination-controls>
   </div>
-  <div class="comment-wrapper">
-    <textarea name="comment" id="comment" cols="30" rows="10" [(ngModel)]="comment"></textarea>
+  <div class="comment-wrapper" *ngIf="this.userStorageService.loggedUser">
+    <textarea name="comment" id="comment" [(ngModel)]="comment.content"></textarea>
+    <br>
+    <button class="btn btn-success" (click)="onSubmit()">Submit Comment</button>
   </div>
 </div>

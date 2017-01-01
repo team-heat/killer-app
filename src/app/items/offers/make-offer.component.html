@@ -1,7 +1,10 @@
 <div class="text-center">
-    <img src="{{this.item.pictures[0].imageUrl}}">
-    <h3>StartPrice: {{this.item.price}}</h3>
-    <h3>Highest offer: {{this.maxOffer}}</h3>
+    <a routerLink="/gallery/{{this.item._id}}">
+        <img src="{{this.item.pictures[0].imageUrl}}">
+    </a>
+    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>
+    <h3 *ngIf="this.haveOffers()">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>
+    <h3 *ngIf="!this.haveOffers()">Highest offer: {{this.maxOffer}}</h3>
 
     <form *ngIf="!isLoading" #submitForm="ngForm" (ngSubmit)="onSubmit(); submitForm.reset()">
         <div class="form-group">

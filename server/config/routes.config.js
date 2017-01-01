@@ -4,7 +4,7 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 
-module.exports = function ({ app, userController, itemListingController, favoritesController, uploadController }) {
+module.exports = function ({ app, userController, itemListingController, favoritesController, uploadController, statistcsController }) {
   const apiRouter = new express.Router();
   apiRouter
     .post('/upload', passport.authenticate('jwt'), uploadController.createFile)
@@ -20,7 +20,14 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .post('/gallery', passport.authenticate('jwt'), itemListingController.createListing)
     .post('/gallery/:id', passport.authenticate('jwt'), itemListingController.submitOfferForListing)
     .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing)
-    .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing);
+    .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing)
+    .get('/statistics/items/mostExpensiveItems', statistcsController.mostExpensiveItems)
+    .get('/statistics/items/mostSaledMakes', statistcsController.mostSaledMakes)
+    .get('/statistics/items/mostOfferedItems', statistcsController.mostOfferedItems)
+    .get('/statistics/items/mostCommentedItems', statistcsController.mostCommentedItems)
+    .get('/statistics/users/topSellers', statistcsController.topSellers)
+    .get('/statistics/users/topBuyers', statistcsController.topBuyers)
+    .get('/statistics/users/topActiveUsers', statistcsController.topActiveUsers);
 
   app.use('/api', apiRouter);
 

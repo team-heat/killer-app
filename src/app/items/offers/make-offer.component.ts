@@ -131,6 +131,10 @@ export class MakeOfferComponent implements OnInit {
                 this.appRouter.navigateByUrl('/gallery/' + x._id + '/offers');
             });
     }
+
+    haveOffers(): Boolean {
+        return !(this.maxOffer === 'No offers');
+    }
 }
 
 

@@ -1,0 +1,69 @@
+$maxScreenSizeWidth: 480px;
+div.comment-section {
+  width: 80%;
+  margin: 7.5vh auto;
+  div.comments-wrapper {
+    ul {
+      width: 60%;
+      margin: 0 auto 5vh auto;
+      padding: 0;
+      list-style-type: none;
+      background-color: #F9F9F9;
+      -webkit-box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75);
+      -moz-box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75);
+      box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75);
+      @media only screen and (max-device-width: $maxScreenSizeWidth) {
+        width: 100%;
+      }
+      li {
+        text-align: left;
+        word-wrap: break-word;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        color: #282828;
+        h3 {
+          margin-top: 0;
+          color: #7e7e7e;
+        }
+      }
+    }
+  }
+  div.comment-wrapper {
+    margin-top: 5vh;
+    #comment {
+      background-color: #F9F9F9;
+      resize: none;
+      padding: 15px;
+      font-size: 2rem;
+      color: #272727;
+      width: 60%;
+      height: 30vh;
+      @media only screen and (max-device-width: $maxScreenSizeWidth) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+:host /deep/ .pagination-controls {
+  ul {
+    padding: 0;
+    li {
+      cursor: pointer;
+      &.disabled {
+        cursor: default;
+      }
+      a,
+      span {
+        font-size: 1.5rem !important;
+      }
+      a {
+        color: #fff !important;
+        &:hover {
+          background-color: #79c1f1 !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
