@@ -22,6 +22,7 @@ import { HttpModule } from '@angular/http';
 import { HttpRequesterOptionsFactoryService } from './services/http-requester-options-factory.service';
 import { HttpRequesterService } from './services/http-requester.service';
 import { ItemsModule } from './items/items.module';
+import { MailService } from './services/mail.service';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavigationHoverDirective } from './directives/navigation-hover.directive';
 import { Ng2PaginationModule } from 'ng2-pagination';
@@ -68,7 +69,8 @@ import { UsersModule } from './users/users.module';
     ToastrNotificationService,
     UserService,
     UserStorageService,
-    AddToFavoritesComponent
+    AddToFavoritesComponent,
+    MailService
   ],
   bootstrap: [AppComponent]
 })

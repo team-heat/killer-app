@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../services/toastr-notification.service';
+import { MailService } from '../services/mail.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +15,7 @@ export class ContactComponent implements OnInit {
   name: string;
 
   constructor(
+    private mailService: MailService,
     private toastrNotification: ToastrNotificationService,
     private toastrOptions: ToastrNotificationOptionsFactoryService) { }
 
