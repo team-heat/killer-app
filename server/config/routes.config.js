@@ -22,7 +22,7 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing)
     .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing)
     .get('/statistics/users', statistcsController.getUsersStatistics)
-    .get('/statistics/items', statistcsController.getUsersStatistics);
+    .get('/statistics/items', statistcsController.getItemsStatistics);
 
   app.use('/api', apiRouter);
 
