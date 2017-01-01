@@ -15,6 +15,7 @@ import { UserStorageService } from '../../services/user-storage.service';
   styleUrls: ['./comment-section.component.scss']
 })
 export class CommentSectionComponent implements OnInit {
+
   comment: Comment;
   listingComments: Comment[];
 
