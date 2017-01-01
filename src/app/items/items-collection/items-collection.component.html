@@ -19,7 +19,8 @@
         </div>
       </div>
     </div>
-    <h3 *ngIf="this.items.length === 0">Be the first to post a new item!</h3>
+    <h3 *ngIf="this.originalItems.length === 0">Be the first to post a new item!</h3>
+    <h3 *ngIf="this.items.length === 0">No matching items found!</h3>   
     <div *ngIf="this.items.length !== 0" id="carousel-container" class="col-xs-8 col-xs-offset-2">
       <app-carousel *ngIf="this.activeItem" [mylist]="this.activeItem.pictures"></app-carousel>
     </div>
