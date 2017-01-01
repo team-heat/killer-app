@@ -22,5 +22,13 @@ export class ApiUrlsConfigService {
   // POST -> add item to logged user favorites list
   favoritesApiUrl: string = '/api/favorites';
 
+  // GET requests only
+  mostExpensiveItemsUrl: string = '/api/statistics/items/mostExpensiveItems';
+  mostSaledMakesUrl: string = '/api/statistics/items/mostSaledMakes';
+  mostOfferedItemsUrl: string = '/api/statistics/items/mostOfferedItems';
+  topSellersUrl = '/api/statistics/users/topSellers';
+  topBuyersUrl = '/api/statistics/users/topBuyers';
+  topActiveUsersUrl = '/api/statistics/users/topActiveUsers';
+
   constructor() { }
 }
