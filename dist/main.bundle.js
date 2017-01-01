@@ -154,6 +154,14 @@ var ApiUrlsConfigService = (function () {
         // GET  -> list favorites for logged on user
         // POST -> add item to logged user favorites list
         this.favoritesApiUrl = '/api/favorites';
+        // GET requests only
+        this.mostExpensiveItemsUrl = '/api/statistics/items/mostExpensiveItems';
+        this.mostSaledMakesUrl = '/api/statistics/items/mostSaledMakes';
+        this.mostOfferedItemsUrl = '/api/statistics/items/mostOfferedItems';
+        this.topSellersUrl = '/api/statistics/users/topSellers';
+        this.topBuyersUrl = '/api/statistics/users/topBuyers';
+        this.topActiveUsersUrl = '/api/statistics/users/topActiveUsers';
+        this.mostCommentedItemsUrl = '/api/statistics/items/mostCommentedItems';
     }
     ApiUrlsConfigService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
