@@ -1,4 +1,3 @@
-import { CarouselListComponent } from './carousel-list/carousel-list.component';
 import { Router, RouterModule } from '@angular/router';
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
 
@@ -7,6 +6,7 @@ import { AddToFavoritesComponent } from './users/add-to-favorites/add-to-favorit
 import { ApiUrlsConfigService } from './services/api-urls-config.service';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { CarouselListComponent } from './carousel-list/carousel-list.component';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 import { DateProviderService } from './services/helpers/date-provider.service';
@@ -22,6 +22,7 @@ import { HttpRequesterService } from './services/http-requester.service';
 import { ItemsModule } from './items/items.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavigationHoverDirective } from './directives/navigation-hover.directive';
+import { Ng2PaginationModule } from 'ng2-pagination';
 import { NgModule } from '@angular/core';
 import { ToastrNotificationOptionsFactoryService } from './services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from './services/toastr-notification.service';
@@ -50,6 +51,7 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     AddListingModule,
     ToastModule,
+    Ng2PaginationModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/', pathMatch: 'full' },
       { path: '**', redirectTo: '/', pathMatch: 'full' }
