@@ -25,6 +25,7 @@ import { UserStorageService } from './../services/user-storage.service';
 import { UsersModule } from '../users/users.module';
 import { YearGreaterThenPipe } from './../pipes/year-greater-then.pipe';
 import { YearLessThenPipe } from './../pipes/year-less-then.pipe';
+import { MakeFilterComponent } from './filters/make-filter/make-filter.component';
 
 @NgModule({
     imports: [
@@ -47,7 +48,8 @@ import { YearLessThenPipe } from './../pipes/year-less-then.pipe';
         PriceGreaterThenPipe,
         PriceLessThenPipe,
         YearGreaterThenPipe,
-        YearLessThenPipe
+        YearLessThenPipe,
+        MakeFilterComponent
     ],
     providers: [
         ItemListingService,

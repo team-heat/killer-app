@@ -1,3 +1,7 @@
+import { PriceGreaterThenPipe } from './../../pipes/price-greater-then.pipe';
+import { YearGreaterThenPipe } from './../../pipes/year-greater-then.pipe';
+import { ExteriorColorFilterPipe } from './../../pipes/exterior-color.pipe';
+import { MakeFilterPipe } from './../../pipes/make-filter.pipe';
 import { UserStorageService } from './../../services/user-storage.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,6 +20,16 @@ export class ItemsCollectionComponent implements OnInit {
   items: ItemListing[];
   activeItem: ItemListing;
   activeItemIndex: number;
+
+  makeFilterPipe = new MakeFilterPipe();
+  colorFilterPipe = new ExteriorColorFilterPipe();
+  minimumYearPipe = new YearGreaterThenPipe();
+  maximumPricePipe = new PriceGreaterThenPipe();
+
+  makeFilter: string = '';
+  colorFilter: string = '';
+  minimumYearFilter: number = 0;
+  maximumPriceFilter: number = 0;
 
   constructor(
     private userStorage: UserStorageService,
@@ -43,6 +57,29 @@ export class ItemsCollectionComponent implements OnInit {
     }
 
     this.activeItem = this.items[this.activeItemIndex];
+  }
+
+  onMakeFilter(makeFilterValue: string): void {
+    this.makeFilter = makeFilterValue;
+    this.applyFiltersToItems();
+  }
+
+  applyFiltersToItems() {
+    if (this.makeFilter) {
+      this.items = this.makeFilterPipe.transform(this.items, this.makeFilter);
+    }
+
+    if (this.colorFilter) {
+      this.items = this.colorFilterPipe.transform(this.items, this.colorFilter);
+    }
+
+    if (this.minimumYearFilter) {
+      this.items = this.minimumYearPipe.transform(this.items, this.minimumYearFilter);
+    }
+
+    if (this.maximumPriceFilter) {
+      this.items = this.maximumPricePipe.transform(this.items, this.maximumPriceFilter);
+    }
   }
 
   ngOnInit() {
