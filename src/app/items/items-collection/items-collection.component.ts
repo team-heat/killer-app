@@ -87,6 +87,16 @@ export class ItemsCollectionComponent implements OnInit {
     this.applyFiltersToItems();
   }
 
+  onMinimumPriceFilter(minimumPriceFilterValue: number): void {
+    this.minimumPriceFilter = minimumPriceFilterValue;
+    this.applyFiltersToItems();
+  }
+
+  onMaximumPriceFilter(maximumPriceFilterValue: number): void {
+    this.maximumPriceFilter = maximumPriceFilterValue;
+    this.applyFiltersToItems();
+  }
+
   applyFiltersToItems() {
     this.items = [...this.originalItems];
     if (this.makeFilter) {

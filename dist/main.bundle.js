@@ -557,6 +557,14 @@ var ItemsCollectionComponent = (function () {
         this.maximumYearFilter = maximumYearFilterValue;
         this.applyFiltersToItems();
     };
+    ItemsCollectionComponent.prototype.onMinimumPriceFilter = function (minimumPriceFilterValue) {
+        this.minimumPriceFilter = minimumPriceFilterValue;
+        this.applyFiltersToItems();
+    };
+    ItemsCollectionComponent.prototype.onMaximumPriceFilter = function (maximumPriceFilterValue) {
+        this.maximumPriceFilter = maximumPriceFilterValue;
+        this.applyFiltersToItems();
+    };
     ItemsCollectionComponent.prototype.applyFiltersToItems = function () {
         this.items = this.originalItems.slice();
         if (this.makeFilter) {
@@ -2537,6 +2545,8 @@ var CommentSectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__ = __webpack_require__(819);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(822);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__ = __webpack_require__(828);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__ = __webpack_require__(831);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2547,6 +2557,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -2603,7 +2615,9 @@ var ItemsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__["a" /* MakeFilterComponent */],
                 __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__["a" /* ColorFilterComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__["a" /* MinimumYearFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__["a" /* MaximumYearFilterComponent */]
+                __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__["a" /* MaximumYearFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__["a" /* MinimumPriceFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__["a" /* MaximumPriceFilterComponent */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
@@ -3664,7 +3678,7 @@ module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wra
 /***/ 771:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
@@ -3995,6 +4009,118 @@ module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\n    placeholder=\"Maximum Year\">\n</div>"
+
+/***/ },
+
+/***/ 828:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MinimumPriceFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MinimumPriceFilterComponent = (function () {
+    function MinimumPriceFilterComponent() {
+        this.onMinimumPriceFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MinimumPriceFilterComponent.prototype.updateValue = function () {
+        this.onMinimumPriceFilter.emit(+this.minimumPriceFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MinimumPriceFilterComponent.prototype, "onMinimumPriceFilter", void 0);
+    MinimumPriceFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-minimum-price-filter',
+            template: __webpack_require__(830),
+            styles: [__webpack_require__(829)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MinimumPriceFilterComponent);
+    return MinimumPriceFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-price-filter.component.js.map
+
+/***/ },
+
+/***/ 829:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 830:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\n    placeholder=\"Minimum Price\">\n</div>"
+
+/***/ },
+
+/***/ 831:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MaximumPriceFilterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MaximumPriceFilterComponent = (function () {
+    function MaximumPriceFilterComponent() {
+        this.onMaximumPriceFilter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    MaximumPriceFilterComponent.prototype.updateValue = function () {
+        this.onMaximumPriceFilter.emit(+this.maximumPriceFilterValue);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
+    ], MaximumPriceFilterComponent.prototype, "onMaximumPriceFilter", void 0);
+    MaximumPriceFilterComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-maximum-price-filter',
+            template: __webpack_require__(833),
+            styles: [__webpack_require__(832)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MaximumPriceFilterComponent);
+    return MaximumPriceFilterComponent;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-price-filter.component.js.map
+
+/***/ },
+
+/***/ 832:
+/***/ function(module, exports) {
+
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+
+/***/ },
+
+/***/ 833:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\n    placeholder=\"Maximum Price\">\n</div>"
 
 /***/ }
 

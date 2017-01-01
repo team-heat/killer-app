@@ -29,6 +29,8 @@ import { MakeFilterComponent } from './filters/make-filter/make-filter.component
 import { ColorFilterComponent } from './filters/color-filter/color-filter.component';
 import { MinimumYearFilterComponent } from './filters/minimum-year-filter/minimum-year-filter.component';
 import { MaximumYearFilterComponent } from './filters/maximum-year-filter/maximum-year-filter.component';
+import { MinimumPriceFilterComponent } from './filters/minimum-price-filter/minimum-price-filter.component';
+import { MaximumPriceFilterComponent } from './filters/maximum-price-filter/maximum-price-filter.component';
 
 @NgModule({
     imports: [
@@ -55,7 +57,9 @@ import { MaximumYearFilterComponent } from './filters/maximum-year-filter/maximu
         MakeFilterComponent,
         ColorFilterComponent,
         MinimumYearFilterComponent,
-        MaximumYearFilterComponent
+        MaximumYearFilterComponent,
+        MinimumPriceFilterComponent,
+        MaximumPriceFilterComponent
     ],
     providers: [
         ItemListingService,
