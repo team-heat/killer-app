@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports = function({ ItemListing }) {
+module.exports = function ({ ItemListing }) {
 
   const availableModelProperties = [
     'make',
@@ -31,6 +31,10 @@ module.exports = function({ ItemListing }) {
         return resolve(newListing);
       });
     });
+  }
+
+  function getAllWithoutFilters() {
+    return filterItemListingWithOptions({});
   }
 
   function getAll() {
@@ -128,7 +132,8 @@ module.exports = function({ ItemListing }) {
             listing[key] = listingForUpdate[key];
           }
 
-          listing.save(err => {
+          listing.save(() => {
+            // listing.save(err => {
             // if (err) {
             //   reject(err);
             // }
@@ -145,6 +150,7 @@ module.exports = function({ ItemListing }) {
 
   return {
     getAll,
+    getAllWithoutFilters,
     createItemListing,
     getItemListingById,
     addOfferToItemListing,
