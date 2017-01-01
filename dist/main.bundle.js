@@ -299,8 +299,8 @@ var HttpRequesterService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddToFavoritesComponent; });
@@ -400,6 +400,79 @@ var AddToFavoritesComponent = (function () {
     var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
+
+/***/ },
+
+/***/ 32:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ToastrNotificationService = (function () {
+    function ToastrNotificationService(dateProviderService) {
+        this.dateProviderService = dateProviderService;
+        this.minimumTimeBetweenEnqueueInMs = 200;
+        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
+        this.notificationsQueue = [];
+        this.lastItemInQueue = {
+            method: '',
+            message: '',
+            heading: '',
+            delay: 1500000
+        };
+    }
+    Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
+        get: function () {
+            return this.notificationsQueue.length > 0;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ToastrNotificationService.prototype, "nextNotificationInQueue", {
+        get: function () {
+            var nextNotification = this.notificationsQueue.shift();
+            return nextNotification;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
+        var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
+        var currentTimestamp = this.dateProviderService.currentTimestamp;
+        var durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
+        if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
+            return;
+        }
+        this.notificationsQueue.push(newNotification);
+        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
+        this.lastItemInQueue = newNotification;
+    };
+    ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
+        var messageIsEqual = newNotification.message === lastNotification.message;
+        var headingIsEqual = newNotification.heading === lastNotification.heading;
+        return messageIsEqual && headingIsEqual;
+    };
+    ToastrNotificationService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */]) === 'function' && _a) || Object])
+    ], ToastrNotificationService);
+    return ToastrNotificationService;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -625,8 +698,8 @@ var ItemsCollectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MakeOfferComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1386,8 +1459,8 @@ var ListedItemsComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(19);
@@ -1491,8 +1564,8 @@ var LoginComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LogoutComponent; });
@@ -1629,8 +1702,8 @@ var ProfileComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(19);
@@ -1811,117 +1884,7 @@ var UsersModule = (function () {
 
 /***/ },
 
-/***/ 42:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__ = __webpack_require__(362);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ToastrNotificationService = (function () {
-    function ToastrNotificationService(dateProviderService) {
-        this.dateProviderService = dateProviderService;
-        this.minimumTimeBetweenEnqueueInMs = 200;
-        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
-        this.notificationsQueue = [];
-        this.lastItemInQueue = {
-            method: '',
-            message: '',
-            heading: '',
-            delay: 1500000
-        };
-    }
-    Object.defineProperty(ToastrNotificationService.prototype, "hasNotificationsInQueue", {
-        get: function () {
-            return this.notificationsQueue.length > 0;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ToastrNotificationService.prototype, "nextNotificationInQueue", {
-        get: function () {
-            var nextNotification = this.notificationsQueue.shift();
-            return nextNotification;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    ToastrNotificationService.prototype.enqueueNotification = function (newNotification) {
-        var notificationsAreEqual = this.notificationsAreEqual(newNotification, this.lastItemInQueue);
-        var currentTimestamp = this.dateProviderService.currentTimestamp;
-        var durationBetweenToastrsIsInvalid = currentTimestamp - this.lastNotificationTimestamp < this.minimumTimeBetweenEnqueueInMs;
-        if (notificationsAreEqual && durationBetweenToastrsIsInvalid) {
-            return;
-        }
-        this.notificationsQueue.push(newNotification);
-        this.lastNotificationTimestamp = this.dateProviderService.currentTimestamp;
-        this.lastItemInQueue = newNotification;
-    };
-    ToastrNotificationService.prototype.notificationsAreEqual = function (newNotification, lastNotification) {
-        var messageIsEqual = newNotification.message === lastNotification.message;
-        var headingIsEqual = newNotification.heading === lastNotification.heading;
-        return messageIsEqual && headingIsEqual;
-    };
-    ToastrNotificationService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__helpers_date_provider_service__["a" /* DateProviderService */]) === 'function' && _a) || Object])
-    ], ToastrNotificationService);
-    return ToastrNotificationService;
-    var _a;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
-
-/***/ },
-
-/***/ 433:
-/***/ function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 433;
-
-
-/***/ },
-
-/***/ 434:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(590);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(526);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(589);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(570);
-
-
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
-}
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
-
-/***/ },
-
-/***/ 46:
+/***/ 43:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1966,6 +1929,43 @@ var ToastrNotificationOptionsFactoryService = (function () {
 
 /***/ },
 
+/***/ 433:
+/***/ function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 433;
+
+
+/***/ },
+
+/***/ 434:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(526);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(589);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(570);
+
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
+//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
+
+/***/ },
+
 /***/ 558:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1974,8 +1974,8 @@ var ToastrNotificationOptionsFactoryService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__ = __webpack_require__(363);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddListingComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2141,8 +2141,8 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ng2_pagination__ = __webpack_require__(413);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_ng2_pagination__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(585);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_user_service__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_storage_service__ = __webpack_require__(19);
@@ -2278,6 +2278,8 @@ var CarouselListComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2289,8 +2291,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ContactComponent = (function () {
-    function ContactComponent() {
+    function ContactComponent(toastrNotification, toastrOptions) {
+        this.toastrNotification = toastrNotification;
+        this.toastrOptions = toastrOptions;
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
@@ -2302,9 +2308,10 @@ var ContactComponent = (function () {
             template: __webpack_require__(781),
             styles: [__webpack_require__(753)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _b) || Object])
     ], ContactComponent);
     return ContactComponent;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/contact.component.js.map
 
@@ -2680,8 +2687,8 @@ var HomeRouterModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CommentSectionComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3047,8 +3054,8 @@ var MinimumYearFilterComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pipes_price_greater_then_pipe__ = __webpack_require__(358);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_price_less_then_pipe__ = __webpack_require__(359);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__single_item_single_item_component__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_user_storage_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__users_users_module__ = __webpack_require__(370);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__ = __webpack_require__(360);
@@ -3351,7 +3358,7 @@ var ModelFilterPipe = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__ = __webpack_require__(414);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ToastrNotificationsHandlerComponent; });
@@ -4003,7 +4010,7 @@ module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileU
 /***/ 783:
 /***/ function(module, exports) {
 
-module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n      aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <!--<a class=\"navbar-brand\" href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      Team Heat - Killer App @ GitHub\r\n    </a>-->\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      Team Heat - Killer App @ GitHub\r\n    </a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n          Iliyan Kupenov\r\n        </a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      Hristo Todorov\r\n        </a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      Stoiko Neykov\r\n        </a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
+module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Killer App @ GitHub</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/contact\">Contact Us</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
@@ -4024,42 +4031,42 @@ module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wra
 /***/ 786:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\n    placeholder=\"Color Filter\">\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\r\n    placeholder=\"Color Filter\">\r\n</div>"
 
 /***/ },
 
 /***/ 787:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.makeFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\"\n    placeholder=\"Make Filter\">\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.makeFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\"\r\n    placeholder=\"Make Filter\">\r\n</div>"
 
 /***/ },
 
 /***/ 788:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\n    placeholder=\"Maximum Price\">\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\r\n    placeholder=\"Maximum Price\">\r\n</div>"
 
 /***/ },
 
 /***/ 789:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\n    placeholder=\"Maximum Year\">\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\r\n    placeholder=\"Maximum Year\">\r\n</div>"
 
 /***/ },
 
 /***/ 790:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\n    placeholder=\"Minimum Price\">\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\r\n    placeholder=\"Minimum Price\">\r\n</div>"
 
 /***/ },
 
 /***/ 791:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\n    placeholder=\"Minimum Year\">\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\r\n    placeholder=\"Minimum Year\">\r\n</div>"
 
 /***/ },
 
