@@ -29,6 +29,8 @@ export class ApiUrlsConfigService {
   topSellersUrl = '/api/statistics/users/topSellers';
   topBuyersUrl = '/api/statistics/users/topBuyers';
   topActiveUsersUrl = '/api/statistics/users/topActiveUsers';
+  mostCommentedItemsUrl = '/api/statistics/items/mostCommentedItems';
+
 
   constructor() { }
 }
