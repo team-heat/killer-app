@@ -18,6 +18,7 @@ export class CommentSectionComponent implements OnInit {
 
   comment: Comment;
   listingComments: Comment[];
+  commentsPerPage: number;
 
   private minContentLength: number = 10;
   private maxContentLength: number = 150;

@@ -28,6 +28,7 @@ div.comment-section {
     }
   }
   div.comment-wrapper {
+    margin-top: 5vh;
     #comment {
       resize: none;
       padding: 15px;
@@ -37,6 +38,21 @@ div.comment-section {
       height: 30vh;
       @media only screen and (max-device-width: $maxScreenSizeWidth) {
         width: 100%;
+      }
+    }
+  }
+}
+
+:host /deep/ .pagination-controls {
+  ul {
+    padding: 0;
+    li {
+      cursor: pointer;
+      &.disabled {
+        cursor: default;
+      }
+      a {
+        color: #fff;
       }
     }
   }

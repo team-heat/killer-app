@@ -1834,13 +1834,15 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__items_items_module__ = __webpack_require__(559);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__navigation_navigation_component__ = __webpack_require__(563);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__ = __webpack_require__(553);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_service__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(572);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_user_service__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__users_users_module__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_pagination__ = __webpack_require__(812);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_ng2_pagination__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_user_service__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_user_storage_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__users_users_module__ = __webpack_require__(363);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1875,17 +1877,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_17__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_18__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__navigation_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
                 __WEBPACK_IMPORTED_MODULE_16__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */]
             ],
             imports: [
@@ -1895,9 +1898,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_10__home_home_module__["a" /* HomeModule */],
                 __WEBPACK_IMPORTED_MODULE_11__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_23__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_24__users_users_module__["a" /* UsersModule */],
                 __WEBPACK_IMPORTED_MODULE_2__add_listing_add_listing_module__["a" /* AddListingModule */],
                 __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__["ToastModule"],
+                __WEBPACK_IMPORTED_MODULE_17_ng2_pagination__["Ng2PaginationModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot([
                     { path: '', redirectTo: '/', pathMatch: 'full' },
                     { path: '**', redirectTo: '/', pathMatch: 'full' }
@@ -1909,10 +1913,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__services_helpers_date_provider_service__["a" /* DateProviderService */],
                 __WEBPACK_IMPORTED_MODULE_12__services_http_requester_options_factory_service__["a" /* HttpRequesterOptionsFactoryService */],
                 __WEBPACK_IMPORTED_MODULE_13__services_http_requester_service__["a" /* HttpRequesterService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_service__["a" /* ToastrNotificationService */],
-                __WEBPACK_IMPORTED_MODULE_21__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_22__services_user_storage_service__["a" /* UserStorageService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_toastr_notification_service__["a" /* ToastrNotificationService */],
+                __WEBPACK_IMPORTED_MODULE_22__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_23__services_user_storage_service__["a" /* UserStorageService */],
                 __WEBPACK_IMPORTED_MODULE_3__users_add_to_favorites_add_to_favorites_component__["a" /* AddToFavoritesComponent */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
@@ -2397,25 +2401,27 @@ var CommentSectionComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__ = __webpack_require__(558);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_item_listing_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__items_collection_items_collection_component__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__items_routes__ = __webpack_require__(560);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__offers_make_offer_component__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__offers_offers_list_component__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__single_item_single_item_component__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_service__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__users_users_module__ = __webpack_require__(363);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_exterior_color_pipe__ = __webpack_require__(565);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pipes_make_filter_pipe__ = __webpack_require__(566);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pipes_model_filter_pipe__ = __webpack_require__(567);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pipes_price_greater_then_pipe__ = __webpack_require__(568);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pipes_price_less_then_pipe__ = __webpack_require__(569);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pipes_year_greater_then_pipe__ = __webpack_require__(570);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_less_then_pipe__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_exterior_color_pipe__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__items_collection_items_collection_component__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__items_routes__ = __webpack_require__(560);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pipes_make_filter_pipe__ = __webpack_require__(566);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__offers_make_offer_component__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_model_filter_pipe__ = __webpack_require__(567);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_pagination__ = __webpack_require__(812);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_ng2_pagination__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__offers_offers_list_component__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pipes_price_greater_then_pipe__ = __webpack_require__(568);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_price_less_then_pipe__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__single_item_single_item_component__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_user_storage_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__users_users_module__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__ = __webpack_require__(571);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2448,37 +2454,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ItemsModule = (function () {
     function ItemsModule() {
     }
     ItemsModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_6__items_routes__["a" /* ItemsRouterModule */],
+                __WEBPACK_IMPORTED_MODULE_11_ng2_pagination__["Ng2PaginationModule"],
+                __WEBPACK_IMPORTED_MODULE_7__items_routes__["a" /* ItemsRouterModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_14__users_users_module__["a" /* UsersModule */]
+                __WEBPACK_IMPORTED_MODULE_20__users_users_module__["a" /* UsersModule */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_10__single_item_single_item_component__["a" /* SingleItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__single_item_single_item_component__["a" /* SingleItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */],
                 __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__["a" /* CommentSectionComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__offers_offers_list_component__["a" /* OffersListComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__offers_make_offer_component__["a" /* MakeOfferComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_16__pipes_make_filter_pipe__["a" /* MakeFilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_17__pipes_model_filter_pipe__["a" /* ModelFilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_18__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_19__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_20__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_21__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */]
+                __WEBPACK_IMPORTED_MODULE_13__offers_offers_list_component__["a" /* OffersListComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__offers_make_offer_component__["a" /* MakeOfferComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_8__pipes_make_filter_pipe__["a" /* MakeFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_10__pipes_model_filter_pipe__["a" /* ModelFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_14__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_15__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_4__services_item_listing_service__["a" /* ItemListingService */],
-                __WEBPACK_IMPORTED_MODULE_13__services_user_storage_service__["a" /* UserStorageService */],
-                __WEBPACK_IMPORTED_MODULE_11__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_12__services_toastr_notification_service__["a" /* ToastrNotificationService */]
+                __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_user_storage_service__["a" /* UserStorageService */],
+                __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__["a" /* ToastrNotificationService */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -3372,7 +3380,7 @@ module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
 /***/ 740:
 /***/ function(module, exports) {
 
-module.exports = "div.comment-section {\n  width: 80%;\n  margin: 7.5vh auto; }\n  div.comment-section div.comments-wrapper ul {\n    width: 60%;\n    margin: 0 auto 5vh auto;\n    padding: 0;\n    list-style-type: none;\n    background-color: #F9F9F9;\n    box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75); }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comments-wrapper ul {\n        width: 100%; } }\n    div.comment-section div.comments-wrapper ul li {\n      text-align: left;\n      padding: 10px;\n      border-bottom: 1px solid #ccc;\n      color: #282828; }\n      div.comment-section div.comments-wrapper ul li h3 {\n        margin-top: 0;\n        color: #7e7e7e; }\n  div.comment-section div.comment-wrapper #comment {\n    resize: none;\n    padding: 15px;\n    font-size: 2rem;\n    color: #272727;\n    width: 60%;\n    height: 30vh; }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comment-wrapper #comment {\n        width: 100%; } }\n"
+module.exports = "div.comment-section {\n  width: 80%;\n  margin: 7.5vh auto; }\n  div.comment-section div.comments-wrapper ul {\n    width: 60%;\n    margin: 0 auto 5vh auto;\n    padding: 0;\n    list-style-type: none;\n    background-color: #F9F9F9;\n    box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75); }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comments-wrapper ul {\n        width: 100%; } }\n    div.comment-section div.comments-wrapper ul li {\n      text-align: left;\n      padding: 10px;\n      border-bottom: 1px solid #ccc;\n      color: #282828; }\n      div.comment-section div.comments-wrapper ul li h3 {\n        margin-top: 0;\n        color: #7e7e7e; }\n  div.comment-section div.comment-wrapper {\n    margin-top: 5vh; }\n    div.comment-section div.comment-wrapper #comment {\n      resize: none;\n      padding: 15px;\n      font-size: 2rem;\n      color: #272727;\n      width: 60%;\n      height: 30vh; }\n      @media only screen and (max-device-width: 480px) {\n        div.comment-section div.comment-wrapper #comment {\n          width: 100%; } }\n\n:host /deep/ .pagination-controls ul {\n  padding: 0; }\n  :host /deep/ .pagination-controls ul li {\n    cursor: pointer; }\n    :host /deep/ .pagination-controls ul li.disabled {\n      cursor: default; }\n    :host /deep/ .pagination-controls ul li a {\n      color: #fff; }\n"
 
 /***/ },
 
@@ -3512,7 +3520,7 @@ module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jp
 /***/ 760:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments\">\n        <div class=\"comment-list-item\">\n          <div class=\"author-wrapper\">\n            <h3 class=\"author\">{{comment.username}}</h3>\n          </div>\n          <div class=\"content-wrapper\">\n            <span>{{comment.content}}</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
+module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\n        <div class=\"comment-list-item\">\n          <div class=\"author-wrapper\">\n            <h3 class=\"author\">{{comment.username}}</h3>\n          </div>\n          <div class=\"content-wrapper\">\n            <span>{{comment.content}}</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\n  </div>\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
 
 /***/ },
 
