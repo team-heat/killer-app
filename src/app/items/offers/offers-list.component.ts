@@ -9,7 +9,8 @@ import { UserStorageService } from './../../services/user-storage.service';
 
 @Component({
     selector: 'offers-list',
-    templateUrl: './offers-list.component.html'
+    templateUrl: './offers-list.component.html',
+    styleUrls:['./make-offer.component.scss']
 })
 
 export class OffersListComponent {
