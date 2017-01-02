@@ -2350,10 +2350,18 @@ var ContactComponent = (function () {
         this.mailService = mailService;
         this.toastrNotification = toastrNotification;
         this.toastrOptions = toastrOptions;
+        this.mail = {
+            senderName: '',
+            senderEmail: '',
+            subject: '',
+            content: ''
+        };
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent.prototype.onSubmit = function () {
+        console.log(this.mail);
+        this.mailService.sendMail(this.mail);
     };
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -4049,7 +4057,7 @@ module.exports = "<div class=\"well\">\r\n  <div id=\"carousel-example-generic\"
 /***/ 782:
 /***/ function(module, exports) {
 
-module.exports = "<h3 id=\"component-header\">Contact Us</h3>\r\n<div class=\"contact-wrapper\">\r\n  <div class=\"form-wrapper form-group\">\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"name\">\r\n    <br>\r\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"emailAddress\">\r\n    <br>\r\n    <textarea name=\"content\" id=\"content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\r\n  </div>\r\n</div>"
+module.exports = "<h3 id=\"component-header\">Contact Us</h3>\r\n<div class=\"contact-wrapper\">\r\n  <div class=\"form-wrapper form-group\">\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\r\n    <br>\r\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\r\n    <br>\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\r\n    <br>\r\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\r\n  </div>\r\n</div>"
 
 /***/ },
 
