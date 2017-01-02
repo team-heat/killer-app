@@ -142,7 +142,7 @@ var HttpRequesterService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user_model__ = __webpack_require__(592);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user_model__ = __webpack_require__(593);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserFactoryService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -500,7 +500,7 @@ var AppComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(797),
-            styles: [__webpack_require__(767)]
+            styles: [__webpack_require__(768)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -535,7 +535,7 @@ var HomeComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(802),
-            styles: [__webpack_require__(772)]
+            styles: [__webpack_require__(773)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
@@ -680,7 +680,7 @@ var ItemsCollectionComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__angular_core__["Component"])({
             selector: 'app-items-collection',
             template: __webpack_require__(810),
-            styles: [__webpack_require__(780)]
+            styles: [__webpack_require__(781)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object])
     ], ItemsCollectionComponent);
@@ -814,7 +814,7 @@ var MakeOfferComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'make-offer',
             template: __webpack_require__(811),
-            styles: [__webpack_require__(781)]
+            styles: [__webpack_require__(428)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
     ], MakeOfferComponent);
@@ -936,7 +936,8 @@ var OffersListComponent = (function () {
     OffersListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'offers-list',
-            template: __webpack_require__(812)
+            template: __webpack_require__(812),
+            styles: [__webpack_require__(428)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], OffersListComponent);
@@ -1287,7 +1288,7 @@ var DateProviderService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_item_listing_model__ = __webpack_require__(591);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_item_listing_model__ = __webpack_require__(592);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemListingFactoryService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2196,11 +2197,11 @@ var RegisterComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__carousel_list_carousel_list_component__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__carousel_list_carousel_list_component__ = __webpack_require__(573);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__add_to_favorites_add_to_favorites_component__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_date_formatter_pipe__ = __webpack_require__(594);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__facebook_login_facebook_login_component__ = __webpack_require__(602);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_date_formatter_pipe__ = __webpack_require__(595);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__facebook_login_facebook_login_component__ = __webpack_require__(603);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__favorites_favorites_component__ = __webpack_require__(375);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_hashing_service__ = __webpack_require__(234);
@@ -2211,8 +2212,8 @@ var RegisterComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__profile_profile_component__ = __webpack_require__(379);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__register_register_component__ = __webpack_require__(380);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_factory_service__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__users_component__ = __webpack_require__(603);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__users_routes__ = __webpack_require__(604);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__users_component__ = __webpack_require__(604);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__users_routes__ = __webpack_require__(605);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UsersModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2280,6 +2281,13 @@ var UsersModule = (function () {
 
 /***/ },
 
+/***/ 428:
+/***/ function(module, exports) {
+
+module.exports = "img {\n  max-width: 300px;\n  margin: 20px;\n  border-radius: 10px; }\n\n.go-center {\n  text-align: center; }\n\n.go-right {\n  text-align: right; }\n\n.go-left {\n  text-align: left; }\n\n.bordered {\n  border: 1px solid gray; }\n\n.border-radius {\n  border-radius: 10px; }\n\n.padding-10-25 {\n  padding: 10px 25px; }\n\n.margin-10 {\n  margin: 10px; }\n"
+
+/***/ },
+
 /***/ 43:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2325,7 +2333,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
 
 /***/ },
 
-/***/ 444:
+/***/ 445:
 /***/ function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -2334,21 +2342,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 444;
+webpackEmptyContext.id = 445;
 
 
 /***/ },
 
-/***/ 445:
+/***/ 446:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(606);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(607);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(537);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(538);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(605);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(606);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(582);
 
 
 
@@ -2362,7 +2370,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ },
 
-/***/ 569:
+/***/ 570:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2426,7 +2434,7 @@ var AddListingComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add-listing',
             template: __webpack_require__(796),
-            styles: [__webpack_require__(766)]
+            styles: [__webpack_require__(767)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__["a" /* ItemListingFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
     ], AddListingComponent);
@@ -2437,20 +2445,20 @@ var AddListingComponent = (function () {
 
 /***/ },
 
-/***/ 570:
+/***/ 571:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_listing_component__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_listing_component__ = __webpack_require__(570);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_form_default_value_directive__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__ = __webpack_require__(578);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_form_default_value_directive__ = __webpack_require__(575);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_form_year_validation_directive__ = __webpack_require__(575);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_form_year_validation_directive__ = __webpack_require__(576);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_item_listing_factory_service__ = __webpack_require__(365);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_item_listing_service__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader__ = __webpack_require__(763);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_uploader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ngx_uploader__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_router__ = __webpack_require__(18);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddListingModule; });
@@ -2509,42 +2517,42 @@ var AddListingModule = (function () {
 
 /***/ },
 
-/***/ 571:
+/***/ 572:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__ = __webpack_require__(425);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_listing_add_listing_module__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_listing_add_listing_module__ = __webpack_require__(571);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_add_to_favorites_add_to_favorites_component__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_api_urls_config_service__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__ = __webpack_require__(574);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__ = __webpack_require__(382);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_helpers_date_provider_service__ = __webpack_require__(364);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__ = __webpack_require__(578);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__ = __webpack_require__(579);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_forms__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_module__ = __webpack_require__(579);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_module__ = __webpack_require__(580);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_http__ = __webpack_require__(328);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_http_requester_options_factory_service__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_http_requester_service__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__items_items_module__ = __webpack_require__(589);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__items_items_module__ = __webpack_require__(590);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_mail_service__ = __webpack_require__(366);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__navigation_navigation_component__ = __webpack_require__(593);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__navigation_navigation_component__ = __webpack_require__(594);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__ = __webpack_require__(577);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_pagination__ = __webpack_require__(424);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_ng2_pagination__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_toastr_notification_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(601);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(602);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_user_storage_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__users_users_module__ = __webpack_require__(381);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__statistics_statistics_module__ = __webpack_require__(599);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__statistics_statistics_module__ = __webpack_require__(600);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2639,7 +2647,7 @@ var AppModule = (function () {
 
 /***/ },
 
-/***/ 572:
+/***/ 573:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2667,7 +2675,7 @@ var CarouselListComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-carousel',
             template: __webpack_require__(798),
-            styles: [__webpack_require__(768)]
+            styles: [__webpack_require__(769)]
         }), 
         __metadata('design:paramtypes', [])
     ], CarouselListComponent);
@@ -2677,7 +2685,7 @@ var CarouselListComponent = (function () {
 
 /***/ },
 
-/***/ 573:
+/***/ 574:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2723,7 +2731,7 @@ var ContactComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-contact',
             template: __webpack_require__(799),
-            styles: [__webpack_require__(769)]
+            styles: [__webpack_require__(770)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_mail_service__["a" /* MailService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_mail_service__["a" /* MailService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _c) || Object])
     ], ContactComponent);
@@ -2734,7 +2742,7 @@ var ContactComponent = (function () {
 
 /***/ },
 
-/***/ 574:
+/***/ 575:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2772,7 +2780,7 @@ var FormDefaultValueDirective = (function () {
 
 /***/ },
 
-/***/ 575:
+/***/ 576:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2820,7 +2828,7 @@ var FormYearValidationDirective = (function () {
 
 /***/ },
 
-/***/ 576:
+/***/ 577:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2874,7 +2882,7 @@ var NavigationHoverDirective = (function () {
 
 /***/ },
 
-/***/ 577:
+/***/ 578:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2957,7 +2965,7 @@ var FileUploaderComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-file-uploader',
             template: __webpack_require__(800),
-            styles: [__webpack_require__(770)]
+            styles: [__webpack_require__(771)]
         }), 
         __metadata('design:paramtypes', [])
     ], FileUploaderComponent);
@@ -2968,7 +2976,7 @@ var FileUploaderComponent = (function () {
 
 /***/ },
 
-/***/ 578:
+/***/ 579:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2993,7 +3001,7 @@ var FooterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-footer',
             template: __webpack_require__(801),
-            styles: [__webpack_require__(771)]
+            styles: [__webpack_require__(772)]
         }), 
         __metadata('design:paramtypes', [])
     ], FooterComponent);
@@ -3003,11 +3011,11 @@ var FooterComponent = (function () {
 
 /***/ },
 
-/***/ 579:
+/***/ 580:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_routes__ = __webpack_require__(580);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_routes__ = __webpack_require__(581);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_component__ = __webpack_require__(353);
@@ -3044,7 +3052,7 @@ var HomeModule = (function () {
 
 /***/ },
 
-/***/ 580:
+/***/ 581:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3083,12 +3091,12 @@ var HomeRouterModule = (function () {
 
 /***/ },
 
-/***/ 581:
+/***/ 582:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(572);
 /* unused harmony namespace reexport */
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
@@ -3097,7 +3105,7 @@ var HomeRouterModule = (function () {
 
 /***/ },
 
-/***/ 582:
+/***/ 583:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3186,7 +3194,7 @@ var CommentSectionComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-comment-section',
             template: __webpack_require__(803),
-            styles: [__webpack_require__(773)]
+            styles: [__webpack_require__(774)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], CommentSectionComponent);
@@ -3197,7 +3205,7 @@ var CommentSectionComponent = (function () {
 
 /***/ },
 
-/***/ 583:
+/***/ 584:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3228,7 +3236,7 @@ var ColorFilterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-color-filter',
             template: __webpack_require__(804),
-            styles: [__webpack_require__(774)]
+            styles: [__webpack_require__(775)]
         }), 
         __metadata('design:paramtypes', [])
     ], ColorFilterComponent);
@@ -3239,7 +3247,7 @@ var ColorFilterComponent = (function () {
 
 /***/ },
 
-/***/ 584:
+/***/ 585:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3270,7 +3278,7 @@ var MakeFilterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-make-filter',
             template: __webpack_require__(805),
-            styles: [__webpack_require__(775)]
+            styles: [__webpack_require__(776)]
         }), 
         __metadata('design:paramtypes', [])
     ], MakeFilterComponent);
@@ -3281,7 +3289,7 @@ var MakeFilterComponent = (function () {
 
 /***/ },
 
-/***/ 585:
+/***/ 586:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3312,7 +3320,7 @@ var MaximumPriceFilterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-maximum-price-filter',
             template: __webpack_require__(806),
-            styles: [__webpack_require__(776)]
+            styles: [__webpack_require__(777)]
         }), 
         __metadata('design:paramtypes', [])
     ], MaximumPriceFilterComponent);
@@ -3323,7 +3331,7 @@ var MaximumPriceFilterComponent = (function () {
 
 /***/ },
 
-/***/ 586:
+/***/ 587:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3354,7 +3362,7 @@ var MaximumYearFilterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-maximum-year-filter',
             template: __webpack_require__(807),
-            styles: [__webpack_require__(777)]
+            styles: [__webpack_require__(778)]
         }), 
         __metadata('design:paramtypes', [])
     ], MaximumYearFilterComponent);
@@ -3365,7 +3373,7 @@ var MaximumYearFilterComponent = (function () {
 
 /***/ },
 
-/***/ 587:
+/***/ 588:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3396,7 +3404,7 @@ var MinimumPriceFilterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-minimum-price-filter',
             template: __webpack_require__(808),
-            styles: [__webpack_require__(778)]
+            styles: [__webpack_require__(779)]
         }), 
         __metadata('design:paramtypes', [])
     ], MinimumPriceFilterComponent);
@@ -3407,7 +3415,7 @@ var MinimumPriceFilterComponent = (function () {
 
 /***/ },
 
-/***/ 588:
+/***/ 589:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3438,7 +3446,7 @@ var MinimumYearFilterComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-minimum-year-filter',
             template: __webpack_require__(809),
-            styles: [__webpack_require__(779)]
+            styles: [__webpack_require__(780)]
         }), 
         __metadata('design:paramtypes', [])
     ], MinimumYearFilterComponent);
@@ -3449,21 +3457,21 @@ var MinimumYearFilterComponent = (function () {
 
 /***/ },
 
-/***/ 589:
+/***/ 590:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__ = __webpack_require__(582);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__ = __webpack_require__(583);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_exterior_color_pipe__ = __webpack_require__(358);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__items_collection_items_collection_component__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__items_routes__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__items_routes__ = __webpack_require__(591);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pipes_make_filter_pipe__ = __webpack_require__(359);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__offers_make_offer_component__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_model_filter_pipe__ = __webpack_require__(595);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_model_filter_pipe__ = __webpack_require__(596);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_pagination__ = __webpack_require__(424);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_ng2_pagination__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_core__ = __webpack_require__(0);
@@ -3477,12 +3485,12 @@ var MinimumYearFilterComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__users_users_module__ = __webpack_require__(381);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__ = __webpack_require__(362);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__ = __webpack_require__(363);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(588);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__ = __webpack_require__(587);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(589);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(587);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__ = __webpack_require__(586);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3570,7 +3578,7 @@ var ItemsModule = (function () {
 
 /***/ },
 
-/***/ 590:
+/***/ 591:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3621,7 +3629,7 @@ var ItemsRouterModule = (function () {
 
 /***/ },
 
-/***/ 591:
+/***/ 592:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3635,7 +3643,7 @@ var ItemListing = (function () {
 
 /***/ },
 
-/***/ 592:
+/***/ 593:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3649,7 +3657,7 @@ var User = (function () {
 
 /***/ },
 
-/***/ 593:
+/***/ 594:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3699,7 +3707,7 @@ var NavigationComponent = (function () {
 
 /***/ },
 
-/***/ 594:
+/***/ 595:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3733,7 +3741,7 @@ var DateFormatterPipe = (function () {
 
 /***/ },
 
-/***/ 595:
+/***/ 596:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3770,7 +3778,7 @@ var ModelFilterPipe = (function () {
 
 /***/ },
 
-/***/ 596:
+/***/ 597:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3809,7 +3817,7 @@ var StatisticsListItemLinkComponent = (function () {
 
 /***/ },
 
-/***/ 597:
+/***/ 598:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3847,7 +3855,7 @@ var StatisticsListItemComponent = (function () {
 
 /***/ },
 
-/***/ 598:
+/***/ 599:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3890,87 +3898,6 @@ var StatisticsListComponent = (function () {
     return StatisticsListComponent;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list.component.js.map
-
-/***/ },
-
-/***/ 599:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statistics_routes__ = __webpack_require__(600);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_statistic_service__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__partial_statistics_list_component__ = __webpack_require__(598);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__partial_statistics_list_item_link_component__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__partial_statistics_list_item_component__ = __webpack_require__(597);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__statistics_main_component__ = __webpack_require__(371);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_statistics_most_commented_items_component__ = __webpack_require__(367);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__item_statistics_most_expensive_items_component__ = __webpack_require__(368);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__item_statistics_most_offered_items_component__ = __webpack_require__(369);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__item_statistics_most_salled_makes_component__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__user_statistics_top_active_users_component__ = __webpack_require__(372);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__user_statistics_top_buyers_component__ = __webpack_require__(373);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__user_statistics_top_sellers_component__ = __webpack_require__(374);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return StatisticsModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var StatisticsModule = (function () {
-    function StatisticsModule() {
-    }
-    StatisticsModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_3__statistics_routes__["a" /* StatisticsRouterModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["BrowserModule"]
-            ],
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__partial_statistics_list_component__["a" /* StatisticsListComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__statistics_main_component__["a" /* StatisticsMainComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__partial_statistics_list_item_component__["a" /* StatisticsListItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__partial_statistics_list_item_link_component__["a" /* StatisticsListItemLinkComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__item_statistics_most_commented_items_component__["a" /* MonstCommentedItemsComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__item_statistics_most_expensive_items_component__["a" /* MonstExpensiveItemsComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__item_statistics_most_offered_items_component__["a" /* MonstOfferedItemsComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__item_statistics_most_salled_makes_component__["a" /* MostSelledMakesComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__user_statistics_top_active_users_component__["a" /* TopActiveUsersComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__user_statistics_top_buyers_component__["a" /* TopBuyersComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__user_statistics_top_sellers_component__["a" /* TopSellersComponent */]
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_4__services_statistic_service__["a" /* StatisticService */]
-            ]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], StatisticsModule);
-    return StatisticsModule;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.module.js.map
 
 /***/ },
 
@@ -4064,6 +3991,87 @@ var ItemListingService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statistics_routes__ = __webpack_require__(601);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_statistic_service__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__partial_statistics_list_component__ = __webpack_require__(599);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__partial_statistics_list_item_link_component__ = __webpack_require__(597);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__partial_statistics_list_item_component__ = __webpack_require__(598);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__statistics_main_component__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_statistics_most_commented_items_component__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__item_statistics_most_expensive_items_component__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__item_statistics_most_offered_items_component__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__item_statistics_most_salled_makes_component__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__user_statistics_top_active_users_component__ = __webpack_require__(372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__user_statistics_top_buyers_component__ = __webpack_require__(373);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__user_statistics_top_sellers_component__ = __webpack_require__(374);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return StatisticsModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var StatisticsModule = (function () {
+    function StatisticsModule() {
+    }
+    StatisticsModule = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3__statistics_routes__["a" /* StatisticsRouterModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["BrowserModule"]
+            ],
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__partial_statistics_list_component__["a" /* StatisticsListComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__statistics_main_component__["a" /* StatisticsMainComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__partial_statistics_list_item_component__["a" /* StatisticsListItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__partial_statistics_list_item_link_component__["a" /* StatisticsListItemLinkComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__item_statistics_most_commented_items_component__["a" /* MonstCommentedItemsComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__item_statistics_most_expensive_items_component__["a" /* MonstExpensiveItemsComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__item_statistics_most_offered_items_component__["a" /* MonstOfferedItemsComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__item_statistics_most_salled_makes_component__["a" /* MostSelledMakesComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__user_statistics_top_active_users_component__["a" /* TopActiveUsersComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__user_statistics_top_buyers_component__["a" /* TopBuyersComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__user_statistics_top_sellers_component__["a" /* TopSellersComponent */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__services_statistic_service__["a" /* StatisticService */]
+            ]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], StatisticsModule);
+    return StatisticsModule;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.module.js.map
+
+/***/ },
+
+/***/ 601:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_statistics_most_commented_items_component__ = __webpack_require__(367);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_statistics_most_expensive_items_component__ = __webpack_require__(368);
@@ -4119,7 +4127,7 @@ var StatisticsRouterModule = (function () {
 
 /***/ },
 
-/***/ 601:
+/***/ 602:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4184,7 +4192,7 @@ var ToastrNotificationsHandlerComponent = (function () {
 
 /***/ },
 
-/***/ 602:
+/***/ 603:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4219,7 +4227,7 @@ var FacebookLoginComponent = (function () {
 
 /***/ },
 
-/***/ 603:
+/***/ 604:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4254,7 +4262,7 @@ var UsersComponent = (function () {
 
 /***/ },
 
-/***/ 604:
+/***/ 605:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4309,7 +4317,7 @@ var UsersRouterModule = (function () {
 
 /***/ },
 
-/***/ 605:
+/***/ 606:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4325,39 +4333,39 @@ var environment = {
 
 /***/ },
 
-/***/ 606:
+/***/ 607:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(622);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(614);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(615);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(611);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(616);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(617);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(615);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(616);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(614);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(612);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(613);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(620);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(621);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(609);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(610);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(608);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(609);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(619);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(611);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(612);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(619);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(620);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(618);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(622);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(623);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(856);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
@@ -4546,66 +4554,59 @@ var UserService = (function () {
 
 /***/ },
 
-/***/ 766:
+/***/ 767:
 /***/ function(module, exports) {
 
 module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#inputs-container {\n  margin-bottom: 25px; }\n\n.well {\n  background: transparent;\n  box-shadow: 0 5px 25px black;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n\n.content-left {\n  opacity: 0.99;\n  box-shadow: 0 5px 25px black;\n  background-image: url(\"../../assets/home-bg10.jpg\");\n  background-repeat: none;\n  padding-left: 20px; }\n\n.form-group {\n  width: 100%; }\n\ninput {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  width: 100%;\n  background-color: #55b559; }\n  .btn.btn-success:hover {\n    text-decoration: underline; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
-/***/ 767:
+/***/ 768:
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
 
-/***/ 768:
+/***/ 769:
 /***/ function(module, exports) {
 
 module.exports = ".carousel-control {\n  background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.0001) 100%);\n  color: #2098D1; }\n\n.well {\n  background-color: transparent;\n  border: none; }\n  .well .carousel {\n    max-height: 400px;\n    overflow: hidden;\n    background-color: transparent; }\n    .well .carousel .item img {\n      width: 100%;\n      margin-top: -100px;\n      height: 600px;\n      -o-object-fit: contain;\n         object-fit: contain; }\n"
 
 /***/ },
 
-/***/ 769:
+/***/ 770:
 /***/ function(module, exports) {
 
 module.exports = "div.contact-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: wrap row;\n      flex-flow: wrap row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 60vh;\n  text-align: center;\n  color: #262626; }\n  div.contact-wrapper div.form-wrapper {\n    width: 50%; }\n    @media only screen and (max-device-width: 480px) {\n      div.contact-wrapper div.form-wrapper {\n        width: 100%; } }\n  div.contact-wrapper input {\n    width: 100%; }\n  div.contact-wrapper #content {\n    resize: none;\n    padding: 10px 15px;\n    width: 100%;\n    height: 20em; }\n"
 
 /***/ },
 
-/***/ 770:
+/***/ 771:
 /***/ function(module, exports) {
 
 module.exports = "#image-uploader {\n  border-top: 1px solid rgba(225, 225, 225, 0.77); }\n\nlabel {\n  margin-top: 25px;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  label:hover {\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #494949;\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n\nlabel,\ninput,\nbutton {\n  width: 250px; }\n\nimg {\n  padding: 10px; }\n\n.well {\n  background-color: transparent;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  margin-top: 25px; }\n"
 
 /***/ },
 
-/***/ 771:
+/***/ 772:
 /***/ function(module, exports) {
 
 module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../assets/Planer-Regular.otf\"); }\n\n@font-face {\n  font-family: noto;\n  src: url(\"../../assets/NotoSans-Regular.ttf\"); }\n\n.navbar .navbar-nav {\n  display: inline-block;\n  float: none;\n  vertical-align: top; }\n\n.navbar .navbar-collapse {\n  text-align: center; }\n\nnav {\n  margin-top: 1.5%;\n  padding-left: 10px;\n  padding-right: 25px;\n  border: none;\n  box-shadow: 0 5px 25px #000000;\n  background-color: rgba(0, 0, 0, 0.33);\n  text-align: center;\n  font-size: 16px;\n  font-family: noto; }\n  nav .btn-default {\n    color: rgba(225, 225, 225, 0.77);\n    background-color: transparent;\n    border: none;\n    font-size: 16px;\n    margin-top: 0px; }\n  nav h1.app-heading {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    letter-spacing: 1em;\n    margin-top: 0px; }\n    nav h1.app-heading:hover {\n      color: white; }\n  nav a.navbar-btn:hover {\n    color: white; }\n  nav a.navbar-brand {\n    color: rgba(225, 225, 225, 0.77);\n    font-family: planer;\n    font-size: 22px; }\n    nav a.navbar-brand:hover {\n      color: white; }\n  nav li.favorites-item:hover span.glyphicon.glyphicon-heart {\n    color: #DF474B; }\n  nav li.favorites-item span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n  nav span.glyphicon.glyphicon-heart {\n    font-size: 2.5rem; }\n    nav span.glyphicon.glyphicon-heart:hover {\n      color: red; }\n  nav li.active > a,\n  nav li.open > a {\n    background-color: rgba(51, 51, 51, 0.33) !important;\n    box-shadow: 0 1px 15px #000000; }\n  nav ul.dropdown-menu > li > a {\n    font-size: 1.5rem;\n    color: #444444; }\n"
 
 /***/ },
 
-/***/ 772:
+/***/ 773:
 /***/ function(module, exports) {
 
 module.exports = "section img {\n  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }\n"
 
 /***/ },
 
-/***/ 773:
-/***/ function(module, exports) {
-
-module.exports = "div.comment-section {\n  width: 80%;\n  margin: 7.5vh auto; }\n  div.comment-section div.comments-wrapper ul {\n    width: 60%;\n    margin: 0 auto 5vh auto;\n    padding: 0;\n    list-style-type: none;\n    background-color: #F9F9F9;\n    box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75); }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comments-wrapper ul {\n        width: 100%; } }\n    div.comment-section div.comments-wrapper ul li {\n      text-align: left;\n      word-wrap: break-word;\n      padding: 10px;\n      border-bottom: 1px solid #ccc;\n      color: #282828; }\n      div.comment-section div.comments-wrapper ul li h3 {\n        margin-top: 0;\n        color: #7e7e7e; }\n  div.comment-section div.comment-wrapper {\n    margin-top: 5vh; }\n    div.comment-section div.comment-wrapper #comment {\n      background-color: #F9F9F9;\n      resize: none;\n      padding: 15px;\n      font-size: 2rem;\n      color: #272727;\n      width: 60%;\n      height: 30vh; }\n      @media only screen and (max-device-width: 480px) {\n        div.comment-section div.comment-wrapper #comment {\n          width: 100%; } }\n\n:host /deep/ .pagination-controls ul {\n  padding: 0; }\n  :host /deep/ .pagination-controls ul li {\n    cursor: pointer; }\n    :host /deep/ .pagination-controls ul li.disabled {\n      cursor: default; }\n    :host /deep/ .pagination-controls ul li a,\n    :host /deep/ .pagination-controls ul li span {\n      font-size: 1.5rem !important; }\n    :host /deep/ .pagination-controls ul li a {\n      color: #fff !important; }\n      :host /deep/ .pagination-controls ul li a:hover {\n        background-color: #79c1f1 !important;\n        text-decoration: none; }\n"
-
-/***/ },
-
 /***/ 774:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
+module.exports = "div.comment-section {\n  width: 80%;\n  margin: 7.5vh auto; }\n  div.comment-section div.comments-wrapper ul {\n    width: 60%;\n    margin: 0 auto 5vh auto;\n    padding: 0;\n    list-style-type: none;\n    background-color: #F9F9F9;\n    box-shadow: 0px 0px 9px 3px rgba(252, 252, 252, 0.75); }\n    @media only screen and (max-device-width: 480px) {\n      div.comment-section div.comments-wrapper ul {\n        width: 100%; } }\n    div.comment-section div.comments-wrapper ul li {\n      text-align: left;\n      word-wrap: break-word;\n      padding: 10px;\n      border-bottom: 1px solid #ccc;\n      color: #282828; }\n      div.comment-section div.comments-wrapper ul li h3 {\n        margin-top: 0;\n        color: #7e7e7e; }\n  div.comment-section div.comment-wrapper {\n    margin-top: 5vh; }\n    div.comment-section div.comment-wrapper #comment {\n      background-color: #F9F9F9;\n      resize: none;\n      padding: 15px;\n      font-size: 2rem;\n      color: #272727;\n      width: 60%;\n      height: 30vh; }\n      @media only screen and (max-device-width: 480px) {\n        div.comment-section div.comment-wrapper #comment {\n          width: 100%; } }\n\n:host /deep/ .pagination-controls ul {\n  padding: 0; }\n  :host /deep/ .pagination-controls ul li {\n    cursor: pointer; }\n    :host /deep/ .pagination-controls ul li.disabled {\n      cursor: default; }\n    :host /deep/ .pagination-controls ul li a,\n    :host /deep/ .pagination-controls ul li span {\n      font-size: 1.5rem !important; }\n    :host /deep/ .pagination-controls ul li a {\n      color: #fff !important; }\n      :host /deep/ .pagination-controls ul li a:hover {\n        background-color: #79c1f1 !important;\n        text-decoration: none; }\n"
 
 /***/ },
 
@@ -4647,14 +4648,14 @@ module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n
 /***/ 780:
 /***/ function(module, exports) {
 
-module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n  #component-header h3 > span {\n    text-transform: capitalize; }\n\n.well {\n  background-color: transparent;\n  border: none; }\n\napp-add-to-favorites {\n  float: right; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px;\n  padding-bottom: 0; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n  #controls #item-number {\n    padding-top: 25px; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
 /***/ 781:
 /***/ function(module, exports) {
 
-module.exports = "img {\n  max-width: 300px; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n  #component-header h3 > span {\n    text-transform: capitalize; }\n\n.well {\n  background-color: transparent;\n  border: none; }\n\napp-add-to-favorites {\n  float: right; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px;\n  padding-bottom: 0; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n  #controls #item-number {\n    padding-top: 25px; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
 
 /***/ },
 
@@ -4794,7 +4795,7 @@ module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileU
 /***/ 801:
 /***/ function(module, exports) {
 
-module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Killer App @ GitHub</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/contact\">Contact Us</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
+module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Dreamstime @ GitHub</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/contact\">Contact Us</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
@@ -4864,14 +4865,14 @@ module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header
 /***/ 811:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"text-center\">\r\n    <a routerLink=\"/gallery/{{this.item._id}}\">\r\n        <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n    </a>\r\n    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"this.haveOffers()\">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"!this.haveOffers()\">Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
+module.exports = "<div class=\"text-center\">\r\n    <div class=\"go-center\">\r\n        <a routerLink=\"/gallery/{{this.item._id}}\">\r\n            <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n        </a>\r\n    </div>\r\n    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"this.haveOffers()\">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"!this.haveOffers()\">Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ },
 
 /***/ 812:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>             \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div> \r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"go-center\">\r\n    <h2>Offers for:</h2>\r\n    <a routerLink=\"/gallery/{{this.item._id}}\">\r\n        <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n    </a>\r\n</div>\r\n<div class=\"go-center\">\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n</div>\r\n\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\" class=\"go-center\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2 class=\"go-center\">Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\r\n            \r\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\r\n            <p class=\"go-right\">By: {{offer.username}}</p>\r\n            \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div>\r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div>\r\n        </div>\r\n    </div>\r\n\r\n    <h2 class=\"go-center\">Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\r\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\r\n            <p class=\"go-right\">By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2 class=\"go-center\">Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\r\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\r\n            <p class=\"go-right\">By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
 
@@ -5039,7 +5040,7 @@ module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 /***/ 857:
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(445);
+module.exports = __webpack_require__(446);
 
 
 /***/ }
