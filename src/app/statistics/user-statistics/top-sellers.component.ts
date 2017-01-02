@@ -5,6 +5,7 @@ import { StatisticService } from './../../services/statistic.service';
 @Component({
     selector: 'app-top-sellers',
     templateUrl: './top-sellers.component.html',
+    styleUrls:['./../statistics.scss']
 })
 export class TopSellersComponent implements OnInit {
     list: any[];

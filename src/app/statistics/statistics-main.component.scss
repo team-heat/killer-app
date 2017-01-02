@@ -1,0 +1,12 @@
+ul {
+    list-style: none;
+    font-size: 20px;
+    
+    li {
+        margin-top: 10px;
+    }
+
+    li:nth-child(2n){
+        background-color: rgba(225, 225, 225, 0.05);
+    }
+}

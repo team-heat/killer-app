@@ -5,6 +5,7 @@ import { StatisticService } from './../../services/statistic.service';
 @Component({
     selector: 'app-most-offered-items',
     templateUrl: './most-offered-items.component.html',
+    styleUrls:['./../statistics.scss']
 })
 export class MonstOfferedItemsComponent implements OnInit {
     list: any[];

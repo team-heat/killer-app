@@ -1,0 +1,23 @@
+ol {
+    font-size: 20px;
+
+    .go-right {
+        float: right;
+    }
+
+    li {        
+        margin-top: 10px;
+    }
+
+    li div {
+        margin-right: 20px;
+    }
+
+    li:nth-child(2n){
+        background-color: rgba(225, 225, 225, 0.05);
+    }
+}
+
+.go-center {
+    text-align: center;
+}

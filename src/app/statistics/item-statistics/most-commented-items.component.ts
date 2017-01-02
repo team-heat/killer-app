@@ -5,6 +5,7 @@ import { StatisticService } from './../../services/statistic.service';
 @Component({
     selector: 'app-most-commented-items',
     templateUrl: './most-commented-items.component.html',
+    styleUrls:['./../statistics.scss']
 })
 export class MonstCommentedItemsComponent implements OnInit {
     list: any[];
