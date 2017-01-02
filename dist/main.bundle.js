@@ -3324,6 +3324,14 @@ var MaximumPriceFilterComponent = (function () {
     MaximumPriceFilterComponent.prototype.updateValue = function () {
         this.onMaximumPriceFilter.emit(+this.maximumPriceFilterValue);
     };
+    MaximumPriceFilterComponent.prototype.validationUpdate = function (value) {
+        if (!value) {
+            this.maximumPriceFilterValue = undefined;
+        }
+        else {
+            this.maximumPriceFilterValue = +value;
+        }
+    };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
@@ -3415,6 +3423,14 @@ var MinimumPriceFilterComponent = (function () {
     }
     MinimumPriceFilterComponent.prototype.updateValue = function () {
         this.onMinimumPriceFilter.emit(+this.minimumPriceFilterValue);
+    };
+    MinimumPriceFilterComponent.prototype.validationUpdate = function (value) {
+        if (!value) {
+            this.minimumPriceFilterValue = undefined;
+        }
+        else {
+            this.minimumPriceFilterValue = +value;
+        }
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
@@ -4861,7 +4877,7 @@ module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" 
 /***/ 806:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\r\n    placeholder=\"Maximum Price\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormPriceValidation #tbMaxPrice (change)=\"validationUpdate(tbMaxPrice.value)\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\r\n    placeholder=\"Maximum Price\">\r\n</div>"
 
 /***/ },
 
@@ -4875,7 +4891,7 @@ module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" 
 /***/ 808:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\r\n    placeholder=\"Minimum Price\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormPriceValidation #tbMinPrice (change)=\"validationUpdate(tbMinPrice.value)\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\r\n    placeholder=\"Minimum Price\">\r\n</div>"
 
 /***/ },
 
@@ -5080,8 +5096,9 @@ module.exports = __webpack_require__(446);
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__form_year_validation_directive__ = __webpack_require__(576);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__ = __webpack_require__(867);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__form_year_validation_directive__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return DirectivesExportModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5094,16 +5111,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var DirectivesExportModule = (function () {
     function DirectivesExportModule() {
     }
     DirectivesExportModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_0__form_year_validation_directive__["a" /* FormYearValidationDirective */]
+                __WEBPACK_IMPORTED_MODULE_1__form_year_validation_directive__["a" /* FormYearValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__["a" /* FormPriceValidationDirective */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_0__form_year_validation_directive__["a" /* FormYearValidationDirective */]
+                __WEBPACK_IMPORTED_MODULE_1__form_year_validation_directive__["a" /* FormYearValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__["a" /* FormPriceValidationDirective */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -5111,6 +5131,58 @@ var DirectivesExportModule = (function () {
     return DirectivesExportModule;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/directives-export.module.js.map
+
+/***/ },
+
+/***/ 867:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FormPriceValidationDirective; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FormPriceValidationDirective = (function () {
+    function FormPriceValidationDirective(domElement) {
+        this.domElement = domElement;
+    }
+    FormPriceValidationDirective.prototype.onChange = function () {
+        var value = +this.domElement.nativeElement.value;
+        if (!value) {
+            this.domElement.nativeElement.value = '';
+            return;
+        }
+        if (value < 1) {
+            this.domElement.nativeElement.value = '1';
+        }
+        if (999999999 < value) {
+            this.domElement.nativeElement.value = '999999999';
+        }
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('change'), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', void 0)
+    ], FormPriceValidationDirective.prototype, "onChange", null);
+    FormPriceValidationDirective = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+            selector: '[appFormPriceValidation]'
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _a) || Object])
+    ], FormPriceValidationDirective);
+    return FormPriceValidationDirective;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-price-validation.directive.js.map
 
 /***/ }
 

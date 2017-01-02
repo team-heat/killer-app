@@ -16,4 +16,12 @@ export class MinimumPriceFilterComponent {
   updateValue() {
     this.onMinimumPriceFilter.emit(+this.minimumPriceFilterValue);
   }
+
+  validationUpdate(value: any) {
+    if (!value) {
+      this.minimumPriceFilterValue = undefined;
+    } else {
+      this.minimumPriceFilterValue = +value;
+    }
+  }
 }

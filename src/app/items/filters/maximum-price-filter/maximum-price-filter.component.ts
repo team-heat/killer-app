@@ -16,4 +16,12 @@ export class MaximumPriceFilterComponent {
   updateValue() {
     this.onMaximumPriceFilter.emit(+this.maximumPriceFilterValue);
   }
+
+  validationUpdate(value: any) {
+    if (!value) {
+      this.maximumPriceFilterValue = undefined;
+    } else {
+      this.maximumPriceFilterValue = +value;
+    }
+  }
 }
