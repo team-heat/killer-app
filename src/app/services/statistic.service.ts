@@ -55,7 +55,7 @@ export class StatisticService {
     }
 
     getMostSalledMakes(): Observable<Response> {
-        const url = this.apiUrlsConfigService.mostSaledMakesUrl;
+        const url = this.apiUrlsConfigService.mostSalledMakesUrl;
 
         const httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(url, {}, this.contentTypeHeaderObject);
