@@ -16,8 +16,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private mailService: MailService,
-    private toastrNotification: ToastrNotificationService,
-    private toastrOptions: ToastrNotificationOptionsFactoryService) {
+    private toastrNotificationService: ToastrNotificationService,
+    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
 
     this.mail = {
       senderName: '',
@@ -33,7 +33,21 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     this.mailService.sendMail(this.mail)
       .subscribe((resp) => {
-        console.log(resp);
-      });
+        const method = 'success';
+        const message = `EMail sent!`;
+        const heading = 'Yay!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      }, (err) => {
+        const method = 'error';
+        const message = 'Something went wrong.';
+        const heading = 'Oops!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      }, () => { });
   }
 }

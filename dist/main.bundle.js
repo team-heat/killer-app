@@ -1414,8 +1414,6 @@ var MailService = (function () {
         this.mailApiUrl = this.apiUrlsConfigService.mailApiUrl;
     }
     MailService.prototype.sendMail = function (mail) {
-        console.log(this.mailApiUrl);
-        console.log(mail);
         var httpRequestOptions = this.httpRequesterOptionsFactory
             .createHttpRequesterOptions(this.mailApiUrl, mail, this.contentTypeHeaderObject);
         return this.httpRequesterService.post(httpRequestOptions);
@@ -2769,10 +2767,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ContactComponent = (function () {
-    function ContactComponent(mailService, toastrNotification, toastrOptions) {
+    function ContactComponent(mailService, toastrNotificationService, toastrNotificationOptionsFactoryService) {
         this.mailService = mailService;
-        this.toastrNotification = toastrNotification;
-        this.toastrOptions = toastrOptions;
+        this.toastrNotificationService = toastrNotificationService;
+        this.toastrNotificationOptionsFactoryService = toastrNotificationOptionsFactoryService;
         this.mail = {
             senderName: '',
             senderEmail: '',
@@ -2783,10 +2781,23 @@ var ContactComponent = (function () {
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent.prototype.onSubmit = function () {
+        var _this = this;
         this.mailService.sendMail(this.mail)
             .subscribe(function (resp) {
-            console.log(resp);
-        });
+            var method = 'success';
+            var message = "EMail sent!";
+            var heading = 'Yay!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        }, function (err) {
+            var method = 'error';
+            var message = 'Something went wrong.';
+            var heading = 'Oops!';
+            var toastrNotificationOptions = _this.toastrNotificationOptionsFactoryService
+                .createToastrNotificationOptions(method, message, heading);
+            _this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+        }, function () { });
     };
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
