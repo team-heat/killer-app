@@ -30,6 +30,14 @@ export class ContactComponent implements OnInit {
   ngOnInit() { }
 
   onSubmit() {
+    if (this.mail.content.length < 50 || this.mail.content.length > 1000) {
+      const toastrOptions = this.toastrOptions
+        .createToastrNotificationOptions('error', 'Content must be between 50 and 1000 symbols long.');
+      this.toastrNotification.enqueueNotification(toastrOptions);
+
+      return;
+    }
+
     this.mailService.sendMail(this.mail)
       .subscribe((resp) => {
         const toastrOptions = this.toastrOptions

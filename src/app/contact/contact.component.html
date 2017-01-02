@@ -1,13 +1,16 @@
 <h3 id="component-header">Contact Us</h3>
 <div class="contact-wrapper">
   <div class="form-wrapper form-group">
-    <input type="text" class="form-group" placeholder="Name" [(ngModel)]="mail.senderName">
+    <input #ngName="ngModel" type="text" class="form-group" placeholder="Name" [(ngModel)]="mail.senderName" required minlength="2" maxlength="30" pattern="[a-zA-Z ]*">
+    <div class="invalid-input-msg animated jello" [hidden]="ngName.valid || ngName.untouched">Your name must be between 2 and 30 symbols long.</div>
     <br>
-    <input type="email" class="form-group" placeholder="Email Address" [(ngModel)]="mail.senderEmail">
+    <input #ngEmail="ngModel" type="email" class="form-group" placeholder="Email Address" [(ngModel)]="mail.senderEmail" required pattern="\S+@\S+\.\S+">
+    <div class="invalid-input-msg animated jello" [hidden]="ngEmail.valid || ngEmail.untouched">Your must enter a valid email address.</div>
     <br>
-    <input type="text" class="form-group" placeholder="Subject" [(ngModel)]="mail.subject">
+    <input #ngSubject="ngModel" type="text" class="form-group" placeholder="Subject" [(ngModel)]="mail.subject" required minlength="4" maxlength="30" pattern="[a-zA-Z0-9\-_ ]*">
+    <div class="invalid-input-msg animated jello" [hidden]="ngSubject.valid || ngSubject.untouched">The subject must be between 4 and 30 symbols long.</div>
     <br>
-    <textarea name="content" id="content" [(ngModel)]="mail.content"></textarea>
+    <textarea name="content" id="content" [(ngModel)]="mail.content" required minlength="50" maxlength="1000"></textarea>
     <br>
     <button class="btn btn-primary" (click)="onSubmit()">Send</button>
   </div>

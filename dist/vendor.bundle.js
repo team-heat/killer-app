@@ -32769,9 +32769,11 @@ var NgUploaderService = (function () {
     };
     NgUploaderService.prototype.uploadFilesInQueue = function () {
         var _this = this;
-        var newFiles = this._queue.filter(function (f) { return !f.uploading; });
-        newFiles.forEach(function (f) {
-            _this.uploadFile(f);
+        this._queue.forEach(function (file) {
+            if (file.uploading) {
+                return;
+            }
+            _this.uploadFile(file);
         });
     };
     ;
@@ -32908,7 +32910,7 @@ var NgUploaderService = (function () {
 var NgUploaderServiceProvider = {
     provide: NgUploaderService, useClass: NgUploaderService
 };
-//# sourceMappingURL=D:/GitHub/killer-app/src/ngx-uploader.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ngx-uploader.js.map
 
 /***/ },
 /* 164 */,
@@ -45616,7 +45618,7 @@ function TreeNode_tsickle_Closure_declarations() {
 
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/index.js.map
 
 /***/ },
 /* 232 */
@@ -45657,8 +45659,8 @@ var NgFileDropDirective = (function () {
         var _this = this;
         this.uploader._emitter.subscribe(function (data) {
             _this.onUpload.emit(data);
-            if (data.done) {
-                _this.files = _this.files.filter(function (f) { return f.name !== data.originalName; });
+            if (data.done && _this.files && _this.files.length) {
+                _this.files = [].filter.call(_this.files, function (x) { return x.name !== data.originalName; });
             }
         });
         this.uploader._previewEmitter.subscribe(function (data) {
@@ -45711,10 +45713,9 @@ var NgFileDropDirective = (function () {
         var _this = this;
         this.files = this.el.nativeElement.files;
         if (!this.files) {
-            console.log('return');
             return;
         }
-        if (this.options.filterExtensions && this.options.allowedExtensions) {
+        if (this.options.filterExtensions && this.options.allowedExtensions && this.files && this.files.length) {
             this.files = this.files.filter(function (f) {
                 if (_this.options.allowedExtensions.indexOf(f.type) !== -1) {
                     return true;
@@ -45794,7 +45795,7 @@ var NgFileDropDirective = (function () {
     return NgFileDropDirective;
     var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ng-file-drop.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ng-file-drop.js.map
 
 /***/ },
 /* 233 */
@@ -45838,8 +45839,8 @@ var NgFileSelectDirective = (function () {
         this.uploader.setOptions(new __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"](this.options));
         this.uploader._emitter.subscribe(function (data) {
             _this.onUpload.emit(data);
-            if (data.done) {
-                _this.files = _this.files.filter(function (f) { return f.name !== data.originalName; });
+            if (data.done && _this.files && _this.files.length) {
+                _this.files = [].filter.call(_this.files, function (x) { return x.name !== data.originalName; });
             }
         });
         this.uploader._previewEmitter.subscribe(function (data) {
@@ -45860,10 +45861,9 @@ var NgFileSelectDirective = (function () {
         var _this = this;
         this.files = this.el.nativeElement.files;
         if (!this.files) {
-            console.log('return');
             return;
         }
-        if (this.options.filterExtensions && this.options.allowedExtensions) {
+        if (this.options.filterExtensions && this.options.allowedExtensions && this.files && this.files.length) {
             this.files = this.files.filter(function (f) {
                 if (_this.options.allowedExtensions.indexOf(f.type) !== -1) {
                     return true;
@@ -45921,7 +45921,7 @@ var NgFileSelectDirective = (function () {
     return NgFileSelectDirective;
     var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ng-file-select.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ng-file-select.js.map
 
 /***/ },
 /* 234 */,
@@ -64578,7 +64578,7 @@ var UploadedFile = (function () {
     };
     return UploadedFile;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/uploaded-file.class.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/uploaded-file.class.js.map
 
 /***/ },
 /* 352 */,
@@ -84436,7 +84436,7 @@ var NgUploaderOptions = (function () {
     }
     return NgUploaderOptions;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ng-uploader-options.class.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ng-uploader-options.class.js.map
 
 /***/ },
 /* 569 */
@@ -84459,7 +84459,7 @@ var UploadRejected = (function () {
     });
     return UploadRejected;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/upload-rejected.class.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/upload-rejected.class.js.map
 
 /***/ },
 /* 570 */
@@ -84505,7 +84505,7 @@ var NgUploaderModule = (function () {
     ], NgUploaderModule);
     return NgUploaderModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ngx-uploader.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/ngx-uploader.module.js.map
 
 /***/ },
 /* 571 */,
