@@ -14,7 +14,7 @@ export class MonstSelledMakesComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.service.getMostCommentedItems()
+        this.service.getMostSalledMakes()
             .map(x => x.json())
             .subscribe(x => this.list = x);
     }
