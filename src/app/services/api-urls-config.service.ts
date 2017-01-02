@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ApiUrlsConfigService {
 
-  mailApiUrl: string = 'api/mail';
+  mailApiUrl: string = '/api/mail';
 
   // POST -> login 
   // PUT  -> register

@@ -18,7 +18,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var ApiUrlsConfigService = (function () {
     function ApiUrlsConfigService() {
-        this.mailApiUrl = 'api/mail';
+        this.mailApiUrl = '/api/mail';
         // POST -> login 
         // PUT  -> register
         // GET  -> details
