@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { StatisticsRouterModule } from './statistics.routes';
 
@@ -20,7 +22,9 @@ import { TopSellersComponent } from './user-statistics/top-sellers.component';
 
 @NgModule({
     imports: [
-        StatisticsRouterModule
+        StatisticsRouterModule,
+        CommonModule,
+        BrowserModule
     ],
     declarations: [
         StatisticsListComponent,

@@ -16,8 +16,10 @@ export class MonstOfferedItemsComponent implements OnInit {
     ngOnInit() {
         this.service.getMostOfferedItems()
             .map(x => x.json())
-            .subscribe(x => this.list = x);
-
-        this.list.forEach(x => x.count = x.offers.length);
+            .subscribe(x => this.list = x
+                .map(y => {
+                    y.count = y.offers.length;
+                    return y;
+                }));
     }
 }

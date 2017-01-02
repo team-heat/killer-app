@@ -16,8 +16,10 @@ export class MonstExpensiveItemsComponent implements OnInit {
     ngOnInit() {
         this.service.getMostExpensiveItems()
             .map(x => x.json())
-            .subscribe(x => this.list = x);
-
-        this.list.forEach(x => x.count = x.price);
+            .subscribe(x => this.list = x
+                .map(y => {
+                    y.count = y.price;
+                    return y;
+                }));
     }
 }

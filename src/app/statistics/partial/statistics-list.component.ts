@@ -14,4 +14,12 @@ export class StatisticsListComponent implements OnInit {
 
     ngOnInit() {
     }
+
+    isThereAnythingInTheList() {
+        return !!this.mylist;
+    }
+
+    isThereId() {
+        return this.mylist[0]._id;
+    }
 }
