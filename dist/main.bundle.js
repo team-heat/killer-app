@@ -3247,6 +3247,15 @@ var ColorFilterComponent = (function () {
     ColorFilterComponent.prototype.updateValue = function () {
         this.onColorFilter.emit(this.colorFilterValue);
     };
+    ColorFilterComponent.prototype.updateValidation = function (value) {
+        if (!value) {
+            this.colorFilterValue = '';
+        }
+        else {
+            this.colorFilterValue = value;
+        }
+        this.updateValue();
+    };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
@@ -3288,6 +3297,15 @@ var MakeFilterComponent = (function () {
     }
     MakeFilterComponent.prototype.updateValue = function () {
         this.onMakeFilter.emit(this.makeFilterValue);
+    };
+    MakeFilterComponent.prototype.updateValidation = function (value) {
+        if (!value) {
+            this.makeFilterValue = '';
+        }
+        else {
+            this.makeFilterValue = value;
+        }
+        this.updateValue();
     };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
@@ -4870,14 +4888,14 @@ module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wra
 /***/ 804:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\r\n    placeholder=\"Color Filter\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormStringLengthValidation #tbColorFilter (change)=\"updateValidation(tbColorFilter.value)\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\r\n    placeholder=\"Color Filter\">\r\n</div>"
 
 /***/ },
 
 /***/ 805:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.makeFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\"\r\n    placeholder=\"Make Filter\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormStringLengthValidation #tbMakeFilter (change)=\"updateValidation(tbMakeFilter.value)\" [(ngModel)]=\"this.makeFilterValue\"\r\n    (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\" placeholder=\"Make Filter\">\r\n</div>"
 
 /***/ },
 
@@ -5104,8 +5122,9 @@ module.exports = __webpack_require__(446);
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__ = __webpack_require__(867);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__form_year_validation_directive__ = __webpack_require__(576);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__form_string_length_validation_directive__ = __webpack_require__(868);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__form_year_validation_directive__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return DirectivesExportModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5119,18 +5138,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DirectivesExportModule = (function () {
     function DirectivesExportModule() {
     }
     DirectivesExportModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_1__form_year_validation_directive__["a" /* FormYearValidationDirective */],
-                __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__["a" /* FormPriceValidationDirective */]
+                __WEBPACK_IMPORTED_MODULE_2__form_year_validation_directive__["a" /* FormYearValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__["a" /* FormPriceValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_1__form_string_length_validation_directive__["a" /* FormStringLengthValidationDirective */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_1__form_year_validation_directive__["a" /* FormYearValidationDirective */],
-                __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__["a" /* FormPriceValidationDirective */]
+                __WEBPACK_IMPORTED_MODULE_2__form_year_validation_directive__["a" /* FormYearValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_0__form_price_validation_directive__["a" /* FormPriceValidationDirective */],
+                __WEBPACK_IMPORTED_MODULE_1__form_string_length_validation_directive__["a" /* FormStringLengthValidationDirective */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -5190,6 +5212,56 @@ var FormPriceValidationDirective = (function () {
     var _a;
 }());
 //# sourceMappingURL=D:/GitHub/killer-app/src/form-price-validation.directive.js.map
+
+/***/ },
+
+/***/ 868:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FormStringLengthValidationDirective; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FormStringLengthValidationDirective = (function () {
+    function FormStringLengthValidationDirective(domElement) {
+        this.domElement = domElement;
+        this.allowedStringLength = 30;
+    }
+    FormStringLengthValidationDirective.prototype.onChange = function () {
+        var value = this.domElement.nativeElement.value;
+        if (!value) {
+            this.domElement.nativeElement.value = '';
+            return;
+        }
+        if (value.length > this.allowedStringLength) {
+            this.domElement.nativeElement.value = '';
+        }
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('change'), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', void 0)
+    ], FormStringLengthValidationDirective.prototype, "onChange", null);
+    FormStringLengthValidationDirective = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
+            selector: '[appFormStringLengthValidation]'
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _a) || Object])
+    ], FormStringLengthValidationDirective);
+    return FormStringLengthValidationDirective;
+    var _a;
+}());
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-string-length-validation.directive.js.map
 
 /***/ }
 

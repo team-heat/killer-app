@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ColorFilterComponent {
 
-@Output() onColorFilter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() onColorFilter: EventEmitter<string> = new EventEmitter<string>();
 
   colorFilterValue: string;
 
@@ -15,5 +15,15 @@ export class ColorFilterComponent {
 
   updateValue() {
     this.onColorFilter.emit(this.colorFilterValue);
+  }
+
+  updateValidation(value: string) {
+    if (!value) {
+      this.colorFilterValue = '';
+    } else {
+      this.colorFilterValue = value;
+    }
+
+    this.updateValue();
   }
 }

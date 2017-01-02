@@ -1,4 +1,4 @@
 <div class="form-group">
-  <input class="from-control" [(ngModel)]="this.colorFilterValue" (ngModelChange)="updateValue()" type="text" name="colorFilterValue"
+  <input class="from-control" appFormStringLengthValidation #tbColorFilter (change)="updateValidation(tbColorFilter.value)" [(ngModel)]="this.colorFilterValue" (ngModelChange)="updateValue()" type="text" name="colorFilterValue"
     placeholder="Color Filter">
 </div>
