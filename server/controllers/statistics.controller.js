@@ -28,15 +28,26 @@ module.exports = function ({itemListingData}) {
                     // count by make
                     .reduce(function (allNames, item) {
                         let name = item.make;
+                        let found = false;
 
-                        if (name in allNames) {
-                            allNames[name]++;
+                        for (let i of allNames) {
+                            if (i.name === name) {
+                                found = i;
+                                break;
+                            }
+                        }
+
+                        if (found) {
+                            found.count++;
                         } else {
-                            allNames[name] = 1;
+                            allNames.push({
+                                name,
+                                count: 1
+                            });
                         }
 
                         return allNames;
-                    }, {})
+                    }, [])
                     // sort
                     .sort((a, b) => b - a)
                     .slice(0, numberOfElements);
@@ -99,7 +110,7 @@ module.exports = function ({itemListingData}) {
                         let found = false;
 
                         for (let i of allNames) {
-                            if (i.username === name) {
+                            if (i.name === name) {
                                 found = i;
                                 break;
                             }
@@ -109,7 +120,7 @@ module.exports = function ({itemListingData}) {
                             found.count++;
                         } else {
                             allNames.push({
-                                username: name,
+                                name,
                                 count: 1
                             });
                         }
@@ -139,7 +150,7 @@ module.exports = function ({itemListingData}) {
                         let found = false;
 
                         for (let i of allNames) {
-                            if (i.username === name) {
+                            if (i.name === name) {
                                 found = i;
                                 break;
                             }
@@ -149,7 +160,7 @@ module.exports = function ({itemListingData}) {
                             found.count++;
                         } else {
                             allNames.push({
-                                username: name,
+                                name,
                                 count: 1
                             });
                         }
@@ -182,7 +193,7 @@ module.exports = function ({itemListingData}) {
                         let found = false;
 
                         for (let i of allNames) {
-                            if (i.username === name) {
+                            if (i.name === name) {
                                 found = i;
                                 break;
                             }
@@ -192,7 +203,7 @@ module.exports = function ({itemListingData}) {
                             found.count++;
                         } else {
                             allNames.push({
-                                username: name,
+                                name,
                                 count: 1
                             });
                         }
