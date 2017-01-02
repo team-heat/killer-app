@@ -4,7 +4,7 @@ module.exports = function ({ transporter, config }) {
 
   function sendFeedback(req, res) {
     const mail = req.body;
-    console.log(mail);
+    
     const mailOptions = {
       from: mail.senderEmail,
       to: config.nodemailerTargetEmail,
