@@ -1,3 +1,4 @@
+import { DirectivesExportModule } from './../directives/directives-export.module';
 import { AddListingComponent } from './add-listing.component';
 import { AppModule } from '../app.module';
 import { CommonModule } from '@angular/common';
@@ -20,11 +21,11 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     NgUploaderModule,
+    DirectivesExportModule,
     RouterModule.forChild(routes)],
   declarations: [
     AddListingComponent,
     FormDefaultValueDirective,
-    FormYearValidationDirective,
     FileUploaderComponent
   ],
   providers: [
@@ -32,8 +33,7 @@ const routes: Routes = [
     ItemListingFactoryService
   ],
   exports: [
-    FileUploaderComponent,
-    FormYearValidationDirective
+    FileUploaderComponent
   ]
 })
 export class AddListingModule { }
