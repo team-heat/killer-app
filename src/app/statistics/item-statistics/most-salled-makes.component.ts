@@ -5,6 +5,7 @@ import { StatisticService } from './../../services/statistic.service';
 @Component({
     selector: 'app-most-selled-makes',
     templateUrl: './most-salled-makes.component.html',
+    styleUrls:['./../statistics.scss']
 })
 export class MostSelledMakesComponent implements OnInit {
     list: any[];
