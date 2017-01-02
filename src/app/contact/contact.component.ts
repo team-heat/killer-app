@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Mail } from '../models/mail.model';
+import { MailService } from '../services/mail.service';
 import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../services/toastr-notification.service';
-import { MailService } from '../services/mail.service';
-import { Mail } from '../models/mail.model';
 
 @Component({
   selector: 'app-contact',
@@ -27,13 +27,21 @@ export class ContactComponent implements OnInit {
     };
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   onSubmit() {
     this.mailService.sendMail(this.mail)
       .subscribe((resp) => {
-        console.log(resp);
+        const toastrOptions = this.toastrOptions
+          .createToastrNotificationOptions('success', 'We\'ll reply shortly.', 'Thanks for your feedback');
+        this.toastrNotification.enqueueNotification(toastrOptions);
+      }, err => {
+        const toastrOptions = this.toastrOptions
+          .createToastrNotificationOptions('error', err.message || 'An error has occured.');
+        this.toastrNotification.enqueueNotification(toastrOptions);
+      }, () => {
+        this.mail.subject = '';
+        this.mail.content = '';
       });
   }
 }
