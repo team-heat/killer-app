@@ -31,6 +31,7 @@ import { UserService } from './services/user.service';
 import { UserStorageService } from './services/user-storage.service';
 import { UsersModule } from './users/users.module';
 import { FooterComponent } from './footer/footer.component';
+import { StatisticsModule } from './statistics/statistics.module';
 
 /** MOCK */
 // import { MockedModule } from './mocked-module/mocked.module'
@@ -46,6 +47,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     // MockedModule,
     ItemsModule,
+    StatisticsModule,
     BrowserModule,
     FormsModule,
     HomeModule,

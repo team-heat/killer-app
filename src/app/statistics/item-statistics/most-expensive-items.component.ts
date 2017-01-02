@@ -4,7 +4,7 @@ import { StatisticService } from './../../services/statistic.service';
 
 @Component({
     selector: 'app-most-expensive-items',
-    templateUrl: './most-most-expensive-items.component.html',
+    templateUrl: './most-expensive-items.component.html',
 })
 export class MonstExpensiveItemsComponent implements OnInit {
     list: any[];

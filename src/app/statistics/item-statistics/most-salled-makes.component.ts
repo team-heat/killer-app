@@ -4,9 +4,9 @@ import { StatisticService } from './../../services/statistic.service';
 
 @Component({
     selector: 'app-most-selled-makes',
-    templateUrl: './most-selled-makes.component.html',
+    templateUrl: './most-salled-makes.component.html',
 })
-export class MonstSelledMakesComponent implements OnInit {
+export class MostSelledMakesComponent implements OnInit {
     list: any[];
 
     constructor(

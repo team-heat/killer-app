@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { StatisticService } from './../../services/statistic.service';
 
 @Component({
-    selector: 'app-top-serllers',
-    templateUrl: './top-serllers.component.html',
+    selector: 'app-top-sellers',
+    templateUrl: './top-sellers.component.html',
 })
 export class TopSellersComponent implements OnInit {
     list: any[];
