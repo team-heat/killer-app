@@ -4360,7 +4360,7 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 "use strict";
 "use strict";
 var root_1 = __webpack_require__(64);
-var toSubscriber_1 = __webpack_require__(846);
+var toSubscriber_1 = __webpack_require__(848);
 var observable_1 = __webpack_require__(261);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
@@ -7384,7 +7384,7 @@ function templateVisitAll(visitor, asts, context) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__ = __webpack_require__(843);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__ = __webpack_require__(845);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_collection__ = __webpack_require__(324);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__facade_lang__ = __webpack_require__(84);
@@ -7997,7 +7997,7 @@ function ControlContainer_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_concatAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_concatAll__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_every__ = __webpack_require__(435);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_every___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_every__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last__ = __webpack_require__(842);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_last__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_map__);
@@ -11943,7 +11943,7 @@ var Observable_1 = __webpack_require__(15);
 var Subscriber_1 = __webpack_require__(36);
 var Subscription_1 = __webpack_require__(256);
 var ObjectUnsubscribedError_1 = __webpack_require__(437);
-var SubjectSubscription_1 = __webpack_require__(835);
+var SubjectSubscription_1 = __webpack_require__(837);
 var rxSubscriber_1 = __webpack_require__(262);
 /**
  * @class SubjectSubscriber<T>
@@ -21895,7 +21895,7 @@ var XSRFStrategy = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_mergeMap__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_reduce__ = __webpack_require__(842);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_reduce__ = __webpack_require__(844);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_reduce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_operator_reduce__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__apply_redirects__ = __webpack_require__(556);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__config__ = __webpack_require__(557);
@@ -32907,7 +32907,7 @@ var NgUploaderService = (function () {
 var NgUploaderServiceProvider = {
     provide: NgUploaderService, useClass: NgUploaderService
 };
-//# sourceMappingURL=D:/GitHub/killer-app/src/ngx-uploader.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/ngx-uploader.js.map
 
 /***/ },
 /* 163 */,
@@ -45615,7 +45615,7 @@ function TreeNode_tsickle_Closure_declarations() {
 
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/index.js.map
 
 /***/ },
 /* 231 */
@@ -45656,7 +45656,7 @@ var NgFileDropDirective = (function () {
         var _this = this;
         this.uploader._emitter.subscribe(function (data) {
             _this.onUpload.emit(data);
-            if (data.done) {
+            if (data.done && _this.files && _this.files.length) {
                 _this.files = _this.files.filter(function (f) { return f.name !== data.originalName; });
             }
         });
@@ -45710,10 +45710,9 @@ var NgFileDropDirective = (function () {
         var _this = this;
         this.files = this.el.nativeElement.files;
         if (!this.files) {
-            console.log('return');
             return;
         }
-        if (this.options.filterExtensions && this.options.allowedExtensions) {
+        if (this.options.filterExtensions && this.options.allowedExtensions && this.files && this.files.length) {
             this.files = this.files.filter(function (f) {
                 if (_this.options.allowedExtensions.indexOf(f.type) !== -1) {
                     return true;
@@ -45793,7 +45792,7 @@ var NgFileDropDirective = (function () {
     return NgFileDropDirective;
     var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ng-file-drop.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/ng-file-drop.js.map
 
 /***/ },
 /* 232 */
@@ -45837,7 +45836,7 @@ var NgFileSelectDirective = (function () {
         this.uploader.setOptions(new __WEBPACK_IMPORTED_MODULE_2__classes__["NgUploaderOptions"](this.options));
         this.uploader._emitter.subscribe(function (data) {
             _this.onUpload.emit(data);
-            if (data.done) {
+            if (data.done && _this.files && _this.files.length) {
                 _this.files = _this.files.filter(function (f) { return f.name !== data.originalName; });
             }
         });
@@ -45859,10 +45858,9 @@ var NgFileSelectDirective = (function () {
         var _this = this;
         this.files = this.el.nativeElement.files;
         if (!this.files) {
-            console.log('return');
             return;
         }
-        if (this.options.filterExtensions && this.options.allowedExtensions) {
+        if (this.options.filterExtensions && this.options.allowedExtensions && this.files && this.files.length) {
             this.files = this.files.filter(function (f) {
                 if (_this.options.allowedExtensions.indexOf(f.type) !== -1) {
                     return true;
@@ -45920,7 +45918,7 @@ var NgFileSelectDirective = (function () {
     return NgFileSelectDirective;
     var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ng-file-select.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/ng-file-select.js.map
 
 /***/ },
 /* 233 */,
@@ -46568,9 +46566,9 @@ exports.OuterSubscriber = OuterSubscriber;
 var isArray_1 = __webpack_require__(264);
 var isObject_1 = __webpack_require__(440);
 var isFunction_1 = __webpack_require__(439);
-var tryCatch_1 = __webpack_require__(847);
+var tryCatch_1 = __webpack_require__(849);
 var errorObject_1 = __webpack_require__(438);
-var UnsubscriptionError_1 = __webpack_require__(844);
+var UnsubscriptionError_1 = __webpack_require__(846);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -46724,7 +46722,7 @@ exports.Subscription = Subscription;
 
 "use strict";
 "use strict";
-var FromObservable_1 = __webpack_require__(837);
+var FromObservable_1 = __webpack_require__(839);
 exports.from = FromObservable_1.FromObservable.create;
 //# sourceMappingURL=from.js.map
 
@@ -46990,7 +46988,7 @@ var isPromise_1 = __webpack_require__(441);
 var isObject_1 = __webpack_require__(440);
 var Observable_1 = __webpack_require__(15);
 var iterator_1 = __webpack_require__(260);
-var InnerSubscriber_1 = __webpack_require__(833);
+var InnerSubscriber_1 = __webpack_require__(835);
 var observable_1 = __webpack_require__(261);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
@@ -64321,7 +64319,7 @@ function provideRouterInitializer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatMap__ = __webpack_require__(434);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_concatMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter__ = __webpack_require__(841);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_filter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_mergeAll__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_mergeAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_mergeAll__);
@@ -64577,7 +64575,7 @@ var UploadedFile = (function () {
     };
     return UploadedFile;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/uploaded-file.class.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/uploaded-file.class.js.map
 
 /***/ },
 /* 351 */,
@@ -66549,7 +66547,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(15);
 var ScalarObservable_1 = __webpack_require__(431);
 var EmptyObservable_1 = __webpack_require__(429);
-var isScheduler_1 = __webpack_require__(845);
+var isScheduler_1 = __webpack_require__(847);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -84433,7 +84431,7 @@ var NgUploaderOptions = (function () {
     }
     return NgUploaderOptions;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ng-uploader-options.class.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/ng-uploader-options.class.js.map
 
 /***/ },
 /* 566 */
@@ -84456,7 +84454,7 @@ var UploadRejected = (function () {
     });
     return UploadRejected;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/upload-rejected.class.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/upload-rejected.class.js.map
 
 /***/ },
 /* 567 */
@@ -84502,7 +84500,7 @@ var NgUploaderModule = (function () {
     ], NgUploaderModule);
     return NgUploaderModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/ngx-uploader.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/ngx-uploader.module.js.map
 
 /***/ },
 /* 568 */,
@@ -87807,7 +87805,9 @@ process.umask = function() { return 0; };
 /* 830 */,
 /* 831 */,
 /* 832 */,
-/* 833 */
+/* 833 */,
+/* 834 */,
+/* 835 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87849,7 +87849,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-/* 834 */
+/* 836 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -87982,7 +87982,7 @@ exports.Notification = Notification;
 //# sourceMappingURL=Notification.js.map
 
 /***/ },
-/* 835 */
+/* 837 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88028,7 +88028,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 836 */
+/* 838 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88104,7 +88104,7 @@ exports.ArrayLikeObservable = ArrayLikeObservable;
 //# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-/* 837 */
+/* 839 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88117,12 +88117,12 @@ var __extends = (this && this.__extends) || function (d, b) {
 var isArray_1 = __webpack_require__(264);
 var isPromise_1 = __webpack_require__(441);
 var PromiseObservable_1 = __webpack_require__(430);
-var IteratorObservable_1 = __webpack_require__(838);
+var IteratorObservable_1 = __webpack_require__(840);
 var ArrayObservable_1 = __webpack_require__(428);
-var ArrayLikeObservable_1 = __webpack_require__(836);
+var ArrayLikeObservable_1 = __webpack_require__(838);
 var iterator_1 = __webpack_require__(260);
 var Observable_1 = __webpack_require__(15);
-var observeOn_1 = __webpack_require__(841);
+var observeOn_1 = __webpack_require__(843);
 var observable_1 = __webpack_require__(261);
 var isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 /**
@@ -88232,7 +88232,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-/* 838 */
+/* 840 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88401,7 +88401,7 @@ function sign(value) {
 //# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-/* 839 */
+/* 841 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88500,7 +88500,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ },
-/* 840 */
+/* 842 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88625,7 +88625,7 @@ var LastSubscriber = (function (_super) {
 //# sourceMappingURL=last.js.map
 
 /***/ },
-/* 841 */
+/* 843 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88636,7 +88636,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(36);
-var Notification_1 = __webpack_require__(834);
+var Notification_1 = __webpack_require__(836);
 /**
  * @see {@link Notification}
  *
@@ -88706,7 +88706,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ },
-/* 842 */
+/* 844 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88835,7 +88835,7 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 843 */
+/* 845 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88870,7 +88870,7 @@ exports.toPromise = toPromise;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 844 */
+/* 846 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -88901,7 +88901,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 845 */
+/* 847 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -88913,7 +88913,7 @@ exports.isScheduler = isScheduler;
 //# sourceMappingURL=isScheduler.js.map
 
 /***/ },
-/* 846 */
+/* 848 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88939,7 +88939,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 847 */
+/* 849 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88964,7 +88964,7 @@ exports.tryCatch = tryCatch;
 //# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-/* 848 */
+/* 850 */
 /***/ function(module, exports) {
 
 /*
@@ -89337,11 +89337,11 @@ if (Md5.hashStr('hello') !== '5d41402abc4b2a76b9719d911017c592') {
 //# sourceMappingURL=md5.js.map
 
 /***/ },
-/* 849 */,
-/* 850 */,
 /* 851 */,
 /* 852 */,
-/* 853 */
+/* 853 */,
+/* 854 */,
+/* 855 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {/**

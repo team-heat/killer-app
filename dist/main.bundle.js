@@ -49,7 +49,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -86,7 +86,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -133,7 +133,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
@@ -181,7 +181,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user-factory.service.js.map
 
 /***/ },
 
@@ -254,7 +254,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -263,7 +263,7 @@ var UserStorageService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5__ = __webpack_require__(848);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5__ = __webpack_require__(850);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ts_md5_dist_md5__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HashingService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -289,7 +289,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/hashing.service.js.map
 
 /***/ },
 
@@ -392,15 +392,15 @@ var AddToFavoritesComponent = (function () {
     AddToFavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-add-to-favorites',
-            template: __webpack_require__(824),
-            styles: [__webpack_require__(784)]
+            template: __webpack_require__(826),
+            styles: [__webpack_require__(786)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _d) || Object])
     ], AddToFavoritesComponent);
     return AddToFavoritesComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-to-favorites.component.js.map
 
 /***/ },
 
@@ -473,7 +473,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -499,14 +499,14 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(794),
+            template: __webpack_require__(796),
             styles: [__webpack_require__(766)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -534,14 +534,14 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
-            template: __webpack_require__(799),
+            template: __webpack_require__(801),
             styles: [__webpack_require__(771)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -679,7 +679,7 @@ var ItemsCollectionComponent = (function () {
     ItemsCollectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__angular_core__["Component"])({
             selector: 'app-items-collection',
-            template: __webpack_require__(807),
+            template: __webpack_require__(809),
             styles: [__webpack_require__(779)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object])
@@ -687,7 +687,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items-collection.component.js.map
 
 /***/ },
 
@@ -813,7 +813,7 @@ var MakeOfferComponent = (function () {
     MakeOfferComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'make-offer',
-            template: __webpack_require__(808),
+            template: __webpack_require__(810),
             styles: [__webpack_require__(780)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
@@ -821,7 +821,7 @@ var MakeOfferComponent = (function () {
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/make-offer.component.js.map
 
 /***/ },
 
@@ -936,14 +936,14 @@ var OffersListComponent = (function () {
     OffersListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'offers-list',
-            template: __webpack_require__(809)
+            template: __webpack_require__(811)
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], OffersListComponent);
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/offers-list.component.js.map
 
 /***/ },
 
@@ -1012,7 +1012,7 @@ var SingleItemComponent = (function () {
     SingleItemComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'single-item',
-            template: __webpack_require__(810),
+            template: __webpack_require__(812),
             styles: [__webpack_require__(781)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
@@ -1020,7 +1020,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/single-item.component.js.map
 
 /***/ },
 
@@ -1057,7 +1057,7 @@ var ExteriorColorFilterPipe = (function () {
     ], ExteriorColorFilterPipe);
     return ExteriorColorFilterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/exterior-color.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/exterior-color.pipe.js.map
 
 /***/ },
 
@@ -1094,7 +1094,7 @@ var MakeFilterPipe = (function () {
     ], MakeFilterPipe);
     return MakeFilterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-filter.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/make-filter.pipe.js.map
 
 /***/ },
 
@@ -1131,7 +1131,7 @@ var PriceGreaterThenPipe = (function () {
     ], PriceGreaterThenPipe);
     return PriceGreaterThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/price-greater-then.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/price-greater-then.pipe.js.map
 
 /***/ },
 
@@ -1168,7 +1168,7 @@ var PriceLessThenPipe = (function () {
     ], PriceLessThenPipe);
     return PriceLessThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/price-less-then.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/price-less-then.pipe.js.map
 
 /***/ },
 
@@ -1205,7 +1205,7 @@ var YearGreaterThenPipe = (function () {
     ], YearGreaterThenPipe);
     return YearGreaterThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/year-greater-then.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/year-greater-then.pipe.js.map
 
 /***/ },
 
@@ -1242,7 +1242,7 @@ var YearLessThenPipe = (function () {
     ], YearLessThenPipe);
     return YearLessThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/year-less-then.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/year-less-then.pipe.js.map
 
 /***/ },
 
@@ -1278,7 +1278,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
@@ -1331,7 +1331,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -1379,7 +1379,7 @@ var MailService = (function () {
     return MailService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/mail.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/mail.service.js.map
 
 /***/ },
 
@@ -1418,14 +1418,14 @@ var MonstCommentedItemsComponent = (function () {
     MonstCommentedItemsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-commented-items',
-            template: __webpack_require__(812),
+            template: __webpack_require__(814),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MonstCommentedItemsComponent);
     return MonstCommentedItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-commented-items.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/most-commented-items.component.js.map
 
 /***/ },
 
@@ -1464,14 +1464,14 @@ var MonstExpensiveItemsComponent = (function () {
     MonstExpensiveItemsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-expensive-items',
-            template: __webpack_require__(813),
+            template: __webpack_require__(815),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MonstExpensiveItemsComponent);
     return MonstExpensiveItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-expensive-items.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/most-expensive-items.component.js.map
 
 /***/ },
 
@@ -1510,14 +1510,14 @@ var MonstOfferedItemsComponent = (function () {
     MonstOfferedItemsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-offered-items',
-            template: __webpack_require__(814),
+            template: __webpack_require__(816),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MonstOfferedItemsComponent);
     return MonstOfferedItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-offered-items.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/most-offered-items.component.js.map
 
 /***/ },
 
@@ -1552,14 +1552,14 @@ var MostSelledMakesComponent = (function () {
     MostSelledMakesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-selled-makes',
-            template: __webpack_require__(815),
+            template: __webpack_require__(817),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MostSelledMakesComponent);
     return MostSelledMakesComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-salled-makes.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/most-salled-makes.component.js.map
 
 /***/ },
 
@@ -1586,13 +1586,14 @@ var StatisticsMainComponent = (function () {
     StatisticsMainComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-statistics-main',
-            template: __webpack_require__(819)
+            template: __webpack_require__(821),
+            styles: [__webpack_require__(784)]
         }), 
         __metadata('design:paramtypes', [])
     ], StatisticsMainComponent);
     return StatisticsMainComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-main.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-main.component.js.map
 
 /***/ },
 
@@ -1627,14 +1628,14 @@ var TopActiveUsersComponent = (function () {
     TopActiveUsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-top-active-users',
-            template: __webpack_require__(820),
+            template: __webpack_require__(822),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], TopActiveUsersComponent);
     return TopActiveUsersComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/top-active-users.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/top-active-users.component.js.map
 
 /***/ },
 
@@ -1669,14 +1670,14 @@ var TopBuyersComponent = (function () {
     TopBuyersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-top-buyers',
-            template: __webpack_require__(821),
+            template: __webpack_require__(823),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], TopBuyersComponent);
     return TopBuyersComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/top-buyers.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/top-buyers.component.js.map
 
 /***/ },
 
@@ -1711,14 +1712,14 @@ var TopSellersComponent = (function () {
     TopSellersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-top-sellers',
-            template: __webpack_require__(822),
+            template: __webpack_require__(824),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], TopSellersComponent);
     return TopSellersComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/top-sellers.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/top-sellers.component.js.map
 
 /***/ },
 
@@ -1791,15 +1792,15 @@ var FavoritesComponent = (function () {
     FavoritesComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-favorites',
-            template: __webpack_require__(826),
-            styles: [__webpack_require__(786)]
+            template: __webpack_require__(828),
+            styles: [__webpack_require__(788)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object])
     ], FavoritesComponent);
     return FavoritesComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/favorites.component.js.map
 
 /***/ },
 
@@ -1827,14 +1828,14 @@ var ListedItemsComponent = (function () {
     ListedItemsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-listed-items',
-            template: __webpack_require__(827),
-            styles: [__webpack_require__(787)]
+            template: __webpack_require__(829),
+            styles: [__webpack_require__(789)]
         }), 
         __metadata('design:paramtypes', [])
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/listed-items.component.js.map
 
 /***/ },
 
@@ -1934,15 +1935,15 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-login',
-            template: __webpack_require__(828),
-            styles: [__webpack_require__(788)]
+            template: __webpack_require__(830),
+            styles: [__webpack_require__(790)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */]) === 'function' && _g) || Object])
     ], LoginComponent);
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -2006,15 +2007,15 @@ var LogoutComponent = (function () {
     LogoutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-logout',
-            template: __webpack_require__(829),
-            styles: [__webpack_require__(789)]
+            template: __webpack_require__(831),
+            styles: [__webpack_require__(791)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
     ], LogoutComponent);
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -2069,15 +2070,15 @@ var ProfileComponent = (function () {
     ProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-profile',
-            template: __webpack_require__(830),
-            styles: [__webpack_require__(790)]
+            template: __webpack_require__(832),
+            styles: [__webpack_require__(792)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _d) || Object])
     ], ProfileComponent);
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -2172,15 +2173,15 @@ var RegisterComponent = (function () {
     RegisterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(831),
-            styles: [__webpack_require__(791)]
+            template: __webpack_require__(833),
+            styles: [__webpack_require__(793)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_user_service__["a" /* UserService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__["a" /* UserFactoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object, (typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_hashing_service__["a" /* HashingService */]) === 'function' && _g) || Object])
     ], RegisterComponent);
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -2268,7 +2269,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -2313,7 +2314,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification-options-factory.service.js.map
 
 /***/ },
 
@@ -2350,7 +2351,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/main.js.map
 
 /***/ },
 
@@ -2417,7 +2418,7 @@ var AddListingComponent = (function () {
     AddListingComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add-listing',
-            template: __webpack_require__(793),
+            template: __webpack_require__(795),
             styles: [__webpack_require__(765)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_6__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__["a" /* ItemListingFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _e) || Object, (typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _f) || Object])
@@ -2425,7 +2426,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.component.js.map
 
 /***/ },
 
@@ -2497,7 +2498,7 @@ var AddListingModule = (function () {
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.module.js.map
 
 /***/ },
 
@@ -2627,7 +2628,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -2658,14 +2659,14 @@ var CarouselListComponent = (function () {
     CarouselListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-carousel',
-            template: __webpack_require__(795),
+            template: __webpack_require__(797),
             styles: [__webpack_require__(767)]
         }), 
         __metadata('design:paramtypes', [])
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -2717,7 +2718,7 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-contact',
-            template: __webpack_require__(796),
+            template: __webpack_require__(798),
             styles: [__webpack_require__(768)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_mail_service__["a" /* MailService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_mail_service__["a" /* MailService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _c) || Object])
@@ -2725,7 +2726,7 @@ var ContactComponent = (function () {
     return ContactComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/contact.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/contact.component.js.map
 
 /***/ },
 
@@ -2763,7 +2764,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -2811,7 +2812,7 @@ var FormYearValidationDirective = (function () {
     return FormYearValidationDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/form-year-validation.directive.js.map
 
 /***/ },
 
@@ -2865,7 +2866,7 @@ var NavigationHoverDirective = (function () {
     return NavigationHoverDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation-hover.directive.js.map
 
 /***/ },
 
@@ -2951,7 +2952,7 @@ var FileUploaderComponent = (function () {
     FileUploaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-file-uploader',
-            template: __webpack_require__(797),
+            template: __webpack_require__(799),
             styles: [__webpack_require__(769)]
         }), 
         __metadata('design:paramtypes', [])
@@ -2959,7 +2960,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -2987,14 +2988,14 @@ var FooterComponent = (function () {
     FooterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-footer',
-            template: __webpack_require__(798),
+            template: __webpack_require__(800),
             styles: [__webpack_require__(770)]
         }), 
         __metadata('design:paramtypes', [])
     ], FooterComponent);
     return FooterComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/footer.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/footer.component.js.map
 
 /***/ },
 
@@ -3035,7 +3036,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -3074,7 +3075,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -3088,7 +3089,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/index.js.map
 
 /***/ },
 
@@ -3180,7 +3181,7 @@ var CommentSectionComponent = (function () {
     CommentSectionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-comment-section',
-            template: __webpack_require__(800),
+            template: __webpack_require__(802),
             styles: [__webpack_require__(772)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* ActivatedRoute */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_item_listing_service__["a" /* ItemListingService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _e) || Object])
@@ -3188,7 +3189,7 @@ var CommentSectionComponent = (function () {
     return CommentSectionComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/comment-section.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/comment-section.component.js.map
 
 /***/ },
 
@@ -3222,7 +3223,7 @@ var ColorFilterComponent = (function () {
     ColorFilterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-color-filter',
-            template: __webpack_require__(801),
+            template: __webpack_require__(803),
             styles: [__webpack_require__(773)]
         }), 
         __metadata('design:paramtypes', [])
@@ -3230,7 +3231,7 @@ var ColorFilterComponent = (function () {
     return ColorFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/color-filter.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/color-filter.component.js.map
 
 /***/ },
 
@@ -3264,7 +3265,7 @@ var MakeFilterComponent = (function () {
     MakeFilterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-make-filter',
-            template: __webpack_require__(802),
+            template: __webpack_require__(804),
             styles: [__webpack_require__(774)]
         }), 
         __metadata('design:paramtypes', [])
@@ -3272,7 +3273,7 @@ var MakeFilterComponent = (function () {
     return MakeFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-filter.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/make-filter.component.js.map
 
 /***/ },
 
@@ -3306,7 +3307,7 @@ var MaximumPriceFilterComponent = (function () {
     MaximumPriceFilterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-maximum-price-filter',
-            template: __webpack_require__(803),
+            template: __webpack_require__(805),
             styles: [__webpack_require__(775)]
         }), 
         __metadata('design:paramtypes', [])
@@ -3314,7 +3315,7 @@ var MaximumPriceFilterComponent = (function () {
     return MaximumPriceFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-price-filter.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/maximum-price-filter.component.js.map
 
 /***/ },
 
@@ -3348,7 +3349,7 @@ var MaximumYearFilterComponent = (function () {
     MaximumYearFilterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-maximum-year-filter',
-            template: __webpack_require__(804),
+            template: __webpack_require__(806),
             styles: [__webpack_require__(776)]
         }), 
         __metadata('design:paramtypes', [])
@@ -3356,7 +3357,7 @@ var MaximumYearFilterComponent = (function () {
     return MaximumYearFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-year-filter.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/maximum-year-filter.component.js.map
 
 /***/ },
 
@@ -3390,7 +3391,7 @@ var MinimumPriceFilterComponent = (function () {
     MinimumPriceFilterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-minimum-price-filter',
-            template: __webpack_require__(805),
+            template: __webpack_require__(807),
             styles: [__webpack_require__(777)]
         }), 
         __metadata('design:paramtypes', [])
@@ -3398,7 +3399,7 @@ var MinimumPriceFilterComponent = (function () {
     return MinimumPriceFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-price-filter.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/minimum-price-filter.component.js.map
 
 /***/ },
 
@@ -3432,7 +3433,7 @@ var MinimumYearFilterComponent = (function () {
     MinimumYearFilterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-minimum-year-filter',
-            template: __webpack_require__(806),
+            template: __webpack_require__(808),
             styles: [__webpack_require__(778)]
         }), 
         __metadata('design:paramtypes', [])
@@ -3440,7 +3441,7 @@ var MinimumYearFilterComponent = (function () {
     return MinimumYearFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-year-filter.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/minimum-year-filter.component.js.map
 
 /***/ },
 
@@ -3561,7 +3562,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items.module.js.map
 
 /***/ },
 
@@ -3612,7 +3613,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/items.routes.js.map
 
 /***/ },
 
@@ -3626,7 +3627,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.model.js.map
 
 /***/ },
 
@@ -3640,7 +3641,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -3682,7 +3683,7 @@ var NavigationComponent = (function () {
     NavigationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navigation',
-            template: __webpack_require__(811),
+            template: __webpack_require__(813),
             styles: [__webpack_require__(782)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_storage_service__["a" /* UserStorageService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_user_storage_service__["a" /* UserStorageService */]) === 'function' && _a) || Object])
@@ -3690,7 +3691,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -3724,7 +3725,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -3761,7 +3762,7 @@ var ModelFilterPipe = (function () {
     ], ModelFilterPipe);
     return ModelFilterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/model-filter.pipe.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/model-filter.pipe.js.map
 
 /***/ },
 
@@ -3793,13 +3794,14 @@ var StatisticsListItemLinkComponent = (function () {
     StatisticsListItemLinkComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-statistics-list-item-link',
-            template: __webpack_require__(816)
+            template: __webpack_require__(818),
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         }), 
         __metadata('design:paramtypes', [])
     ], StatisticsListItemLinkComponent);
     return StatisticsListItemLinkComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list-item-link.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-list-item-link.component.js.map
 
 /***/ },
 
@@ -3830,13 +3832,14 @@ var StatisticsListItemComponent = (function () {
     StatisticsListItemComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-statistics-list-item',
-            template: __webpack_require__(817)
+            template: __webpack_require__(819),
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         }), 
         __metadata('design:paramtypes', [])
     ], StatisticsListItemComponent);
     return StatisticsListItemComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list-item.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-list-item.component.js.map
 
 /***/ },
 
@@ -3874,13 +3877,15 @@ var StatisticsListComponent = (function () {
     StatisticsListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-statistics-list',
-            template: __webpack_require__(818)
+            template: __webpack_require__(820),
+            styles: [__webpack_require__(783)],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         }), 
         __metadata('design:paramtypes', [])
     ], StatisticsListComponent);
     return StatisticsListComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-list.component.js.map
 
 /***/ },
 
@@ -3961,7 +3966,7 @@ var StatisticsModule = (function () {
     ], StatisticsModule);
     return StatisticsModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.module.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics.module.js.map
 
 /***/ },
 
@@ -4021,7 +4026,7 @@ var StatisticsRouterModule = (function () {
     ], StatisticsRouterModule);
     return StatisticsRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics.routes.js.map
 
 /***/ },
 
@@ -4106,7 +4111,7 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
@@ -4163,15 +4168,15 @@ var ToastrNotificationsHandlerComponent = (function () {
     ToastrNotificationsHandlerComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-toastr-notifications-handler',
-            template: __webpack_require__(823),
-            styles: [__webpack_require__(783)]
+            template: __webpack_require__(825),
+            styles: [__webpack_require__(785)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _c) || Object])
     ], ToastrNotificationsHandlerComponent);
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -4199,14 +4204,14 @@ var FacebookLoginComponent = (function () {
     FacebookLoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-facebook-login',
-            template: __webpack_require__(825),
-            styles: [__webpack_require__(785)]
+            template: __webpack_require__(827),
+            styles: [__webpack_require__(787)]
         }), 
         __metadata('design:paramtypes', [])
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -4234,14 +4239,14 @@ var UsersComponent = (function () {
     UsersComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-users',
-            template: __webpack_require__(832),
-            styles: [__webpack_require__(792)]
+            template: __webpack_require__(834),
+            styles: [__webpack_require__(794)]
         }), 
         __metadata('design:paramtypes', [])
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -4296,7 +4301,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -4312,7 +4317,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -4350,7 +4355,7 @@ var environment = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(621);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(853);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(855);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -4368,7 +4373,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -4450,7 +4455,7 @@ var StatisticService = (function () {
     return StatisticService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistic.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/statistic.service.js.map
 
 /***/ },
 
@@ -4526,7 +4531,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
+//# sourceMappingURL=E:/MyRepos/killer-app/src/user.service.js.map
 
 /***/ },
 
@@ -4659,14 +4664,14 @@ module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../asset
 /***/ 783:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "ol {\n  font-size: 20px; }\n  ol .go-right {\n    float: right; }\n  ol li div {\n    margin-right: 20px; }\n"
 
 /***/ },
 
 /***/ 784:
 /***/ function(module, exports) {
 
-module.exports = "span.add-to-favorites {\n  cursor: pointer;\n  font-size: 3.5rem;\n  color: #E6E6E6; }\n  span.add-to-favorites:hover {\n    color: #DF474B; }\n\nspan.remove-to-favorites {\n  cursor: pointer;\n  font-size: 3.5rem;\n  color: #DF474B; }\n  span.remove-to-favorites:hover {\n    color: #E6E6E6; }\n"
+module.exports = "ul {\n  list-style: none;\n  font-size: 20px; }\n"
 
 /***/ },
 
@@ -4680,7 +4685,7 @@ module.exports = ""
 /***/ 786:
 /***/ function(module, exports) {
 
-module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
+module.exports = "span.add-to-favorites {\n  cursor: pointer;\n  font-size: 3.5rem;\n  color: #E6E6E6; }\n  span.add-to-favorites:hover {\n    color: #DF474B; }\n\nspan.remove-to-favorites {\n  cursor: pointer;\n  font-size: 3.5rem;\n  color: #DF474B; }\n  span.remove-to-favorites:hover {\n    color: #E6E6E6; }\n"
 
 /***/ },
 
@@ -4694,7 +4699,7 @@ module.exports = ""
 /***/ 788:
 /***/ function(module, exports) {
 
-module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.login-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .login-wrapper > .inner-wrapper {\n    margin-top: auto;\n    margin-bottom: auto; }\n\ninput {\n  text-align: center;\n  color: white;\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n\n.form-group label {\n  width: 20em; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
 
 /***/ },
 
@@ -4708,305 +4713,319 @@ module.exports = ""
 /***/ 790:
 /***/ function(module, exports) {
 
-module.exports = "img {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n    .list-group .list-group-item .btn {\n      font-family: planer;\n      font-size: 17px;\n      background-color: transparent;\n      color: rgba(225, 225, 225, 0.77);\n      border: 1px solid rgba(225, 225, 225, 0.77);\n      border-radius: 0px;\n      box-shadow: 0 5px 20px black;\n      overflow: hidden; }\n      .list-group .list-group-item .btn:hover {\n        text-decoration: underline; }\n  .list-group .no-shadow {\n    box-shadow: none; }\n"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.login-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .login-wrapper > .inner-wrapper {\n    margin-top: auto;\n    margin-bottom: auto; }\n\ninput {\n  text-align: center;\n  color: white;\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n  input.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  background-color: #55b559; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n\n.form-group label {\n  width: 20em; }\n"
 
 /***/ },
 
 /***/ 791:
 /***/ function(module, exports) {
 
-module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#inputs-container {\n  margin-bottom: 25px; }\n\n.well {\n  background: transparent;\n  box-shadow: 0 5px 25px black;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n\n.content-left {\n  opacity: 0.99;\n  box-shadow: 0 5px 25px black;\n  background-image: url(\"../../assets/home-bg2.jpg\");\n  background-repeat: none;\n  padding-left: 20px; }\n\n.form-group {\n  width: 100%; }\n\ninput,\n.dropdown-toggle {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n  input.ng-valid.ng-touched,\n  .dropdown-toggle.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  .dropdown-toggle.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  width: 100%;\n  background-color: #55b559; }\n  .btn.btn-success:hover {\n    text-decoration: underline; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 792:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "img {\n  box-shadow: 0 5px 20px black; }\n\n.list-group {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 16px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: transparent; }\n  .list-group .list-group-item {\n    border: none;\n    box-shadow: 0 5px 20px black;\n    background-color: transparent;\n    margin-bottom: 20px; }\n    .list-group .list-group-item .btn {\n      font-family: planer;\n      font-size: 17px;\n      background-color: transparent;\n      color: rgba(225, 225, 225, 0.77);\n      border: 1px solid rgba(225, 225, 225, 0.77);\n      border-radius: 0px;\n      box-shadow: 0 5px 20px black;\n      overflow: hidden; }\n      .list-group .list-group-item .btn:hover {\n        text-decoration: underline; }\n  .list-group .no-shadow {\n    box-shadow: none; }\n"
 
 /***/ },
 
 /***/ 793:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader [resetState]=\"this.resetState\" (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
+module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n#inputs-container {\n  margin-bottom: 25px; }\n\n.well {\n  background: transparent;\n  box-shadow: 0 5px 25px black;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch; }\n\n.content-left {\n  opacity: 0.99;\n  box-shadow: 0 5px 25px black;\n  background-image: url(\"../../assets/home-bg2.jpg\");\n  background-repeat: none;\n  padding-left: 20px; }\n\n.form-group {\n  width: 100%; }\n\ninput,\n.dropdown-toggle {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n  input.ng-valid.ng-touched,\n  .dropdown-toggle.ng-valid.ng-touched {\n    border-color: #55b559; }\n  input.ng-invalid.ng-touched,\n  .dropdown-toggle.ng-invalid.ng-touched {\n    border-color: #F55145; }\n\n.btn.btn-success {\n  width: 100%;\n  background-color: #55b559; }\n  .btn.btn-success:hover {\n    text-decoration: underline; }\n\n.invalid-input-msg {\n  padding: 10px 7.5px;\n  font-size: 1.2rem;\n  color: #FFFEFE;\n  background-color: #F55145;\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px; }\n\n#loading {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%; }\n"
 
 /***/ },
 
 /***/ 794:
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n</div>"
+module.exports = ""
 
 /***/ },
 
 /***/ 795:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"well\">\r\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n      </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n        <img [attr.src]=\"item.imageUrl\" class=\"animated fadeIn\">\r\n      </div>\r\n    </div>\r\n\r\n    <a *ngIf=\"mylist.length > 1\" class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a *ngIf=\"mylist.length > 1\" class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormYearValidation type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader [resetState]=\"this.resetState\" (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 796:
 /***/ function(module, exports) {
 
-module.exports = "<h3 id=\"component-header\">Contact Us</h3>\r\n<div class=\"contact-wrapper\">\r\n  <div class=\"form-wrapper form-group\">\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\r\n    <br>\r\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\r\n    <br>\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\r\n    <br>\r\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\r\n  </div>\r\n</div>"
+module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n</div>"
 
 /***/ },
 
 /***/ 797:
 /***/ function(module, exports) {
 
-module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
+module.exports = "<div class=\"well\">\r\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n      </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n        <img [attr.src]=\"item.imageUrl\" class=\"animated fadeIn\">\r\n      </div>\r\n    </div>\r\n\r\n    <a *ngIf=\"mylist.length > 1\" class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a *ngIf=\"mylist.length > 1\" class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 798:
 /***/ function(module, exports) {
 
-module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Killer App @ GitHub</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/contact\">Contact Us</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
+module.exports = "<h3 id=\"component-header\">Contact Us</h3>\r\n<div class=\"contact-wrapper\">\r\n  <div class=\"form-wrapper form-group\">\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\r\n    <br>\r\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\r\n    <br>\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\r\n    <br>\r\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 799:
 /***/ function(module, exports) {
 
-module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
+module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
 
 /***/ },
 
 /***/ 800:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wrapper\" *ngIf=\"listingComments.length\">\r\n    <ul>\r\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\r\n        <div class=\"comment-list-item\">\r\n          <div class=\"author-wrapper\">\r\n            <h3 class=\"author\">{{comment.username}}</h3>\r\n          </div>\r\n          <div class=\"content-wrapper\">\r\n            <span>{{comment.content}}</span>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\r\n  </div>\r\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\r\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\r\n  </div>\r\n</div>"
+module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Killer App @ GitHub</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/contact\">Contact Us</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
 /***/ 801:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\r\n    placeholder=\"Color Filter\">\r\n</div>"
+module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
 
 /***/ },
 
 /***/ 802:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.makeFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\"\r\n    placeholder=\"Make Filter\">\r\n</div>"
+module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wrapper\" *ngIf=\"listingComments.length\">\r\n    <ul>\r\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\r\n        <div class=\"comment-list-item\">\r\n          <div class=\"author-wrapper\">\r\n            <h3 class=\"author\">{{comment.username}}</h3>\r\n          </div>\r\n          <div class=\"content-wrapper\">\r\n            <span>{{comment.content}}</span>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\r\n  </div>\r\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\r\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 803:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\r\n    placeholder=\"Maximum Price\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\r\n    placeholder=\"Color Filter\">\r\n</div>"
 
 /***/ },
 
 /***/ 804:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\r\n    placeholder=\"Maximum Year\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.makeFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\"\r\n    placeholder=\"Make Filter\">\r\n</div>"
 
 /***/ },
 
 /***/ 805:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\r\n    placeholder=\"Minimum Price\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\r\n    placeholder=\"Maximum Price\">\r\n</div>"
 
 /***/ },
 
 /***/ 806:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\r\n    placeholder=\"Minimum Year\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\r\n    placeholder=\"Maximum Year\">\r\n</div>"
 
 /***/ },
 
 /***/ 807:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\r\n    placeholder=\"Minimum Price\">\r\n</div>"
 
 /***/ },
 
 /***/ 808:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"text-center\">\r\n    <a routerLink=\"/gallery/{{this.item._id}}\">\r\n        <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n    </a>\r\n    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"this.haveOffers()\">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"!this.haveOffers()\">Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\r\n    placeholder=\"Minimum Year\">\r\n</div>"
 
 /***/ },
 
 /***/ 809:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>             \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div> \r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 810:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"single-item-wrapper\">\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\r\n\r\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\r\n\r\n    <app-comment-section></app-comment-section>\r\n</div>"
+module.exports = "<div class=\"text-center\">\r\n    <a routerLink=\"/gallery/{{this.item._id}}\">\r\n        <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n    </a>\r\n    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"this.haveOffers()\">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"!this.haveOffers()\">Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
 
 /***/ },
 
 /***/ 811:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n      aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Browse'\" (click)=\"setActiveItem('Browse')\"><a routerLink=\"/gallery\">Browse</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='favorites'>Favorites</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n        aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/gallery\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-th\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <a routerLink=\"/\">\r\n        <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      </a>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<h2>Offers for:</h2>\r\n<a routerLink=\"/gallery/{{this.item._id}}\"><img src=\"{{this.item.pictures[0].imageUrl}}\"></a>\r\n\r\n<a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2>Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>             \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div> \r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div> \r\n        </div>\r\n    </div>\r\n\r\n    <h2>Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2>Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\">\r\n            <h3>{{offer.offeredPrice}}</h3>\r\n            <p>By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
 
 /***/ 812:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 most commented cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<div class=\"single-item-wrapper\">\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\r\n\r\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\r\n\r\n    <app-comment-section></app-comment-section>\r\n</div>"
 
 /***/ },
 
 /***/ 813:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 most expensive cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n      aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Browse'\" (click)=\"setActiveItem('Browse')\"><a routerLink=\"/gallery\">Browse</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='favorites'>Favorites</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n        aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/gallery\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-th\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <a routerLink=\"/\">\r\n        <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      </a>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ },
 
 /***/ 814:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 most offered cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<h2>Top 10 most commented cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 815:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 most selled makes</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<h2>Top 10 most expensive cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 816:
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n    <a routerLink=\"{{this.linkPrefix}}{{this.item._id}}\">\r\n        {{this.item.make}} {{this.item.model}}\r\n    </a>\r\n    {{this.item.count}}\r\n</div>"
+module.exports = "<h2>Top 10 most offered cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 817:
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n    {{this.item.name}}  \r\n    {{this.item.count}}\r\n</div>"
+module.exports = "<h2>Top 10 most selled makes</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 818:
 /***/ function(module, exports) {
 
-module.exports = "<div *ngIf=\"this.isThereAnythingInTheList() && this.isThereId()\">\r\n    <div *ngFor=\"let item of mylist\">\r\n        <app-statistics-list-item-link [item]=\"item\"></app-statistics-list-item-link>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"this.isThereAnythingInTheList() && !this.isThereId()\">\r\n    <div *ngFor=\"let item of mylist\">\r\n        <app-statistics-list-item [item]=\"item\"></app-statistics-list-item>\r\n    </div>\r\n</div>"
+module.exports = "<div>\r\n    <a routerLink=\"{{this.linkPrefix}}{{this.item._id}}\">\r\n        {{this.item.make}} {{this.item.model}}\r\n    </a>\r\n    <div class=\"go-right\">\r\n        {{this.item.count}}\r\n    </div>\r\n</div>"
 
 /***/ },
 
 /***/ 819:
 /***/ function(module, exports) {
 
-module.exports = "<h1>Statistics main component works!</h1>\r\n<a routerLink=\"/statistics/items/mostCommentedItems\">Top 10 most commented cars</a>\r\n<a routerLink=\"/statistics/items/mostExpensiveItems\">Top 10 most expensive cars</a>\r\n<a routerLink=\"/statistics/items/mostOfferedItems\">Top 10 most offered cars</a>\r\n<a routerLink=\"/statistics/items/mostSalledMakes\">Top 10 most selled makes</a>\r\n<a routerLink=\"/statistics/users/topActiveUsers\">Top 10 active users</a>\r\n<a routerLink=\"/statistics/users/topBuyers\">Top 10 buyers</a>\r\n<a routerLink=\"/statistics/users/topSellers\">Top 10 sellers</a>"
+module.exports = "<div>\r\n    {{this.item.name}}\r\n    <div class=\"go-right\">\r\n        {{this.item.count}}\r\n    </div>\r\n</div>"
 
 /***/ },
 
 /***/ 820:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 active users</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<ol *ngIf=\"this.isThereAnythingInTheList() && this.isThereId()\">\r\n    <li *ngFor=\"let item of mylist\">\r\n        <app-statistics-list-item-link [item]=\"item\"></app-statistics-list-item-link>\r\n    </li>\r\n</ol>\r\n<ol *ngIf=\"this.isThereAnythingInTheList() && !this.isThereId()\">\r\n    <li *ngFor=\"let item of mylist\">\r\n        <app-statistics-list-item [item]=\"item\"></app-statistics-list-item>\r\n    </li>\r\n</ol>\r\n<a routerLink=\"/statistics\" class=\"btn btn-primary\">Back</a>"
 
 /***/ },
 
 /***/ 821:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 buyers</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<ul>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostCommentedItems\">Top 10 most commented cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostExpensiveItems\">Top 10 most expensive cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostOfferedItems\">Top 10 most offered cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostSalledMakes\">Top 10 most selled makes</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topActiveUsers\">Top 10 active users</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topBuyers\">Top 10 buyers</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topSellers\">Top 10 sellers</a>\r\n    </li>\r\n</ul>"
 
 /***/ },
 
 /***/ 822:
 /***/ function(module, exports) {
 
-module.exports = "<h2>Top 10 sellers</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
+module.exports = "<h2>Top 10 active users</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 823:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "<h2>Top 10 buyers</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 824:
 /***/ function(module, exports) {
 
-module.exports = "<a *ngIf=\"!this.itemIsFavorite\" (click)=\"addToFavorites()\">\r\n  <span class=\"glyphicon glyphicon-heart add-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>\r\n<a *ngIf=\"this.itemIsFavorite\" (click)=\"removeFromFavorites()\">\r\n  <span class=\"glyphicon glyphicon-heart remove-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>"
+module.exports = "<h2>Top 10 sellers</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 825:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 826:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<a *ngIf=\"!this.itemIsFavorite\" (click)=\"addToFavorites()\">\r\n  <span class=\"glyphicon glyphicon-heart add-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>\r\n<a *ngIf=\"this.itemIsFavorite\" (click)=\"removeFromFavorites()\">\r\n  <span class=\"glyphicon glyphicon-heart remove-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>"
 
 /***/ },
 
 /***/ 827:
 /***/ function(module, exports) {
 
-module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
+module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 828:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between 4 and 30 symbols long.</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between 6 and 30 symbols long.</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
 /***/ 829:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
 
 /***/ },
 
 /***/ 830:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
+module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between 4 and 30 symbols long.</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between 6 and 30 symbols long.</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
 
 /***/ },
 
 /***/ 831:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n\r\n  <div id=\"component-header\">\r\n    <h3>Registration Form</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n\r\n    <form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required\r\n                minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\"\r\n                required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\"\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\"\r\n                maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\"\r\n                required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"dropdown\">\r\n                <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n                <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n                <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n                  <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n                  <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n                </ul>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button class=\"form-control btn btn-success\" type=\"submit\">Register</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>\r\n\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+module.exports = ""
 
 /***/ },
 
 /***/ 832:
 /***/ function(module, exports) {
 
+module.exports = "<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
+
+/***/ },
+
+/***/ 833:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"submit-wrapper\">\r\n\r\n  <div id=\"component-header\">\r\n    <h3>Registration Form</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n\r\n    <form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required\r\n                minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\"\r\n                required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\"\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\"\r\n                maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\"\r\n                required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"dropdown\">\r\n                <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n                <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n                <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n                  <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n                  <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n                </ul>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button class=\"form-control btn btn-success\" type=\"submit\">Register</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>\r\n\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
+
+/***/ },
+
+/***/ 834:
+/***/ function(module, exports) {
+
 module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
 
 /***/ },
 
-/***/ 854:
+/***/ 856:
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(444);
@@ -5014,5 +5033,5 @@ module.exports = __webpack_require__(444);
 
 /***/ }
 
-},[854]);
+},[856]);
 //# sourceMappingURL=main.bundle.map

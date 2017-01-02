@@ -1,10 +1,11 @@
-<ul *ngIf="this.isThereAnythingInTheList() && this.isThereId()">
+<ol *ngIf="this.isThereAnythingInTheList() && this.isThereId()">
     <li *ngFor="let item of mylist">
         <app-statistics-list-item-link [item]="item"></app-statistics-list-item-link>
     </li>
-</ul>
-<ul *ngIf="this.isThereAnythingInTheList() && !this.isThereId()">
+</ol>
+<ol *ngIf="this.isThereAnythingInTheList() && !this.isThereId()">
     <li *ngFor="let item of mylist">
         <app-statistics-list-item [item]="item"></app-statistics-list-item>
     </li>
-</ul>
+</ol>
+<a routerLink="/statistics" class="btn btn-primary">Back</a>
