@@ -22,7 +22,7 @@ module.exports = function ({ app, userController, itemListingController, favorit
     .put('/gallery/:id', passport.authenticate('jwt'), itemListingController.updateListing)
     .put('/gallery/:id/comments', passport.authenticate('jwt'), itemListingController.addCommentToListing)
     .get('/statistics/items/mostExpensiveItems', statistcsController.mostExpensiveItems)
-    .get('/statistics/items/mostSaledMakes', statistcsController.mostSaledMakes)
+    .get('/statistics/items/mostSalledMakes', statistcsController.mostSalledMakes)
     .get('/statistics/items/mostOfferedItems', statistcsController.mostOfferedItems)
     .get('/statistics/items/mostCommentedItems', statistcsController.mostCommentedItems)
     .get('/statistics/users/topSellers', statistcsController.topSellers)

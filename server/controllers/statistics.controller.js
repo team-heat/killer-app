@@ -18,7 +18,7 @@ module.exports = function ({itemListingData}) {
             });
     }
 
-    function mostSaledMakes(req, res) {
+    function mostSalledMakes(req, res) {
         itemListingData.getAllWithoutFilters()
             .then(listings => {
 
@@ -223,7 +223,7 @@ module.exports = function ({itemListingData}) {
 
     return {
         mostExpensiveItems,
-        mostSaledMakes,
+        mostSalledMakes,
         mostOfferedItems,
         mostCommentedItems,
         topBuyers,
