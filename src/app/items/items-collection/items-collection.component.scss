@@ -41,6 +41,7 @@
 #controls {
   border-top: 1px solid rgba(225, 225, 225, 0.77);
   padding: 25px;
+  padding-bottom: 0;
   .btn {
     overflow: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -55,6 +56,9 @@
     &:hover {
       background-color: lighten( #2f2f2f, 10);
     }
+  }
+  #item-number{
+    padding-top: 25px;
   }
 }
 

@@ -55,5 +55,8 @@
         </a>
       </div>
     </div>
+    <div *ngIf="this.items.length !== 0" id="item-number" class="row text-center">
+      <p>Displaying Item {{this.activeItemIndex + 1}} / {{this.items.length}}</p>
+    </div>
   </div>
 </div>
