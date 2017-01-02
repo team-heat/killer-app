@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = function({ transporter, emailAddress }) {
+module.exports = function ({ transporter, config }) {
 
   function sendFeedback(req, res) {
     const mail = req.body;
-
+    console.log(mail);
     const mailOptions = {
       from: mail.senderEmail,
-      to: emailAddress,
+      to: config.nodemailerTargetEmail,
       subject: mail.subject,
       text: mail.content,
       html: ''
