@@ -1,3 +1,33 @@
 img {
     max-width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.go-center {
+    text-align: center;
+}
+
+.go-right {
+    text-align: right;
+}
+
+.go-left {
+    text-align: left;
+}
+
+.bordered {
+    border: 1px solid gray;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+.padding-10-25 {
+    padding: 10px 25px;
+}
+
+.margin-10 {
+    margin: 10px;
 }
