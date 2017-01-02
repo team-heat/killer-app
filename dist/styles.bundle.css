@@ -26,6 +26,7 @@ div#content {
   text-align: center;
   color: #e6e6e6;
   background-color: #848484;
+  text-transform: capitalize;
 }@charset "UTF-8";
 
 /*!

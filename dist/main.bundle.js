@@ -49,7 +49,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -86,7 +86,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -133,7 +133,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/http-requester.service.js.map
 
 /***/ },
 
@@ -181,7 +181,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/user-factory.service.js.map
 
 /***/ },
 
@@ -254,7 +254,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/user-storage.service.js.map
 
 /***/ },
 
@@ -289,7 +289,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/hashing.service.js.map
 
 /***/ },
 
@@ -400,7 +400,7 @@ var AddToFavoritesComponent = (function () {
     return AddToFavoritesComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/add-to-favorites.component.js.map
 
 /***/ },
 
@@ -473,7 +473,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -506,7 +506,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/app.component.js.map
 
 /***/ },
 
@@ -552,11 +552,7 @@ var DirectivesExportModule = (function () {
     ], DirectivesExportModule);
     return DirectivesExportModule;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/directives-export.module.js.map
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/directives-export.module.js.map
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
@@ -591,7 +587,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/home.component.js.map
 
 /***/ },
 
@@ -738,7 +734,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/items-collection.component.js.map
 
 /***/ },
 
@@ -872,7 +868,7 @@ var MakeOfferComponent = (function () {
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/make-offer.component.js.map
 
 /***/ },
 
@@ -995,7 +991,7 @@ var OffersListComponent = (function () {
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/offers-list.component.js.map
 
 /***/ },
 
@@ -1072,7 +1068,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/single-item.component.js.map
 
 /***/ },
 
@@ -1109,7 +1105,7 @@ var ExteriorColorFilterPipe = (function () {
     ], ExteriorColorFilterPipe);
     return ExteriorColorFilterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/exterior-color.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/exterior-color.pipe.js.map
 
 /***/ },
 
@@ -1146,7 +1142,7 @@ var MakeFilterPipe = (function () {
     ], MakeFilterPipe);
     return MakeFilterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-filter.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/make-filter.pipe.js.map
 
 /***/ },
 
@@ -1183,7 +1179,7 @@ var PriceGreaterThenPipe = (function () {
     ], PriceGreaterThenPipe);
     return PriceGreaterThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/price-greater-then.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/price-greater-then.pipe.js.map
 
 /***/ },
 
@@ -1220,7 +1216,7 @@ var PriceLessThenPipe = (function () {
     ], PriceLessThenPipe);
     return PriceLessThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/price-less-then.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/price-less-then.pipe.js.map
 
 /***/ },
 
@@ -1257,7 +1253,7 @@ var YearGreaterThenPipe = (function () {
     ], YearGreaterThenPipe);
     return YearGreaterThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/year-greater-then.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/year-greater-then.pipe.js.map
 
 /***/ },
 
@@ -1294,7 +1290,7 @@ var YearLessThenPipe = (function () {
     ], YearLessThenPipe);
     return YearLessThenPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/year-less-then.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/year-less-then.pipe.js.map
 
 /***/ },
 
@@ -1330,7 +1326,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/date-provider.service.js.map
 
 /***/ },
 
@@ -1383,7 +1379,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -1429,7 +1425,7 @@ var MailService = (function () {
     return MailService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/mail.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/mail.service.js.map
 
 /***/ },
 
@@ -1476,7 +1472,7 @@ var MonstCommentedItemsComponent = (function () {
     return MonstCommentedItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-commented-items.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/most-commented-items.component.js.map
 
 /***/ },
 
@@ -1523,7 +1519,7 @@ var MonstExpensiveItemsComponent = (function () {
     return MonstExpensiveItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-expensive-items.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/most-expensive-items.component.js.map
 
 /***/ },
 
@@ -1570,7 +1566,7 @@ var MonstOfferedItemsComponent = (function () {
     return MonstOfferedItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-offered-items.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/most-offered-items.component.js.map
 
 /***/ },
 
@@ -1613,7 +1609,7 @@ var MostSelledMakesComponent = (function () {
     return MostSelledMakesComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/most-salled-makes.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/most-salled-makes.component.js.map
 
 /***/ },
 
@@ -1647,7 +1643,7 @@ var StatisticsMainComponent = (function () {
     ], StatisticsMainComponent);
     return StatisticsMainComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-main.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/statistics-main.component.js.map
 
 /***/ },
 
@@ -1690,7 +1686,7 @@ var TopActiveUsersComponent = (function () {
     return TopActiveUsersComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/top-active-users.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/top-active-users.component.js.map
 
 /***/ },
 
@@ -1733,7 +1729,7 @@ var TopBuyersComponent = (function () {
     return TopBuyersComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/top-buyers.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/top-buyers.component.js.map
 
 /***/ },
 
@@ -1776,7 +1772,7 @@ var TopSellersComponent = (function () {
     return TopSellersComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/top-sellers.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/top-sellers.component.js.map
 
 /***/ },
 
@@ -1857,7 +1853,7 @@ var FavoritesComponent = (function () {
     return FavoritesComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/favorites.component.js.map
 
 /***/ },
 
@@ -1892,7 +1888,7 @@ var ListedItemsComponent = (function () {
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/listed-items.component.js.map
 
 /***/ },
 
@@ -2000,7 +1996,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/login.component.js.map
 
 /***/ },
 
@@ -2072,7 +2068,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/logout.component.js.map
 
 /***/ },
 
@@ -2135,7 +2131,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/profile.component.js.map
 
 /***/ },
 
@@ -2238,7 +2234,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/register.component.js.map
 
 /***/ },
 
@@ -2326,14 +2322,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
-
-/***/ },
-
-/***/ 429:
-/***/ function(module, exports) {
-
-module.exports = "img {\n  max-width: 300px;\n  margin: 20px;\n  border-radius: 10px; }\n\n.go-center {\n  text-align: center; }\n\n.go-right {\n  text-align: right; }\n\n.go-left {\n  text-align: left; }\n\n.bordered {\n  border: 1px solid gray; }\n\n.border-radius {\n  border-radius: 10px; }\n\n.padding-10-25 {\n  padding: 10px 25px; }\n\n.margin-10 {\n  margin: 10px; }\n"
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/users.module.js.map
 
 /***/ },
 
@@ -2385,7 +2374,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/toastr-notification-options-factory.service.js.map
 
 /***/ },
 
@@ -2422,7 +2411,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/main.js.map
 
 /***/ },
 
@@ -2511,7 +2500,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/add-listing.component.js.map
 
 /***/ },
 
@@ -2583,7 +2572,7 @@ var AddListingModule = (function () {
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/add-listing.module.js.map
 
 /***/ },
 
@@ -2713,7 +2702,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/app.module.js.map
 
 /***/ },
 
@@ -2751,7 +2740,7 @@ var CarouselListComponent = (function () {
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -2817,7 +2806,7 @@ var ContactComponent = (function () {
     return ContactComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/contact.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/contact.component.js.map
 
 /***/ },
 
@@ -2855,7 +2844,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -2907,11 +2896,7 @@ var FormPriceValidationDirective = (function () {
     return FormPriceValidationDirective;
     var _a;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/form-price-validation.directive.js.map
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-price-validation.directive.js.map
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
@@ -2961,16 +2946,11 @@ var FormStringLengthValidationDirective = (function () {
     return FormStringLengthValidationDirective;
     var _a;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/form-string-length-validation.directive.js.map
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-string-length-validation.directive.js.map
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 579:
-<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3077,114 +3057,6 @@ var NavigationHoverDirective = (function () {
 /***/ },
 
 /***/ 581:
-=======
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FormYearValidationDirective; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var FormYearValidationDirective = (function () {
-    function FormYearValidationDirective(domElement) {
-        this.domElement = domElement;
-    }
-    FormYearValidationDirective.prototype.onChange = function () {
-        var value = +this.domElement.nativeElement.value;
-        if (!value) {
-            this.domElement.nativeElement.value = '';
-            return;
-        }
-        if (value < 1850) {
-            this.domElement.nativeElement.value = '1850';
-        }
-        if (2017 < value) {
-            this.domElement.nativeElement.value = '2017';
-        }
-    };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('change'), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', []), 
-        __metadata('design:returntype', void 0)
-    ], FormYearValidationDirective.prototype, "onChange", null);
-    FormYearValidationDirective = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
-            selector: '[appFormYearValidation]'
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _a) || Object])
-    ], FormYearValidationDirective);
-    return FormYearValidationDirective;
-    var _a;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
-
-/***/ },
-
-/***/ 580:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NavigationHoverDirective; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var NavigationHoverDirective = (function () {
-    function NavigationHoverDirective(domElement) {
-        this.domElement = domElement;
-    }
-    NavigationHoverDirective.prototype.onMouseEnter = function () {
-        this.underline('underline');
-    };
-    NavigationHoverDirective.prototype.onMouseLeave = function () {
-        this.underline(null);
-    };
-    NavigationHoverDirective.prototype.underline = function (value) {
-        this.domElement.nativeElement.style.textDecoration = value;
-    };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mouseenter'), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', []), 
-        __metadata('design:returntype', void 0)
-    ], NavigationHoverDirective.prototype, "onMouseEnter", null);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mouseleave'), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', []), 
-        __metadata('design:returntype', void 0)
-    ], NavigationHoverDirective.prototype, "onMouseLeave", null);
-    NavigationHoverDirective = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
-            selector: '[appNavigationHover]'
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _a) || Object])
-    ], NavigationHoverDirective);
-    return NavigationHoverDirective;
-    var _a;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
-
-/***/ },
-
-/***/ 581:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3274,7 +3146,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -3309,7 +3181,7 @@ var FooterComponent = (function () {
     ], FooterComponent);
     return FooterComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/footer.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/footer.component.js.map
 
 /***/ },
 
@@ -3350,7 +3222,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/home.module.js.map
 
 /***/ },
 
@@ -3389,7 +3261,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/home.routes.js.map
 
 /***/ },
 
@@ -3403,7 +3275,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/index.js.map
 
 /***/ },
 
@@ -3503,7 +3375,7 @@ var CommentSectionComponent = (function () {
     return CommentSectionComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/comment-section.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/comment-section.component.js.map
 
 /***/ },
 
@@ -3554,7 +3426,7 @@ var ColorFilterComponent = (function () {
     return ColorFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/color-filter.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/color-filter.component.js.map
 
 /***/ },
 
@@ -3605,7 +3477,7 @@ var MakeFilterComponent = (function () {
     return MakeFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/make-filter.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/make-filter.component.js.map
 
 /***/ },
 
@@ -3655,7 +3527,7 @@ var MaximumPriceFilterComponent = (function () {
     return MaximumPriceFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-price-filter.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/maximum-price-filter.component.js.map
 
 /***/ },
 
@@ -3705,7 +3577,7 @@ var MaximumYearFilterComponent = (function () {
     return MaximumYearFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-year-filter.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/maximum-year-filter.component.js.map
 
 /***/ },
 
@@ -3755,7 +3627,7 @@ var MinimumPriceFilterComponent = (function () {
     return MinimumPriceFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-price-filter.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/minimum-price-filter.component.js.map
 
 /***/ },
 
@@ -3805,7 +3677,7 @@ var MinimumYearFilterComponent = (function () {
     return MinimumYearFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-year-filter.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/minimum-year-filter.component.js.map
 
 /***/ },
 
@@ -3929,7 +3801,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/items.module.js.map
 
 /***/ },
 
@@ -3980,7 +3852,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/items.routes.js.map
 
 /***/ },
 
@@ -3994,7 +3866,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/item-listing.model.js.map
 
 /***/ },
 
@@ -4008,7 +3880,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/user.model.js.map
 
 /***/ },
 
@@ -4058,7 +3930,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/navigation.component.js.map
 
 /***/ },
 
@@ -4092,7 +3964,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -4129,7 +4001,7 @@ var ModelFilterPipe = (function () {
     ], ModelFilterPipe);
     return ModelFilterPipe;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/model-filter.pipe.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/model-filter.pipe.js.map
 
 /***/ },
 
@@ -4214,7 +4086,6 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/item-listing.service.js.map
 
 /***/ },
@@ -4296,89 +4167,6 @@ var StatisticsListItemComponent = (function () {
 
 /***/ },
 
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
-
-/***/ },
-
-/***/ 600:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return StatisticsListItemLinkComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var StatisticsListItemLinkComponent = (function () {
-    function StatisticsListItemLinkComponent() {
-        this.linkPrefix = '/gallery/';
-    }
-    StatisticsListItemLinkComponent.prototype.ngOnInit = function () { };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
-        __metadata('design:type', Object)
-    ], StatisticsListItemLinkComponent.prototype, "item", void 0);
-    StatisticsListItemLinkComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-statistics-list-item-link',
-            template: __webpack_require__(822),
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], StatisticsListItemLinkComponent);
-    return StatisticsListItemLinkComponent;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list-item-link.component.js.map
-
-/***/ },
-
-/***/ 601:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return StatisticsListItemComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var StatisticsListItemComponent = (function () {
-    function StatisticsListItemComponent() {
-    }
-    StatisticsListItemComponent.prototype.ngOnInit = function () { };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
-        __metadata('design:type', Object)
-    ], StatisticsListItemComponent.prototype, "item", void 0);
-    StatisticsListItemComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-statistics-list-item',
-            template: __webpack_require__(823),
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], StatisticsListItemComponent);
-    return StatisticsListItemComponent;
-}());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list-item.component.js.map
-
-/***/ },
-
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 /***/ 602:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -4421,7 +4209,7 @@ var StatisticsListComponent = (function () {
     ], StatisticsListComponent);
     return StatisticsListComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/statistics-list.component.js.map
 
 /***/ },
 
@@ -4502,7 +4290,7 @@ var StatisticsModule = (function () {
     ], StatisticsModule);
     return StatisticsModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.module.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/statistics.module.js.map
 
 /***/ },
 
@@ -4562,7 +4350,7 @@ var StatisticsRouterModule = (function () {
     ], StatisticsRouterModule);
     return StatisticsRouterModule;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.routes.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/statistics.routes.js.map
 
 /***/ },
 
@@ -4627,7 +4415,7 @@ var ToastrNotificationsHandlerComponent = (function () {
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -4662,7 +4450,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -4697,7 +4485,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/users.component.js.map
 
 /***/ },
 
@@ -4752,11 +4540,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/users.routes.js.map
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
@@ -4772,11 +4556,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/environment.js.map
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
@@ -4858,63 +4638,7 @@ var StatisticService = (function () {
     return StatisticService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=D:/GitHub/killer-app/src/statistic.service.js.map
-
-/***/ },
-
-/***/ 610:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(625);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(618);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(614);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(620);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(619);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(617);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(616);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(624);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(613);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(622);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(615);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(623);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(621);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(626);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(859);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
+//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/statistic.service.js.map
 
 /***/ },
 
@@ -4977,7 +4701,7 @@ var StatisticService = (function () {
 /***/ 64:
 /***/ function(module, exports) {
 
-module.exports = "h2 {\n  text-align: center;\n  margin-bottom: 30px; }\n"
+module.exports = "h3 {\n  text-align: center;\n  margin-bottom: 30px; }\n"
 
 /***/ },
 
@@ -5053,11 +4777,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-<<<<<<< HEAD
 //# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/user.service.js.map
-=======
-//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
@@ -5267,330 +4987,210 @@ module.exports = ""
 /***/ 799:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h3>Submit Listing</h3>\n  </div>\n  <div class=\"inner-wrapper\">\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\n      <div id=\"inputs-container\" class=\"row\">\n        <div class=\"content-left col-xs-8\">\n        </div>\n        <div id=\"content-right\" class=\"col-xs-4\">\n          <div class=\"well\">\n            <div class=\"form-group\">\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\n                minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\n                required minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\n            </div>\n            <div class=\"form-group\">\n              <input #yearInput appFormDefaultValue appFormYearValidation (change)=\"updateYearProp(yearInput.value)\" type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input appFormDefaultValue appFormPriceValidation #tbPrice (change)=\"updatePriceProp(tbPrice.value)\" type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\n            </div>\n            <div class=\"form-group\">\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div id=\"image-upload\" class=\"form-group\">\n        <app-file-uploader [resetState]=\"this.resetState\" (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\n      </div>\n\n    </form>\n  </div>\n</div>"
-=======
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3>Submit Listing</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngMake=\"ngModel\" class=\"form-control\" name=\"make\" [(ngModel)]=\"itemListing.make\" placeholder=\"Make\" required\r\n                minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngModel=\"ngModel\" class=\"form-control\" name=\"model\" [(ngModel)]=\"itemListing.model\" placeholder=\"Model\"\r\n                required minlength=\"1\" maxlength=\"30\" pattern=\"[A-Za-z0-9\\- ]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input #yearInput appFormDefaultValue appFormYearValidation (change)=\"updateYearProp(yearInput.value)\" type=\"text\" #ngYear=\"ngModel\" class=\"form-control\" name=\"year\" [(ngModel)]=\"itemListing.year\"\r\n                placeholder=\"Year\" required minlength=\"4\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue appFormPriceValidation #tbPrice (change)=\"updatePriceProp(tbPrice.value)\" type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"itemListing.price\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input appFormDefaultValue type=\"text\" #ngEnginePower=\"ngModel\" class=\"form-control\" name=\"enginePower\" [(ngModel)]=\"itemListing.enginePower\"\r\n                placeholder=\"Engine Power\" required minlength=\"1\" maxlength=\"4\" pattern=\"[0-9]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #ngExteriorColor=\"ngModel\" class=\"form-control\" name=\"exteriorColor\" [(ngModel)]=\"itemListing.exteriorColor\"\r\n                placeholder=\"Exterior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" #InteriorColor=\"ngModel\" class=\"form-control\" name=\"interiorColor\" [(ngModel)]=\"itemListing.interiorColor\"\r\n                placeholder=\"Interior Color\" required minlength=\"3\" maxlength=\"30\" pattern=\"[A-Za-z \\-]+\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div id=\"image-upload\" class=\"form-group\">\r\n        <app-file-uploader [resetState]=\"this.resetState\" (onFileUpload)=\"onFileUpload($event)\"></app-file-uploader>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 800:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div id=\"root\" class=\"container\">\n    <app-navigation></app-navigation>\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\n    <div id=\"content\">\n        <router-outlet></router-outlet>\n    </div>\n    <app-footer></app-footer>\n</div>"
-=======
-module.exports = "<div id=\"root\" class=\"container\">\r\n    <app-navigation></app-navigation>\r\n    <app-toastr-notifications-handler></app-toastr-notifications-handler>\r\n    <div id=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 801:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"well\">\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n    <!--Indicators -->\n    <ol class=\"carousel-indicators\">\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\n      </li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\n        <img [attr.src]=\"item.imageUrl\" class=\"animated fadeIn\">\n      </div>\n    </div>\n\n    <a *ngIf=\"mylist.length > 1\" class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Previous</span>\n    </a>\n    <a *ngIf=\"mylist.length > 1\" class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Next</span>\n    </a>\n  </div>\n</div>"
-=======
-module.exports = "<div class=\"well\">\r\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!--Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\r\n      </li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\" role=\"listbox\">\r\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\r\n        <img [attr.src]=\"item.imageUrl\" class=\"animated fadeIn\">\r\n      </div>\r\n    </div>\r\n\r\n    <a *ngIf=\"mylist.length > 1\" class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a *ngIf=\"mylist.length > 1\" class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 802:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\n    <br>\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\n    <br>\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\n    <br>\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
-=======
-module.exports = "<h3 id=\"component-header\">Contact Us</h3>\r\n<div class=\"contact-wrapper\">\r\n  <div class=\"form-wrapper form-group\">\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\r\n    <br>\r\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\r\n    <br>\r\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\r\n    <br>\r\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\r\n  </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 803:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<!--<label>\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\n  <label [for]=\"id\" class=\"file-upl-lb\">\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\n  </label>\n</label>-->\n<!-- app.component.html -->\n<div id=\"image-uploader\">\n  <label class=\"btn btn-default btn-file\">\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\n</label>\n<!-- drag & drop file example-->\n<style>\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\n  </style>\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\n  (beforeUpload)=\"beforeUpload($event)\">\n</div>\n\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\n</div>\n</div>"
-=======
-module.exports = "<!--<label>\r\n  <input [id]=\"id\" type=\"file\" name=\"fileUpload\" (change)=\"updateLabel($event)\" multiple>\r\n  <label [for]=\"id\" class=\"file-upl-lb\">\r\n    <span class=\"glyphicon glyphicon-cloud-upload\" aria-hidden=\"true\"></span> {{labelText}}\r\n  </label>\r\n</label>-->\r\n<!-- app.component.html -->\r\n<div id=\"image-uploader\">\r\n  <label class=\"btn btn-default btn-file\">\r\n    Upload Image <input style=\"display: none;\" type=\"file\" ngFileSelect [options]=\"options\" (onUpload)=\"handleUpload($event)\" (beforeUpload)=\"beforeUpload($event)\" accept=\"image/*\">\r\n</label>\r\n<!-- drag & drop file example-->\r\n<style>\r\n    .file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */\r\n  </style>\r\n<div ngFileDrop [options]=\"options\" (onUpload)=\"handleUpload($event)\" [ngClass]=\"{'file-over': hasBaseDropZoneOver}\" (onFileOver)=\"fileOverBase($event)\"\r\n  (beforeUpload)=\"beforeUpload($event)\">\r\n</div>\r\n\r\n<div *ngIf=\"uploadedFiles.length > 0\" class=\"well\" id=\"uploaded\">\r\n  <img *ngFor=\"let file of uploadedFiles \" [src]=\"file.imageUrl\" height=\"150px\" alt=\"image\">\r\n</div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 804:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<!--<footer>\n  <div class=\"well\">\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\n      <p>Team Heat - Killer App @ GitHub</p>\n    </a>\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\n      <p>Iliyan Kupenov</p>\n    </a>\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\n      <p>Hristo Todorov</p>\n    </a>\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\n      <p>Stoiko Neykov</p>\n    </a>\n  </div>\n</footer>-->\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav text-center\">\n      <li>\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Killer App @ GitHub</a>\n      </li>\n      <li>\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\n      </li>\n      <li>\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\n      </li>\n      <li>\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\n      </li>\n      <li>\n        <a routerLink=\"/contact\">Contact Us</a>\n      </li>\n    </ul>\n  </div>\n</nav>"
-=======
-module.exports = "<!--<footer>\r\n  <div class=\"well\">\r\n    <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">\r\n      <p>Team Heat - Killer App @ GitHub</p>\r\n    </a>\r\n    <a href=\"https://github.com/ilievv\" target=\"_blank\">\r\n      <p>Iliyan Kupenov</p>\r\n    </a>\r\n    <a href=\"https://github.com/shakuu\" target=\"_blank\">\r\n      <p>Hristo Todorov</p>\r\n    </a>\r\n    <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">\r\n      <p>Stoiko Neykov</p>\r\n    </a>\r\n  </div>\r\n</footer>-->\r\n<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav text-center\">\r\n      <li>\r\n        <a href=\"https://github.com/team-heat/killer-app\" target=\"_blank\">Team Heat - Killer App @ GitHub</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/ilievv\" target=\"_blank\">Iliyan Kupenov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/shakuu\" target=\"_blank\">Hristo Todorov</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://github.com/StoikoNeykov\" target=\"_blank\">Stoiko Neykov</a>\r\n      </li>\r\n      <li>\r\n        <a routerLink=\"/contact\">Contact Us</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 805:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<section id=\"header\">\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\n</section>"
-=======
-module.exports = "<section id=\"header\">\r\n  <img src=\"../../assets/home-bg6.jpg\" alt=\"logo\" width=\"100%\">\r\n</section>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 806:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"comment-section\">\n  <div class=\"comments-wrapper\" *ngIf=\"listingComments.length\">\n    <ul>\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\n        <div class=\"comment-list-item\">\n          <div class=\"author-wrapper\">\n            <h3 class=\"author\">{{comment.username}}</h3>\n          </div>\n          <div class=\"content-wrapper\">\n            <span>{{comment.content}}</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\n  </div>\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\n    <br>\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\n  </div>\n</div>"
-=======
-module.exports = "<div class=\"comment-section\">\r\n  <div class=\"comments-wrapper\" *ngIf=\"listingComments.length\">\r\n    <ul>\r\n      <li *ngFor=\"let comment of listingComments | paginate: { itemsPerPage: 5, currentPage: p }\">\r\n        <div class=\"comment-list-item\">\r\n          <div class=\"author-wrapper\">\r\n            <h3 class=\"author\">{{comment.username}}</h3>\r\n          </div>\r\n          <div class=\"content-wrapper\">\r\n            <span>{{comment.content}}</span>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <pagination-controls class=\"pagination-controls\" (pageChange)=\"p = $event\"></pagination-controls>\r\n  </div>\r\n  <div class=\"comment-wrapper\" *ngIf=\"this.userStorageService.loggedUser\">\r\n    <textarea name=\"comment\" id=\"comment\" [(ngModel)]=\"comment.content\"></textarea>\r\n    <br>\r\n    <button class=\"btn btn-success\" (click)=\"onSubmit()\">Submit Comment</button>\r\n  </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 807:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" appFormStringLengthValidation #tbColorFilter (change)=\"updateValidation(tbColorFilter.value)\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\n    placeholder=\"Color Filter\">\n</div>"
-=======
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormStringLengthValidation #tbColorFilter (change)=\"updateValidation(tbColorFilter.value)\" [(ngModel)]=\"this.colorFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"colorFilterValue\"\r\n    placeholder=\"Color Filter\">\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 808:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" appFormStringLengthValidation #tbMakeFilter (change)=\"updateValidation(tbMakeFilter.value)\" [(ngModel)]=\"this.makeFilterValue\"\n    (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\" placeholder=\"Make Filter\">\n</div>"
-=======
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormStringLengthValidation #tbMakeFilter (change)=\"updateValidation(tbMakeFilter.value)\" [(ngModel)]=\"this.makeFilterValue\"\r\n    (ngModelChange)=\"updateValue()\" type=\"text\" name=\"makeFilterValue\" placeholder=\"Make Filter\">\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 809:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" appFormPriceValidation #tbMaxPrice (change)=\"validationUpdate(tbMaxPrice.value)\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\n    placeholder=\"Maximum Price\">\n</div>"
-=======
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormPriceValidation #tbMaxPrice (change)=\"validationUpdate(tbMaxPrice.value)\" [(ngModel)]=\"this.maximumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumPriceFilterValue\"\r\n    placeholder=\"Maximum Price\">\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 810:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" appFormYearValidation #tbMaxYear (change)=\"updateValidation(tbMaxYear.value)\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\n    placeholder=\"Maximum Year\">\n</div>"
-=======
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormYearValidation #tbMaxYear (change)=\"updateValidation(tbMaxYear.value)\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\r\n    placeholder=\"Maximum Year\">\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 811:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" appFormPriceValidation #tbMinPrice (change)=\"validationUpdate(tbMinPrice.value)\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\n    placeholder=\"Minimum Price\">\n</div>"
-=======
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormPriceValidation #tbMinPrice (change)=\"validationUpdate(tbMinPrice.value)\" [(ngModel)]=\"this.minimumPriceFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumPriceFilterValue\"\r\n    placeholder=\"Minimum Price\">\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 812:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"form-group\">\n  <input class=\"from-control\" appFormYearValidation #tbMinYear (change)=\"updateValidation(tbMinYear.value)\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\n    placeholder=\"Minimum Year\">\n</div>"
-=======
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormYearValidation #tbMinYear (change)=\"updateValidation(tbMinYear.value)\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\r\n    placeholder=\"Minimum Year\">\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 813:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\n    <h3 *ngIf=\"this.items.length !== 0\" class=\" text-center\">\n      <span> {{this.activeItem.make}}</span>\n      <span>{{this.activeItem.model}}</span>\n      <span>{{this.activeItem.year}}</span>\n      <app-add-to-favorites *ngIf=\"this.items.length !== 0 && this.userStorage.isLogged() \" [itemIdToFavorite]=\"this.activeItem._id\"></app-add-to-favorites>\n    </h3>\n  </div>\n  <div class=\"row\">\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\n      <div class=\"row\">\n        <div class=\"col-xs-2\">\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\n        </div>\n        <div class=\"col-xs-2\">\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\n        </div>\n      </div>\n    </div>\n    <h3 *ngIf=\"this.originalItems.length === 0 && this.items.length !== 0\">Be the first to post a new item!</h3>\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\n    </div>\n  </div>\n  <div id=\"controls\">\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Previous\n        </a>\n      </div>\n      <div class=\"col-xs-4 col-xs-offset-1\">\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\n          More Details\n        </a>\n      </div>\n      <div class=\"col-xs-2 col-xs-offset-1\">\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\n          Next\n        </a>\n      </div>\n    </div>\n    <div *ngIf=\"this.items.length !== 0\" id=\"item-number\" class=\"row text-center\">\n      <p>Displaying Item {{this.activeItemIndex + 1}} / {{this.items.length}}</p>\n    </div>\n  </div>\n</div>"
-=======
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\" class=\" text-center\">\r\n      <span> {{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.items.length !== 0 && this.userStorage.isLogged() \" [itemIdToFavorite]=\"this.activeItem._id\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0 && this.items.length !== 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"item-number\" class=\"row text-center\">\r\n      <p>Displaying Item {{this.activeItemIndex + 1}} / {{this.items.length}}</p>\r\n    </div>\r\n  </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 814:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"text-center\">\n    <div class=\"go-center\">\n        <a routerLink=\"/gallery/{{this.item._id}}\">\n            <img src=\"{{this.item.pictures[0].imageUrl}}\">\n        </a>\n    </div>\n    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>\n    <h3 *ngIf=\"this.haveOffers()\">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>\n    <h3 *ngIf=\"!this.haveOffers()\">Highest offer: {{this.maxOffer}}</h3>\n\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\n        <div class=\"form-group\">\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\n        </div>\n        <div class=\"form-group\">\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n        </div>\n    </form>\n</div>"
-=======
-module.exports = "<div class=\"text-center\">\r\n    <div class=\"go-center\">\r\n        <a routerLink=\"/gallery/{{this.item._id}}\">\r\n            <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n        </a>\r\n    </div>\r\n    <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"this.haveOffers()\">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>\r\n    <h3 *ngIf=\"!this.haveOffers()\">Highest offer: {{this.maxOffer}}</h3>\r\n\r\n    <form *ngIf=\"!isLoading\" #submitForm=\"ngForm\" (ngSubmit)=\"onSubmit(); submitForm.reset()\">\r\n        <div class=\"form-group\">\r\n            <input appFormDefaultValue type=\"text\" #ngPrice=\"ngModel\" class=\"form-control\" name=\"price\" [(ngModel)]=\"offer.offeredPrice\"\r\n                placeholder=\"Price\" required minlength=\"1\" maxlength=\"10\" pattern=\"[0-9]+\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-success\">Submit</button>\r\n        </div>\r\n    </form>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 815:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"go-center\">\n    <h2>Offers for:</h2>\n    <a routerLink=\"/gallery/{{this.item._id}}\">\n        <img src=\"{{this.item.pictures[0].imageUrl}}\">\n    </a>\n</div>\n<div class=\"go-center\">\n    <a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\n</div>\n\n\n<h3 *ngIf=\"!this.item.offers.length\" class=\"go-center\">No offers at this moment!</h3>\n\n<div *ngIf=\"this.item.offers.length\">\n    <h2 class=\"go-center\">Active offers:</h2>\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\n        <div *ngIf=\"offer.status === 'active'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\n            \n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\n            <p class=\"go-right\">By: {{offer.username}}</p>\n            \n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div>\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div>\n        </div>\n    </div>\n\n    <h2 class=\"go-center\">Rejected offers:</h2>\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\n        <div *ngIf=\"offer.status === 'rejected'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\n            <p class=\"go-right\">By: {{offer.username}}</p>\n        </div>\n    </div>\n\n    <h2 class=\"go-center\">Canceled offers:</h2>\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\n        <div *ngIf=\"offer.status === 'canceled'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\n            <p class=\"go-right\">By: {{offer.username}}</p>\n        </div>\n    </div>\n</div>"
-=======
-module.exports = "<div class=\"go-center\">\r\n    <h2>Offers for:</h2>\r\n    <a routerLink=\"/gallery/{{this.item._id}}\">\r\n        <img src=\"{{this.item.pictures[0].imageUrl}}\">\r\n    </a>\r\n</div>\r\n<div class=\"go-center\">\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" routerLink=\"/gallery/{{this.item._id}}/offer\" class=\"btn btn-primary\">Make offer</a>\r\n</div>\r\n\r\n\r\n<h3 *ngIf=\"!this.item.offers.length\" class=\"go-center\">No offers at this moment!</h3>\r\n\r\n<div *ngIf=\"this.item.offers.length\">\r\n    <h2 class=\"go-center\">Active offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'active'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\r\n            \r\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\r\n            <p class=\"go-right\">By: {{offer.username}}</p>\r\n            \r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-success\" (click)=\"acceptOffer($event, offer)\">Accept offer</div>\r\n            <div *ngIf=\"this.isOwner\" class=\"btn btn-danger\" (click)=\"rejectOffer($event, offer)\">Reject offer</div>\r\n            <div *ngIf=\"this.loggedUser===offer.username\" class=\"btn btn-warning\" (click)=\"cencelOffer($event, offer)\">Cancel offer</div>\r\n        </div>\r\n    </div>\r\n\r\n    <h2 class=\"go-center\">Rejected offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'rejected'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\r\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\r\n            <p class=\"go-right\">By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n\r\n    <h2 class=\"go-center\">Canceled offers:</h2>\r\n    <div *ngFor=\"let offer of this.item.offers\" class=\"offer\">\r\n        <div *ngIf=\"offer.status === 'canceled'\" class=\"bordered border-radius padding-10-25 go-center margin-10\">\r\n            <h3 class=\"go-left\">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>\r\n            <p class=\"go-right\">By: {{offer.username}}</p>\r\n        </div>\r\n    </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 816:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"single-item-wrapper\">\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\n    <h3>Price: ${{this.item.price}}</h3>\n\n    <!--TODO add right update link when ready-->\n\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\n\n    <!--TODO add right make offer link when ready-->\n\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\n\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\n\n    <app-comment-section></app-comment-section>\n</div>"
-=======
-module.exports = "<div class=\"single-item-wrapper\">\r\n    <h1>{{this.item.make}} {{this.item.model}} {{this.item.year}}</h1>\r\n    <app-carousel *ngIf=\"this.item && this.item.pictures && this.item.pictures.length > 0\" [mylist]=\"this.item.pictures\"></app-carousel>\r\n    <!--<div *ngIf=\"!this.item && !this.item.pictures && !this.item.pictures.length > 0\"></div>-->\r\n    <h3>Engine power: {{this.item.enginePower}}hp</h3>\r\n    <h3>Exterior Color: {{this.item.exteriorColor}}</h3>\r\n    <h3>Interior Color: {{this.item.interiorColor}}</h3>\r\n    <h3>Price: ${{this.item.price}}</h3>\r\n\r\n    <!--TODO add right update link when ready-->\r\n\r\n    <a *ngIf=\"this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}\">Update</a>\r\n\r\n    <!--TODO add right make offer link when ready-->\r\n\r\n    <a *ngIf=\"this.isLogged && !this.isOwner\" class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offer\">Make Offer</a>\r\n\r\n    <a class=\"btn btn-primary\" routerLink=\"/gallery/{{this.item._id}}/offers\">Show offers</a>\r\n\r\n    <app-comment-section></app-comment-section>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 817:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <!-- Brand and toggle get grouped for better mobile display -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\n      aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\n  </div>\n  <!-- Collect the nav links, forms, and other content for toggling -->\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n    <ul class=\"nav navbar-nav\">\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Browse'\" (click)=\"setActiveItem('Browse')\"><a routerLink=\"/gallery\">Browse</a></li>\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Statistics'\" (click)=\"setActiveItem('Statistics')\"><a routerLink=\"/statistics\">Statistics</a></li>\n    </ul>\n\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li class=\"dropdown\">\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\n        <ul class=\"dropdown-menu\">\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink='favorites'>Favorites</a></li>\n          <li role=\"separator\" class=\"divider\"></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\n        </ul>\n      </li>\n    </ul>\n  </div>\n  <!-- /.navbar-collapse -->\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\n        aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n    </div>\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <h1>\n        <a routerLink=\"/gallery\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-th\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n      <a routerLink=\"/\">\n        <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\n      </a>\n      <h1>\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\n        </a>\n      </h1>\n    </div>\n  </div>\n</nav>"
-=======
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\r\n  <!-- Brand and toggle get grouped for better mobile display -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n      aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    <a class=\"navbar-brand\" (click)=\"setActiveItem()\" routerLink=\"/\">DREAMSTIME</a>\r\n  </div>\r\n  <!-- Collect the nav links, forms, and other content for toggling -->\r\n  <div *ngIf=\"hasLoggedUser == true\" class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n    <ul class=\"nav navbar-nav\">\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Browse'\" (click)=\"setActiveItem('Browse')\"><a routerLink=\"/gallery\">Browse</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Create'\" (click)=\"setActiveItem('Create')\"><a routerLink=\"/submit\">Create</a></li>\r\n      <li class=\"hvr-overline-reveal\" [class.active]=\"activeItem === 'Statistics'\" (click)=\"setActiveItem('Statistics')\"><a routerLink=\"/statistics\">Statistics</a></li>\r\n    </ul>\r\n\r\n    <ul class=\"nav navbar-nav navbar-right\">\r\n      <li class=\"dropdown\">\r\n        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{loggedUserName}}<span class=\"caret\"></span></a>\r\n        <ul class=\"dropdown-menu\">\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Profile</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='favorites'>Favorites</a></li>\r\n          <li role=\"separator\" class=\"divider\"></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink='profile'>Settings</a></li>\r\n          <li (click)=\"setActiveItem('None')\"><a routerLink=\"logout\">Logout</a></li>\r\n        </ul>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <!-- /.navbar-collapse -->\r\n  <div class=\"row public-container\" *ngIf=\"hasLoggedUser == false\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\"\r\n        aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <h1>\r\n        <a routerLink=\"/gallery\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-th\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n      <a routerLink=\"/\">\r\n        <h1 class=\"app-heading col-xs-10\">DREAMSTIME</h1>\r\n      </a>\r\n      <h1>\r\n        <a routerLink=\"/login\" class=\"btn btn-default navbar-btn col-xs-1\" aria-label=\"Left Align\">\r\n          <span class=\"glyphicon glyphicon-log-in\" aria-hidden=\"true\"></span>\r\n        </a>\r\n      </h1>\r\n    </div>\r\n  </div>\r\n</nav>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 818:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 most commented cars</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 most commented cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 most commented cars</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 819:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 most expensive cars</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 most expensive cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 most expensive cars</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 820:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 most offered cars</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 most offered cars</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 most offered cars</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 821:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 most selled makes</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 most selled makes</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 most selled makes</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 822:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div>\n    <a routerLink=\"{{this.linkPrefix}}{{this.item._id}}\">\n        {{this.item.make}} {{this.item.model}}\n    </a>\n    <div class=\"go-right\">\n        {{this.item.count}}\n    </div>\n</div>"
-=======
-module.exports = "<div>\r\n    <a routerLink=\"{{this.linkPrefix}}{{this.item._id}}\">\r\n        {{this.item.make}} {{this.item.model}}\r\n    </a>\r\n    <div class=\"go-right\">\r\n        {{this.item.count}}\r\n    </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 823:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div>\n    {{this.item.name}}\n    <div class=\"go-right\">\n        {{this.item.count}}\n    </div>\n</div>"
-=======
-module.exports = "<div>\r\n    {{this.item.name}}\r\n    <div class=\"go-right\">\r\n        {{this.item.count}}\r\n    </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 824:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<ol *ngIf=\"this.isThereAnythingInTheList() && this.isThereId()\">\n    <li *ngFor=\"let item of mylist\">\n        <app-statistics-list-item-link [item]=\"item\"></app-statistics-list-item-link>\n    </li>\n</ol>\n<ol *ngIf=\"this.isThereAnythingInTheList() && !this.isThereId()\">\n    <li *ngFor=\"let item of mylist\">\n        <app-statistics-list-item [item]=\"item\"></app-statistics-list-item>\n    </li>\n</ol>\n<div class=\"go-center\">\n    <a routerLink=\"/statistics\" class=\"btn btn-primary\">Back</a>\n</div>"
-=======
-module.exports = "<ol *ngIf=\"this.isThereAnythingInTheList() && this.isThereId()\">\r\n    <li *ngFor=\"let item of mylist\">\r\n        <app-statistics-list-item-link [item]=\"item\"></app-statistics-list-item-link>\r\n    </li>\r\n</ol>\r\n<ol *ngIf=\"this.isThereAnythingInTheList() && !this.isThereId()\">\r\n    <li *ngFor=\"let item of mylist\">\r\n        <app-statistics-list-item [item]=\"item\"></app-statistics-list-item>\r\n    </li>\r\n</ol>\r\n<div class=\"go-center\">\r\n    <a routerLink=\"/statistics\" class=\"btn btn-primary\">Back</a>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 825:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Statistics (Top 10)</h2>\n<ul>\n    <li>\n        <a routerLink=\"/statistics/items/mostCommentedItems\">Most commented cars</a>\n    </li>\n    <li>\n        <a routerLink=\"/statistics/items/mostExpensiveItems\">Most expensive cars</a>\n    </li>\n    <li>\n        <a routerLink=\"/statistics/items/mostOfferedItems\">Most offered cars</a>\n    </li>\n    <li>\n        <a routerLink=\"/statistics/items/mostSalledMakes\">Most selled makes</a>\n    </li>\n    <li>\n        <a routerLink=\"/statistics/users/topActiveUsers\">Active users</a>\n    </li>\n    <li>\n        <a routerLink=\"/statistics/users/topBuyers\">Buyers</a>\n    </li>\n    <li>\n        <a routerLink=\"/statistics/users/topSellers\">Sellers</a>\n    </li>\n</ul>"
-=======
-module.exports = "<h2>Statistics</h2>\r\n<ul>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostCommentedItems\">Top 10 most commented cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostExpensiveItems\">Top 10 most expensive cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostOfferedItems\">Top 10 most offered cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostSalledMakes\">Top 10 most selled makes</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topActiveUsers\">Top 10 active users</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topBuyers\">Top 10 buyers</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topSellers\">Top 10 sellers</a>\r\n    </li>\r\n</ul>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<div class=\"statistics-wrapper\">\n  <h3 id=\"component-header\">Statistics (Top 10)</h3>\n  <ul>\n    <li>\n      <a routerLink=\"/statistics/items/mostCommentedItems\">Most commented cars</a>\n    </li>\n    <li>\n      <a routerLink=\"/statistics/items/mostExpensiveItems\">Most expensive cars</a>\n    </li>\n    <li>\n      <a routerLink=\"/statistics/items/mostOfferedItems\">Most offered cars</a>\n    </li>\n    <!-- <li>\n      <a routerLink=\"/statistics/items/mostSalledMakes\">Most selled makes</a>\n    </li>\n    <li>\n      <a routerLink=\"/statistics/users/topActiveUsers\">Active users</a>\n    </li>\n    <li>\n      <a routerLink=\"/statistics/users/topBuyers\">Buyers</a>\n    </li>\n    <li>\n      <a routerLink=\"/statistics/users/topSellers\">Sellers</a>\n    </li> -->\n  </ul>\n</div>"
 
 /***/ },
 
 /***/ 826:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 active users</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 active users</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 active users</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 827:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 buyers</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 buyers</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 buyers</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
 /***/ 828:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h2>Top 10 sellers</h2>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
-=======
-module.exports = "<h2>Top 10 sellers</h2>\r\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
+module.exports = "<h3 id=\"component-header\">Top 10 sellers</h3>\n<app-statistics-list [mylist]=\"this.list\"></app-statistics-list>"
 
 /***/ },
 
@@ -5604,55 +5204,35 @@ module.exports = ""
 /***/ 830:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<a *ngIf=\"!this.itemIsFavorite\" (click)=\"addToFavorites()\">\n  <span class=\"glyphicon glyphicon-star-empty add-to-favorites\" aria-hidden=\"true\"></span>\n</a>\n<a *ngIf=\"this.itemIsFavorite\" (click)=\"removeFromFavorites()\">\n  <span class=\"glyphicon glyphicon-star remove-to-favorites\" aria-hidden=\"true\"></span>\n</a>"
-=======
-module.exports = "<a *ngIf=\"!this.itemIsFavorite\" (click)=\"addToFavorites()\">\r\n  <span class=\"glyphicon glyphicon-star-empty add-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>\r\n<a *ngIf=\"this.itemIsFavorite\" (click)=\"removeFromFavorites()\">\r\n  <span class=\"glyphicon glyphicon-star remove-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 831:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<p>\n  facebook-login works!\n</p>\n"
-=======
-module.exports = "<p>\r\n  facebook-login works!\r\n</p>\r\n"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 832:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"submit-wrapper\">\n  <div id=\"component-header\">\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\n    <h3 *ngIf=\"this.items.length !== 0\" class=\" text-center\">\n      <span> {{this.activeItem.make}}</span>\n      <span>{{this.activeItem.model}}</span>\n      <span>{{this.activeItem.year}}</span>\n      <app-add-to-favorites *ngIf=\"this.items.length !== 0 && this.userStorage.isLogged() \" [itemIdToFavorite]=\"this.activeItem._id\"></app-add-to-favorites>\n    </h3>\n  </div>\n  <div class=\"row \">\n    <h3 *ngIf=\"this.items.length===0 \">Be the first to post a new item!</h3>\n    <div *ngIf=\"this.items.length !==0 \" id=\"carousel-container \" class=\"col-xs-8 col-xs-offset-2 \">\n      <app-carousel *ngIf=\"this.activeItem \" [mylist]=\"this.activeItem.pictures \"></app-carousel>\n    </div>\n  </div>\n  <div id=\"controls\">\n    <div *ngIf=\"this.items.length !==0 \" class=\"row \">\n      <div class=\"col-xs-2 col-xs-offset-1 \">\n        <a (click)=\"onPrevious() \" class=\"btn btn-primary \" *ngIf=\"this.items.length !==0 \">\n          Previous\n        </a>\n      </div>\n      <div class=\"col-xs-4 col-xs-offset-1 \">\n        <a class=\"btn btn-primary \" *ngIf=\"this.items.length !==0 \" routerLink=\"{{this.activeItem._id}} \">\n          More Details\n        </a>\n      </div>\n      <div class=\"col-xs-2 col-xs-offset-1 \">\n        <a (click)=\"onNext() \" class=\"btn btn-primary \" *ngIf=\"this.items.length !==0 \">\n          Next\n        </a>\n      </div>\n    </div>\n    <div *ngIf=\"this.items.length !== 0\" id=\"item-number\" class=\"row text-center\">\n      <p>Displaying Item {{this.activeItemIndex + 1}} / {{this.items.length}}</p>\n    </div>\n  </div>\n</div>"
-=======
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\" class=\" text-center\">\r\n      <span> {{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.items.length !== 0 && this.userStorage.isLogged() \" [itemIdToFavorite]=\"this.activeItem._id\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row \">\r\n    <h3 *ngIf=\"this.items.length===0 \">Be the first to post a new item!</h3>\r\n    <div *ngIf=\"this.items.length !==0 \" id=\"carousel-container \" class=\"col-xs-8 col-xs-offset-2 \">\r\n      <app-carousel *ngIf=\"this.activeItem \" [mylist]=\"this.activeItem.pictures \"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !==0 \" class=\"row \">\r\n      <div class=\"col-xs-2 col-xs-offset-1 \">\r\n        <a (click)=\"onPrevious() \" class=\"btn btn-primary \" *ngIf=\"this.items.length !==0 \">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1 \">\r\n        <a class=\"btn btn-primary \" *ngIf=\"this.items.length !==0 \" routerLink=\"{{this.activeItem._id}} \">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1 \">\r\n        <a (click)=\"onNext() \" class=\"btn btn-primary \" *ngIf=\"this.items.length !==0 \">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"item-number\" class=\"row text-center\">\r\n      <p>Displaying Item {{this.activeItemIndex + 1}} / {{this.items.length}}</p>\r\n    </div>\r\n  </div>\r\n</div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 833:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<p>\n  listed-items works!\n</p>\n"
-=======
-module.exports = "<p>\r\n  listed-items works!\r\n</p>\r\n"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 834:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"login-wrapper\">\n  <h2 id=\"component-header\">Sign In</h2>\n  <div class=\"inner-wrapper\">\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\n      <div class=\"form-group\">\n        <label> \n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between 4 and 30 symbols long.</div>\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <label> \n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between 6 and 30 symbols long.</div>\n        </label>\n      </div>\n      <div class=\"form-group\">\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\n      </div>\n    </form>\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\n  </div>\n</div>\n\n<!-- Carousel testing DELETE -->\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n  <ol class=\"carousel-indicators\">\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\n  </ol>\n  <div class=\"carousel-inner\" role=\"listbox\">\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\n      <img [src]=\"img\" alt=\"slide\">\n    </div>\n  </div>\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>-->"
-=======
-module.exports = "<div class=\"login-wrapper\">\r\n  <h2 id=\"component-header\">Sign In</h2>\r\n  <div class=\"inner-wrapper\">\r\n    <form *ngIf=\"isLoading === false\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(); loginForm.reset()\">\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngName=\"ngModel\" class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your username must be between 4 and 30 symbols long.</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label> \r\n          <input #ngPass=\"ngModel\" class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\" required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n          <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngPass.valid || ngPass.untouched\">Your password must be between 6 and 30 symbols long.</div>\r\n        </label>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-success\" [disabled]=\"ngPass.invalid || ngName.invalid\" type=\"submit\">Submit</button>\r\n        <a routerLink='/register' class=\"btn btn-primary\">Register</a>\r\n      </div>\r\n    </form>\r\n    <img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />\r\n  </div>\r\n</div>\r\n\r\n<!-- Carousel testing DELETE -->\r\n<!--<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\r\n  <ol class=\"carousel-indicators\">\r\n    <li *ngFor=\"let img of images; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\" [class.active]=\"i===1\"></li>\r\n  </ol>\r\n  <div class=\"carousel-inner\" role=\"listbox\">\r\n    <div *ngFor=\"let img of images; let i = index\" class=\"item\" [class.active]=\"i===1\">\r\n      <img [src]=\"img\" alt=\"slide\">\r\n    </div>\r\n  </div>\r\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\r\n    <span class=\"icon-prev\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Previous</span>\r\n  </a>\r\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\r\n    <span class=\"icon-next\" aria-hidden=\"true\"></span>\r\n    <span class=\"sr-only\">Next</span>\r\n  </a>\r\n</div>-->"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
@@ -5666,33 +5246,21 @@ module.exports = ""
 /***/ 836:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div id=\"component-header\">\n  <h3>Profile</h3>\n</div>\n<div class=\"row\">\n  <div class=\"content-left col-xs-6\">\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\n  </div>\n  <div class=\"content-right col-xs-6\">\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>{{user.username}}</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.email}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>{{user.firstName}} {{user.lastName}}</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.gender}}, {{user.age}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <p>Member since:</p>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <p>{{user.createdOn | dateFormatter}}</p>\n          </div>\n        </div>\n      </li>\n      <li class=\"list-group-item no-shadow row\">\n        <div class=\"row\">\n          <div class=\"column-left col-xs-6 text-left\">\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\n              <span>View Favorites</span>\n            </a>\n          </div>\n          <div class=\"column-right col-xs-6 text-right\">\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\n              <span>View Listed Items</span>\n            </a>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>"
-=======
-module.exports = "<div id=\"component-header\">\r\n  <h3>Profile</h3>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"content-left col-xs-6\">\r\n    <img [src]=\"user.image\" alt=\"profile image\" width=\"100%\">\r\n  </div>\r\n  <div class=\"content-right col-xs-6\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.username}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.email}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>{{user.firstName}} {{user.lastName}}</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.gender}}, {{user.age}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <p>Member since:</p>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <p>{{user.createdOn | dateFormatter}}</p>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"list-group-item no-shadow row\">\r\n        <div class=\"row\">\r\n          <div class=\"column-left col-xs-6 text-left\">\r\n            <a appNavigationHover routerLink=\"/favorites\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Favorites</span>\r\n            </a>\r\n          </div>\r\n          <div class=\"column-right col-xs-6 text-right\">\r\n            <a appNavigationHover routerLink=\"/listed-items\" class=\"btn btn-default col-xs-12\">\r\n              <span>View Listed Items</span>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 837:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div class=\"submit-wrapper\">\n\n  <div id=\"component-header\">\n    <h3>Registration Form</h3>\n  </div>\n  <div class=\"inner-wrapper\">\n\n    <form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n      <div id=\"inputs-container\" class=\"row\">\n        <div class=\"content-left col-xs-8\">\n        </div>\n        <div id=\"content-right\" class=\"col-xs-4\">\n          <div class=\"well\">\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required\n                minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n            </div>\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\"\n                required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n            </div>\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\"\n                minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n            </div>\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\"\n                maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n            </div>\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\"\n                required>\n            </div>\n            <div class=\"form-group\">\n              <div class=\"dropdown\">\n                <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\n          {{user.gender}}\n        <span class=\"caret\"></span>\n      </button>\n                <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\n          Gender\n        <span class=\"caret\"></span>\n      </button>\n                <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\n                  <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\n                  <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\n                </ul>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\n            </div>\n            <div class=\"form-group\">\n              <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\n            </div>\n            <div class=\"form-group\">\n              <button class=\"form-control btn btn-success\" type=\"submit\">Register</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
-=======
-module.exports = "<div class=\"submit-wrapper\">\r\n\r\n  <div id=\"component-header\">\r\n    <h3>Registration Form</h3>\r\n  </div>\r\n  <div class=\"inner-wrapper\">\r\n\r\n    <form *ngIf=\"isLoading === false\" #registerForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n      <div id=\"inputs-container\" class=\"row\">\r\n        <div class=\"content-left col-xs-8\">\r\n        </div>\r\n        <div id=\"content-right\" class=\"col-xs-4\">\r\n          <div class=\"well\">\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" placeholder=\"Enter your username\" required\r\n                minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"user.password\" placeholder=\"Enter your password\"\r\n                required minlength=\"6\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"firstName\" [(ngModel)]=\"user.firstName\" placeholder=\"Enter your first name\"\r\n                minlength=\"3\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"text\" name=\"lastName\" [(ngModel)]=\"user.lastName\" placeholder=\"Enter your last name\" minlength=\"3\"\r\n                maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"number\" name=\"age\" [(ngModel)]=\"user.age\" placeholder=\"Enter your age\" min=\"0\" max=\"120\"\r\n                required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"dropdown\">\r\n                <button *ngIf=\"user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          {{user.gender}}\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n                <button *ngIf=\"!user.gender\" class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"gender-select\" data-toggle=\"dropdown\"\r\n                  aria-haspopup=\"true\" aria-expanded=\"true\" name=\"gender\">\r\n          Gender\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n                <ul class=\"dropdown-menu\" aria-labelledby=\"gender-select\">\r\n                  <li (click)=\"onGenderSelect('Male')\"><a>Male</a></li>\r\n                  <li (click)=\"onGenderSelect('Female')\"><a>Female</a></li>\r\n                </ul>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"email\" name=\"email\" [(ngModel)]=\"user.email\" placeholder=\"Enter your email\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <input class=\"form-control\" type=\"url\" name=\"image\" [(ngModel)]=\"user.image\" placeholder=\"Enter an url to your profile image\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <button class=\"form-control btn btn-success\" type=\"submit\">Register</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>\r\n\r\n<img *ngIf=\"isLoading === true\" id=\"loading\" src=\"../../../assets/load.gif\" alt=\"Be patient...\" width=\"50px\" />"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
 /***/ 838:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<p>\n  users works!\n</p>\n"
-=======
-module.exports = "<p>\r\n  users works!\r\n</p>\r\n"
->>>>>>> a3b6e80833e49a89743edd99962de9b2dfd27156
 
 /***/ },
 
