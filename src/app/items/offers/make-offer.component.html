@@ -1,7 +1,9 @@
 <div class="text-center">
-    <a routerLink="/gallery/{{this.item._id}}">
-        <img src="{{this.item.pictures[0].imageUrl}}">
-    </a>
+    <div class="go-center">
+        <a routerLink="/gallery/{{this.item._id}}">
+            <img src="{{this.item.pictures[0].imageUrl}}">
+        </a>
+    </div>
     <h3>StartPrice: {{this.item.price | currency:'USD':true:'4.0'}}</h3>
     <h3 *ngIf="this.haveOffers()">Highest offer: {{this.maxOffer | currency:'USD':true:'4.0'}}</h3>
     <h3 *ngIf="!this.haveOffers()">Highest offer: {{this.maxOffer}}</h3>

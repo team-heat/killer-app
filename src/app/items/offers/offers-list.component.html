@@ -1,35 +1,43 @@
-<h2>Offers for:</h2>
-<a routerLink="/gallery/{{this.item._id}}"><img src="{{this.item.pictures[0].imageUrl}}"></a>
+<div class="go-center">
+    <h2>Offers for:</h2>
+    <a routerLink="/gallery/{{this.item._id}}">
+        <img src="{{this.item.pictures[0].imageUrl}}">
+    </a>
+</div>
+<div class="go-center">
+    <a *ngIf="this.isLogged && !this.isOwner" routerLink="/gallery/{{this.item._id}}/offer" class="btn btn-primary">Make offer</a>
+</div>
 
-<a *ngIf="this.isLogged && !this.isOwner" routerLink="/gallery/{{this.item._id}}/offer" class="btn btn-primary">Make offer</a>
 
-<h3 *ngIf="!this.item.offers.length">No offers at this moment!</h3>
+<h3 *ngIf="!this.item.offers.length" class="go-center">No offers at this moment!</h3>
 
 <div *ngIf="this.item.offers.length">
-    <h2>Active offers:</h2>
+    <h2 class="go-center">Active offers:</h2>
     <div *ngFor="let offer of this.item.offers" class="offer">
-        <div *ngIf="offer.status === 'active'">
-            <h3>{{offer.offeredPrice}}</h3>
-            <p>By: {{offer.username}}</p>
-            <div *ngIf="this.isOwner" class="btn btn-success" (click)="acceptOffer($event, offer)">Accept offer</div>             
-            <div *ngIf="this.isOwner" class="btn btn-danger" (click)="rejectOffer($event, offer)">Reject offer</div> 
-            <div *ngIf="this.loggedUser===offer.username" class="btn btn-warning" (click)="cencelOffer($event, offer)">Cancel offer</div> 
+        <div *ngIf="offer.status === 'active'" class="bordered border-radius padding-10-25 go-center margin-10">
+            
+            <h3 class="go-left">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>
+            <p class="go-right">By: {{offer.username}}</p>
+            
+            <div *ngIf="this.isOwner" class="btn btn-success" (click)="acceptOffer($event, offer)">Accept offer</div>
+            <div *ngIf="this.isOwner" class="btn btn-danger" (click)="rejectOffer($event, offer)">Reject offer</div>
+            <div *ngIf="this.loggedUser===offer.username" class="btn btn-warning" (click)="cencelOffer($event, offer)">Cancel offer</div>
         </div>
     </div>
 
-    <h2>Rejected offers:</h2>
+    <h2 class="go-center">Rejected offers:</h2>
     <div *ngFor="let offer of this.item.offers" class="offer">
-        <div *ngIf="offer.status === 'rejected'">
-            <h3>{{offer.offeredPrice}}</h3>
-            <p>By: {{offer.username}}</p>
+        <div *ngIf="offer.status === 'rejected'" class="bordered border-radius padding-10-25 go-center margin-10">
+            <h3 class="go-left">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>
+            <p class="go-right">By: {{offer.username}}</p>
         </div>
     </div>
 
-    <h2>Canceled offers:</h2>
+    <h2 class="go-center">Canceled offers:</h2>
     <div *ngFor="let offer of this.item.offers" class="offer">
-        <div *ngIf="offer.status === 'canceled'">
-            <h3>{{offer.offeredPrice}}</h3>
-            <p>By: {{offer.username}}</p>
+        <div *ngIf="offer.status === 'canceled'" class="bordered border-radius padding-10-25 go-center margin-10">
+            <h3 class="go-left">Offered price: {{offer.offeredPrice | currency:'USD':true :'1.0-0'}}</h3>
+            <p class="go-right">By: {{offer.username}}</p>
         </div>
     </div>
 </div>
