@@ -49,7 +49,7 @@ var ApiUrlsConfigService = (function () {
     ], ApiUrlsConfigService);
     return ApiUrlsConfigService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/api-urls-config.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/api-urls-config.service.js.map
 
 /***/ },
 
@@ -86,7 +86,7 @@ var HttpRequesterOptionsFactoryService = (function () {
     ], HttpRequesterOptionsFactoryService);
     return HttpRequesterOptionsFactoryService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester-options-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester-options-factory.service.js.map
 
 /***/ },
 
@@ -133,7 +133,7 @@ var HttpRequesterService = (function () {
     return HttpRequesterService;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/http-requester.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/http-requester.service.js.map
 
 /***/ },
 
@@ -181,7 +181,7 @@ var UserFactoryService = (function () {
     ], UserFactoryService);
     return UserFactoryService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/user-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-factory.service.js.map
 
 /***/ },
 
@@ -254,7 +254,7 @@ var UserStorageService = (function () {
     return UserStorageService;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/user-storage.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user-storage.service.js.map
 
 /***/ },
 
@@ -289,7 +289,7 @@ var HashingService = (function () {
     ], HashingService);
     return HashingService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/hashing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/hashing.service.js.map
 
 /***/ },
 
@@ -400,7 +400,7 @@ var AddToFavoritesComponent = (function () {
     return AddToFavoritesComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/add-to-favorites.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-to-favorites.component.js.map
 
 /***/ },
 
@@ -473,7 +473,7 @@ var ToastrNotificationService = (function () {
     return ToastrNotificationService;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification.service.js.map
 
 /***/ },
 
@@ -506,7 +506,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/app.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/app.component.js.map
 
 /***/ },
 
@@ -541,7 +541,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/home.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.component.js.map
 
 /***/ },
 
@@ -687,7 +687,7 @@ var ItemsCollectionComponent = (function () {
     return ItemsCollectionComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/items-collection.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items-collection.component.js.map
 
 /***/ },
 
@@ -821,7 +821,7 @@ var MakeOfferComponent = (function () {
     return MakeOfferComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/make-offer.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/make-offer.component.js.map
 
 /***/ },
 
@@ -943,7 +943,7 @@ var OffersListComponent = (function () {
     return OffersListComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/offers-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/offers-list.component.js.map
 
 /***/ },
 
@@ -1020,7 +1020,7 @@ var SingleItemComponent = (function () {
     return SingleItemComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/single-item.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/single-item.component.js.map
 
 /***/ },
 
@@ -1057,7 +1057,7 @@ var ExteriorColorFilterPipe = (function () {
     ], ExteriorColorFilterPipe);
     return ExteriorColorFilterPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/exterior-color.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/exterior-color.pipe.js.map
 
 /***/ },
 
@@ -1094,7 +1094,7 @@ var MakeFilterPipe = (function () {
     ], MakeFilterPipe);
     return MakeFilterPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/make-filter.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/make-filter.pipe.js.map
 
 /***/ },
 
@@ -1131,7 +1131,7 @@ var PriceGreaterThenPipe = (function () {
     ], PriceGreaterThenPipe);
     return PriceGreaterThenPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/price-greater-then.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/price-greater-then.pipe.js.map
 
 /***/ },
 
@@ -1168,7 +1168,7 @@ var PriceLessThenPipe = (function () {
     ], PriceLessThenPipe);
     return PriceLessThenPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/price-less-then.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/price-less-then.pipe.js.map
 
 /***/ },
 
@@ -1205,7 +1205,7 @@ var YearGreaterThenPipe = (function () {
     ], YearGreaterThenPipe);
     return YearGreaterThenPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/year-greater-then.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/year-greater-then.pipe.js.map
 
 /***/ },
 
@@ -1242,7 +1242,7 @@ var YearLessThenPipe = (function () {
     ], YearLessThenPipe);
     return YearLessThenPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/year-less-then.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/year-less-then.pipe.js.map
 
 /***/ },
 
@@ -1278,7 +1278,7 @@ var DateProviderService = (function () {
     ], DateProviderService);
     return DateProviderService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/date-provider.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-provider.service.js.map
 
 /***/ },
 
@@ -1331,7 +1331,7 @@ var ItemListingFactoryService = (function () {
     ], ItemListingFactoryService);
     return ItemListingFactoryService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing-factory.service.js.map
 
 /***/ },
 
@@ -1379,7 +1379,7 @@ var MailService = (function () {
     return MailService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/mail.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/mail.service.js.map
 
 /***/ },
 
@@ -1425,7 +1425,7 @@ var MonstCommentedItemsComponent = (function () {
     return MonstCommentedItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/most-commented-items.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/most-commented-items.component.js.map
 
 /***/ },
 
@@ -1471,7 +1471,7 @@ var MonstExpensiveItemsComponent = (function () {
     return MonstExpensiveItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/most-expensive-items.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/most-expensive-items.component.js.map
 
 /***/ },
 
@@ -1517,7 +1517,7 @@ var MonstOfferedItemsComponent = (function () {
     return MonstOfferedItemsComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/most-offered-items.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/most-offered-items.component.js.map
 
 /***/ },
 
@@ -1559,7 +1559,7 @@ var MostSelledMakesComponent = (function () {
     return MostSelledMakesComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/most-salled-makes.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/most-salled-makes.component.js.map
 
 /***/ },
 
@@ -1592,7 +1592,7 @@ var StatisticsMainComponent = (function () {
     ], StatisticsMainComponent);
     return StatisticsMainComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-main.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-main.component.js.map
 
 /***/ },
 
@@ -1634,7 +1634,7 @@ var TopActiveUsersComponent = (function () {
     return TopActiveUsersComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/top-active-users.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/top-active-users.component.js.map
 
 /***/ },
 
@@ -1676,7 +1676,7 @@ var TopBuyersComponent = (function () {
     return TopBuyersComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/top-buyers.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/top-buyers.component.js.map
 
 /***/ },
 
@@ -1718,7 +1718,7 @@ var TopSellersComponent = (function () {
     return TopSellersComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/top-sellers.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/top-sellers.component.js.map
 
 /***/ },
 
@@ -1799,7 +1799,7 @@ var FavoritesComponent = (function () {
     return FavoritesComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/favorites.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/favorites.component.js.map
 
 /***/ },
 
@@ -1834,7 +1834,7 @@ var ListedItemsComponent = (function () {
     ], ListedItemsComponent);
     return ListedItemsComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/listed-items.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/listed-items.component.js.map
 
 /***/ },
 
@@ -1942,7 +1942,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/login.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/login.component.js.map
 
 /***/ },
 
@@ -2014,7 +2014,7 @@ var LogoutComponent = (function () {
     return LogoutComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/logout.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/logout.component.js.map
 
 /***/ },
 
@@ -2077,7 +2077,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/profile.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/profile.component.js.map
 
 /***/ },
 
@@ -2180,7 +2180,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d, _e, _f, _g;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/register.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/register.component.js.map
 
 /***/ },
 
@@ -2268,7 +2268,7 @@ var UsersModule = (function () {
     ], UsersModule);
     return UsersModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/users.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.module.js.map
 
 /***/ },
 
@@ -2313,7 +2313,7 @@ var ToastrNotificationOptionsFactoryService = (function () {
     ], ToastrNotificationOptionsFactoryService);
     return ToastrNotificationOptionsFactoryService;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notification-options-factory.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notification-options-factory.service.js.map
 
 /***/ },
 
@@ -2350,7 +2350,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=E:/MyRepos/killer-app/src/main.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/main.js.map
 
 /***/ },
 
@@ -2425,7 +2425,7 @@ var AddListingComponent = (function () {
     return AddListingComponent;
     var _a, _b, _c, _d, _e, _f;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.component.js.map
 
 /***/ },
 
@@ -2497,7 +2497,7 @@ var AddListingModule = (function () {
     ], AddListingModule);
     return AddListingModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/add-listing.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/add-listing.module.js.map
 
 /***/ },
 
@@ -2627,7 +2627,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/app.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/app.module.js.map
 
 /***/ },
 
@@ -2665,7 +2665,7 @@ var CarouselListComponent = (function () {
     ], CarouselListComponent);
     return CarouselListComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/carousel-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/carousel-list.component.js.map
 
 /***/ },
 
@@ -2706,7 +2706,13 @@ var ContactComponent = (function () {
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent.prototype.onSubmit = function () {
-        this.mailService.sendMail(this.mail);
+        // Angular creates 'cold' observable, 
+        // nothing happens unless subscribed
+        // ( as opposed to Promise which fires regardless )
+        this.mailService.sendMail(this.mail)
+            .subscribe(function (resp) {
+            console.log('here');
+        });
     };
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2719,7 +2725,7 @@ var ContactComponent = (function () {
     return ContactComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/contact.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/contact.component.js.map
 
 /***/ },
 
@@ -2757,7 +2763,7 @@ var FormDefaultValueDirective = (function () {
     return FormDefaultValueDirective;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/form-default-value.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-default-value.directive.js.map
 
 /***/ },
 
@@ -2805,7 +2811,7 @@ var FormYearValidationDirective = (function () {
     return FormYearValidationDirective;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/form-year-validation.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/form-year-validation.directive.js.map
 
 /***/ },
 
@@ -2859,7 +2865,7 @@ var NavigationHoverDirective = (function () {
     return NavigationHoverDirective;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation-hover.directive.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/navigation-hover.directive.js.map
 
 /***/ },
 
@@ -2953,7 +2959,7 @@ var FileUploaderComponent = (function () {
     return FileUploaderComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/file-uploader.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/file-uploader.component.js.map
 
 /***/ },
 
@@ -2988,7 +2994,7 @@ var FooterComponent = (function () {
     ], FooterComponent);
     return FooterComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/footer.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/footer.component.js.map
 
 /***/ },
 
@@ -3029,7 +3035,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/home.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.module.js.map
 
 /***/ },
 
@@ -3068,7 +3074,7 @@ var HomeRouterModule = (function () {
     ], HomeRouterModule);
     return HomeRouterModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/home.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/home.routes.js.map
 
 /***/ },
 
@@ -3082,7 +3088,7 @@ var HomeRouterModule = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=E:/MyRepos/killer-app/src/index.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/index.js.map
 
 /***/ },
 
@@ -3182,7 +3188,7 @@ var CommentSectionComponent = (function () {
     return CommentSectionComponent;
     var _a, _b, _c, _d, _e;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/comment-section.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/comment-section.component.js.map
 
 /***/ },
 
@@ -3224,7 +3230,7 @@ var ColorFilterComponent = (function () {
     return ColorFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/color-filter.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/color-filter.component.js.map
 
 /***/ },
 
@@ -3266,7 +3272,7 @@ var MakeFilterComponent = (function () {
     return MakeFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/make-filter.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/make-filter.component.js.map
 
 /***/ },
 
@@ -3308,7 +3314,7 @@ var MaximumPriceFilterComponent = (function () {
     return MaximumPriceFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/maximum-price-filter.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-price-filter.component.js.map
 
 /***/ },
 
@@ -3350,7 +3356,7 @@ var MaximumYearFilterComponent = (function () {
     return MaximumYearFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/maximum-year-filter.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/maximum-year-filter.component.js.map
 
 /***/ },
 
@@ -3392,7 +3398,7 @@ var MinimumPriceFilterComponent = (function () {
     return MinimumPriceFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/minimum-price-filter.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-price-filter.component.js.map
 
 /***/ },
 
@@ -3434,7 +3440,7 @@ var MinimumYearFilterComponent = (function () {
     return MinimumYearFilterComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/minimum-year-filter.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/minimum-year-filter.component.js.map
 
 /***/ },
 
@@ -3555,7 +3561,7 @@ var ItemsModule = (function () {
     ], ItemsModule);
     return ItemsModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/items.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items.module.js.map
 
 /***/ },
 
@@ -3606,7 +3612,7 @@ var ItemsRouterModule = (function () {
     ], ItemsRouterModule);
     return ItemsRouterModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/items.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/items.routes.js.map
 
 /***/ },
 
@@ -3620,7 +3626,7 @@ var ItemListing = (function () {
     }
     return ItemListing;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.model.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.model.js.map
 
 /***/ },
 
@@ -3634,7 +3640,7 @@ var User = (function () {
     }
     return User;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/user.model.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user.model.js.map
 
 /***/ },
 
@@ -3684,7 +3690,7 @@ var NavigationComponent = (function () {
     return NavigationComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/navigation.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/navigation.component.js.map
 
 /***/ },
 
@@ -3718,7 +3724,7 @@ var DateFormatterPipe = (function () {
     ], DateFormatterPipe);
     return DateFormatterPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/date-formatter.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/date-formatter.pipe.js.map
 
 /***/ },
 
@@ -3755,7 +3761,7 @@ var ModelFilterPipe = (function () {
     ], ModelFilterPipe);
     return ModelFilterPipe;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/model-filter.pipe.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/model-filter.pipe.js.map
 
 /***/ },
 
@@ -3793,7 +3799,7 @@ var StatisticsListItemLinkComponent = (function () {
     ], StatisticsListItemLinkComponent);
     return StatisticsListItemLinkComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-list-item-link.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list-item-link.component.js.map
 
 /***/ },
 
@@ -3830,7 +3836,7 @@ var StatisticsListItemComponent = (function () {
     ], StatisticsListItemComponent);
     return StatisticsListItemComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-list-item.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list-item.component.js.map
 
 /***/ },
 
@@ -3874,7 +3880,7 @@ var StatisticsListComponent = (function () {
     ], StatisticsListComponent);
     return StatisticsListComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics-list.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics-list.component.js.map
 
 /***/ },
 
@@ -3955,7 +3961,7 @@ var StatisticsModule = (function () {
     ], StatisticsModule);
     return StatisticsModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics.module.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.module.js.map
 
 /***/ },
 
@@ -4015,7 +4021,7 @@ var StatisticsRouterModule = (function () {
     ], StatisticsRouterModule);
     return StatisticsRouterModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistics.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistics.routes.js.map
 
 /***/ },
 
@@ -4100,7 +4106,7 @@ var ItemListingService = (function () {
     return ItemListingService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/item-listing.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/item-listing.service.js.map
 
 /***/ },
 
@@ -4165,7 +4171,7 @@ var ToastrNotificationsHandlerComponent = (function () {
     return ToastrNotificationsHandlerComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/toastr-notifications-handler.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/toastr-notifications-handler.component.js.map
 
 /***/ },
 
@@ -4200,7 +4206,7 @@ var FacebookLoginComponent = (function () {
     ], FacebookLoginComponent);
     return FacebookLoginComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/facebook-login.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/facebook-login.component.js.map
 
 /***/ },
 
@@ -4235,7 +4241,7 @@ var UsersComponent = (function () {
     ], UsersComponent);
     return UsersComponent;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/users.component.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.component.js.map
 
 /***/ },
 
@@ -4290,7 +4296,7 @@ var UsersRouterModule = (function () {
     ], UsersRouterModule);
     return UsersRouterModule;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/users.routes.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/users.routes.js.map
 
 /***/ },
 
@@ -4306,7 +4312,7 @@ var UsersRouterModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=E:/MyRepos/killer-app/src/environment.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/environment.js.map
 
 /***/ },
 
@@ -4362,7 +4368,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=E:/MyRepos/killer-app/src/polyfills.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/polyfills.js.map
 
 /***/ },
 
@@ -4444,7 +4450,7 @@ var StatisticService = (function () {
     return StatisticService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/statistic.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/statistic.service.js.map
 
 /***/ },
 
@@ -4520,7 +4526,7 @@ var UserService = (function () {
     return UserService;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/MyRepos/killer-app/src/user.service.js.map
+//# sourceMappingURL=D:/GitHub/killer-app/src/user.service.js.map
 
 /***/ },
 

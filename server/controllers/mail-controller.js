@@ -8,7 +8,7 @@ module.exports = function({ emailAddress }) {
   function sendFeedback(req, res) {
     console.log('In serve mail controller');
     const mail = req.body;
-
+    console.log(req.body);
     const mailOptions = {
       from: mail.senderEmail,
       to: emailAddress,
