@@ -302,7 +302,7 @@ var HashingService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddToFavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1419,7 +1419,7 @@ var MonstCommentedItemsComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-commented-items',
             template: __webpack_require__(815),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MonstCommentedItemsComponent);
@@ -1466,7 +1466,7 @@ var MonstExpensiveItemsComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-expensive-items',
             template: __webpack_require__(816),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MonstExpensiveItemsComponent);
@@ -1513,7 +1513,7 @@ var MonstOfferedItemsComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-offered-items',
             template: __webpack_require__(817),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MonstOfferedItemsComponent);
@@ -1556,7 +1556,7 @@ var MostSelledMakesComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-most-selled-makes',
             template: __webpack_require__(818),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], MostSelledMakesComponent);
@@ -1591,7 +1591,7 @@ var StatisticsMainComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-statistics-main',
             template: __webpack_require__(822),
-            styles: [__webpack_require__(785)]
+            styles: [__webpack_require__(785), __webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [])
     ], StatisticsMainComponent);
@@ -1633,7 +1633,7 @@ var TopActiveUsersComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-top-active-users',
             template: __webpack_require__(823),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], TopActiveUsersComponent);
@@ -1676,7 +1676,7 @@ var TopBuyersComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-top-buyers',
             template: __webpack_require__(824),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], TopBuyersComponent);
@@ -1719,7 +1719,7 @@ var TopSellersComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-top-sellers',
             template: __webpack_require__(825),
-            styles: [__webpack_require__(79)]
+            styles: [__webpack_require__(64)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_statistic_service__["a" /* StatisticService */]) === 'function' && _a) || Object])
     ], TopSellersComponent);
@@ -1736,7 +1736,7 @@ var TopSellersComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FavoritesComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1858,7 +1858,7 @@ var ListedItemsComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1962,7 +1962,7 @@ var LoginComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toastr_notification_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LogoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2035,7 +2035,7 @@ var LogoutComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_factory_service__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2101,7 +2101,7 @@ var ProfileComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_user_factory_service__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_storage_service__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2520,7 +2520,7 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__users_add_to_favorites_add_to_favorites_component__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_api_urls_config_service__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__ = __webpack_require__(573);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__ = __webpack_require__(382);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__);
@@ -2541,7 +2541,7 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_toastr_notification_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__toastr_notifications_handler_toastr_notifications_handler_component__ = __webpack_require__(601);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_user_service__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_user_storage_service__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__users_users_module__ = __webpack_require__(381);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__statistics_statistics_module__ = __webpack_require__(599);
@@ -3456,7 +3456,7 @@ var MinimumYearFilterComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__ = __webpack_require__(582);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_exterior_color_pipe__ = __webpack_require__(358);
@@ -3902,7 +3902,7 @@ var StatisticsListComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statistics_routes__ = __webpack_require__(600);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_statistic_service__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__partial_statistics_list_component__ = __webpack_require__(598);
@@ -4466,7 +4466,14 @@ var StatisticService = (function () {
 
 /***/ },
 
-/***/ 74:
+/***/ 64:
+/***/ function(module, exports) {
+
+module.exports = "h2 {\n  text-align: center;\n  margin-bottom: 30px; }\n"
+
+/***/ },
+
+/***/ 75:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4671,14 +4678,14 @@ module.exports = "@font-face {\n  font-family: planer;\n  src: url(\"../../asset
 /***/ 784:
 /***/ function(module, exports) {
 
-module.exports = "ol {\n  font-size: 20px; }\n  ol .go-right {\n    float: right; }\n  ol li div {\n    margin-top: 10px;\n    margin-right: 20px; }\n\n.go-center {\n  text-align: center; }\n"
+module.exports = "ol {\n  font-size: 20px; }\n  ol .go-right {\n    float: right; }\n  ol li {\n    margin-top: 10px; }\n  ol li div {\n    margin-right: 20px; }\n  ol li:nth-child(2n) {\n    background-color: rgba(225, 225, 225, 0.05); }\n\n.go-center {\n  text-align: center; }\n"
 
 /***/ },
 
 /***/ 785:
 /***/ function(module, exports) {
 
-module.exports = "ul {\n  list-style: none;\n  font-size: 20px; }\n"
+module.exports = "ul {\n  list-style: none;\n  font-size: 20px; }\n  ul li {\n    margin-top: 10px; }\n  ul li:nth-child(2n) {\n    background-color: rgba(225, 225, 225, 0.05); }\n"
 
 /***/ },
 
@@ -4707,13 +4714,6 @@ module.exports = ""
 /***/ function(module, exports) {
 
 module.exports = "#component-header {\n  color: rgba(225, 225, 225, 0.77);\n  background: transparent;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-bottom: 1px solid rgba(225, 225, 225, 0.77);\n  box-shadow: 0 1px 25px black;\n  padding: 20px; }\n  #component-header h3 > span {\n    text-transform: capitalize; }\n\n.submit-wrapper {\n  text-align: center;\n  min-height: 60vh;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: column wrap;\n      flex-flow: column wrap; }\n  .submit-wrapper > .inner-wrapper {\n    margin: 5vh; }\n\n.add-to-favorites-btn {\n  float: right; }\n  .add-to-favorites-btn span.glyphicon-heart {\n    cursor: pointer;\n    font-size: 3.5rem;\n    color: #E6E6E6; }\n  .add-to-favorites-btn:hover > span.glyphicon-heart {\n    color: #DF474B; }\n\n#controls {\n  border-top: 1px solid rgba(225, 225, 225, 0.77);\n  padding: 25px; }\n  #controls .btn {\n    overflow: hidden;\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\n    text-align: center;\n    font-size: 12px;\n    color: rgba(225, 225, 225, 0.77);\n    background-color: #2f2f2f;\n    border-color: rgba(225, 225, 225, 0.77);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    width: 100%; }\n    #controls .btn:hover {\n      background-color: #494949; }\n\n.gallery-item {\n  min-width: 300px;\n  max-width: 500px;\n  float: left; }\n  .gallery-item a {\n    text-align: center; }\n"
-
-/***/ },
-
-/***/ 79:
-/***/ function(module, exports) {
-
-module.exports = "h2 {\n  text-align: center; }\n"
 
 /***/ },
 
@@ -4944,7 +4944,7 @@ module.exports = "<ol *ngIf=\"this.isThereAnythingInTheList() && this.isThereId(
 /***/ 822:
 /***/ function(module, exports) {
 
-module.exports = "<ul>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostCommentedItems\">Top 10 most commented cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostExpensiveItems\">Top 10 most expensive cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostOfferedItems\">Top 10 most offered cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostSalledMakes\">Top 10 most selled makes</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topActiveUsers\">Top 10 active users</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topBuyers\">Top 10 buyers</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topSellers\">Top 10 sellers</a>\r\n    </li>\r\n</ul>"
+module.exports = "<h2>Statistics</h2>\r\n<ul>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostCommentedItems\">Top 10 most commented cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostExpensiveItems\">Top 10 most expensive cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostOfferedItems\">Top 10 most offered cars</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/items/mostSalledMakes\">Top 10 most selled makes</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topActiveUsers\">Top 10 active users</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topBuyers\">Top 10 buyers</a>\r\n    </li>\r\n    <li>\r\n        <a routerLink=\"/statistics/users/topSellers\">Top 10 sellers</a>\r\n    </li>\r\n</ul>"
 
 /***/ },
 
