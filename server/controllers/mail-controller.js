@@ -1,14 +1,10 @@
 'use strict';
 
-const nodemailer = require('nodemailer');
-const transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
-
-module.exports = function({ emailAddress }) {
+module.exports = function({ transporter, emailAddress }) {
 
   function sendFeedback(req, res) {
-    console.log('In serve mail controller');
     const mail = req.body;
-    console.log(req.body);
+
     const mailOptions = {
       from: mail.senderEmail,
       to: emailAddress,

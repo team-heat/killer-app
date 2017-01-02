@@ -5,6 +5,9 @@ const config = require('./config/config')({ environment });
 
 const app = require('./config/express.config')({ config });
 
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+
 const User = require('./models/user.model')({});
 const ItemListing = require('./models/item-listing.model')({});
 
@@ -16,7 +19,7 @@ const itemListingController = require('./controllers/item-listing.controller')({
 const favoritesController = require('./controllers/favorites.controller')({ userData, itemListingData });
 const statistcsController = require('./controllers/statistics.controller')({ userData, itemListingData });
 const uploadController = require('./controllers/upload.controller')({});
-const mailController = require('./controllers/mail-controller')({ emailAddress: config.emailAddress });
+const mailController = require('./controllers/mail-controller')({ transporter, emailAddress: config.emailAddress });
 
 require('./config/local.passport.config')({ app, userData });
 require('./config/jwt.passport.config')({ app, userData, config });

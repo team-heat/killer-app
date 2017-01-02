@@ -31,12 +31,9 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    // Angular creates 'cold' observable, 
-    // nothing happens unless subscribed
-    // ( as opposed to Promise which fires regardless )
     this.mailService.sendMail(this.mail)
       .subscribe((resp) => {
-        console.log('here');
+        console.log(resp);
       });
   }
 }
