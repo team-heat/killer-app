@@ -1,9 +1,11 @@
 'use strict';
 
-module.exports = function({ environment }) {
+module.exports = function ({ environment }) {
   const config = {
     development: {
-      emailAddress: 'teamheat@gmail.com',
+      // nodemailer not working locally to avoid disclosing password
+      nodemailerTargetEmail: 'team.heat.killer.app@gmail.com',
+      nodemailerSmtpInfo: 'smtps://team.heat.killer.app%40gmail.com:notrealpass@smtp.gmail.com',
       cookieName: 'com.herokuapps.killerapp',
       sessionSecret: '[insert session secret here]',
       webTokenSecret: 'super duper secret',
@@ -12,7 +14,8 @@ module.exports = function({ environment }) {
       errorResponseCode: 400
     },
     production: {
-      emailAddress: 'teamheat@gmail.com',
+      nodemailerTargetEmail: process.env.TARGET_EMAIL,
+      nodemailerSmtpInfo: process.env.SMTP_INFO,
       cookieName: process.env.COOKIE_NAME,
       webTokenSecret: process.env.WEB_TOKEN_SECRET,
       sessionSecret: process.env.SESSION_SECRET,
