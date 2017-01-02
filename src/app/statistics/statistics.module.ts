@@ -5,6 +5,8 @@ import { StatisticsRouterModule } from './statistics.routes';
 import { StatisticService } from './../services/statistic.service';
 
 import { StatisticsListComponent } from './partial/statistics-list.component';
+import { StatisticsListItemLinkComponent } from './partial/statistics-list-item-link.component';
+import { StatisticsListItemComponent } from './partial/statistics-list-item.component';
 
 import { StatisticsMainComponent } from './statistics-main.component';
 
@@ -14,7 +16,9 @@ import { StatisticsMainComponent } from './statistics-main.component';
     ],
     declarations: [
         StatisticsListComponent,
-        StatisticsMainComponent
+        StatisticsMainComponent,
+        StatisticsListItemComponent,
+        StatisticsListItemLinkComponent
     ],
     providers: [
         StatisticService
