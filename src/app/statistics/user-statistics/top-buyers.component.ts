@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { StatisticService } from './../../services/statistic.service';
 
 @Component({
-    selector: 'app-most-selled-makes',
-    templateUrl: './most-selled-makes.component.html',
+    selector: 'app-top-buyers',
+    templateUrl: './top-buyers.component.html',
 })
-export class MonstSelledMakesComponent implements OnInit {
+export class TopBuyersComponent implements OnInit {
     list: any[];
 
     constructor(
@@ -14,7 +14,7 @@ export class MonstSelledMakesComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.service.getMostSalledMakes()
+        this.service.getTopBuyers()
             .map(x => x.json())
             .subscribe(x => this.list = x);
     }
