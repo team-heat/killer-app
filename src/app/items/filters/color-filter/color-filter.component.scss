@@ -5,7 +5,13 @@ input {
   font-size: 14px;
   color: rgba(225, 225, 225, 0.77);
   background-color: #2f2f2f;
+  border-radius: 4px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-color: rgba(225, 225, 225, 0.77);
+  border-style: solid;
   width: 100%;
+  &:hover {
+      background-color: lighten( #2f2f2f, 10);
+    }
 }

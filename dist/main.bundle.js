@@ -4589,42 +4589,42 @@ module.exports = "div.comment-section {\n  width: 80%;\n  margin: 7.5vh auto; }\
 /***/ 773:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
 /***/ 774:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
 /***/ 775:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
 /***/ 776:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
 /***/ 777:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
 /***/ 778:
 /***/ function(module, exports) {
 
-module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  width: 100%; }\n"
+module.exports = "input {\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  text-align: center;\n  padding: 10px;\n  font-size: 14px;\n  color: rgba(225, 225, 225, 0.77);\n  background-color: #2f2f2f;\n  border-radius: 4px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n  border-color: rgba(225, 225, 225, 0.77);\n  border-style: solid;\n  width: 100%; }\n  input:hover {\n    background-color: #494949; }\n"
 
 /***/ },
 
@@ -4827,7 +4827,7 @@ module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" 
 /***/ 807:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"submit-wrapper\">\r\n  <div id=\"component-header\">\r\n    <h3 *ngIf=\"this.items.length === 0\">Dreamstime Gallery</h3>\r\n    <h3 *ngIf=\"this.items.length !== 0\">\r\n      <span>{{this.activeItem.make}}</span>\r\n      <span>{{this.activeItem.model}}</span>\r\n      <span>{{this.activeItem.year}}</span>\r\n      <app-add-to-favorites *ngIf=\"this.userStorage.isLogged()\" [itemIdToFavorite]=\"this.activeItem._id\" class=\"add-to-favorites-btn\"></app-add-to-favorites>\r\n    </h3>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div *ngIf=\"this.originalItems.length !== 0\" class=\"well\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-2\">\r\n          <app-make-filter (onMakeFilter)=\"onMakeFilter($event)\"></app-make-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-color-filter (onColorFilter)=\"onColorFilter($event)\"></app-color-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-year-filter (onMinimumYearFilter)=\"onMinimumYearFilter($event)\"></app-minimum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-year-filter (onMaximumYearFilter)=\"onMaximumYearFilter($event)\"></app-maximum-year-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-minimum-price-filter (onMinimumPriceFilter)=\"onMinimumPriceFilter($event)\"></app-minimum-price-filter>\r\n        </div>\r\n        <div class=\"col-xs-2\">\r\n          <app-maximum-price-filter (onMaximumPriceFilter)=\"onMaximumPriceFilter($event)\"></app-maximum-price-filter>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <h3 *ngIf=\"this.originalItems.length === 0 && this.items.length !== 0\">Be the first to post a new item!</h3>\r\n    <h3 *ngIf=\"this.items.length === 0\">No matching items found.</h3>\r\n    <div *ngIf=\"this.items.length !== 0\" id=\"carousel-container\" class=\"col-xs-8 col-xs-offset-2\">\r\n      <app-carousel *ngIf=\"this.activeItem\" [mylist]=\"this.activeItem.pictures\"></app-carousel>\r\n    </div>\r\n  </div>\r\n  <div id=\"controls\">\r\n    <div *ngIf=\"this.items.length !== 0\" class=\"row\">\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onPrevious()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Previous\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-4 col-xs-offset-1\">\r\n        <a class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\" routerLink=\"{{this.activeItem._id}}\">\r\n          More Details\r\n        </a>\r\n      </div>\r\n      <div class=\"col-xs-2 col-xs-offset-1\">\r\n        <a (click)=\"onNext()\" class=\"btn btn-primary\" *ngIf=\"this.items.length !== 0\">\r\n          Next\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ },
 
