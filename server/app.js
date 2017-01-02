@@ -16,14 +16,15 @@ const itemListingController = require('./controllers/item-listing.controller')({
 const favoritesController = require('./controllers/favorites.controller')({ userData, itemListingData });
 const statistcsController = require('./controllers/statistics.controller')({ userData, itemListingData });
 const uploadController = require('./controllers/upload.controller')({});
+const mailController = require('./controllers/mail-controller')({ emailAddress: config.emailAddress });
 
 require('./config/local.passport.config')({ app, userData });
 require('./config/jwt.passport.config')({ app, userData, config });
 
-require('./config/routes.config')({ app, userController, itemListingController, favoritesController, uploadController, statistcsController });
+require('./config/routes.config')({ app, userController, itemListingController, favoritesController, uploadController, statistcsController, mailController });
 
 require('./config/mongoose.config')({ config });
 
-app.listen(config.port, function () {
-    console.log(`App listening on port: ${config.port}`);
+app.listen(config.port, function() {
+  console.log(`App listening on port: ${config.port}`);
 });

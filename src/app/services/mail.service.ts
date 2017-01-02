@@ -19,6 +19,8 @@ export class MailService {
   }
 
   sendMail(mail: Mail) {
+    console.log(this.mailApiUrl);
+    console.log(mail);
     const httpRequestOptions = this.httpRequesterOptionsFactory
       .createHttpRequesterOptions(this.mailApiUrl, mail, this.contentTypeHeaderObject);
 

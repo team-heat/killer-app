@@ -31,7 +31,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.mail);
     this.mailService.sendMail(this.mail);
   }
 }

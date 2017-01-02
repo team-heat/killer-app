@@ -4,9 +4,10 @@ const express = require('express');
 const passport = require('passport');
 const path = require('path');
 
-module.exports = function ({ app, userController, itemListingController, favoritesController, uploadController, statistcsController }) {
+module.exports = function({ app, userController, itemListingController, favoritesController, uploadController, statistcsController, mailController }) {
   const apiRouter = new express.Router();
   apiRouter
+    .post('/mail', mailController.sendFeedback)
     .post('/upload', passport.authenticate('jwt'), uploadController.createFile)
     .get('/users', passport.authenticate('jwt'), userController.profile)
     .post('/users', passport.authenticate('local'), userController.login)
@@ -32,12 +33,12 @@ module.exports = function ({ app, userController, itemListingController, favorit
   app.use('/api', apiRouter);
 
   app
-    .get('/', function (req, res) {
+    .get('/', function(req, res) {
       res
         .status(200)
         .sendFile(path.join(__dirname, '/../../dist/index.html'));
     })
-    .get('*', function (req, res) {
+    .get('*', function(req, res) {
       res
         .status(200)
         .sendFile(path.join(__dirname, '/../../dist/index.html'));
