@@ -22,7 +22,7 @@
                 placeholder="Year" required minlength="4" maxlength="4" pattern="[0-9]+">
             </div>
             <div class="form-group">
-              <input appFormDefaultValue type="text" #ngPrice="ngModel" class="form-control" name="price" [(ngModel)]="itemListing.price"
+              <input appFormDefaultValue appFormPriceValidation #tbPrice (change)="updatePriceProp(tbPrice.value)" type="text" #ngPrice="ngModel" class="form-control" name="price" [(ngModel)]="itemListing.price"
                 placeholder="Price" required minlength="1" maxlength="10" pattern="[0-9]+">
             </div>
             <div class="form-group">
