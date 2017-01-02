@@ -16,4 +16,14 @@ export class MakeFilterComponent {
   updateValue() {
     this.onMakeFilter.emit(this.makeFilterValue);
   }
+
+  updateValidation(value: string) {
+    if (!value) {
+      this.makeFilterValue = '';
+    } else {
+      this.makeFilterValue = value;
+    }
+
+    this.updateValue();
+  }
 }

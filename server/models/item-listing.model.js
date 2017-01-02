@@ -21,11 +21,17 @@ const itemListingSchema = new mongoose.Schema({
 });
 
 let ItemListing;
-itemListingSchema.static('createItemListing', function(listing) {
+itemListingSchema.static('createItemListing', function (listing) {
   if (!listing.pictures || listing.pictures.length === 0) {
     listing.pictures = [{
       imageUrl: '/assets/default-image.jpeg'
     }];
+  }
+  if (+listing.year < 1850) {
+    listing.year = '1850';
+  }
+  if (+listing.year > 2017) {
+    listing.year = '2017';
   }
   return new ItemListing({
     owner: listing.owner,
@@ -49,6 +55,6 @@ itemListingSchema.static('createItemListing', function(listing) {
 mongoose.model('ItemListing', itemListingSchema);
 ItemListing = mongoose.model('ItemListing');
 
-module.exports = function({}) {
+module.exports = function ({}) {
   return ItemListing;
 };

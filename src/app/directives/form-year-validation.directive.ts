@@ -9,6 +9,11 @@ export class FormYearValidationDirective {
 
   @HostListener('change') onChange() {
     const value = +this.domElement.nativeElement.value;
+    if (!value) {
+      this.domElement.nativeElement.value = '';
+      return;
+    }
+
     if (value < 1850) {
       this.domElement.nativeElement.value = '1850';
     }

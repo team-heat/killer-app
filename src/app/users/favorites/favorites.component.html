@@ -1,36 +1,39 @@
 <div class="submit-wrapper">
   <div id="component-header">
     <h3 *ngIf="this.items.length === 0">Dreamstime Gallery</h3>
-    <h3 *ngIf="this.items.length !== 0">
-      <span>{{this.activeItem.make}}</span>
+    <h3 *ngIf="this.items.length !== 0" class=" text-center">
+      <span> {{this.activeItem.make}}</span>
       <span>{{this.activeItem.model}}</span>
       <span>{{this.activeItem.year}}</span>
-      <app-add-to-favorites *ngIf="this.userStorage.isLogged()" [itemIdToFavorite]="this.activeItem._id" class="add-to-favorites-btn"></app-add-to-favorites>
+      <app-add-to-favorites *ngIf="this.items.length !== 0 && this.userStorage.isLogged() " [itemIdToFavorite]="this.activeItem._id"></app-add-to-favorites>
     </h3>
   </div>
-  <div class="row">
-    <h3 *ngIf="this.items.length === 0">Be the first to post a new item!</h3>
-    <div *ngIf="this.items.length !== 0" id="carousel-container" class="col-xs-8 col-xs-offset-2">
-      <app-carousel *ngIf="this.activeItem" [mylist]="this.activeItem.pictures"></app-carousel>
+  <div class="row ">
+    <h3 *ngIf="this.items.length===0 ">Be the first to post a new item!</h3>
+    <div *ngIf="this.items.length !==0 " id="carousel-container " class="col-xs-8 col-xs-offset-2 ">
+      <app-carousel *ngIf="this.activeItem " [mylist]="this.activeItem.pictures "></app-carousel>
     </div>
   </div>
   <div id="controls">
-    <div *ngIf="this.items.length !== 0" class="row">
-      <div class="col-xs-2 col-xs-offset-1">
-        <a (click)="onPrevious()" class="btn btn-primary" *ngIf="this.items.length !== 0">
+    <div *ngIf="this.items.length !==0 " class="row ">
+      <div class="col-xs-2 col-xs-offset-1 ">
+        <a (click)="onPrevious() " class="btn btn-primary " *ngIf="this.items.length !==0 ">
           Previous
         </a>
       </div>
-      <div class="col-xs-4 col-xs-offset-1">
-        <a class="btn btn-primary" *ngIf="this.items.length !== 0" routerLink="{{this.activeItem._id}}">
+      <div class="col-xs-4 col-xs-offset-1 ">
+        <a class="btn btn-primary " *ngIf="this.items.length !==0 " routerLink="{{this.activeItem._id}} ">
           More Details
         </a>
       </div>
-      <div class="col-xs-2 col-xs-offset-1">
-        <a (click)="onNext()" class="btn btn-primary" *ngIf="this.items.length !== 0">
+      <div class="col-xs-2 col-xs-offset-1 ">
+        <a (click)="onNext() " class="btn btn-primary " *ngIf="this.items.length !==0 ">
           Next
         </a>
       </div>
+    </div>
+    <div *ngIf="this.items.length !== 0" id="item-number" class="row text-center">
+      <p>Displaying Item {{this.activeItemIndex + 1}} / {{this.items.length}}</p>
     </div>
   </div>
 </div>

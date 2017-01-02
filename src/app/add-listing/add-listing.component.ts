@@ -42,6 +42,24 @@ export class AddListingComponent implements OnInit {
     }
   }
 
+  updateYearProp(value: number): void {
+    if (!value) {
+      this.itemListing.year = undefined;
+      return;
+    }
+
+    this.itemListing.year = +value;
+  }
+
+  updatePriceProp(value: number): void {
+    if (!value) {
+      this.itemListing.price = undefined;
+      return;
+    }
+
+    this.itemListing.price = +value;
+  }
+
   onSubmit(): void {
     this.itemListingService.addItem(this.itemListing)
       .subscribe((response: any) => {

@@ -123,7 +123,8 @@ export class ItemsCollectionComponent implements OnInit {
       this.items = this.maximumPricePipe.transform(this.items, this.maximumPriceFilter);
     }
 
-    this.activeItem = this.items[0];
+    this.activeItemIndex = 0;
+    this.activeItem = this.items[this.activeItemIndex];
   }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
 <div class="form-group">
-  <input class="from-control" [(ngModel)]="this.maximumPriceFilterValue" (ngModelChange)="updateValue()" type="text" name="maximumPriceFilterValue"
+  <input class="from-control" appFormPriceValidation #tbMaxPrice (change)="validationUpdate(tbMaxPrice.value)" [(ngModel)]="this.maximumPriceFilterValue" (ngModelChange)="updateValue()" type="text" name="maximumPriceFilterValue"
     placeholder="Maximum Price">
 </div>

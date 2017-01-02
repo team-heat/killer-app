@@ -16,4 +16,12 @@ export class MinimumYearFilterComponent {
   updateValue() {
     this.onMinimumYearFilter.emit(+this.minimumYearFilterValue);
   }
+
+  updateValidation(value: number): void {
+    if (!value) {
+      this.minimumYearFilterValue = undefined;
+    } else {
+      this.minimumYearFilterValue = +value;
+    }
+  }
 }
