@@ -1,0 +1,66 @@
+import { Component, OnInit } from '@angular/core';
+
+import { Mail } from '../models/mail.model';
+import { MailService } from '../services/mail.service';
+import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
+import { ToastrNotificationService } from '../services/toastr-notification.service';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
+})
+export class ContactComponent implements OnInit {
+
+  mail: Mail;
+
+  constructor(
+    private mailService: MailService,
+    private toastrNotificationService: ToastrNotificationService,
+    private toastrNotificationOptionsFactoryService: ToastrNotificationOptionsFactoryService) {
+
+    this.mail = {
+      senderName: '',
+      senderEmail: '',
+      subject: '',
+      content: ''
+    };
+  }
+
+  ngOnInit() { }
+
+  onSubmit() {
+    this.mailService.sendMail(this.mail)
+      .subscribe((resp) => {
+<<<<<<< HEAD
+        const toastrOptions = this.toastrOptions
+          .createToastrNotificationOptions('success', 'We\'ll reply shortly.', 'Thanks for your feedback');
+        this.toastrNotification.enqueueNotification(toastrOptions);
+      }, err => {
+        const toastrOptions = this.toastrOptions
+          .createToastrNotificationOptions('error', err.message || 'An error has occured.');
+        this.toastrNotification.enqueueNotification(toastrOptions);
+      }, () => {
+        this.mail.subject = '';
+        this.mail.content = '';
+      });
+=======
+        const method = 'success';
+        const message = `EMail sent!`;
+        const heading = 'Yay!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      }, (err) => {
+        const method = 'error';
+        const message = 'Something went wrong.';
+        const heading = 'Oops!';
+        const toastrNotificationOptions = this.toastrNotificationOptionsFactoryService
+          .createToastrNotificationOptions(method, message, heading);
+
+        this.toastrNotificationService.enqueueNotification(toastrNotificationOptions);
+      }, () => { });
+>>>>>>> f78221a46c11b104b27a7bbe2b72f1ed411fdde3
+  }
+}
