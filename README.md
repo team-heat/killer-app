@@ -1,6 +1,6 @@
 # [KillerApp](https://team-heat-killer-app.herokuapp.com/)
 
-![image](./src/assets/screenshot10.png)
+![image](./src/assets/screenshot14.png)
 
 ![image](./src/assets/screenshot13.png)
 
