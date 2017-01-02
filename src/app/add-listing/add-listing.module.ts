@@ -32,7 +32,8 @@ const routes: Routes = [
     ItemListingFactoryService
   ],
   exports: [
-    FileUploaderComponent
+    FileUploaderComponent,
+    FormYearValidationDirective
   ]
 })
 export class AddListingModule { }

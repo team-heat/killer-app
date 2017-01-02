@@ -1,3 +1,4 @@
+import { AddListingModule } from './../add-listing/add-listing.module';
 import { AddToFavoritesComponent } from './../users/add-to-favorites/add-to-favorites.component';
 import { AppModule } from './../app.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -39,7 +40,8 @@ import { MaximumPriceFilterComponent } from './filters/maximum-price-filter/maxi
         CommonModule,
         FormsModule,
         BrowserModule,
-        UsersModule
+        UsersModule,
+        AddListingModule
     ],
     declarations: [
         SingleItemComponent,

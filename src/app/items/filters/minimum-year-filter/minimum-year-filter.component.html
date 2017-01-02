@@ -1,4 +1,4 @@
 <div class="form-group">
-  <input class="from-control" [(ngModel)]="this.minimumYearFilterValue" (ngModelChange)="updateValue()" type="text" name="minimumYearFilterValue"
+  <input class="from-control" appFormYearValidation #tbMinYear (change)="updateValidation(tbMinYear.value)" [(ngModel)]="this.minimumYearFilterValue" (ngModelChange)="updateValue()" type="text" name="minimumYearFilterValue"
     placeholder="Minimum Year">
 </div>

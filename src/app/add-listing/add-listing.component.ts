@@ -43,6 +43,11 @@ export class AddListingComponent implements OnInit {
   }
 
   updateYearProp(value: number) {
+    if (!value) {
+      this.itemListing.year = undefined;
+      return;
+    }
+
     this.itemListing.year = +value;
   }
 

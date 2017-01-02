@@ -16,4 +16,12 @@ export class MaximumYearFilterComponent {
   updateValue() {
     this.onMaximumYearFilter.emit(+this.maximumYearFilterValue);
   }
+
+  updateValidation(value: number): void {
+    if (!value) {
+      this.maximumYearFilterValue = undefined;
+    } else {
+      this.maximumYearFilterValue = +value;
+    }
+  }
 }

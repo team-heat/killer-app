@@ -659,7 +659,8 @@ var ItemsCollectionComponent = (function () {
         if (this.maximumPriceFilter) {
             this.items = this.maximumPricePipe.transform(this.items, this.maximumPriceFilter);
         }
-        this.activeItem = this.items[0];
+        this.activeItemIndex = 0;
+        this.activeItem = this.items[this.activeItemIndex];
     };
     ItemsCollectionComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2418,6 +2419,10 @@ var AddListingComponent = (function () {
         }
     };
     AddListingComponent.prototype.updateYearProp = function (value) {
+        if (!value) {
+            this.itemListing.year = undefined;
+            return;
+        }
         this.itemListing.year = +value;
     };
     AddListingComponent.prototype.onSubmit = function () {
@@ -2509,7 +2514,8 @@ var AddListingModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__services_item_listing_factory_service__["a" /* ItemListingFactoryService */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_2__file_uploader_file_uploader_component__["a" /* FileUploaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_form_year_validation_directive__["a" /* FormYearValidationDirective */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -2805,6 +2811,10 @@ var FormYearValidationDirective = (function () {
     }
     FormYearValidationDirective.prototype.onChange = function () {
         var value = +this.domElement.nativeElement.value;
+        if (!value) {
+            this.domElement.nativeElement.value = '';
+            return;
+        }
         if (value < 1850) {
             this.domElement.nativeElement.value = '1850';
         }
@@ -3357,6 +3367,14 @@ var MaximumYearFilterComponent = (function () {
     MaximumYearFilterComponent.prototype.updateValue = function () {
         this.onMaximumYearFilter.emit(+this.maximumYearFilterValue);
     };
+    MaximumYearFilterComponent.prototype.updateValidation = function (value) {
+        if (!value) {
+            this.maximumYearFilterValue = undefined;
+        }
+        else {
+            this.maximumYearFilterValue = +value;
+        }
+    };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
@@ -3441,6 +3459,14 @@ var MinimumYearFilterComponent = (function () {
     MinimumYearFilterComponent.prototype.updateValue = function () {
         this.onMinimumYearFilter.emit(+this.minimumYearFilterValue);
     };
+    MinimumYearFilterComponent.prototype.updateValidation = function (value) {
+        if (!value) {
+            this.minimumYearFilterValue = undefined;
+        }
+        else {
+            this.minimumYearFilterValue = +value;
+        }
+    };
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === 'function' && _a) || Object)
@@ -3464,36 +3490,37 @@ var MinimumYearFilterComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_exterior_color_pipe__ = __webpack_require__(358);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__items_collection_items_collection_component__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__items_routes__ = __webpack_require__(591);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pipes_make_filter_pipe__ = __webpack_require__(359);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__offers_make_offer_component__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pipes_model_filter_pipe__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_pagination__ = __webpack_require__(424);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_ng2_pagination__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__offers_offers_list_component__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pipes_price_greater_then_pipe__ = __webpack_require__(360);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_price_less_then_pipe__ = __webpack_require__(361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__single_item_single_item_component__ = __webpack_require__(357);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_user_storage_service__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__users_users_module__ = __webpack_require__(381);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__ = __webpack_require__(362);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__ = __webpack_require__(363);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__ = __webpack_require__(585);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(589);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(587);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__ = __webpack_require__(588);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__ = __webpack_require__(586);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__add_listing_add_listing_module__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__comment_section_comment_section_component__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_exterior_color_pipe__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_item_listing_service__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__items_collection_items_collection_component__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__items_routes__ = __webpack_require__(591);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pipes_make_filter_pipe__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__offers_make_offer_component__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pipes_model_filter_pipe__ = __webpack_require__(596);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng2_pagination__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng2_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_ng2_pagination__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__offers_offers_list_component__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_price_greater_then_pipe__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pipes_price_less_then_pipe__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__single_item_single_item_component__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_service__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_user_storage_service__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__users_users_module__ = __webpack_require__(381);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_year_greater_then_pipe__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pipes_year_less_then_pipe__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__filters_make_filter_make_filter_component__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__filters_color_filter_color_filter_component__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__filters_minimum_year_filter_minimum_year_filter_component__ = __webpack_require__(589);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__filters_maximum_year_filter_maximum_year_filter_component__ = __webpack_require__(587);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__filters_minimum_price_filter_minimum_price_filter_component__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__filters_maximum_price_filter_maximum_price_filter_component__ = __webpack_require__(586);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ItemsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3533,44 +3560,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ItemsModule = (function () {
     function ItemsModule() {
     }
     ItemsModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__angular_core__["NgModule"])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_13__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_11_ng2_pagination__["Ng2PaginationModule"],
-                __WEBPACK_IMPORTED_MODULE_7__items_routes__["a" /* ItemsRouterModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_20__users_users_module__["a" /* UsersModule */]
+                __WEBPACK_IMPORTED_MODULE_12_ng2_pagination__["Ng2PaginationModule"],
+                __WEBPACK_IMPORTED_MODULE_8__items_routes__["a" /* ItemsRouterModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common__["CommonModule"],
+                __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_21__users_users_module__["a" /* UsersModule */],
+                __WEBPACK_IMPORTED_MODULE_0__add_listing_add_listing_module__["a" /* AddListingModule */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_16__single_item_single_item_component__["a" /* SingleItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */],
-                __WEBPACK_IMPORTED_MODULE_1__comment_section_comment_section_component__["a" /* CommentSectionComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__offers_offers_list_component__["a" /* OffersListComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__offers_make_offer_component__["a" /* MakeOfferComponent */],
-                __WEBPACK_IMPORTED_MODULE_3__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_8__pipes_make_filter_pipe__["a" /* MakeFilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_10__pipes_model_filter_pipe__["a" /* ModelFilterPipe */],
-                __WEBPACK_IMPORTED_MODULE_14__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_15__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_21__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_22__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */],
-                __WEBPACK_IMPORTED_MODULE_23__filters_make_filter_make_filter_component__["a" /* MakeFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__filters_color_filter_color_filter_component__["a" /* ColorFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__filters_minimum_year_filter_minimum_year_filter_component__["a" /* MinimumYearFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__filters_maximum_year_filter_maximum_year_filter_component__["a" /* MaximumYearFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__filters_minimum_price_filter_minimum_price_filter_component__["a" /* MinimumPriceFilterComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__filters_maximum_price_filter_maximum_price_filter_component__["a" /* MaximumPriceFilterComponent */]
+                __WEBPACK_IMPORTED_MODULE_17__single_item_single_item_component__["a" /* SingleItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__items_collection_items_collection_component__["a" /* ItemsCollectionComponent */],
+                __WEBPACK_IMPORTED_MODULE_2__comment_section_comment_section_component__["a" /* CommentSectionComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__offers_offers_list_component__["a" /* OffersListComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__offers_make_offer_component__["a" /* MakeOfferComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__pipes_exterior_color_pipe__["a" /* ExteriorColorFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_9__pipes_make_filter_pipe__["a" /* MakeFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_11__pipes_model_filter_pipe__["a" /* ModelFilterPipe */],
+                __WEBPACK_IMPORTED_MODULE_15__pipes_price_greater_then_pipe__["a" /* PriceGreaterThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_16__pipes_price_less_then_pipe__["a" /* PriceLessThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_22__pipes_year_greater_then_pipe__["a" /* YearGreaterThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_23__pipes_year_less_then_pipe__["a" /* YearLessThenPipe */],
+                __WEBPACK_IMPORTED_MODULE_24__filters_make_filter_make_filter_component__["a" /* MakeFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__filters_color_filter_color_filter_component__["a" /* ColorFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__filters_minimum_year_filter_minimum_year_filter_component__["a" /* MinimumYearFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__filters_maximum_year_filter_maximum_year_filter_component__["a" /* MaximumYearFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__filters_minimum_price_filter_minimum_price_filter_component__["a" /* MinimumPriceFilterComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__filters_maximum_price_filter_maximum_price_filter_component__["a" /* MaximumPriceFilterComponent */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_5__services_item_listing_service__["a" /* ItemListingService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_user_storage_service__["a" /* UserStorageService */],
-                __WEBPACK_IMPORTED_MODULE_17__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_service__["a" /* ToastrNotificationService */]
+                __WEBPACK_IMPORTED_MODULE_6__services_item_listing_service__["a" /* ItemListingService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_user_storage_service__["a" /* UserStorageService */],
+                __WEBPACK_IMPORTED_MODULE_18__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_toastr_notification_service__["a" /* ToastrNotificationService */]
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -4840,7 +4869,7 @@ module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" 
 /***/ 807:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\r\n    placeholder=\"Maximum Year\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormYearValidation #tbMaxYear (change)=\"updateValidation(tbMaxYear.value)\" [(ngModel)]=\"this.maximumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"maximumYearFilterValue\"\r\n    placeholder=\"Maximum Year\">\r\n</div>"
 
 /***/ },
 
@@ -4854,7 +4883,7 @@ module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" 
 /***/ 809:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\r\n    placeholder=\"Minimum Year\">\r\n</div>"
+module.exports = "<div class=\"form-group\">\r\n  <input class=\"from-control\" appFormYearValidation #tbMinYear (change)=\"updateValidation(tbMinYear.value)\" [(ngModel)]=\"this.minimumYearFilterValue\" (ngModelChange)=\"updateValue()\" type=\"text\" name=\"minimumYearFilterValue\"\r\n    placeholder=\"Minimum Year\">\r\n</div>"
 
 /***/ },
 
