@@ -4,11 +4,13 @@
 
 ![image](./src/assets/screenshot13.png)
 
-![image](./src/assets/screenshot11.png)
+![image](./src/assets/screenshot15-profile.png)
 
 ![image](./src/assets/screenshot12.png)
 
-![image](./src/assets/screenshot9.png)
+![image](./src/assets/screenshot16-gallery.png)
+
+![image](./src/assets/screenshot17-contact.png)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
