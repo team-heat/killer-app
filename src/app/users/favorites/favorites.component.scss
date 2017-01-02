@@ -5,10 +5,18 @@
   border-bottom: 1px solid rgba(225, 225, 225, 0.77);
   box-shadow: 0 1px 25px black;
   padding: 20px;
-  padding-bottom: 0;
   h3>span {
     text-transform: capitalize;
   }
+}
+
+.well {
+  background-color: transparent;
+  border: none;
+}
+
+app-add-to-favorites {
+  float: right;
 }
 
 .submit-wrapper {
@@ -21,9 +29,23 @@
   }
 }
 
+.add-to-favorites-btn {
+  float: right;
+  span.glyphicon-heart {
+    cursor: pointer;
+    font-size: 3.5rem;
+    color: #E6E6E6;
+    // color: #9D9D9D;
+  }
+  &:hover>span.glyphicon-heart {
+    color: #DF474B;
+  }
+}
+
 #controls {
   border-top: 1px solid rgba(225, 225, 225, 0.77);
   padding: 25px;
+  padding-bottom: 0;
   .btn {
     overflow: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,6 +60,9 @@
     &:hover {
       background-color: lighten( #2f2f2f, 10);
     }
+  }
+  #item-number {
+    padding-top: 25px;
   }
 }
 

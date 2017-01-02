@@ -15,6 +15,10 @@
   border: none;
 }
 
+app-add-to-favorites {
+  float: right;
+}
+
 .submit-wrapper {
   text-align: center;
   min-height: 60vh;
@@ -57,7 +61,7 @@
       background-color: lighten( #2f2f2f, 10);
     }
   }
-  #item-number{
+  #item-number {
     padding-top: 25px;
   }
 }
