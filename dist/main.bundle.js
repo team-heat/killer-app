@@ -2781,6 +2781,12 @@ var ContactComponent = (function () {
     ContactComponent.prototype.ngOnInit = function () { };
     ContactComponent.prototype.onSubmit = function () {
         var _this = this;
+        if (this.mail.content.length < 50 || this.mail.content.length > 1000) {
+            var toastrOptions = this.toastrOptions
+                .createToastrNotificationOptions('error', 'Content must be between 50 and 1000 symbols long.');
+            this.toastrNotification.enqueueNotification(toastrOptions);
+            return;
+        }
         this.mailService.sendMail(this.mail)
             .subscribe(function (resp) {
             var toastrOptions = _this.toastrOptions
@@ -4805,7 +4811,7 @@ module.exports = ".carousel-control {\n  background-image: -webkit-linear-gradie
 /***/ 773:
 /***/ function(module, exports) {
 
-module.exports = "div.contact-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: wrap row;\n      flex-flow: wrap row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 60vh;\n  text-align: center;\n  color: #262626; }\n  div.contact-wrapper div.form-wrapper {\n    width: 50%; }\n    @media only screen and (max-device-width: 480px) {\n      div.contact-wrapper div.form-wrapper {\n        width: 100%; } }\n  div.contact-wrapper input {\n    width: 100%;\n    padding: 5px; }\n    div.contact-wrapper input.ng-valid.ng-touched {\n      border-color: #55b559; }\n    div.contact-wrapper input.ng-invalid.ng-touched {\n      border-color: #F55145; }\n  div.contact-wrapper #content {\n    resize: none;\n    padding: 10px;\n    width: 100%;\n    height: 20em; }\n    div.contact-wrapper #content.ng-valid.ng-touched {\n      border-color: #55b559; }\n    div.contact-wrapper #content.ng-invalid.ng-touched {\n      border-color: #F55145; }\n"
+module.exports = "div.contact-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: wrap row;\n      flex-flow: wrap row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 60vh;\n  text-align: center;\n  color: #262626; }\n  div.contact-wrapper div.form-wrapper {\n    width: 50%; }\n    @media only screen and (max-device-width: 480px) {\n      div.contact-wrapper div.form-wrapper {\n        width: 100%; } }\n  div.contact-wrapper input {\n    width: 100%;\n    padding: 5px;\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n    div.contact-wrapper input.ng-valid.ng-touched {\n      border-color: #55b559; }\n    div.contact-wrapper input.ng-invalid.ng-touched {\n      border-color: #F55145; }\n  div.contact-wrapper #content {\n    resize: none;\n    padding: 10px;\n    width: 100%;\n    height: 20em; }\n  div.contact-wrapper .invalid-input-msg {\n    padding: 10px 7.5px;\n    font-size: 1.2rem;\n    color: #FFFEFE;\n    margin-top: -15px;\n    background-color: #F55145;\n    border-bottom-left-radius: 4px;\n    border-bottom-right-radius: 4px; }\n"
 
 /***/ },
 
@@ -5008,7 +5014,7 @@ module.exports = "<div class=\"well\">\n  <div id=\"carousel-example-generic\" c
 /***/ 802:
 /***/ function(module, exports) {
 
-module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\" required minlength=\"2\" maxlength=\"30\" pattern=\"[a-zA-Z]*\">\n    <br>\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\" required>\n    <br>\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_]*\">\n    <br>\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\" required minlength=\"50\" maxlength=\"1000\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
+module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input #ngName=\"ngModel\" type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\" required minlength=\"2\" maxlength=\"30\" pattern=\"[a-zA-Z ]*\">\n    <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngName.valid || ngName.untouched\">Your name must be between 2 and 30 symbols long.</div>\n    <br>\n    <input #ngEmail=\"ngModel\" type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\" required pattern=\"\\S+@\\S+\\.\\S+\">\n    <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngEmail.valid || ngEmail.untouched\">Your must enter a valid email address.</div>\n    <br>\n    <input #ngSubject=\"ngModel\" type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\" required minlength=\"4\" maxlength=\"30\" pattern=\"[a-zA-Z0-9\\-_ ]*\">\n    <div class=\"invalid-input-msg animated jello\" [hidden]=\"ngSubject.valid || ngSubject.untouched\">The subject must be between 4 and 30 symbols long.</div>\n    <br>\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\" required minlength=\"50\" maxlength=\"1000\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
 
 /***/ },
 
