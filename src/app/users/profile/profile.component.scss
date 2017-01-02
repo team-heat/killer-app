@@ -2,6 +2,15 @@ img {
   box-shadow: 0 5px 20px black;
 }
 
+#component-header {
+  color: rgba(225, 225, 225, 0.77);
+  background: transparent;
+  border-color: rgba(225, 225, 225, 0.77);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.77);
+  box-shadow: 0 1px 25px black;
+  margin-bottom: 25px;
+}
+
 .list-group {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
