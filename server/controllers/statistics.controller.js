@@ -18,7 +18,7 @@ module.exports = function ({itemListingData}) {
             });
     }
 
-    function mostSaledMakes(req, res) {
+    function mostSalledMakes(req, res) {
         itemListingData.getAllWithoutFilters()
             .then(listings => {
 
@@ -28,18 +28,29 @@ module.exports = function ({itemListingData}) {
                     // count by make
                     .reduce(function (allNames, item) {
                         let name = item.make;
+                        let found = false;
 
-                        if (name in allNames) {
-                            allNames[name]++;
+                        for (let i of allNames) {
+                            if (i.name === name) {
+                                found = i;
+                                break;
+                            }
+                        }
+
+                        if (found) {
+                            found.count++;
                         } else {
-                            allNames[name] = 1;
+                            allNames.push({
+                                name,
+                                count: 1
+                            });
                         }
 
                         return allNames;
-                    }, {})
+                    }, [])
                     // sort
                     .sort((a, b) => b - a)
-                    .slice(0, numberOfElements);                    
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
             })
@@ -54,7 +65,7 @@ module.exports = function ({itemListingData}) {
 
                 let result = listings
                     .sort((a, b) => b.offers.length - a.offers.length)
-                    .slice(0, numberOfElements);                    
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
             })
@@ -63,13 +74,13 @@ module.exports = function ({itemListingData}) {
             });
     }
 
-        function mostCommentedItems(req, res) {
+    function mostCommentedItems(req, res) {
         itemListingData.getAllWithoutFilters()
             .then(listings => {
 
                 let result = listings
                     .sort((a, b) => b.comments.length - a.comments.length)
-                    .slice(0, numberOfElements);                   
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
             })
@@ -89,21 +100,36 @@ module.exports = function ({itemListingData}) {
                     .map(x => x.offers
                         // get only accepted offers
                         .filter(y => y.status === 'accepted'))
+                    // flat
+                    .reduce((all, curent) => {
+                        return all.concat(curent);
+                    }, [])
                     // count accepted offers by buyer username
                     .reduce(function (allNames, offer) {
                         let name = offer.username;
+                        let found = false;
 
-                        if (name in allNames) {
-                            allNames[name]++;
+                        for (let i of allNames) {
+                            if (i.name === name) {
+                                found = i;
+                                break;
+                            }
+                        }
+
+                        if (found) {
+                            found.count++;
                         } else {
-                            allNames[name] = 1;
+                            allNames.push({
+                                name,
+                                count: 1
+                            });
                         }
 
                         return allNames;
-                    }, {})
-                    // sort
-                    .sort((a, b) => b - a)
-                    .slice(0, numberOfElements);                    
+                    }, [])
+                    // // sort
+                    .sort((a, b) => b.count - a.count)
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
             })
@@ -121,17 +147,28 @@ module.exports = function ({itemListingData}) {
                     // count by owner username
                     .reduce(function (allNames, item) {
                         let name = item.owner;
+                        let found = false;
 
-                        if (name in allNames) {
-                            allNames[name]++;
+                        for (let i of allNames) {
+                            if (i.name === name) {
+                                found = i;
+                                break;
+                            }
+                        }
+
+                        if (found) {
+                            found.count++;
                         } else {
-                            allNames[name] = 1;
+                            allNames.push({
+                                name,
+                                count: 1
+                            });
                         }
 
                         return allNames;
-                    }, {})
-                    .sort((a, b) => b - a)
-                    .slice(0, numberOfElements);                    
+                    }, [])
+                    .sort((a, b) => b.count - a.count)
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
 
@@ -153,16 +190,28 @@ module.exports = function ({itemListingData}) {
                     .reduce(function (allNames, offer) {
                         let name = offer.username;
 
-                        if (name in allNames) {
-                            allNames[name]++;
+                        let found = false;
+
+                        for (let i of allNames) {
+                            if (i.name === name) {
+                                found = i;
+                                break;
+                            }
+                        }
+
+                        if (found) {
+                            found.count++;
                         } else {
-                            allNames[name] = 1;
+                            allNames.push({
+                                name,
+                                count: 1
+                            });
                         }
 
                         return allNames;
-                    }, {})
+                    }, [])
                     .sort((a, b) => b - a)
-                    .slice(0, numberOfElements);                    
+                    .slice(0, numberOfElements);
 
                 res.status(200).json(result);
 
@@ -174,7 +223,7 @@ module.exports = function ({itemListingData}) {
 
     return {
         mostExpensiveItems,
-        mostSaledMakes,
+        mostSalledMakes,
         mostOfferedItems,
         mostCommentedItems,
         topBuyers,

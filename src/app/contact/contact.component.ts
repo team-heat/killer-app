@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { ToastrNotificationOptionsFactoryService } from '../services/toastr-notification-options-factory.service';
 import { ToastrNotificationService } from '../services/toastr-notification.service';
+import { MailService } from '../services/mail.service';
+import { Mail } from '../models/mail.model';
 
 @Component({
   selector: 'app-contact',
@@ -10,16 +12,31 @@ import { ToastrNotificationService } from '../services/toastr-notification.servi
 })
 export class ContactComponent implements OnInit {
 
-  emailAddress: string;
-  name: string;
+  mail: Mail;
 
   constructor(
+    private mailService: MailService,
     private toastrNotification: ToastrNotificationService,
-    private toastrOptions: ToastrNotificationOptionsFactoryService) { }
+    private toastrOptions: ToastrNotificationOptionsFactoryService) {
+
+    this.mail = {
+      senderName: '',
+      senderEmail: '',
+      subject: '',
+      content: ''
+    };
+  }
 
   ngOnInit() {
   }
 
   onSubmit() {
+    // Angular creates 'cold' observable, 
+    // nothing happens unless subscribed
+    // ( as opposed to Promise which fires regardless )
+    this.mailService.sendMail(this.mail)
+      .subscribe((resp) => {
+        console.log('here');
+      });
   }
 }

@@ -7,7 +7,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MockedComponent } from './mocked.component';
 import { MockedRouterModule } from './mocked.routes';
 
-import { CarouselListComponent } from './../carousel-list/carousel-list.component';
+// import { CarouselListComponent } from './../carousel-list/carousel-list.component';
+
+import { StatisticsListComponent } from './../statistics/partial/statistics-list.component';
+import { StatisticService } from './../services/statistic.service';
+
 
 @NgModule({
     imports: [
@@ -16,10 +20,13 @@ import { CarouselListComponent } from './../carousel-list/carousel-list.componen
         FormsModule,
         BrowserModule
     ],
-    providers: [],
+    providers: [
+        StatisticService
+    ],
     declarations: [
+        StatisticsListComponent,
         MockedComponent,
-        CarouselListComponent
+        // CarouselListComponent
     ]
 })
 

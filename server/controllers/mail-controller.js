@@ -3,14 +3,17 @@
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
 
-module.exports = function({}) {
+module.exports = function({ emailAddress }) {
 
-  function send(req, res) {
-    let mailOptions = {
-      from: '',
-      to: '',
-      subject: '',
-      text: '',
+  function sendFeedback(req, res) {
+    console.log('In serve mail controller');
+    const mail = req.body;
+    console.log(req.body);
+    const mailOptions = {
+      from: mail.senderEmail,
+      to: emailAddress,
+      subject: mail.subject,
+      text: mail.content,
       html: ''
     };
 
@@ -23,7 +26,5 @@ module.exports = function({}) {
     });
   }
 
-  return {
-    send
-  };
+  return { sendFeedback };
 };

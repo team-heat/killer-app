@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ApiUrlsConfigService {
 
+  mailApiUrl: string = '/api/mail';
+
   // POST -> login 
   // PUT  -> register
   // GET  -> details
@@ -24,7 +26,7 @@ export class ApiUrlsConfigService {
 
   // GET requests only
   mostExpensiveItemsUrl: string = '/api/statistics/items/mostExpensiveItems';
-  mostSaledMakesUrl: string = '/api/statistics/items/mostSaledMakes';
+  mostSalledMakesUrl: string = '/api/statistics/items/mostSalledMakes';
   mostOfferedItemsUrl: string = '/api/statistics/items/mostOfferedItems';
   topSellersUrl = '/api/statistics/users/topSellers';
   topBuyersUrl = '/api/statistics/users/topBuyers';
