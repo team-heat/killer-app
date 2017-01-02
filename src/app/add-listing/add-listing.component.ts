@@ -42,6 +42,10 @@ export class AddListingComponent implements OnInit {
     }
   }
 
+  updateYearProp(value: number) {
+    this.itemListing.year = +value;
+  }
+
   onSubmit(): void {
     this.itemListingService.addItem(this.itemListing)
       .subscribe((response: any) => {

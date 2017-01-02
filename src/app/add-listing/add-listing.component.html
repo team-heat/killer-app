@@ -18,7 +18,7 @@
                 required minlength="1" maxlength="30" pattern="[A-Za-z0-9\- ]+">
             </div>
             <div class="form-group">
-              <input appFormDefaultValue appFormYearValidation type="text" #ngYear="ngModel" class="form-control" name="year" [(ngModel)]="itemListing.year"
+              <input #yearInput appFormDefaultValue appFormYearValidation (change)="updateYearProp(yearInput.value)" type="text" #ngYear="ngModel" class="form-control" name="year" [(ngModel)]="itemListing.year"
                 placeholder="Year" required minlength="4" maxlength="4" pattern="[0-9]+">
             </div>
             <div class="form-group">
