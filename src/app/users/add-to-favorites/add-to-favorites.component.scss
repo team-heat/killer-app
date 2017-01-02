@@ -1,17 +1,5 @@
-span.add-to-favorites {
+span {
   cursor: pointer;
-  font-size: 3.5rem;
-  color: #E6E6E6;
-  &:hover {
-    color: #DF474B;
-  }
-}
-
-span.remove-to-favorites {
-  cursor: pointer;
-  font-size: 3.5rem;
-  color: #DF474B;
-  &:hover {
-    color: #E6E6E6;
-  }
+  font-size: 3.37rem;
+  color: rgba(225, 225, 225, 0.77);
 }

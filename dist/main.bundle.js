@@ -4666,7 +4666,7 @@ module.exports = ""
 /***/ 784:
 /***/ function(module, exports) {
 
-module.exports = "span.add-to-favorites {\n  cursor: pointer;\n  font-size: 3.5rem;\n  color: #E6E6E6; }\n  span.add-to-favorites:hover {\n    color: #DF474B; }\n\nspan.remove-to-favorites {\n  cursor: pointer;\n  font-size: 3.5rem;\n  color: #DF474B; }\n  span.remove-to-favorites:hover {\n    color: #E6E6E6; }\n"
+module.exports = "span {\n  cursor: pointer;\n  font-size: 3.37rem;\n  color: rgba(225, 225, 225, 0.77); }\n"
 
 /***/ },
 
@@ -4946,7 +4946,7 @@ module.exports = ""
 /***/ 824:
 /***/ function(module, exports) {
 
-module.exports = "<a *ngIf=\"!this.itemIsFavorite\" (click)=\"addToFavorites()\">\r\n  <span class=\"glyphicon glyphicon-heart add-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>\r\n<a *ngIf=\"this.itemIsFavorite\" (click)=\"removeFromFavorites()\">\r\n  <span class=\"glyphicon glyphicon-heart remove-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>"
+module.exports = "<a *ngIf=\"!this.itemIsFavorite\" (click)=\"addToFavorites()\">\r\n  <span class=\"glyphicon glyphicon-star-empty add-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>\r\n<a *ngIf=\"this.itemIsFavorite\" (click)=\"removeFromFavorites()\">\r\n  <span class=\"glyphicon glyphicon-star remove-to-favorites\" aria-hidden=\"true\"></span>\r\n</a>"
 
 /***/ },
 
