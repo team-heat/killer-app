@@ -2536,6 +2536,7 @@ var AddListingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__contact_contact_component__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__ = __webpack_require__(382);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular2_cookie_services_cookies_service__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_helpers_date_provider_service__ = __webpack_require__(364);
@@ -2611,7 +2612,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_24__toastr_notifications_handler_toastr_notifications_handler_component__["a" /* ToastrNotificationsHandlerComponent */],
                 __WEBPACK_IMPORTED_MODULE_19__directives_navigation_hover_directive__["a" /* NavigationHoverDirective */],
                 __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["a" /* ContactComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["ContactComponent"]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_16__items_items_module__["a" /* ItemsModule */],
@@ -2625,7 +2626,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__["ToastModule"],
                 __WEBPACK_IMPORTED_MODULE_20_ng2_pagination__["Ng2PaginationModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot([
-                    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["a" /* ContactComponent */] },
+                    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["ContactComponent"] },
                     { path: '', redirectTo: '/', pathMatch: 'full' },
                     { path: '**', redirectTo: '/', pathMatch: 'full' }
                 ], { useHash: true })
@@ -2692,68 +2693,9 @@ var CarouselListComponent = (function () {
 /***/ },
 
 /***/ 573:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_mail_service__ = __webpack_require__(366);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ContactComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var ContactComponent = (function () {
-    function ContactComponent(mailService, toastrNotification, toastrOptions) {
-        this.mailService = mailService;
-        this.toastrNotification = toastrNotification;
-        this.toastrOptions = toastrOptions;
-        this.mail = {
-            senderName: '',
-            senderEmail: '',
-            subject: '',
-            content: ''
-        };
-    }
-    ContactComponent.prototype.ngOnInit = function () { };
-    ContactComponent.prototype.onSubmit = function () {
-        var _this = this;
-        this.mailService.sendMail(this.mail)
-            .subscribe(function (resp) {
-            var toastrOptions = _this.toastrOptions
-                .createToastrNotificationOptions('success', 'We\'ll reply shortly.', 'Thanks for your feedback');
-            _this.toastrNotification.enqueueNotification(toastrOptions);
-        }, function (err) {
-            var toastrOptions = _this.toastrOptions
-                .createToastrNotificationOptions('error', err.message || 'An error has occured.');
-            _this.toastrNotification.enqueueNotification(toastrOptions);
-        }, function () {
-            _this.mail.subject = '';
-            _this.mail.content = '';
-        });
-    };
-    ContactComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-contact',
-            template: __webpack_require__(799),
-            styles: [__webpack_require__(769)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_mail_service__["a" /* MailService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_mail_service__["a" /* MailService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_toastr_notification_service__["a" /* ToastrNotificationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_toastr_notification_options_factory_service__["a" /* ToastrNotificationOptionsFactoryService */]) === 'function' && _c) || Object])
-    ], ContactComponent);
-    return ContactComponent;
-    var _a, _b, _c;
-}());
-//# sourceMappingURL=/home/ilievv/Documents/Angular2 Official/src/contact.component.js.map
+throw new Error("Module build failed: Error: /home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (35,1): Merge conflict marker encountered.)\n/home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (47,1): Merge conflict marker encountered.)\n/home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (64,1): Merge conflict marker encountered.)\n/home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (36,36): Property 'toastrOptions' does not exist on type 'ContactComponent'.)\n/home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (38,14): Property 'toastrNotification' does not exist on type 'ContactComponent'.)\n/home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (40,36): Property 'toastrOptions' does not exist on type 'ContactComponent'.)\n/home/ilievv/Documents/Angular2 Official/src/app/contact/contact.component.ts (42,14): Property 'toastrNotification' does not exist on type 'ContactComponent'.)\n    at _checkDiagnostics (/home/ilievv/Documents/Angular2 Official/node_modules/@ngtools/webpack/src/loader.js:116:15)\n    at /home/ilievv/Documents/Angular2 Official/node_modules/@ngtools/webpack/src/loader.js:141:17");
 
 /***/ },
 
@@ -4647,13 +4589,6 @@ module.exports = ".carousel-control {\n  background-image: -webkit-linear-gradie
 
 /***/ },
 
-/***/ 769:
-/***/ function(module, exports) {
-
-module.exports = "div.contact-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: wrap row;\n      flex-flow: wrap row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 60vh;\n  text-align: center;\n  color: #262626; }\n  div.contact-wrapper div.form-wrapper {\n    width: 50%; }\n    @media only screen and (max-device-width: 480px) {\n      div.contact-wrapper div.form-wrapper {\n        width: 100%; } }\n  div.contact-wrapper input {\n    width: 100%; }\n  div.contact-wrapper #content {\n    resize: none;\n    padding: 10px 15px;\n    width: 100%;\n    height: 20em; }\n"
-
-/***/ },
-
 /***/ 770:
 /***/ function(module, exports) {
 
@@ -4854,13 +4789,6 @@ module.exports = "<div id=\"root\" class=\"container\">\n    <app-navigation></a
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"well\">\n  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n    <!--Indicators -->\n    <ol class=\"carousel-indicators\">\n      <li [class.active]=\"i===0\" *ngFor=\"let item of mylist; let i = index\" data-target=\"#carousel-example-generic\" [attr.data-slide-to]=\"i\">\n      </li>\n    </ol>\n\n    <!-- Wrapper for slides -->\n    <div class=\"carousel-inner\" role=\"listbox\">\n      <div *ngFor=\"let item of mylist; let i=index\" class=\"item\" [class.active]=\"i===0\">\n        <img [attr.src]=\"item.imageUrl\" class=\"animated fadeIn\">\n      </div>\n    </div>\n\n    <a *ngIf=\"mylist.length > 1\" class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n      <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Previous</span>\n    </a>\n    <a *ngIf=\"mylist.length > 1\" class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n      <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Next</span>\n    </a>\n  </div>\n</div>"
-
-/***/ },
-
-/***/ 799:
-/***/ function(module, exports) {
-
-module.exports = "<h3 id=\"component-header\">Contact Us</h3>\n<div class=\"contact-wrapper\">\n  <div class=\"form-wrapper form-group\">\n    <input type=\"text\" class=\"form-group\" placeholder=\"Name\" [(ngModel)]=\"mail.senderName\">\n    <br>\n    <input type=\"email\" class=\"form-group\" placeholder=\"Email Address\" [(ngModel)]=\"mail.senderEmail\">\n    <br>\n    <input type=\"text\" class=\"form-group\" placeholder=\"Subject\" [(ngModel)]=\"mail.subject\">\n    <br>\n    <textarea name=\"content\" id=\"content\" [(ngModel)]=\"mail.content\"></textarea>\n    <br>\n    <button class=\"btn btn-primary\" (click)=\"onSubmit()\">Send</button>\n  </div>\n</div>"
 
 /***/ },
 
