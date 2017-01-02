@@ -1,0 +1,14 @@
+<h3 id="component-header">Contact Us</h3>
+<div class="contact-wrapper">
+  <div class="form-wrapper form-group">
+    <input type="text" class="form-group" placeholder="Name" [(ngModel)]="mail.senderName">
+    <br>
+    <input type="email" class="form-group" placeholder="Email Address" [(ngModel)]="mail.senderEmail">
+    <br>
+    <input type="text" class="form-group" placeholder="Subject" [(ngModel)]="mail.subject">
+    <br>
+    <textarea name="content" id="content" [(ngModel)]="mail.content"></textarea>
+    <br>
+    <button class="btn btn-primary" (click)="onSubmit()">Send</button>
+  </div>
+</div>

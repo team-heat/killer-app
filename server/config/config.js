@@ -3,6 +3,7 @@
 module.exports = function({ environment }) {
   const config = {
     development: {
+      emailAddress: 'teamheat@gmail.com',
       cookieName: 'com.herokuapps.killerapp',
       sessionSecret: '[insert session secret here]',
       webTokenSecret: 'super duper secret',
@@ -11,6 +12,7 @@ module.exports = function({ environment }) {
       errorResponseCode: 400
     },
     production: {
+      emailAddress: 'teamheat@gmail.com',
       cookieName: process.env.COOKIE_NAME,
       webTokenSecret: process.env.WEB_TOKEN_SECRET,
       sessionSecret: process.env.SESSION_SECRET,
