@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselListComponent } from './../carousel-list/carousel-list.component';
 
+import { StatisticService } from './../services/statistic.service';
+
 @Component({
     selector: 'app-mock',
     templateUrl: './mocked.component.html',
@@ -14,8 +16,15 @@ export class MockedComponent implements OnInit {
         'http://www.hd-wallpapersdownload.com/script/bulk-upload/amazing-car-photos.jpg'
     ];
 
-    constructor() { }
+    list: any[];
+
+    constructor(
+        private service: StatisticService
+    ) { }
 
     ngOnInit() {
+        this.service.getMostCommentedItems()
+            .map(x => x.json())
+            .subscribe(x => this.list = x);
     }
 }
