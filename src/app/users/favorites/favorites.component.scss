@@ -5,6 +5,9 @@
   border-bottom: 1px solid rgba(225, 225, 225, 0.77);
   box-shadow: 0 1px 25px black;
   padding: 20px;
+  h3>span {
+    text-transform: capitalize;
+  }
 }
 
 .submit-wrapper {
