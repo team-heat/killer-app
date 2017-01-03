@@ -1,12 +1,27 @@
 'use strict';
 
 const fs = require('fs');
+var mongo = require('mongodb').MongoClient;
+var Binary = require('mongodb').Binary;
 
-module.exports = function ({}) {
+module.exports = function ({config}) {
   const ROOT_UPLOADS_DIR = './dist/uploads';
   if (!fs.existsSync(ROOT_UPLOADS_DIR)) {
     fs.mkdirSync(ROOT_UPLOADS_DIR);
   }
+
+  mongo.connect(config.imagesDb, (err4, db) => {
+    db.collection('images').find((err, imgs) => {
+      imgs.forEach(img => {
+        const userUploadsDirExists = fs.existsSync(img.directory);
+        if (!userUploadsDirExists) {
+          fs.mkdirSync(img.directory);
+        }
+
+        fs.writeFileSync(img.location, img.bin.buffer);
+      });
+    });
+  });
 
   function createFile(req, res) {
     const user = req.user;
@@ -33,6 +48,30 @@ module.exports = function ({}) {
         console.log(err);
         return res.status(400).send('error');
       }
+
+      mongo.connect(config.imagesDb, (err3, db) => {
+        if (err3) {
+          return err;
+        }
+
+        const file = fs.readFileSync(imageSaveLocation);
+        const doc = {
+          bin: Binary(file),
+          location: imageSaveLocation,
+          directory: userUploadsDirName
+        };
+
+        db.collection('images').insert(doc, (err2, res2) => {
+          if (err2) {
+            return err2;
+          }
+
+          return null;
+        });
+
+        return null;
+      });
+
       return res.status(200).send({ imageUrl: `/uploads/${user._id}/${newFileName}${fileExtension}` });
     });
   }
