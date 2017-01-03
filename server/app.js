@@ -16,7 +16,7 @@ const userController = require('./controllers/user.controller')({ userData, conf
 const itemListingController = require('./controllers/item-listing.controller')({ itemListingData });
 const favoritesController = require('./controllers/favorites.controller')({ userData, itemListingData });
 const statistcsController = require('./controllers/statistics.controller')({ userData, itemListingData });
-const uploadController = require('./controllers/upload.controller')({});
+const uploadController = require('./controllers/upload.controller')({ config });
 const mailController = require('./controllers/mail-controller')({ transporter, config });
 
 require('./config/local.passport.config')({ app, userData });
