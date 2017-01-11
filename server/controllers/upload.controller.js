@@ -5,19 +5,25 @@ var mongo = require('mongodb').MongoClient;
 var Binary = require('mongodb').Binary;
 
 module.exports = function ({config}) {
+  const IMAGES_COLLECTION_NAME = 'images';
   const ROOT_UPLOADS_DIR = './dist/uploads';
   if (!fs.existsSync(ROOT_UPLOADS_DIR)) {
     fs.mkdirSync(ROOT_UPLOADS_DIR);
   }
 
-  mongo.connect(config.imagesDb, (err4, db) => {
-    db.collection('images').find((err, imgs) => {
-      imgs.forEach(img => {
+  mongo.connect(config.imagesDb, (connectErr, db) => {
+    if (connectErr) {
+      return console.log(connectErr.message);
+    }
+    return db.collection(IMAGES_COLLECTION_NAME).find((findErr, imgs) => {
+      if (findErr) {
+        return console.log(findErr.message);
+      }
+      return imgs.forEach(img => {
         const userUploadsDirExists = fs.existsSync(img.directory);
         if (!userUploadsDirExists) {
           fs.mkdirSync(img.directory);
         }
-
         fs.writeFileSync(img.location, img.bin.buffer);
       });
     });
@@ -48,30 +54,22 @@ module.exports = function ({config}) {
         console.log(err);
         return res.status(400).send('error');
       }
-
-      mongo.connect(config.imagesDb, (err3, db) => {
-        if (err3) {
-          return err;
+      mongo.connect(config.imagesDb, (connectErr, db) => {
+        if (connectErr) {
+          console.log(connectErr.message);
         }
-
         const file = fs.readFileSync(imageSaveLocation);
-        const doc = {
+        const imageDocument = {
           bin: Binary(file),
           location: imageSaveLocation,
           directory: userUploadsDirName
         };
-
-        db.collection('images').insert(doc, (err2, res2) => {
-          if (err2) {
-            return err2;
+        return db.collection(IMAGES_COLLECTION_NAME).insert(imageDocument, (insertErr) => {
+          if (insertErr) {
+            console.log(insertErr.message);
           }
-
-          return null;
         });
-
-        return null;
       });
-
       return res.status(200).send({ imageUrl: `/uploads/${user._id}/${newFileName}${fileExtension}` });
     });
   }
